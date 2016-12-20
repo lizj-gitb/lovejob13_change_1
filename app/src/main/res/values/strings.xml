@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">爱上工作</string>
+    <string name="inputNull">输入不能为空</string>
+    <string name="inputErrorNumber">帐号不符合规范</string>
+    <string name="inputErrorPassword">密码太简单</string>
+    <string name="NetWorkError">网络异常</string>
+    <string name="SystemErrpr">操作系统不安全</string>
+    <string name="canNotConnectService">无法连接到指定服务器</string>
+    <string name="userCancle">用户取消操作</string>
+    <string name="sendMsgCodeSuccess">验证码发送成功，请耐心等待</string>
+    <string name="sendMsgCodeError">验证码获取失败，请重试</string>
+    <string name="passwordisfalse">两次密码输入不一致</string>
+    <string name="registerSuccess">注册成功</string>
+    <string name="forgotPasswordSuccess">重置密码成功</string>
+    <string name="autherror">授权失败，请再试一次</string>
+    <string name="boundSuccess">绑定成功，即将跳转</string>
+    <string name="select_city">选择城市</string>
+    <string name="hot_city">热门城市</string>
+    <string name="located_city">定位城市</string>
+    <string name="hint_search_box">请输入城市名或拼音</string>
+    <string name="hint_search_home">输入名称/城市搜索</string>
+    <string name="nothing_found">没有搜索结果~</string>
+    <string name="locating">正在定位…</string>
+    <string name="located_failed">定位失败</string>
+    <string name="senddynamic">发布动态成功</string>
+    <string name="sendGoodSuccess">点赞成功</string>
+    <string name="sendBadSuccess">差评成功</string>
+    <string name="home">主页</string>
+    <string name="me">我</string>
+    <string name="job_hunt">求职</string>
+    <string name="money">赚点现钱</string>
+
+
+</resources>

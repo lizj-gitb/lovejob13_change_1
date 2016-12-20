@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.v.rapiddev.views.InputMethodLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/inputstate"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/lovajobactionbar_2"
+        android:layout_width="match_parent"
+        android:layout_height="52dp" />
+
+    <LinearLayout
+        android:id="@+id/lt_et"
+        android:layout_below="@+id/actionbar"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/rc_bg_editinput">
+
+        <EditText
+            android:id="@+id/et_send_dynamic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:background="@color/white"
+            android:imeOptions="actionDone"
+            android:hint="请输入您想说的……"
+            android:textColor="@color/defaultTextColor"
+            android:textColorHint="@color/hiteTextColor" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/lt_et"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/bt1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="138dp"
+            android:layout_marginLeft="75dp"
+            android:background="@null"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/bt2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="138dp"
+            android:layout_marginLeft="65dp"
+            android:layout_toRightOf="@id/bt1"
+            android:background="@null"
+            android:enabled="false" />
+
+        <LinearLayout
+            android:id="@+id/layout_addImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:background="@mipmap/tianjia2"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/main"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/shizi" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/tupian"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/xiangji"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</com.v.rapiddev.views.InputMethodLayout>

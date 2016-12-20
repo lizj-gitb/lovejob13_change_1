@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+
+        <TextView
+            android:id="@+id/tv_mysersell_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="谈谈吉他"
+            android:textColor="@color/actionbar"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_mysersell_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:text="2016/06/17"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+        <com.v.rapiddev.views.CircleImageView
+            android:id="@+id/img_mysersell_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/defaultuserlogo" />
+
+        <TextView
+            android:id="@+id/tv_mysersell_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/img_mysersell_logo"
+            android:text="张三丰"
+            android:textColor="@color/actionbar"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_mysersell_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="35dp"
+            android:layout_toRightOf="@+id/img_mysersell_logo"
+            android:text="武当派"
+            android:textColor="@color/hiteTextColor"
+            android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/tv_mysersell_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_mysersell_logo"
+            android:text="武当掌门"
+            android:textColor="@color/hiteTextColor"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_mysersell_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="18dp"
+            android:text="1500.00"
+            android:textColor="@color/orage" />
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+请在app里添加如下代码：
+  defaultConfig {
+        applicationId "com.rapiddevsample"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        ／／add this code in your app config
+        resValue "string", "tray__authority", "com.rapiddevsample.preferences"
+
+
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }

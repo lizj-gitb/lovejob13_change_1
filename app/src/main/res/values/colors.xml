@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <!--欢迎页面素材-->
+    <bool name="default_circle_indicator_centered">true</bool>
+    <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <integer name="default_circle_indicator_orientation">0</integer>
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+    <color name="theme_gray">#646464</color>
+    <color name="shadow">#AAEBEBEB</color>
+    <bool name="default_circle_indicator_snap">false</bool>
+    <color name="divider">#E5E5E5</color>
+    <color name="alpha_gray">#CC646464</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+    <color name="content_bg">#F3F3F3</color>
+    <color name="gray_deep">#5c5c5c</color>
+    <color name="common_bg">#FAFAFA</color>
+    <color name="gray">#D9D9D9</color>
+    <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
+    <!--欢迎页面素材-->
+    <color name="actionbar">#00a0e9</color>
+
+    <color name="actionbar_2">#50b8f1</color>
+    <color name="line">#c8c8c8</color>
+    <color name="loginetbg">#f5f5f5</color>
+    <!--app相关素材-->
+    <color name="bgColor_svprogressdefaultview">@android:color/white</color>
+    <color name="background">#3bd7d7d7</color>
+    <color name="defaultTextColor">#6e6d6c</color>
+    <color name="hiteTextColor">#969696</color>
+    <color name="userbg">#f1f1f1</color>
+    <color name="orage">#ffa200</color>
+    <color name="orage2">#f5bd59</color>
+    <color name="text_color_hint">#ffaaaaaa</color>
+    <color name="oridetails">#f0f0f0</color>
+    <color name="background_color">#fff8f8f8</color>
+    <color name="viewbackground">#3bd7d7d7</color>
+    <color name="red">#FF0000</color>
+    <color name="textColor_alert_button_cancel">#007aff</color>
+    <color name="black">#444</color>
+
+    <color name="list_item_press_color">#f0f2f3</color>
+
+</resources>

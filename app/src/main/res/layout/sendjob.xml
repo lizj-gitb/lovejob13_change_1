@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/lovajobactionbar_2"
+        android:layout_width="match_parent"
+        android:layout_height="52dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rel_permanert_job_name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonselector">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="职位名称"
+                    android:textColor="@color/actionbar"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_permanert_job_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/img_permanert_job_name"
+                    android:textColor="#8f8f8f" />
+
+                <ImageView
+                    android:id="@+id/img_permanert_job_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/button_basemessage_edit" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rel_permanert_job_position"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonselector">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="职位类型"
+                    android:textColor="@color/actionbar"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_permanert_job_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/img_permanert_job_position"
+                    android:textColor="#8f8f8f" />
+
+                <ImageView
+                    android:id="@+id/img_permanert_job_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/button_next" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rel_permanert_job_wage"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonselector">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="薪资待遇"
+                    android:textColor="@color/actionbar"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_permanert_job_wage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/img_permanert_job_wage"
+                    android:textColor="#8f8f8f" />
+
+                <ImageView
+                    android:id="@+id/img_permanert_job_wage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/button_basemessage_edit" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rel_permanert_job_sex"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonselector">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="性别要求"
+                    android:textColor="@color/actionbar"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_permanert_job_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/img_permanert_job_sex"
+                    android:textColor="#8f8f8f"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/img_permanert_job_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/button_next" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rel_permanert_job_experience"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonselector">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="经验要求"
+                    android:textColor="@color/actionbar"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_permanert_job_experience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/img_permanert_job_experience"
+                    android:textColor="#8f8f8f"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/img_permanert_job_experience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/button_next" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rel_permanert_job_education_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonselector">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="学历要求"
+                    android:textColor="@color/actionbar"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_permanert_job_education_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/img_permanert_job_education_background"
+                    android:textColor="#8f8f8f"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/img_permanert_job_education_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/button_next" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rel_permanert_job_age"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonselector">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="年龄要求"
+                    android:textColor="@color/actionbar"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_permanert_job_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/img_permanert_job_age"
+                    android:textColor="#8f8f8f"
+                    android:textSize="13sp" />
+
+
+                <ImageView
+                    android:id="@+id/img_permanert_job_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/button_basemessage_edit" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rel_permanert_job_skill"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonselector">
+
+                <TextView
+                    android:id="@+id/tvv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginLeft="15dp"
+                    android:text="技能要求"
+                    android:textColor="@color/actionbar"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tvv1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_permanert_job_skill"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:textColor="#8f8f8f"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/img_permanert_job_skill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/button_basemessage_edit" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rel_permanert_job_recruit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonselector">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="招聘人数"
+                    android:textColor="@color/actionbar"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_permanert_job_recryit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/img_permanert_job_recryit"
+                    android:textColor="#8f8f8f"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/img_permanert_job_recryit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/button_basemessage_edit" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rel_permanert_job_site"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonselector">
+
+                <TextView
+                    android:id="@+id/tvv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="工作地点"
+                    android:textColor="@color/actionbar"
+                    android:textSize="13sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tvv2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_permanert_job_site"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:textColor="#8f8f8f"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/img_permanert_job_site"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/button_next" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rel_permanert_job_content"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonselector">
+
+                <TextView
+                    android:id="@+id/tvv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="工作内容"
+                    android:textColor="@color/actionbar"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tvv3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_permanert_job_content"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:textColor="#8f8f8f"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/img_permanert_job_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/button_basemessage_edit" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rel_permanert_job_time"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonselector">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="上班时间"
+                    android:textColor="@color/actionbar"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_permanert_job_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/img_permanert_job_time"
+                    android:textColor="#8f8f8f"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/img_permanert_job_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/button_basemessage_edit" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rel_permanert_job_phone"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonselector">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="联系方式"
+                    android:textColor="@color/actionbar"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_permanert_job_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/img_permanert_job_phone"
+                    android:textColor="#8f8f8f"
+                    android:textSize="13sp" />
+
+
+                <ImageView
+                    android:id="@+id/img_permanert_job_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/button_basemessage_edit" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/line" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

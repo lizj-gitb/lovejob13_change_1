@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/buttonselector"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp">
+
+            <TextView
+                android:id="@+id/tv_alreadyempl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="工程师"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/ttttt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/tv_alreadyempl_price"
+                android:gravity="center_vertical"
+                android:text="薪资："
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_alreadyempl_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:layout_marginRight="15dp"
+                android:text="￥0.00"
+                android:textColor="#ffa200"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="6dp"
+            android:src="@mipmap/xuxian" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52.5dp">
+
+            <ImageView
+                android:id="@+id/img_worklist_date"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="18dp"
+                android:src="@mipmap/icon_date" />
+
+            <TextView
+                android:id="@+id/tv_alreadyempl_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@+id/img_worklist_date"
+                android:text=" 时间: 2016-10-07"
+                android:textColor="#969696"
+                android:textSize="10dp" />
+
+            <ImageView
+                android:id="@+id/img_worklist_position"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_worklist_date"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="4dp"
+                android:src="@mipmap/icon_position" />
+
+            <TextView
+                android:id="@+id/tv_alreadyempl_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_worklist_date"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/img_worklist_position"
+                android:text="地址: 雁塔区朱雀大街"
+                android:textColor="#969696"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

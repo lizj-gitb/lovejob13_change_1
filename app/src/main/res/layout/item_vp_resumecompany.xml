@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/background_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="企业信息"
+                android:textColor="#b5b5b5"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/background_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:text="公司名称:"
+                android:textColor="@color/actionbar"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="38dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/background_color">
+
+                <TextView
+                    android:id="@+id/et_comm_info_name"
+                    android:layout_width="240dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:textColor="@color/hiteTextColor"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/background_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:text="公司地址:"
+                android:textColor="@color/actionbar"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="12dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/background_color">
+
+                <TextView
+                    android:id="@+id/et_comm_info_address"
+                    android:layout_width="240dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:textColor="@color/hiteTextColor"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/background_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:text="公司规模:"
+                android:textColor="@color/actionbar"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="38dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="12dp"
+
+                android:layout_marginRight="25dp"
+
+
+                android:layout_marginTop="12dp"
+                android:background="@color/background_color">
+
+                <TextView
+                    android:id="@+id/et_comm_info_scale"
+                    android:layout_width="240dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:textColor="@color/hiteTextColor"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/background_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:text="机构代码:"
+                android:textColor="@color/actionbar"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="38dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+
+
+                android:layout_marginTop="12dp"
+                android:background="@color/background_color">
+
+                <TextView
+                    android:id="@+id/et_comm_info_commcode"
+                    android:layout_width="240dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:textColor="@color/hiteTextColor"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/background_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:text="公司官网:"
+                android:textColor="@color/actionbar"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="38dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/background_color">
+
+                <TextView
+                    android:id="@+id/et_comm_info_website"
+                    android:layout_width="240dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:textColor="@color/hiteTextColor"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/background_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:text="主营业务:"
+                android:textColor="@color/actionbar"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/background_color">
+
+                <TextView
+                    android:id="@+id/et_comm_info_business"
+                    android:layout_width="240dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:textColor="@color/hiteTextColor"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/background_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="营业执照:"
+                android:textColor="@color/actionbar"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/gv_commpany_info_img"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

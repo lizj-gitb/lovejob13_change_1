@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.v.rapiddev.views.InputMethodLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editkeybox"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/atb"
+        layout="@layout/lovejobactionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+
+    <com.v.rapiddev.pulltorefresh.PullToRefreshScrollView
+        android:id="@+id/sv_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/atb">
+
+        <LinearLayout
+            android:id="@+id/shownot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <GridView
+                android:id="@+id/gv_home"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:numColumns="3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background" />
+
+            <com.v.rapiddev.views.MyListView
+                android:id="@+id/lv_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </com.v.rapiddev.pulltorefresh.PullToRefreshScrollView>
+</com.v.rapiddev.views.InputMethodLayout>

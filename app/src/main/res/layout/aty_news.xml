@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/actionbar"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/img_news_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/button_back" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="消息"
+            android:textColor="@color/bgColor_svprogressdefaultview"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:background="@color/shadow"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_news_xiaoxi"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/buttonselector">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="消息"
+                android:textColor="@color/actionbar"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvNewMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="136dp"
+                android:gravity="center_vertical"
+                android:text="新消息:"
+                android:textColor="@color/orage"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvNewMsgNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tvNewMsg"
+                android:gravity="center_vertical"
+                android:text="2条"
+                android:textColor="@color/orage" />
+
+            <ImageView
+                android:id="@+id/img_111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="16dp"
+                android:src="@mipmap/icon_enter" />
+
+            <TextView
+                android:id="@+id/tv_news_xiaoxi_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/img_111"
+                android:gravity="center_vertical"
+                android:text="09:21"
+                android:textColor="@color/hiteTextColor"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@color/background_color" />
+
+        <RelativeLayout
+            android:id="@+id/rl_news_tongzhi"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/buttonselector">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="通知"
+                android:textColor="@color/actionbar"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv222"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="136dp"
+                android:gravity="center_vertical"
+                android:text="新通知:"
+                android:textColor="@color/orage"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_news_tongzhi"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv222"
+                android:gravity="center_vertical"
+                android:text="1条"
+                android:textColor="@color/orage" />
+
+            <ImageView
+                android:id="@+id/img_222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="16dp"
+                android:src="@mipmap/icon_enter" />
+
+            <TextView
+                android:id="@+id/tv_news_tongzhi_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/img_222"
+                android:gravity="center_vertical"
+                android:text="09:21"
+                android:textColor="@color/hiteTextColor"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@color/background_color" />
+
+        <RelativeLayout
+            android:id="@+id/rl_news_dongtai"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/buttonselector">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="动态"
+                android:textColor="@color/actionbar"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/img_333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="16dp"
+                android:src="@mipmap/icon_enter" />
+
+            <TextView
+                android:id="@+id/tv_news_dongtai_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/img_333"
+                android:gravity="center_vertical"
+                android:text="09:21"
+                android:textColor="@color/hiteTextColor"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_news_dongtai"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@+id/tv333"
+                android:layout_alignBottom="@+id/tv333"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv333"
+                android:gravity="center_vertical"
+                android:text="1条"
+                android:textColor="@color/orage" />
+
+            <TextView
+                android:id="@+id/tv333"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="91dp"
+                android:layout_marginStart="91dp"
+                android:layout_toEndOf="@+id/textView"
+                android:layout_toRightOf="@+id/textView"
+                android:gravity="center_vertical"
+                android:text="新动态:"
+                android:textColor="@color/orage"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GrantAndroidPermission/GrantAndroidPermission.iml" filepath="$PROJECT_DIR$/GrantAndroidPermission/GrantAndroidPermission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhotoPicker/PhotoPicker.iml" filepath="$PROJECT_DIR$/PhotoPicker/PhotoPicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Rong_Cloud_2_7_3/Rong_Cloud_2_7_3.iml" filepath="$PROJECT_DIR$/Rong_Cloud_2_7_3/Rong_Cloud_2_7_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UMengPushSDK/UMengPushSDK.iml" filepath="$PROJECT_DIR$/UMengPushSDK/UMengPushSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-bither-compress/lib-bither-compress.iml" filepath="$PROJECT_DIR$/lib-bither-compress/lib-bither-compress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lovejob11.iml" filepath="$PROJECT_DIR$/lovejob11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lovejob12.iml" filepath="$PROJECT_DIR$/lovejob12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rapiddev/rapiddev.iml" filepath="$PROJECT_DIR$/rapiddev/rapiddev.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/actionbar"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/img_history_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/button_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="我的动态"
+            android:textColor="@color/bgColor_svprogressdefaultview"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+        <RelativeLayout
+            android:id="@+id/dynamic_beij"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@mipmap/beij">
+
+        </RelativeLayout>
+        <com.v.rapiddev.views.CircleImageView
+            android:id="@+id/img_dynamic_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentBottom="true"/>
+        <TextView
+            android:id="@+id/tv_dynamic_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/img_dynamic_logo"
+            android:layout_marginTop="110dp"
+            android:layout_marginLeft="10dp"
+            android:text="数码宝贝"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+    <com.v.rapiddev.pulltorefresh.PullToRefreshListView
+        android:id="@+id/lv_mydynamic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.v.rapiddev.pulltorefresh.PullToRefreshListView>
+</LinearLayout>

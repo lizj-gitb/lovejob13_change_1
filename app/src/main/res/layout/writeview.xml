@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/lovajobactionbar_2"
+        android:layout_width="match_parent"
+        android:layout_height="52dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/shurukuang1">
+
+        <EditText
+            android:id="@+id/et_aty_write"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:gravity="top"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

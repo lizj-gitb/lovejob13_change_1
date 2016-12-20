@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_marginLeft="15dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/lingpaibeijing">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="26dp"
+                android:layout_height="33dp"
+                android:src="@mipmap/icon_changqigongzuo_xuanshang"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginLeft="13dp"
+            android:layout_width="240dp"
+            android:layout_height="match_parent">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"
+                android:background="@color/viewbackground"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="赏金"
+                android:layout_marginLeft="32dp"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="@color/hiteTextColor"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="职位"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="32dp"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="@color/hiteTextColor"/>
+            <TextView
+                android:id="@+id/tv_wallet_money"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="33dp"
+                android:text="330￥"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="@color/orage"/>
+            <TextView
+                android:id="@+id/tv_wallet_posstion"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="33dp"
+                android:text="技术开发"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="@color/orage"/>
+
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/img_wallet_tuixian"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/tuixian"/>
+    </LinearLayout>
+
+
+</LinearLayout>

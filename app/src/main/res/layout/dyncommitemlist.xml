@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/shadow"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/lovajobactionbar_2"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.v.rapiddev.views.CircleImageView
+            android:id="@+id/iv_dyncommitemlist_userlogo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/shadow_left"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tv_dyncommitemlist_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="神秘人"
+                    android:textColor="@color/actionbar_2"
+                    android:textSize="12sp"/>
+
+                <LinearLayout
+                    android:id="@+id/lt_dyncommitemlist_good"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_dyncommitemlist_good"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@mipmap/icon_good_common"/>
+
+                    <TextView
+                        android:id="@+id/tv_dyncommitemlist_good"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="3"
+                        android:textColor="@color/actionbar_2"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_dyncommitemlist_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="加油、加油、加油、加油、加油、加油、加油、加油、加油、加油、加油、加油、加油、加油、加油、加油、加油、加油、加油、加油、"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_dyncommitemlist_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1小时前"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_dyncommitemlist_resend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="回复"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="3dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:background="@color/line" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:background="@color/white">
+
+        <ListView
+            android:id="@+id/lv_dyncommitemlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/shadow"
+            android:dividerHeight="5dp"></ListView>
+
+        <TextView
+            android:id="@+id/tv_isdefault"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="没有更多回复数据"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="34dp"
+                android:background="@mipmap/shurukuang1"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/et_dyncommitemlist_edittext"
+                    android:layout_width="210dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入评论内容"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_dyncommitemlist_emoy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="表情"/>
+
+            <TextView
+                android:id="@+id/tv_dyncommitemlist_reComm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="20dp"
+                android:focusable="true"
+                android:text="回复"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

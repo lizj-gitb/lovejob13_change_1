@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.v.rapiddev.views.InputMethodLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/editkeybox"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include
+            layout="@layout/lovejobactionbar"
+            android:layout_width="match_parent"
+            android:layout_height="52dp" />
+
+        <com.v.rapiddev.pulltorefresh.PullToRefreshScrollView
+            android:id="@+id/pull_to_refresh_job"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.jude.rollviewpager.RollPagerView
+                    android:id="@+id/roll_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    app:rollviewpager_play_delay="3000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tab_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="时间"
+                        android:textColor="@color/actionbar"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/tab_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="位置"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/tab_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="岗位"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/tab_4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="排序"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <com.v.rapiddev.views.MyListView
+                    android:id="@+id/lv_job"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#00000000"
+                    android:dividerHeight="5dp" />
+            </LinearLayout>
+
+        </com.v.rapiddev.pulltorefresh.PullToRefreshScrollView>
+    </LinearLayout>
+</com.v.rapiddev.views.InputMethodLayout>

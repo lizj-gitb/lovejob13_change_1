@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="127dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_waitbuy_title"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="桌球进阶陪练"
+                android:textSize="14sp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/actionbar"/>
+            <TextView
+                android:id="@+id/tv_tobesure_money"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="500元"
+                android:textSize="14sp"
+                android:textColor="@color/orage"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/background_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.v.rapiddev.views.CircleImageView
+                android:id="@+id/img_tobesure_logo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/defaultuserlogo" />
+            <TextView
+                android:id="@+id/tv_tobesure_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="李红明"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/actionbar"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/img_worklist_position"
+                android:layout_width="8dp"
+                android:layout_height="11dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/icon_position" />
+            <TextView
+                android:id="@+id/tv_tobesure_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="地点:大雁塔"
+                android:textColor="@color/hiteTextColor"
+                android:layout_marginLeft="3dp"
+                android:textSize="13dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/img_worklist_date"
+                android:layout_width="10dp"
+                android:layout_height="11dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/icon_date" />
+            <TextView
+                android:id="@+id/tv_tobesure_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="2016-11-8"
+                android:textSize="13dp"
+                android:textColor="@color/hiteTextColor"
+                android:layout_marginLeft="1dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/background_color"/>
+
+</LinearLayout>
