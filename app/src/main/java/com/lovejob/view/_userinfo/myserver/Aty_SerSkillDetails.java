@@ -79,7 +79,7 @@ public class Aty_SerSkillDetails extends BaseActivity {
     public void onCreate_(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.aty_ser_skilldetails);
         ButterKnife.bind(this);
-        serverPid = getIntent().getStringExtra("serverPid");
+        serverPid = getIntent().getStringExtra("serPid");
         price = getIntent().getStringExtra("price");
         addData();
         initAdapter();
@@ -111,9 +111,14 @@ public class Aty_SerSkillDetails extends BaseActivity {
             public void onSuccess(ThePerfectGirl thePerfectGirl) {
                 if (thePerfectGirl.getData().getServerDTO() != null) {
                     tvSerSkillTitle.setText(thePerfectGirl.getData().getServerDTO().getTitle());
-                    tvSerSkillMoney.setVisibility(View.GONE);
+                    int serType =thePerfectGirl.getData().getServerDTO().getServiceType();
+                    if (serType==2){
+                        tvSerSkillMoney.setVisibility(View.GONE);
+                        tvSerSkillPayment.setVisibility(View.GONE);
+                    }
+                    tvSerSkillPayment.setText("/"+thePerfectGirl.getData().getServerDTO().getPaymentDec());
+                    tvSerSkillMoney.setText(thePerfectGirl.getData().getServerDTO().getMoney()+"");
                     tvSerSkillExplain.setText(thePerfectGirl.getData().getServerDTO().getContent());
-                    tvSerSkillPayment.setVisibility(View.GONE);
                     tvSerSkillCount.setText(thePerfectGirl.getData().getServerDTO().getSoldCount());
                     tvSerSkillStar.setText(thePerfectGirl.getData().getServerDTO().getLevel());
                   phoneNumber=thePerfectGirl.getData().getServerDTO().getUserInfo().getPhoneNumber();

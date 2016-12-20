@@ -564,10 +564,15 @@ public class F_Home extends BaseFragment {
 //                if (adapter_dynList.getItem(posstion).getReleaseInfo().getUserId().equals(new AppPreferences(context).getString(StaticParams.FileKey.__USERPID__,""))){
 //                    getActivity().getSupportFragmentManager().beginTransaction().replace()
 //                }
-                Intent intent = new Intent(context, Others.class);
-                intent.putExtra("userType",adapter_dynList.getItem(posstion).getReleaseInfo().getType());
-                intent.putExtra("userId", adapter_dynList.getItem(posstion).getReleaseInfo().getUserId());
-                startActivity(intent);
+                if (userPid.equals(adapter_dynList.getItem(posstion).getReleaseInfo().getUserId())){
+
+                }else {
+                    Intent intent = new Intent(context, Others.class);
+                    intent.putExtra("userType",adapter_dynList.getItem(posstion).getReleaseInfo().getType());
+                    intent.putExtra("userId", adapter_dynList.getItem(posstion).getReleaseInfo().getUserId());
+                    startActivity(intent);
+                }
+
             }
         });
         enter.setOnClickListener(new MyOnClickListener() {

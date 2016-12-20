@@ -84,6 +84,7 @@ public class F_OtherDynamic extends BaseFragment {
             public View getViewHolder(int position, View convertView, ViewGroup parent) {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_dynamic, position);
                 ((TextView) viewHolder.getView(R.id.tv_dynamic_content)).setText(getItem(position).getContent());
+                ((ImageView)viewHolder.getView(R.id.img_clear_dynamic)).setVisibility(View.GONE);
                 if (getItem(position).getTimeDec().equals("今天") || getItem(position).getTimeDec().equals("昨天")) {
                     ((TextView) viewHolder.getView(R.id.tv_dynamic_time)).setText(getItem(position).getTimeDec());
                 } else {

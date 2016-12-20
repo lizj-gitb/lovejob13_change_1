@@ -99,6 +99,7 @@ public class F_Money extends BaseFragment {
     private FastAdapter<String> adapter_lv_gridview;//listview中嵌套的gridview适配器
     private String time;
     private int page = 1;
+    private String userPid;
     private String jobName;
     private MyActvityResult broadcastReceiver;
 
@@ -149,6 +150,8 @@ public class F_Money extends BaseFragment {
         broadcastReceiver = new MyActvityResult();
         IntentFilter intentFilter = new IntentFilter("com.lovejob.onactivityresult");
         context.registerReceiver(broadcastReceiver, intentFilter);
+        AppPreferences appPreferences = new AppPreferences(context);
+        userPid = appPreferences.getString(StaticParams.FileKey.__USERPID__, "");
         return mainView;
     }
 
@@ -280,10 +283,14 @@ public class F_Money extends BaseFragment {
             @Override
             protected void onclickListener(View v) {
                 V.d("进入用户" + adapter_lv_main.getItem(posstion).getReleaseInfo().getRealName() + "的个人中心");
-                Intent intent = new Intent(context, Others.class);
-                intent.putExtra("userType",adapter_lv_main.getItem(posstion).getReleaseInfo().getType());
-                intent.putExtra("userId", adapter_lv_main.getItem(posstion).getReleaseInfo().getUserId());
-                startActivity(intent);
+                if (userPid.equals(adapter_lv_main.getItem(posstion).getReleaseInfo().getUserId())){
+
+                }else {
+                    Intent intent = new Intent(context, Others.class);
+                    intent.putExtra("userType",adapter_lv_main.getItem(posstion).getReleaseInfo().getType());
+                    intent.putExtra("userId", adapter_lv_main.getItem(posstion).getReleaseInfo().getUserId());
+                    startActivity(intent);
+                }
             }
         });
         imageView_buy.setOnClickListener(new MyOnClickListener() {

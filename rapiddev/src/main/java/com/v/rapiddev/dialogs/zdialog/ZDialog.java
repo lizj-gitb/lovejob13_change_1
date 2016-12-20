@@ -46,7 +46,7 @@ public final class ZDialog {
                 .limitIconToDefaultSize() // limits the displayed icon size to 48dp
                 .title(title)
                 .content(content)
-                .autoDismiss(false)
+//                .autoDismiss(false)
                 .positiveText(rightButtonText)
                 .negativeText(leftButtonText)
                 .onPositive(new MaterialDialog.SingleButtonCallback() {

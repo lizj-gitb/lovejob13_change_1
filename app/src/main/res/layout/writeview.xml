@@ -18,6 +18,7 @@
             android:id="@+id/et_aty_write"
             android:layout_width="match_parent"
             android:layout_height="120dp"
+            android:hint="暂时不支持输入表情，切勿输入，谢谢。"
             android:layout_margin="10dp"
             android:background="@null"
             android:gravity="top"

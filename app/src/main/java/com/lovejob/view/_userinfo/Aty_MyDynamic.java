@@ -169,19 +169,21 @@ public class Aty_MyDynamic extends BaseActivity {
                         ZDialog.showZDlialog(context, "提示", "是否删除", "删除", "取消", new OnDialogItemClickListener() {
                             @Override
                             public void onLeftButtonClickListener() {
-                                dialog = Utils.showProgressDliago(context, "正在删除");
+//                                dialog = Utils.showProgressDliago(context, "正在删除");
+
                                 callList.add(LoveJob.CancelDynamic(adapter.getItem(position).getPid(), new OnAllParameListener() {
                                     @Override
                                     public void onSuccess(ThePerfectGirl thePerfectGirl) {
                                         adapter.removeAll();
                                         addData();
                                         adapter.notifyDataSetChanged();
-                                        dialog.dismiss();
+//                                        dialog.dismiss();
+
                                     }
 
                                     @Override
                                     public void onError(String msg) {
-                                        dialog.dismiss();
+//                                        dialog.dismiss();
                                         Utils.showToast(context, msg);
                                     }
                                 }));

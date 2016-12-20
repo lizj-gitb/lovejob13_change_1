@@ -134,7 +134,7 @@ public class F_ServiveWindow_Feels extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getActivity(), Aty_SerSkillDetails.class);
 //                intent.putExtra("isEdit",adapter.getItem(position).getShowApplyBtn()== 0 ? false : true);
-                intent.putExtra("serverPid", adapter_lv.getItem(position).getServerPid());
+                intent.putExtra("serPid", adapter_lv.getItem(position).getServerPid());
                 startActivity(intent);
             }
 

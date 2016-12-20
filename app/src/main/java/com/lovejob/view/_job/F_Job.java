@@ -99,6 +99,7 @@ public class F_Job extends BaseFragment {
     private FastAdapter<ThePerfectGirl.WorkInfoDTO> adapter_lv;
     private boolean isAddDate = true;//用户是否为第一次进入该页面
     private MaterialDialog dialog;
+    private String userPid;
     private MyActvityResult broadcastReceiver;
     private boolean isFirstIntoPage = true;//是否为第一次进入页面
 
@@ -148,7 +149,8 @@ public class F_Job extends BaseFragment {
         broadcastReceiver = new MyActvityResult();
         IntentFilter intentFilter = new IntentFilter("com.lovejob.onactivityresult");
         context.registerReceiver(broadcastReceiver, intentFilter);
-
+        AppPreferences appPreferences = new AppPreferences(context);
+        userPid = appPreferences.getString(StaticParams.FileKey.__USERPID__, "");
         return mainView;
     }
 
@@ -280,10 +282,14 @@ public class F_Job extends BaseFragment {
             @Override
             public void onClick(View view) {
                 V.d("进入用户" + adapter_lv.getItem(position).getReleaseInfo().getRealName() + "的个人中心");
-                Intent intent = new Intent(context, Others.class);
-                intent.putExtra("userType",adapter_lv.getItem(position).getReleaseInfo().getType());
-                intent.putExtra("userId", adapter_lv.getItem(position).getReleaseInfo().getUserId());
-                startActivity(intent);
+                if (userPid.equals(adapter_lv.getItem(position).getReleaseInfo().getUserId())){
+
+                }else {
+                    Intent intent = new Intent(context, Others.class);
+                    intent.putExtra("userType",adapter_lv.getItem(position).getReleaseInfo().getType());
+                    intent.putExtra("userId", adapter_lv.getItem(position).getReleaseInfo().getUserId());
+                    startActivity(intent);
+                }
             }
         });
 
