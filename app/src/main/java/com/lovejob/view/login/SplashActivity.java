@@ -63,6 +63,10 @@ public class SplashActivity extends Activity {
             V.d("start location...");
             MyApplication.mLocationClient.start();
         }
+        /**
+         * 检测是否有异常日志需要上送 有则上送
+         */
+        checkUpLoadLogs();
 //        try {
         V.d("start sleep " + StaticParams.SPLASH_TIME + " ms");
 //            Thread.sleep(StaticParams.SPLASH_TIME);
@@ -95,6 +99,10 @@ public class SplashActivity extends Activity {
             startActivity(new Intent().setClass(this, isFirstStartApp() ? WelcomeAcitvity.class : LoginAcitvity.class));
             AppManager.getAppManager().finishActivity(SplashActivity.this);
         }
+    }
+
+    private void checkUpLoadLogs() {
+        LoveJob.upLoadExcption();
     }
 
     private void hiteTitleBar() {

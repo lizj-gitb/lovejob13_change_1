@@ -24,6 +24,9 @@ import com.v.rapiddev.utils.V;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.lovejob.model.StaticParams.FileKey.AppException_ExceptionType;
+import static com.lovejob.model.StaticParams.FileKey.AppException_FileContent;
+
 /**
  * ClassType:
  * User:wenyunzhao
@@ -35,6 +38,41 @@ import java.util.Map;
 public class LoveJob {
 
     public static Context context = MyApplication.getContext();
+
+    public static Call upLoadExcption() {
+        AppPreferences mAppPreferences = new AppPreferences(context);
+        String mExceptionContent = mAppPreferences.getString(AppException_FileContent, "");
+        if (TextUtils.isEmpty(mExceptionContent)) {
+            mAppPreferences = null;
+            V.d("无日志需要上送");
+            return null;
+        }
+        Map hashMap = new HashMap();
+        hashMap.put("requestType", "666");
+        hashMap.put("type", "1");//1安卓  2ios
+        hashMap.put("devicePid", mAppPreferences.getString(AppException_ExceptionType, ""));//设备型号
+        hashMap.put("exceptionDec", mExceptionContent);//错误详细信息
+        mAppPreferences = null;
+        return ZokHttp.getInstance(60).doPost(StaticParams.URL, hashMap, new OnZokHttpResponse() {
+            @Override
+            public void OnSucc(String data) {
+                ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
+                if (thePerfectGirl.isSuccess()) {
+                    AppPreferences appPreferences = new AppPreferences(context);
+                    appPreferences.put(AppException_FileContent, "");
+                    appPreferences.put(AppException_ExceptionType, "");
+                    V.d("日志上传成功，已清空日志");
+                } else {
+                    V.e("日志上送失败");
+                }
+            }
+
+            @Override
+            public void OnError(String errorMsg) {
+                V.e("日志上送失败");
+            }
+        }, "交换密钥");
+    }
 
     //交换密钥的类型  登录或忘记密码传0 第三方登录传1  绑定或注册传2
     public static Call exChangeKey(String phoneNumbeOrOpenId, int exchangeType, final OnAllParameListener onAllParameListener) {
@@ -115,7 +153,7 @@ public class LoveJob {
                         preferences.put(StaticParams.FileKey.__USERNAME__, thePerfectGirl.getData().getUsername());
                         preferences.put(StaticParams.FileKey.__USERTYPE__, thePerfectGirl.getData().getUserType());
                         preferences.put(StaticParams.FileKey.__REALNAME__, thePerfectGirl.getData().getRealName());
-                        preferences.put(StaticParams.FileKey.__IDENTIFY__,(!thePerfectGirl.getData().isIdentify())?"false":"true");
+                        preferences.put(StaticParams.FileKey.__IDENTIFY__, (!thePerfectGirl.getData().isIdentify()) ? "false" : "true");
                         preferences.put(StaticParams.FileKey.__LEVEL__, thePerfectGirl.getData().getLevel());
                         try {
                             preferences.put(StaticParams.FileKey.__LOCALTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getLocalToken()));
@@ -213,7 +251,7 @@ public class LoveJob {
                     preferences.put(StaticParams.FileKey.__USERTYPE__, thePerfectGirl.getData().getUserType());
                     preferences.put(StaticParams.FileKey.__REALNAME__, thePerfectGirl.getData().getRealName());
 
-                    preferences.put(StaticParams.FileKey.__IDENTIFY__,(!thePerfectGirl.getData().isIdentify())?"false":"true");
+                    preferences.put(StaticParams.FileKey.__IDENTIFY__, (!thePerfectGirl.getData().isIdentify()) ? "false" : "true");
                     preferences.put(StaticParams.FileKey.__LEVEL__, thePerfectGirl.getData().getLevel());
                     try {
                         preferences.put(StaticParams.FileKey.__LOCALTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getLocalToken()));
@@ -350,7 +388,7 @@ public class LoveJob {
                         preferences.put(StaticParams.FileKey.__USERTYPE__, thePerfectGirl.getData().getUserType());
 //                        preferences.put(StaticParams.FileKey.__REALNAME__, thePerfectGirl.getData().getRealName());
                         preferences.put(StaticParams.FileKey.__LEVEL__, thePerfectGirl.getData().getLevel());
-                        preferences.put(StaticParams.FileKey.__IDENTIFY__,thePerfectGirl.getData().isIdentify()?"true":"false");
+                        preferences.put(StaticParams.FileKey.__IDENTIFY__, thePerfectGirl.getData().isIdentify() ? "true" : "false");
 //                        preferences.put(StaticParams.FileKey.__LOCALTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getLocalToken()));
                         preferences.put(StaticParams.FileKey.__RONGTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getRongCloudToken()));
                         V.d("saved bound some data success");
@@ -687,6 +725,7 @@ public class LoveJob {
             }
         }, "评论点赞或者点差");
     }
+
     /**
      * 获取动态评论的列表
      *
@@ -716,6 +755,7 @@ public class LoveJob {
             }
         }, "获取动态评论列表");
     }
+
     /**
      * 获取动态评论的列表
      *
@@ -1875,7 +1915,7 @@ public class LoveJob {
         }, "获取简历");
     }
 
-    public static Call saveResume(String pic,String name, String Sex, String height, String age, String address, String education, String major, String school,
+    public static Call saveResume(String pic, String name, String Sex, String height, String age, String address, String education, String major, String school,
                                   String educationExperience, String industryDirection, String experience, String skill, String mine, final OnAllParameListener onAllParameListener) {
 
         Map<String, String> map = new HashMap<>();
@@ -1885,8 +1925,8 @@ public class LoveJob {
         map.put("height", height);
         map.put("age", age);
         map.put("address", address);
-        if (pic!=null){
-            map.put("portraitId",pic);
+        if (pic != null) {
+            map.put("portraitId", pic);
 
         }
         map.put("education", education);
@@ -1921,7 +1961,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "424");
         if (!TextUtils.isEmpty(pic))
-        map.put("businessLicense", pic);
+            map.put("businessLicense", pic);
         map.put("name", name);
         map.put("address", address);
         map.put("scale", scale);
@@ -2869,6 +2909,7 @@ public class LoveJob {
             }
         }, "请求重新付款");
     }
+
     public static Call CancelDynamic(String pid, final OnAllParameListener onAllParameListener) {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "521");

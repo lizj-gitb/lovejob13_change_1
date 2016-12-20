@@ -111,8 +111,8 @@ public class MyApplication extends MultiDexApplication {
         appPreferences = new AppPreferences(this.applicationContext);
         V.d("开始读取资源文件／／／／／开始反序列化到对象");
         readDateFromResuseAndToObject();
-        CrashHandler crashHandler = CrashHandler.getInstance();
-        crashHandler.init(getApplicationContext());
+        //注册App异常崩溃处理器
+        AppException.getInstance().init(getApplicationContext());
 
 //        //上线删除下面的代码
 //        if (!LeakCanary.isInAnalyzerProcess(this)) {

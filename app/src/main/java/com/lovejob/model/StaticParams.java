@@ -80,6 +80,11 @@ public class StaticParams {
         public static final String __DynamicContent__ ="dynamcicontent";
 
 
+
+        //异常文本信息
+        public static final String AppException_FileContent = "app_exception_file_content";
+        //异常的手机型号
+        public static final String AppException_ExceptionType = "app_exception_exception_type";
     }
 
     public static class RequestCode {

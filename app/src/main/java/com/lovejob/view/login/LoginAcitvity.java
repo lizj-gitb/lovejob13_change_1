@@ -91,6 +91,7 @@ public class LoginAcitvity extends BaseActivity {
         etLoginPhonenumber.setText(new AppPreferences(context.getApplicationContext()).getString(StaticParams.FileKey.__UserNumber__, ""));
         addEditTestListener();
         initView();
+
     }
 
     private void addEditTestListener() {
