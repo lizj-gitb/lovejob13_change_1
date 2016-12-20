@@ -49,7 +49,8 @@ public class WriteView extends BaseActivity {
     private int writeType;
     private String observerPid, questionPid;
     private int maxLenth = Integer.MAX_VALUE;
-    private boolean isChanged=false;
+    private boolean isChanged = false;
+
     @Override
     public void onCreate_(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.writeview);
@@ -62,18 +63,18 @@ public class WriteView extends BaseActivity {
         actionbarTitle.setText(title == null ? "" : title);
         etAtyWrite.setText(content == null ? "" : content);
 //        etAtyWrite.setInputType(writeType == -1 ? EditorInfo.TYPE_CLASS_TEXT : EditorInfo.TYPE_CLASS_NUMBER);
-        switch (writeType){
+        switch (writeType) {
             case -1:
-                etAtyWrite.setInputType(EditorInfo.TYPE_CLASS_TEXT|EditorInfo.TYPE_TEXT_FLAG_MULTI_LINE);
+                etAtyWrite.setInputType(EditorInfo.TYPE_CLASS_TEXT | EditorInfo.TYPE_TEXT_FLAG_MULTI_LINE);
                 break;
             case 1:
                 etAtyWrite.setInputType(EditorInfo.TYPE_CLASS_PHONE);
                 break;
             case 2:
-                etAtyWrite.setInputType(EditorInfo.TYPE_NUMBER_FLAG_DECIMAL|EditorInfo.TYPE_CLASS_NUMBER);
+                etAtyWrite.setInputType(EditorInfo.TYPE_NUMBER_FLAG_DECIMAL | EditorInfo.TYPE_CLASS_NUMBER);
                 break;
             case 3:
-                etAtyWrite.setInputType(EditorInfo.TYPE_NUMBER_FLAG_DECIMAL|EditorInfo.TYPE_CLASS_NUMBER);
+                etAtyWrite.setInputType(EditorInfo.TYPE_NUMBER_FLAG_DECIMAL | EditorInfo.TYPE_CLASS_NUMBER);
                 break;
 
         }
@@ -95,49 +96,53 @@ public class WriteView extends BaseActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (isChanged) {// ----->如果字符未改变则返回
-                    return;
-                }
-                String str = s.toString();
+                if (writeType == 3) {
 
-                isChanged = true;
-                String cuttedStr = str;
+
+                    if (isChanged) {// ----->如果字符未改变则返回
+                        return;
+                    }
+                    String str = s.toString();
+
+                    isChanged = true;
+                    String cuttedStr = str;
                 /* 删除字符串中的dot */
-                for (int i = str.length() - 1; i >= 0; i--) {
-                    char c = str.charAt(i);
-                    if ('.' == c) {
-                        cuttedStr = str.substring(0, i) + str.substring(i + 1);
-                        break;
+                    for (int i = str.length() - 1; i >= 0; i--) {
+                        char c = str.charAt(i);
+                        if ('.' == c) {
+                            cuttedStr = str.substring(0, i) + str.substring(i + 1);
+                            break;
+                        }
                     }
-                }
                 /* 删除前面多余的0 */
-                int NUM = cuttedStr.length();
-                int zeroIndex = -1;
-                for (int i = 0; i < NUM - 2; i++) {
-                    char c = cuttedStr.charAt(i);
-                    if (c != '0') {
-                        zeroIndex = i;
-                        break;
-                    }else if(i == NUM - 3){
-                        zeroIndex = i;
-                        break;
+                    int NUM = cuttedStr.length();
+                    int zeroIndex = -1;
+                    for (int i = 0; i < NUM - 2; i++) {
+                        char c = cuttedStr.charAt(i);
+                        if (c != '0') {
+                            zeroIndex = i;
+                            break;
+                        } else if (i == NUM - 3) {
+                            zeroIndex = i;
+                            break;
+                        }
                     }
-                }
-                if(zeroIndex != -1){
-                    cuttedStr = cuttedStr.substring(zeroIndex);
-                }
+                    if (zeroIndex != -1) {
+                        cuttedStr = cuttedStr.substring(zeroIndex);
+                    }
                 /* 不足3位补0 */
-                if (cuttedStr.length() < 3) {
-                    cuttedStr = "0" + cuttedStr;
-                }
+                    if (cuttedStr.length() < 3) {
+                        cuttedStr = "0" + cuttedStr;
+                    }
                 /* 加上dot，以显示小数点后两位 */
-                cuttedStr = cuttedStr.substring(0, cuttedStr.length() - 2)
-                        + "." + cuttedStr.substring(cuttedStr.length() - 2);
+                    cuttedStr = cuttedStr.substring(0, cuttedStr.length() - 2)
+                            + "." + cuttedStr.substring(cuttedStr.length() - 2);
 
-                etAtyWrite.setText(cuttedStr);
+                    etAtyWrite.setText(cuttedStr);
 
-                etAtyWrite.setSelection(etAtyWrite.length());
-                isChanged = false;
+                    etAtyWrite.setSelection(etAtyWrite.length());
+                    isChanged = false;
+                }
             }
         });
     }

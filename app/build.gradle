@@ -1,19 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-//    signingConfigs {
-//        config {
-//            keyAlias 'lovejob'
-//            keyPassword 'ai930225'
-//            storePassword 'ai930225'
-//            storeFile file('D:/git/lovejob.jks')
-//        }
-//    }
     signingConfigs {
         config {
             keyAlias 'lovejob'
             keyPassword 'ai930225'
-            storeFile file('D:/git/lovejob.jks')
+            storeFile file('/Users/wenyunzhao/Desktop/lovejob.jks')
             storePassword 'ai930225'
         }
     }
