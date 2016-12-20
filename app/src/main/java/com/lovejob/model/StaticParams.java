@@ -16,12 +16,12 @@ public class StaticParams {
     //是否开启日志打印、
     public static boolean isDebug = false;
     //
-//    public static final String URL = "http://192.168.3.90/lovejob";
+    public static final String URL = "http://192.168.3.90/lovejob";
 //    public static final String URL = "http://192.168.3.8:8084/lovejob";
 //    public static final String URL = "http://192.168.3.37/lovejob";
 //    public static final String URL = "http://192.168.3.23/lovejob";
 //    public static final String URL = "http://www.congxinwl.com/lovejob";
-    public static final String URL = "http://117.34.116.121:8084/lovejob";
+//    public static final String URL = "http://117.34.116.121:8084/lovejob";
 
 
     //友盟推送注册成功返回

@@ -349,7 +349,12 @@ public class PayView extends BaseActivity {
 //            case R.id.tv_buytoken_money:
 //                break;
             case R.id.tv_buytoken_pay:
-                if (TextUtils.isEmpty(tvBuytokenMoney.getText().toString())) {
+//                if (TextUtils.isEmpty(tvBuytokenMoney.getText().toString())) {
+//                    Utils.showToast(context, "金额不可为空");
+//                    return;
+//                }
+                int money = Integer.parseInt((tvBuytokenMoney.getText().toString()));
+                if (money<=0){
                     Utils.showToast(context, "金额不可为空");
                     return;
                 }

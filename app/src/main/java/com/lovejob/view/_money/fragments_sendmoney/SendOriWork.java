@@ -199,6 +199,13 @@ public class SendOriWork extends BaseFragment {
             Utils.showToast(context, "不能有空值");
             return;
         }
+        String s = tvSendWorkOriPrice.getText().toString();
+        String s1 =s.substring(0,s.length()-2);
+        int money = Integer.parseInt(s1);
+        if (money<=0){
+            Utils.showToast(context, "支付金额不能小于0元");
+            return;
+        }
         String want = tvSendWorkOriWant.getText() == null ? "" : tvSendWorkOriWant.getText().toString().trim();
         String person = tvSendWorkOriPerson.getText() == null ? "" : tvSendWorkOriPerson.getText().toString().trim();
         final String[] strs = new String[8];
@@ -336,7 +343,7 @@ public class SendOriWork extends BaseFragment {
                 title = "请输入酬金";
                 content = tvSendWorkOriPrice.getText().toString().trim();
                 requestCode = RequestCode_SendOriWork_TO_WriteView_Price;
-                writeType = 2;
+                writeType = 3;
                 maxLenth = 8;
 
                 break;

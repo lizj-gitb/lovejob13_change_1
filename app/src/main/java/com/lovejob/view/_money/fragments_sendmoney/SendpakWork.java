@@ -205,7 +205,13 @@ public class SendpakWork extends BaseFragment {
             Utils.showToast(context, "不能有空值");
             return;
         }
-
+        String s = tvSendWorkParPrice.getText().toString();
+        String s1 =s.substring(0,s.length()-2);
+        int money = Integer.parseInt(s1);
+        if (money<=0){
+            Utils.showToast(context, "支付金额不能小于0元");
+            return;
+        }
         String[] strs = new String[14];
         for (int i = 0; i < inputModel.getParams().length; i++) {
             strs[i] = inputModel.getParams()[i];
@@ -363,7 +369,7 @@ public class SendpakWork extends BaseFragment {
             case R.id.rl_send_work_par_wanttonum:
                 title = "请输入招聘人数";
                 content = tvSendWorkParWanttonum.getText().toString();
-                maxLenth = 2;
+                maxLenth = 4;
                 writeType = 1;
                 requestCode = RequestCode_SendPakWork_TO_WriteView_Wanttonum;
                 break;
@@ -371,7 +377,7 @@ public class SendpakWork extends BaseFragment {
                 title = "请输入酬金，单位元";
                 content = tvSendWorkParPrice.getText().toString();
                 maxLenth = 8;
-                writeType = 2;
+                writeType = 3;
                 requestCode = RequestCode_SendPakWork_TO_WriteView_Price;
 
                 break;

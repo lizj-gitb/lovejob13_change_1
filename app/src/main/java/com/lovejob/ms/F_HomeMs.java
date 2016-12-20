@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -33,14 +31,13 @@ import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
 import com.lovejob.view._home.DynDetailsAty;
-import com.lovejob.view._home.NewsDetails;
 import com.lovejob.view._home.SendDynamic;
+import com.lovejob.view._home.dyndetailstabs.NewsDetails;
 import com.lovejob.view._userinfo.myserver.ServiceActivity;
 import com.lovejob.view._userinfo.myserver.ServiceMyActivity;
 import com.lovejob.view.cityselector.CityPickerActivity;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
-import com.v.rapiddev.adpater.RecyclerItemClickListener;
 import com.v.rapiddev.dialogs.core.MaterialDialog;
 import com.v.rapiddev.http.okhttp3.Call;
 import com.v.rapiddev.preferences.AppPreferences;
@@ -53,14 +50,10 @@ import com.v.rapiddev.views.InputMethodLayout;
 import com.v.rapiddev.views.MyListView;
 import com.v.rapiddev.views.MyTextVIew;
 
-import java.util.ArrayList;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import me.iwf.photopicker.PhotoPreview;
 
-import static com.lovejob.MyApplication.getCity;
 import static com.lovejob.model.StaticParams.RequestCode.RequestCode_F_Home_TO_DynDetails;
 
 /**

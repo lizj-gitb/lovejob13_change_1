@@ -34,8 +34,7 @@ import com.lovejob.model.MyOnClickListener;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
-import com.lovejob.view._home.F_Home;
-import com.lovejob.view._home.NewsDetails;
+import com.lovejob.view._home.dyndetailstabs.NewsDetails;
 import com.lovejob.view._othersinfos.Others;
 import com.lovejob.view.cityselector.CityPickerActivity;
 import com.v.rapiddev.adpater.FFViewHolder;
@@ -52,9 +51,7 @@ import com.v.rapiddev.views.InputMethodLayout;
 import com.v.rapiddev.views.MyListView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

@@ -34,6 +34,8 @@ import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
 import com.v.rapiddev.adpater.RecyclerItemClickListener;
 import com.v.rapiddev.base.AppManager;
+import com.v.rapiddev.dialogs.zdialog.OnDialogItemClickListener;
+import com.v.rapiddev.dialogs.zdialog.ZDialog;
 import com.v.rapiddev.http.okhttp3.Call;
 import com.v.rapiddev.preferences.AppPreferences;
 import com.v.rapiddev.pulltorefresh.PullToRefreshListView;
@@ -77,19 +79,19 @@ public class Aty_MyDynamic extends BaseActivity {
         userPid = apppreference.getString(StaticParams.FileKey.__USERPID__, "");
         initAdapter();
         addData();
-        lvMydynamic.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                ImageView clear = (ImageView)view.findViewById(R.id.img_clear_dynamic);
-                int num = clear.getVisibility();
-                if (num==8){
-                    clear.setVisibility(View.VISIBLE);
-                }else {
-                    clear.setVisibility(View.GONE);
-                }
-                return true;
-            }
-        });
+//        lvMydynamic.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+//                ImageView clear = (ImageView)view.findViewById(R.id.img_clear_dynamic);
+//                int num = clear.getVisibility();
+//                if (num==8){
+//                    clear.setVisibility(View.VISIBLE);
+//                }else {
+//                    clear.setVisibility(View.GONE);
+//                }
+//                return true;
+//            }
+//        });
     }
 
     private void addData() {
@@ -164,23 +166,32 @@ public class Aty_MyDynamic extends BaseActivity {
                 ((ImageView)viewHolder.getView(R.id.img_clear_dynamic)).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        dialog = Utils.showProgressDliago(context,"正在删除");
-                        callList.add(LoveJob.CancelDynamic(adapter.getItem(position).getPid(), new OnAllParameListener() {
+                        ZDialog.showZDlialog(context, "提示", "是否删除", "删除", "取消", new OnDialogItemClickListener() {
                             @Override
-                            public void onSuccess(ThePerfectGirl thePerfectGirl) {
-                                adapter.removeAll();
-                                addData();
-                                adapter.notifyDataSetChanged();
-                                dialog.dismiss();
+                            public void onLeftButtonClickListener() {
+                                dialog = Utils.showProgressDliago(context, "正在删除");
+                                callList.add(LoveJob.CancelDynamic(adapter.getItem(position).getPid(), new OnAllParameListener() {
+                                    @Override
+                                    public void onSuccess(ThePerfectGirl thePerfectGirl) {
+                                        adapter.removeAll();
+                                        addData();
+                                        adapter.notifyDataSetChanged();
+                                        dialog.dismiss();
+                                    }
+
+                                    @Override
+                                    public void onError(String msg) {
+                                        dialog.dismiss();
+                                        Utils.showToast(context, msg);
+                                    }
+                                }));
                             }
 
                             @Override
-                            public void onError(String msg) {
-                                dialog.dismiss();
-                                Utils.showToast(context,msg);
-                            }
-                        }));
+                            public void onRightButtonClickListener() {
 
+                            }
+                        }).show();
                     }
                 });
 

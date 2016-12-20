@@ -29,6 +29,7 @@
             android:inputType="textMultiLine"
             android:gravity="top"
             android:background="@color/white"
+            android:textSize="14sp"
             android:imeOptions="actionDone"
             android:hint="请输入您想说的……"
             android:textColor="@color/defaultTextColor"

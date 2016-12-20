@@ -249,8 +249,8 @@ public class Aty_OriDetails extends BaseActivity {
             public void onSuccess(ThePerfectGirl thePerfectGirl) {
                 svAtyOriMain.onRefreshComplete();
                 ThePerfectGirl.UserInfoDTO userInfo = thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo();
-                userId = userInfo.getUserId();
-                userName = userInfo.getRealName();
+                    userId = userInfo.getUserId();
+                    userName = userInfo.getRealName();
                 Glide.with(context).load(StaticParams.QiNiuYunUrl + userInfo.getPortraitId()).placeholder(R.mipmap.ic_launcher).dontAnimate()
                         .into(imgOridetailsUserVo);
                 tvOridetailsUsername.setText(userInfo.getRealName() + "".trim());

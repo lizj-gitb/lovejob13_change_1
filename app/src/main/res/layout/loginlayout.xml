@@ -198,7 +198,7 @@
                 android:layout_marginRight="12dp"
                 android:layout_weight="1.5"
                 android:gravity="center"
-                android:text="快捷登陆"
+                android:text="快捷登录"
                 android:textColor="@color/line"
                 android:textSize="12sp"/>
 

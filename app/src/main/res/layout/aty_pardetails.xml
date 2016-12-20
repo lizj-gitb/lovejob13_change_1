@@ -183,8 +183,9 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
-                        android:layout_centerVertical="true"
                         android:text="工作地点:"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:textColor="@color/actionbar" />
                 </RelativeLayout>
 
@@ -345,8 +346,9 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="10dp"
-                        android:layout_centerVertical="true"
                         android:text="技能要求:"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:textColor="@color/actionbar" />
 
                     <TextView
@@ -384,8 +386,9 @@
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
-                        android:layout_centerVertical="true"
                         android:text="工作内容:"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
                         android:textColor="@color/actionbar" />
 
                     <TextView

@@ -39,6 +39,7 @@ import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
 import com.lovejob.ms.MainActivityMs;
+import com.lovejob.view._home.dyndetailstabs.NewsDetails;
 import com.lovejob.view._othersinfos.Others;
 import com.lovejob.view._job.SendJob;
 import com.lovejob.view._money.Aty_SendMoneyWork;

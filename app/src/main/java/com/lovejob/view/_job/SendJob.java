@@ -361,6 +361,7 @@ public class SendJob extends BaseActivity {
             case R.id.rel_permanert_job_recruit:
                 in.putExtra("title", "招聘人数");
                 in.putExtra("writeType", 1);
+                in.putExtra("maxLenth", 4);
                 in.putExtra("content", tvPermanertJobRecryit.getText() == null ? "" : tvPermanertJobRecryit.getText().toString());
                 requestCode = StaticParams.RequestCode.RequestCode_F_SendJob_TO_WriteView_Number;
                 break;

@@ -240,7 +240,8 @@ public class Aty_ReleaseService extends BaseActivity {
                 break;
             case R.id.lt_send_ser_skill_price:
                 in.putExtra("title", "服务价格");
-                in.putExtra("writeType", 2);
+                in.putExtra("writeType", 3);
+                in.putExtra("maxLenth", 8);
                 in.putExtra("content", tvSendSerSkillPrice.getText() == null ? "" : tvSendSerSkillPrice.getText().toString());
                 requestCode = StaticParams.RequestCode.RequsetCode_Aty_ReleaseService_To_Price;
                 break;

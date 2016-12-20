@@ -11,6 +11,7 @@ package com.lovejob;
 public class AppConfig {
     public static boolean isLogin = false;
     public static boolean isConnectRongService = false;
-    public static final String TestAmount = "0.01";
+//    public static final String TestAmount = "0.01";
+    public static final String TestAmount = null;
     public static final int OutTime =20;
 }

@@ -165,7 +165,6 @@
         <activity android:name=".view._home.DynDetailsAty" />
         <activity android:name=".view._home.SendDynamic" />
         <activity android:name=".view._money.Aty_SendMoneyWork" />
-        <activity android:name=".view._home.NewsDetails" />
         <activity android:name=".view._home.dyndetailstabs.f_comm.DynCommDetails" />
         <activity android:name=".view._job.JobDetails" />
         <activity android:name=".view._job.SendJob" />
@@ -259,6 +258,7 @@
         <activity android:name=".view._userinfo.mylist.Aty_MyGetWork_AreadySignIn" />
         <activity android:name=".view._userinfo.mylist.Aty_MyGetWork_AlreadyEmployment" />
         <activity android:name=".view._userinfo.mylist.Aty_MyGetWork_AlreadyComm" />
+        <activity android:name=".view._home.dyndetailstabs.NewsDetails"/>
         <!--服务-->
         <activity android:name=".view._userinfo.myserver.ServiceActivity" />
         <activity android:name=".view._userinfo.myserver.ServiceMyActivity" />
