@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'lovejob'
             keyPassword 'ai930225'
-            storeFile file('D:/git/lovejob.jks')
+            storeFile file('/Users/wenyunzhao/Desktop/lovejob.jks')
             storePassword 'ai930225'
         }
     }

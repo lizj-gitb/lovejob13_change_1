@@ -170,7 +170,6 @@ public class Aty_MyDynamic extends BaseActivity {
                             @Override
                             public void onLeftButtonClickListener() {
 //                                dialog = Utils.showProgressDliago(context, "正在删除");
-
                                 callList.add(LoveJob.CancelDynamic(adapter.getItem(position).getPid(), new OnAllParameListener() {
                                     @Override
                                     public void onSuccess(ThePerfectGirl thePerfectGirl) {

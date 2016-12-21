@@ -676,7 +676,7 @@ public class ThePerfectGirl implements Serializable {
         private int experience;
         private int number;
         private int education;
-        private int age;
+        private String age;
         private String skill;
         private String address;
         private String content;
@@ -1020,11 +1020,11 @@ public class ThePerfectGirl implements Serializable {
             this.education = education;
         }
 
-        public int getAge() {
+        public String getAge() {
             return age;
         }
 
-        public void setAge(int age) {
+        public void setAge(String age) {
             this.age = age;
         }
 
