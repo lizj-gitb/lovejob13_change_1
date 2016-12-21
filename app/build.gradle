@@ -1,14 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'lovejob'
-            keyPassword 'ai930225'
-            storeFile file('/Users/wenyunzhao/Desktop/lovejob.jks')
-            storePassword 'ai930225'
-        }
-    }
+
     compileSdkVersion 24
     // buildToolsVersion "24.0.1"
     buildToolsVersion '23.0.2'
@@ -31,12 +24,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
-        debug {
-            signingConfig signingConfigs.config
-        }
-        release {
-            signingConfig signingConfigs.config
-        }
+//        debug {
+//            signingConfig signingConfigs.config
+//        }
+//        release {
+//            signingConfig signingConfigs.config
+//        }
 
     }
     sourceSets {
