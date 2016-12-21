@@ -97,6 +97,13 @@ public class Aty_MySendServer_ToBeSure extends BaseActivity {
                 ((TextView) viewHolder.getView(R.id.tv_ser_tobesure_posetion)).setText(getItem(position).getUserInfo().getPosition());
                 ((TextView) viewHolder.getView(R.id.tv_ser_tobesure_commpl)).setText(getItem(position).getUserInfo().getCompany());
                 ((TextView) viewHolder.getView(R.id.tv_ser_tobesure_price)).setText(getItem(position).getMoney() + "元/" + getItem(position).getPaymentDec());
+                switch (getItem(position).getState()){
+                    case "3":
+                        viewHolder.getView(R.id.tv_ser_tobeshure_yanshou).setVisibility(View.GONE);
+                        viewHolder.getView(R.id.tv_ser_tobeshure_tuikuan).setVisibility(View.GONE);
+                        viewHolder.getView(R.id.tv_tobesure_tuikuanzhong).setVisibility(View.VISIBLE);
+                        break;
+                }
                 Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getUserInfo().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_ser_tobesure_logo));
                 setOnItemListener(viewHolder.getConvertView(), position, serverPid);
                 return viewHolder.getConvertView();
@@ -128,7 +135,7 @@ public class Aty_MySendServer_ToBeSure extends BaseActivity {
                 });
             }
         });
-        TextView tvtuikuan = (TextView) convertView.findViewById(R.id.tv_ser_tobeshure_tuikuan);
+        final TextView tvtuikuan = (TextView) convertView.findViewById(R.id.tv_ser_tobeshure_tuikuan);
         tvtuikuan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,8 +144,9 @@ public class Aty_MySendServer_ToBeSure extends BaseActivity {
                     @Override
                     public void onSuccess(ThePerfectGirl thePerfectGirl) {
                         dialog.dismiss();
-                        Utils.showToast(context, "退款成功");
-                        Lvadapter.remove(position);
+                        Utils.showToast(context, "已申请退款");
+                        Lvadapter.removeAll();
+                        addData();
                         Lvadapter.notifyDataSetChanged();
                     }
 

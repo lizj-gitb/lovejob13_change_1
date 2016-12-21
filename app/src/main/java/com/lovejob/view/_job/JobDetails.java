@@ -301,20 +301,15 @@ public class JobDetails extends BaseActivity {
 //                tvJobdetailsMode.setText("/月" + thePerfectGirl.getData().getWorkInfoDTO().getPaymentDec());
 
 //                tvJobdetailsPhone.setText(thePerfectGirl.getData().getWorkInfoDTO().getContactPhone() + "".trim());
-
-
-                tvJobdetailsPhone.setText("***********");
-
-
+                String s = thePerfectGirl.getData().getWorkInfoDTO().getContactPhone();
+                String s3 = s.substring(0, s.length() - 4);
+                tvJobdetailsPhone.setText(s3+"****");
                 if (thePerfectGirl.getData().getWorkInfoDTO().getShowApplyBtn() == 2) {
                     imgJobdetailsApply.setImageResource(R.mipmap.button_focus_suspend_cancle1);
                     isGetWork = false;
                 } else {
                     isGetWork = true;
                 }
-
-
-
                 int alreadySiginPersonNumber = 0;
                 FastAdapter<String> adapter_alreadySiginPerson = new FastAdapter<String>(context, R.layout.item_jobdetails_alreadysiginperson) {
                     @Override

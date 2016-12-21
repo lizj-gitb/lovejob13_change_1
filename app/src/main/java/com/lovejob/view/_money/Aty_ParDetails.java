@@ -219,7 +219,9 @@ public class Aty_ParDetails extends BaseActivity {
                 phoneNumber = workinfoDto.getContactPhone();
                 tvPardetailsPrice.setText(workinfoDto.getSalary() + "元/" + workinfoDto.getPaymentDec());
 //                tvPardetailsPhonenuber.setText(workinfoDto.getContactPhone());
-                tvPardetailsPhonenuber.setText("***********");
+                String s = workinfoDto.getContactPhone();
+                String s3 = s.substring(0, s.length() - 4);
+                tvPardetailsPhonenuber.setText(s3+"****");
                 //TODO 点评列表
                 List<ThePerfectGirl.UserInfoDTO> lists = workinfoDto.getEmployeeInfo();
                 int size = 0;

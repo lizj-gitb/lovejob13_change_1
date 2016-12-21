@@ -118,14 +118,17 @@ public class Aty_ReleaseService extends BaseActivity {
         ButterKnife.bind(this);
         serverType =getIntent().getStringExtra("server");
         have = context.getIntent().getStringExtra("have");
-        if (serverType==null || have==null) AppManager.getAppManager().finishActivity();
-        if (serverType.equals("2")){
-            ltSendSerSkillPrice.setVisibility(View.GONE);
+        if (serverType!=null){
+            if (serverType.equals("2")){
+                ltSendSerSkillPrice.setVisibility(View.GONE);
+            }
         }
-
         serverDTO = (ThePerfectGirl.ServerDTO) getIntent().getSerializableExtra("serverDto");
         if (serverDTO != null) {
             state = String.valueOf(serverDTO.getState());
+            if (serverDTO.getServiceType()==2) {
+                ltSendSerSkillPrice.setVisibility(View.GONE);
+            }
         }
         photos = getIntent().getStringExtra("bitmaps");
         if (!TextUtils.isEmpty(photos)) {
@@ -150,10 +153,14 @@ public class Aty_ReleaseService extends BaseActivity {
             tvSendSerSkillTitle.setText(serverDTO.getTitle());
             etSendSerSkillIntroduce.setText(serverDTO.getContent());
             selectedPhotos.clear();
-            for (int i = 0; i < photos.split("\\|").length; i++) {
-                selectedPhotos.add(StaticParams.QiNiuYunUrl + photos.split("\\|")[i]);
+            try {
+                for (int i = 0; i < photos.split("\\|").length; i++) {
+                    selectedPhotos.add(StaticParams.QiNiuYunUrl + photos.split("\\|")[i]);
+                }
+                photoAdapter.addItem(selectedPhotos);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            photoAdapter.addItem(selectedPhotos);
         }
 
 
@@ -335,7 +342,7 @@ public class Aty_ReleaseService extends BaseActivity {
                             if (serverDTO != null && serverDTO.getServerPid() != null) {
                                 pid = serverDTO.getServerPid();
                             }
-                            callList.add(LoveJob.sendService(titie, introduce, price, stringBuffer.toString(), serverType, pid, new OnAllParameListener() {
+                            callList.add(LoveJob.sendService(titie, introduce,price, stringBuffer.toString(), serverType, pid, new OnAllParameListener() {
                                 @Override
                                 public void onSuccess(ThePerfectGirl thePerfectGirl) {
                                     String token = thePerfectGirl.getData().getUploadToken();
