@@ -3219,6 +3219,15 @@ public class ThePerfectGirl implements Serializable {
         private String pid;
         private int state;
 
+        private String impression;
+
+        public String getImpression() {
+            return impression;
+        }
+
+        public void setImpression(String impression) {
+            this.impression = impression;
+        }
 
         @Override
         public String toString() {

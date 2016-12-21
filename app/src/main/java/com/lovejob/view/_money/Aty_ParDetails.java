@@ -123,7 +123,7 @@ public class Aty_ParDetails extends BaseActivity {
     private FastAdapter<ThePerfectGirl.WorkInfoDTO> adapter_comm;
     private FastAdapter<Data_Comm_2_2> adapter_comm_2;
     private String phoneNumber;
-    private String userId,userName;
+    private String userId, userName;
 
     @Override
     public void onCreate_(@Nullable Bundle savedInstanceState) {
@@ -194,7 +194,7 @@ public class Aty_ParDetails extends BaseActivity {
                 userId = userinfo.getUserId();
                 userName = userinfo.getRealName();
                 Glide.with(context).load(StaticParams.QiNiuYunUrl
-                        + userinfo.getPortraitId()).placeholder(R.mipmap.ic_launcher).dontAnimate().into(imgOridetailsUserVo);
+                        + userinfo.getPortraitId()).dontAnimate().into(imgOridetailsUserVo);
                 tvOridetailsUsername.setText(userinfo.getRealName());
                 //imgOridetailsUserleavl
                 tvOridetailsPosition.setText(userinfo.getPosition());
@@ -221,7 +221,7 @@ public class Aty_ParDetails extends BaseActivity {
 //                tvPardetailsPhonenuber.setText(workinfoDto.getContactPhone());
                 String s = workinfoDto.getContactPhone();
                 String s3 = s.substring(0, s.length() - 4);
-                tvPardetailsPhonenuber.setText(s3+"****");
+                tvPardetailsPhonenuber.setText(s3 + "****");
                 //TODO 点评列表
                 List<ThePerfectGirl.UserInfoDTO> lists = workinfoDto.getEmployeeInfo();
                 int size = 0;
@@ -271,10 +271,6 @@ public class Aty_ParDetails extends BaseActivity {
     }
 
     private void initAdapater() {
-        /**
-         * 初始化内容图片加载的gridview适配器
-         */
-//        initContentImgGridView();
         /**
          * 初始化已抢单人的头像gridview适配器
          */
@@ -361,18 +357,10 @@ public class Aty_ParDetails extends BaseActivity {
                 Utils.showToast(context, "给" + adapter_comm.getItem(position).getObserverName() + "回复");
                 reQuestPid = adapter_comm.getItem(position).getQuestionPid();
                 reSendComm(adapter_comm.getItem(position).getObserverName());
-//                Intent intent = new Intent(context, Aty_View_Write.class);
-//                Bundle b = new Bundle();
-//                b.putString("hite", "给" + adapter_comm.getItem(position).getObserverName() + "回复");
-//                b.putInt("textSize", 50);
-//                b.putInt("requestCode", StaticParams.RequestCode.RequsetCode_Comm_ToWrite);
-//                b.putString("context", "");
-//
-//                intent.putExtra("data", b);
-//                startActivityForResult(intent, StaticParams.RequestCode.RequsetCode_Comm_ToWrite);
             }
         });
     }
+
     public void reSendComm(String name) {
         Intent intent = new Intent(context, WriteView.class);
         intent.putExtra("title", "给" + name + "回复");
@@ -380,6 +368,7 @@ public class Aty_ParDetails extends BaseActivity {
         intent.putExtra("requestCode", RequestCode_OriWork_To_WriteView_WriteReComm);
         AppManager.getAppManager().toNextPage(intent, RequestCode_OriWork_To_WriteView_WriteReComm);
     }
+
     private void sendComm() {
         Intent intent = new Intent(context, WriteView.class);
         intent.putExtra("title", "请输入您要评论的内容");
@@ -387,49 +376,18 @@ public class Aty_ParDetails extends BaseActivity {
         intent.putExtra("requestCode", RequestCode_OriWork_To_WriteView_WriteComm);
         AppManager.getAppManager().toNextPage(intent, RequestCode_OriWork_To_WriteView_WriteComm);
     }
+
     private void initAleadySignInPersonImgGridView() {
         adapter_alreadySignInPersonImg = new FastAdapter<String>(this, R.layout.item_lv_f_money_gridview) {
             @Override
             public View getViewHolder(int position, View convertView, ViewGroup parent) {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_f_money_gridview, position);
-//                Rima img_item_lv_f_money_gridview = (FFRoundImageView) viewHolder.getView(R.id.img_item_lv_f_money_gridview);
-//
-//                if (!TextUtils.isEmpty(getItem(position))) {
-//                    MyApplication.imageloader.displayImage(getItem(position), img_item_lv_f_money_gridview, ImageMode.DefaultImage,
-//                            true, true);
-//                } else {
-//                    MyApplication.imageloader.displayImage(StaticParam.DefaultUserVo, img_item_lv_f_money_gridview, ImageMode.DefaultImage,
-//                            true, true);
-//                }
+                Glide.with(context).load(getItem(position)).into((CircleImageView) viewHolder.getView(R.id.img_item_lv_f_money_gridview));
                 return viewHolder.getConvertView();
             }
         };
         gvOridetailsAlreadySignPerson.setAdapter(adapter_alreadySignInPersonImg);
     }
-
-//    private void initContentImgGridView() {
-//        adapter_contentImg = new FastAdapter<String>(this, R.layout.item_gv_oridetails_img) {
-//            @Override
-//            public View getViewHolder(int position, View convertView, ViewGroup parent) {
-//                FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_gv_oridetails_img, position);
-//                ImageView img_contentimg = (ImageView) viewHolder.getView(R.id.img_contentimg);
-//                img_contentimg.setImageResource(R.drawable.test_money_1);
-//                if (!TextUtils.isEmpty(getItem(position))) {
-//                    MyApplication.imageloader.displayImage(getItem(position), img_contentimg, ImageMode.DefaultImage,
-//                            true, true);
-//
-//                } else {
-//                    com.lovejob.utils.V.d("加载默认图片");
-//                    MyApplication.imageloader.displayImage(StaticParam.DefaultUserVo, img_contentimg, ImageMode.DefaultImage,
-//                            true, true);
-//                }
-//
-//                return viewHolder.getConvertView();
-//            }
-//        };
-//        gvOridetailsContentimg.setAdapter(adapter_contentImg);
-//    }
-
 
     @Override
     protected void onPause() {
@@ -448,15 +406,6 @@ public class Aty_ParDetails extends BaseActivity {
             case R.id.tv_pardetails_tocomm:
                 Utils.showToast(this, "点评");
                 sendComm();
-//                Intent intent = new Intent(context, Aty_View_Write.class);
-//                Bundle b = new Bundle();
-//                b.putString("hite", "请输入您要评论的内容");
-//                b.putInt("textSize", 50);
-//                b.putInt("requestCode", RequestCode.RequsetCode_Comm_ToWrite);
-//                b.putString("context", "");
-//                reQuestPid = null;
-//                intent.putExtra("data", b);
-//                startActivityForResult(intent, RequestCode.RequsetCode_Comm_ToWrite);
                 break;
             case R.id.img_pardetails_chat:
                 Utils.showToast(this, "聊天");
@@ -488,64 +437,6 @@ public class Aty_ParDetails extends BaseActivity {
         }
     }
 //
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        if (data == null) return;
-//        //TODO 发表评论
-//        String str = data.getBundleExtra("data").getString("data");
-//        Map<String, String> map = new HashMap<>();
-//        map.put("workPid", workId);
-//        if (reQuestPid != null) {
-//            map.put("parentPid", reQuestPid);
-//        }
-//        map.put("content", str);
-////        HiteImpl.getImpl().sendComment(context, map, new OnAllParamsListener() {
-////            @Override
-////            public void onSuccess(ThePerfectGirl thePerfectGirl) {
-////                reQuestPid = null;
-////                adapter_comm.removeAll();
-////                for (int i = 0; i < thePerfectGirl.getData().getWorkInfoDTOs().size(); i++) {
-////                    adapter_comm.addItem(thePerfectGirl.getData().getWorkInfoDTOs().get(i));
-////                }
-////                adapter_comm.notifyDataSetChanged();
-////            }
-////
-////            @Override
-////            public void onError(String errorMsg) {
-////                reQuestPid = null;
-////                Utils.showInfoDiV(context, "评论/回复失败，" + errorMsg);
-////            }
-////        });
-//    }
-
-//    private void doSignInOrCancel() {
-//        Utils.showProgressDliago(Aty_ParDetails.this, isGetWork ? "正在为您报名,请稍后" : "正在取消申请");
-//        Map<String, String> map = new HashMap<String, String>();
-//        map.put("workPid", workId);
-//        map.put("isApply", isGetWork ? "true" : "false");
-////        HiteImpl.getImpl().getGrabForm(context, map, new OnAllParamsListener() {
-////            @Override
-////            public void onSuccess(ThePerfectGirl thePerfectGirl) {
-////                Utils.dissmissDiV(Aty_ParDetails.this);
-////                if (isGetWork) {
-////                    imgPardetailsGrad.setImageResource(R.mipmap.button_focus_suspend_cancle1);
-////                } else {
-////                    imgPardetailsGrad.setImageResource(R.mipmap.button_focus_suspend_off);
-////                }
-////                isGetWork = !isGetWork;
-////                Utils.showToast(Aty_ParDetails.this, "操作成功", false);
-////                adapter_alreadySignInPersonImg.removeAll();
-////
-////                getDetails();
-////            }
-////
-////            @Override
-////            public void onError(String errorMsg) {
-////                Utils.dissmissDiV(Aty_ParDetails.this);
-////                Utils.showInfoDiV(Aty_ParDetails.this, errorMsg);
-////            }
-////        });
-//    }
 
     private void doSignInOrCancel() {
         dialog = Utils.showProgressDliago(context, isGetWork ? "正在为您报名,请稍后" : "正在取消申请");
@@ -579,6 +470,7 @@ public class Aty_ParDetails extends BaseActivity {
             }
         }));
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (data == null) {
@@ -595,11 +487,6 @@ public class Aty_ParDetails extends BaseActivity {
                         V.d("评论成功");
                         Utils.showToast(context, "评论成功");
 
-//                        adapter_alreadySignInPersonImg.removeAll();
-//                        adapter_comm.removeAll();
-//                        adapter_comm_2.removeAll();
-//                        adapter_contentImg.removeAll();
-//                        getDetails();
                         getCommList();
                         adapter_comm.notifyDataSetChanged();
                     }

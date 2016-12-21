@@ -96,6 +96,14 @@ public class F_UserInfo extends BaseFragment {
     TextView tvFMyRepliesCount;
     @Bind(R.id.InformationCount)
     TextView InformationCount;
+
+    @Bind(R.id.ttv1)
+    TextView ttv1;
+    @Bind(R.id.ttv2)
+    TextView ttv2;
+    @Bind(R.id.ttv3)
+    TextView ttv3;
+
     @Bind(R.id.lt_f_my_msg)
     LinearLayout ltFMyMsg;
     @Bind(R.id.DynamicCount)
@@ -112,6 +120,14 @@ public class F_UserInfo extends BaseFragment {
     LinearLayout ltFMyRedeme;
     @Bind(R.id.lt_f_my_setting)
     LinearLayout ltFMySetting;
+
+    @Bind(R.id.ll1)
+    LinearLayout ll1;
+    @Bind(R.id.ll2)
+    LinearLayout ll2;
+    @Bind(R.id.ll3)
+    LinearLayout ll3;
+
     @Bind(R.id.sv_f_my_refreshview)
     PullToRefreshScrollView svFMyRefreshview;
     @Bind(R.id.lt_userbg)
@@ -205,7 +221,34 @@ public class F_UserInfo extends BaseFragment {
                         } else {
                             InformationCount.setVisibility(View.GONE);
                         }
+                    if (thePerfectGirl.getData().getUserInfoDTO().getUserImpression()==null
+                            ||thePerfectGirl.getData().getUserInfoDTO().getUserImpression().size()==0){
+                        ll1.setVisibility(View.GONE);
+                        ll2.setVisibility(View.GONE);
+                        ll3.setVisibility(View.GONE);
 
+                    }else {
+                        List<ThePerfectGirl.ImpressionDTO> ss = thePerfectGirl.getData().getUserInfoDTO().getUserImpression();
+                        try {
+                            ttv1.setText(ss.get(0).getImpression());
+                            tvFMyHumour.setText("  :"+String.valueOf(ss.get(0).getCount()));
+                        }catch (Exception e){
+
+                        }
+                        try {
+                            ttv2.setText(ss.get(1).getImpression());
+                            tvFMyLoveliness.setText("  :"+String.valueOf(ss.get(1).getCount()));
+                        }catch (Exception e){
+
+                        }
+                        try {
+                            ttv3.setText(ss.get(2).getImpression());
+                            tvFMyLively.setText("  :"+String.valueOf(ss.get(2).getCount()));
+                        }catch (Exception e){
+
+                        }
+
+                    }
                         if (!TextUtils.isEmpty(userInfo.getBackground())) {
 
                             ThreadPoolUtils.getInstance().addTask(new Runnable() {

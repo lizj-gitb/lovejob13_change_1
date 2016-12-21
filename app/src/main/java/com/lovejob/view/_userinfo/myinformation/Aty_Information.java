@@ -173,7 +173,7 @@ public class Aty_Information extends BaseActivity {
                     etInforWorke.setText(thePerfectGirl.getData().getResumeDTO().getExperience() + "".trim());
                     etInforSkill.setText(thePerfectGirl.getData().getResumeDTO().getSkill() + "".trim());
                     etInforMine.setText(thePerfectGirl.getData().getResumeDTO().getPersonalEvaluation());
-                    Glide.with(context).load(StaticParams.QiNiuYunUrl+thePerfectGirl.getData().getResumeDTO().getPortraitId()).dontAnimate().placeholder(R.drawable.ic_launcher).into(imgUserHead);
+                    Glide.with(context).load(StaticParams.QiNiuYunUrl+thePerfectGirl.getData().getResumeDTO().getPortraitId()).dontAnimate().into(imgUserHead);
 
                 }
             }
@@ -333,6 +333,11 @@ public class Aty_Information extends BaseActivity {
                     @Override
                     public void onSuccess(ThePerfectGirl thePerfectGirl) {
                             UploadManager uploadManager = new UploadManager();
+                        if (path==null){
+                            dialog.dismiss();
+                            Utils.showToast(context, "保存成功");
+                            return;
+                        }
                             uploadManager.put(path, path, thePerfectGirl.getData().getUploadToken(), new UpCompletionHandler() {
                                 @Override
                                 public void complete(String key, ResponseInfo info, JSONObject response) {
