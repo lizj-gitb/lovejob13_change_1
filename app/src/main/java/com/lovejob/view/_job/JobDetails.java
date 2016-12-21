@@ -299,7 +299,6 @@ public class JobDetails extends BaseActivity {
                 tvJobdetailsPrice.setText(thePerfectGirl.getData().getWorkInfoDTO().getSalary() + "/月");
 //                tvJobdetailsMode.setText("/月");
 //                tvJobdetailsMode.setText("/月" + thePerfectGirl.getData().getWorkInfoDTO().getPaymentDec());
-
 //                tvJobdetailsPhone.setText(thePerfectGirl.getData().getWorkInfoDTO().getContactPhone() + "".trim());
                 String s = thePerfectGirl.getData().getWorkInfoDTO().getContactPhone();
                 String s3 = s.substring(0, s.length() - 4);

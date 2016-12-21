@@ -129,7 +129,7 @@ public class Aty_Information extends BaseActivity {
     @Bind(R.id.et_infor_mine)
     EditText etInforMine;
     private String userPid;
-    private String Sex = "0";
+    private String Sex = "1";
     private Call call_getResumeList, call_saveResume;
 
     @Override
@@ -332,14 +332,14 @@ public class Aty_Information extends BaseActivity {
                 etInforWorke.getText().toString(), etInforSkill.getText().toString(), etInforMine.getText().toString(), new OnAllParameListener() {
                     @Override
                     public void onSuccess(ThePerfectGirl thePerfectGirl) {
-                        UploadManager uploadManager = new UploadManager();
-                        uploadManager.put(path, path, thePerfectGirl.getData().getUploadToken(), new UpCompletionHandler() {
-                            @Override
-                            public void complete(String key, ResponseInfo info, JSONObject response) {
-                                dialog.dismiss();
-                                Utils.showToast(context, "保存成功");
-                            }
-                        }, null);
+                            UploadManager uploadManager = new UploadManager();
+                            uploadManager.put(path, path, thePerfectGirl.getData().getUploadToken(), new UpCompletionHandler() {
+                                @Override
+                                public void complete(String key, ResponseInfo info, JSONObject response) {
+                                    dialog.dismiss();
+                                    Utils.showToast(context, "保存成功");
+                                }
+                            }, null);
                     }
 
                     @Override
