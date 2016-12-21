@@ -120,6 +120,8 @@ public class MainActivityMs extends BaseActivity {
 //                }).start();
 //            }
 //        },5000);
+
+
     }
 
     private void connectRongIM() {

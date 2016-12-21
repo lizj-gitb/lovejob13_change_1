@@ -66,10 +66,17 @@ public class Aty_Resume extends BaseActivity {
                 AppManager.getAppManager().finishActivity();
                 break;
             case R.id.rl_information:
-                if (userType.equals("0")) {
-                    startActivity(new Intent(context, Aty_Information.class));
-                } else {
-                    startActivity(new Intent(context, Aty_Company_Information.class));
+
+                try {
+                    if (userType.equals("0")) {
+                        startActivity(new Intent(context, Aty_Information.class));
+                    } else {
+                        startActivity(new Intent(context, Aty_Company_Information.class));
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Utils.showToast(context,"系统异常");
+                    AppManager.getAppManager().finishActivity();
                 }
                 break;
             case R.id.rl_show_works:

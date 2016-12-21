@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Looper;
 import android.widget.Toast;
 
+import com.v.rapiddev.base.AppManager;
 import com.v.rapiddev.preferences.AppPreferences;
 
 import java.io.PrintWriter;
@@ -90,8 +91,10 @@ public class AppException implements Thread.UncaughtExceptionHandler {
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
+
             }
             // 退出程序,注释下面的重启启动程序代码
+            AppManager.getAppManager().AppExit(mContext);
             android.os.Process.killProcess(android.os.Process.myPid());
             System.exit(0);
 //            AppManager.getAppManager().AppExit(mContext);
