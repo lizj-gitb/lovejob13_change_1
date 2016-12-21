@@ -1819,7 +1819,9 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("title", title);
         map.put("content", content);
-        map.put("money", money);
+        if (!money.equals("null")) {
+            map.put("money", money);
+        }
         map.put("payment", "0");
         if (pictrueId != null)
             map.put("pictrueId", pictrueId);
