@@ -214,7 +214,9 @@ public class F_Job extends BaseFragment {
                 ((TextView) viewHolder.getView(R.id.tv_job_com)).setText(getItem(position).getReleaseInfo().getCompany() == null ? "公司名称未填写" : getItem(position).getReleaseInfo().getCompany());
 
                 ((TextView) viewHolder.getView(R.id.tv_job_location)).setText(TextUtils.isEmpty(getItem(position).getAddress()) ? "工作地点未填写" : getItem(position).getAddress());
+
                 ((TextView) viewHolder.getView(R.id.tv_job_money)).setText((getItem(position).getSalary() + "元" + getItem(position).getPaymentDec()) == null ? "用户未填写" : getItem(position).getSalary() + "/月");// getItem(position).getPaymentDec()
+
                 ((TextView) viewHolder.getView(R.id.tv_job_alreadysinperson)).setText(getItem(position).getApplyCount() + "" == null ? "" : getItem(position).getApplyCount() + "/人已报名".trim());
                 String s1 = String.format("%tF%n", getItem(position).getReleaseDate());
                 ((TextView) viewHolder.getView(R.id.tv_job_day)).setText(s1.substring(5, s1.length()));
