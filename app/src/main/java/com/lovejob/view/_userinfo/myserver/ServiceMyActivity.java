@@ -171,7 +171,6 @@ public class ServiceMyActivity extends BaseActivity {
 
     }
 
-
     String serverType = "0";
 
     @OnClick({R.id.img_service_window_back, R.id.tv_ser_my_fabu, R.id.lt_tab1, R.id.lt_tab2, R.id.lt_tab3})

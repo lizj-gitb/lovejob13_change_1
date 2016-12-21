@@ -71,7 +71,7 @@ public class LoveJob {
             public void OnError(String errorMsg) {
                 V.e("日志上送失败");
             }
-        }, "交换密钥");
+        }, "日志上送");
     }
 
     //交换密钥的类型  登录或忘记密码传0 第三方登录传1  绑定或注册传2

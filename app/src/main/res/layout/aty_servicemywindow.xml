@@ -49,10 +49,6 @@
         layout="@layout/tab_servicewindow_buttonview"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_serviceacitivity"
@@ -61,5 +57,10 @@
         android:layout_weight="1">
 
     </android.support.v4.view.ViewPager>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
 
 </LinearLayout>

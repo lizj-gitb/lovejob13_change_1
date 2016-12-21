@@ -128,7 +128,7 @@ public class F_ServiceMyWindow_Free extends BaseFragment {
                 Intent intent = new Intent(context, Aty_ReleaseService.class);
                 intent.putExtra("serverPid", adapter_lv.getItem(position).getServerPid());
                 intent.putExtra("title",adapter_lv.getItem(position).getTitle());
-                intent.putExtra("money",adapter_lv.getItem(position).getMoney().toString());
+//                intent.putExtra("money",adapter_lv.getItem(position).getMoney().toString());
                 intent.putExtra("content",adapter_lv.getItem(position).getContent());
                 intent.putExtra("state",adapter_lv.getItem(position).getState());
                 intent.putExtra("have","0");

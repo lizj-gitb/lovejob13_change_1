@@ -130,7 +130,7 @@ public class F_ServiveWindow_Free extends BaseFragment {
         lvSerSkill.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(), Aty_SerSkillDetails.class);
+                Intent intent = new Intent(context, Aty_SerSkillDetails.class);
 //                intent.putExtra("isEdit",adapter.getItem(position).getShowApplyBtn()== 0 ? false : true);
                 intent.putExtra("serPid", adapter_lv.getItem(position).getServerPid());
                 startActivity(intent);

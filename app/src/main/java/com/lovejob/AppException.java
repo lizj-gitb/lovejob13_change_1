@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.v.rapiddev.base.AppManager;
 import com.v.rapiddev.preferences.AppPreferences;
+import com.v.rapiddev.utils.V;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -199,6 +200,9 @@ public class AppException implements Thread.UncaughtExceptionHandler {
         String result = writer.toString();
         sb.append(result);
         mAppPreferences.put(AppException_FileContent, sb.toString());
+        V.d("=======================================================================");
+        V.d(sb.toString());
+        V.d("=======================================================================");
         sb = null;
         mAppPreferences = null;
         return null;

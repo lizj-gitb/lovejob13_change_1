@@ -219,7 +219,7 @@ public class ZokHttp {
                     mResponse.OnError("请求超时");
                 }
             });
-            call.cancel();
+            call.cancel();//73E624929D728242F6FC7DF6F1F31554
         }
 
         /**
@@ -241,7 +241,9 @@ public class ZokHttp {
             V.d("请求" + tag + "的响应:" + data.trim().toString().trim());
             List<String> cookies = response.headers().values("Set-Cookie");
             for (String str : cookies) {
+                if (!tag.equals("日志上送"))
                 ResponseHeadersInfo.SessionId = str.split(";")[0];
+                V.d("响应的头信息："+str);
             }
 
             if (response.isSuccessful()) {
