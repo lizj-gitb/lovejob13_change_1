@@ -291,7 +291,9 @@ public class Aty_OriDetails extends BaseActivity {
 
                 tvOridetailsPrice.setText(thePerfectGirl.getData().getWorkInfoDTO().getSalary() + "元" + thePerfectGirl.getData().getWorkInfoDTO().getPaymentDec());
 //                tvOridetailsPhonenuber.setText(thePerfectGirl.getData().getWorkInfoDTO().getContactPhone());
-                tvOridetailsPhonenuber.setText("***********");
+                String s = thePerfectGirl.getData().getWorkInfoDTO().getContactPhone();
+                String s3 = s.substring(0, s.length() - 4);
+                tvOridetailsPhonenuber.setText(s3+"****");
                 phoneNumber = thePerfectGirl.getData().getWorkInfoDTO().getContactPhone();
                 //TODO 点评列表
 
