@@ -116,11 +116,13 @@ public class Aty_ReleaseService extends BaseActivity {
     public void onCreate_(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.aty_releasesercice);
         ButterKnife.bind(this);
-        serverType = context.getIntent().getStringExtra("server");
+        serverType =getIntent().getStringExtra("server");
+        have = context.getIntent().getStringExtra("have");
+        if (serverType==null || have==null) AppManager.getAppManager().finishActivity();
         if (serverType.equals("2")){
             ltSendSerSkillPrice.setVisibility(View.GONE);
         }
-        have = context.getIntent().getStringExtra("have");
+
         serverDTO = (ThePerfectGirl.ServerDTO) getIntent().getSerializableExtra("serverDto");
         if (serverDTO != null) {
             state = String.valueOf(serverDTO.getState());
