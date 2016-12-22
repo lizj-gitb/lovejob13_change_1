@@ -51,13 +51,14 @@
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@+id/img_dynamic_logo"
             android:layout_marginTop="110dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="数码宝贝"
             android:textColor="@color/white"
             android:textSize="16sp"/>
     </RelativeLayout>
     <com.v.rapiddev.pulltorefresh.PullToRefreshListView
         android:id="@+id/lv_mydynamic"
+        android:divider="@null"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

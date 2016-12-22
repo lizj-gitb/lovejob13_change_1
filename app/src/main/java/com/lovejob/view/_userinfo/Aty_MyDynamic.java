@@ -1,6 +1,7 @@
 package com.lovejob.view._userinfo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -30,6 +31,7 @@ import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.ThreadPoolUtils;
 import com.lovejob.model.Utils;
+import com.lovejob.view._home.DynDetailsAty;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
 import com.v.rapiddev.adpater.RecyclerItemClickListener;
@@ -39,6 +41,7 @@ import com.v.rapiddev.dialogs.zdialog.ZDialog;
 import com.v.rapiddev.http.okhttp3.Call;
 import com.v.rapiddev.preferences.AppPreferences;
 import com.v.rapiddev.pulltorefresh.PullToRefreshListView;
+import com.v.rapiddev.utils.V;
 import com.v.rapiddev.views.CircleImageView;
 
 import java.util.ArrayList;
@@ -92,6 +95,14 @@ public class Aty_MyDynamic extends BaseActivity {
 //                return true;
 //            }
 //        });
+        lvMydynamic.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(context, DynDetailsAty.class);
+                intent.putExtra("dynPid", adapter.getItem(position-1).getPid());
+                startActivity(intent);
+            }
+        });
     }
 
     private void addData() {

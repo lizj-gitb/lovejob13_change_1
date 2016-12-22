@@ -81,6 +81,10 @@ public class Aty_TokenDetails extends BaseActivity {
                 ((TextView) viewHolder.getView(R.id.tv_token_name)).setText(getItem(position).getRealName());
                 ((TextView) viewHolder.getView(R.id.tv_token_position)).setText(getItem(position).getPosition());
                 ((TextView) viewHolder.getView(R.id.tv_token_company)).setText(getItem(position).getCompany());
+                if (getItem(position).getState().equals("1")){
+                    ((ImageView)viewHolder.getView(R.id.tv_token_faling)).setVisibility(View.GONE);
+                    ((ImageView)viewHolder.getView(R.id.tv_token_yifa)).setVisibility(View.VISIBLE);
+                }
                 ((ImageView) viewHolder.getView(R.id.tv_token_faling)).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

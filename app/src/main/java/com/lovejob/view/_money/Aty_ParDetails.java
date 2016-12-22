@@ -123,7 +123,7 @@ public class Aty_ParDetails extends BaseActivity {
     private FastAdapter<ThePerfectGirl.WorkInfoDTO> adapter_comm;
     private FastAdapter<Data_Comm_2_2> adapter_comm_2;
     private String phoneNumber;
-    private String userId,userName;
+    private String userId, userName;
 
     @Override
     public void onCreate_(@Nullable Bundle savedInstanceState) {
@@ -221,7 +221,7 @@ public class Aty_ParDetails extends BaseActivity {
 //                tvPardetailsPhonenuber.setText(workinfoDto.getContactPhone());
                 String s = workinfoDto.getContactPhone();
                 String s3 = s.substring(0, s.length() - 4);
-                tvPardetailsPhonenuber.setText(s3+"****");
+                tvPardetailsPhonenuber.setText(s3 + "****");
                 //TODO 点评列表
                 List<ThePerfectGirl.UserInfoDTO> lists = workinfoDto.getEmployeeInfo();
                 int size = 0;
@@ -373,6 +373,7 @@ public class Aty_ParDetails extends BaseActivity {
             }
         });
     }
+
     public void reSendComm(String name) {
         Intent intent = new Intent(context, WriteView.class);
         intent.putExtra("title", "给" + name + "回复");
@@ -380,6 +381,7 @@ public class Aty_ParDetails extends BaseActivity {
         intent.putExtra("requestCode", RequestCode_OriWork_To_WriteView_WriteReComm);
         AppManager.getAppManager().toNextPage(intent, RequestCode_OriWork_To_WriteView_WriteReComm);
     }
+
     private void sendComm() {
         Intent intent = new Intent(context, WriteView.class);
         intent.putExtra("title", "请输入您要评论的内容");
@@ -387,22 +389,30 @@ public class Aty_ParDetails extends BaseActivity {
         intent.putExtra("requestCode", RequestCode_OriWork_To_WriteView_WriteComm);
         AppManager.getAppManager().toNextPage(intent, RequestCode_OriWork_To_WriteView_WriteComm);
     }
+
     private void initAleadySignInPersonImgGridView() {
         adapter_alreadySignInPersonImg = new FastAdapter<String>(this, R.layout.item_lv_f_money_gridview) {
             @Override
             public View getViewHolder(int position, View convertView, ViewGroup parent) {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_f_money_gridview, position);
-//                Rima img_item_lv_f_money_gridview = (FFRoundImageView) viewHolder.getView(R.id.img_item_lv_f_money_gridview);
-//
-//                if (!TextUtils.isEmpty(getItem(position))) {
-//                    MyApplication.imageloader.displayImage(getItem(position), img_item_lv_f_money_gridview, ImageMode.DefaultImage,
-//                            true, true);
-//                } else {
-//                    MyApplication.imageloader.displayImage(StaticParam.DefaultUserVo, img_item_lv_f_money_gridview, ImageMode.DefaultImage,
-//                            true, true);
-//                }
+                Glide.with(context).load(getItem(position)).dontAnimate().into((CircleImageView) viewHolder.getView(R.id.img_item_lv_f_money_gridview));
                 return viewHolder.getConvertView();
             }
+
+//            @Override
+//            public View getViewHoler(int position, View convertView, ViewGroup parent) {
+//                FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_f_money_gridview, position);
+////                Rima img_item_lv_f_money_gridview = (FFRoundImageView) viewHolder.getView(R.id.img_item_lv_f_money_gridview);
+////
+////                if (!TextUtils.isEmpty(getItem(position))) {
+////                    MyApplication.imageloader.displayImage(getItem(position), img_item_lv_f_money_gridview, ImageMode.DefaultImage,
+////                            true, true);
+////                } else {
+////                    MyApplication.imageloader.displayImage(StaticParam.DefaultUserVo, img_item_lv_f_money_gridview, ImageMode.DefaultImage,
+////                            true, true);
+////                }
+//                return viewHolder.getConvertView();
+//            }
         };
         gvOridetailsAlreadySignPerson.setAdapter(adapter_alreadySignInPersonImg);
     }
@@ -579,6 +589,7 @@ public class Aty_ParDetails extends BaseActivity {
             }
         }));
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (data == null) {

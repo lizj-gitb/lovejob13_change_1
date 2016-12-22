@@ -112,26 +112,22 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
-                        android:textColor="@color/hiteTextColor" />
+                        android:textColor="@color/orage" />
                 </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
 
-                <RelativeLayout
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_marginBottom="5dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
                         android:text="工作要求:"
@@ -139,13 +135,10 @@
 
                     <TextView
                         android:id="@+id/tv_oridetails_want"
-                        android:layout_width="200dp"
+                        android:layout_width="260dp"
                         android:layout_height="wrap_content"
-                        android:gravity="right"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
                         android:textColor="@color/hiteTextColor"
                         android:textSize="14.3dp" />
                     <!--<TextView-->
@@ -164,7 +157,7 @@
                     <!--android:singleLine="true"-->
                     <!--android:textColor="@color/hiteTextColor"-->
                     <!--android:textSize="14.3dp" />-->
-                </RelativeLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/hitview_detaile"
@@ -182,125 +175,98 @@
                 <!--</LinearLayout>-->
 
                 <!--</HorizontalScrollView>-->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
-                    <TextView
-                        android:id="@+id/tv_oridetails_location"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="15dp"
-                        android:gravity="right"
-                        android:text=""
-                        android:textColor="@color/hiteTextColor" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:text="工作地点:"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="15dp"
                         android:textColor="@color/actionbar"
                         android:layout_alignParentLeft="true"
-                        android:layout_marginTop="13dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
                         android:id="@+id/textView6" />
-                </RelativeLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
+                    <TextView
+                        android:id="@+id/tv_oridetails_location"
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/hiteTextColor" />
+                </LinearLayout>
 
-                <RelativeLayout
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="28dp"
                         android:gravity="center_vertical"
                         android:text="倒计时:"
                         android:textColor="@color/actionbar" />
 
                     <TextView
                         android:id="@+id/tv_oridetails_countdown"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@mipmap/button_send_code"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@mipmap/daojishi"
                         android:gravity="center_vertical"
                         android:textColor="@color/white"
                         android:textSize="12dp" />
-                </RelativeLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@color/white"
-                    android:gravity="right|center_vertical"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal">
-
+                    <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content" />
+                    <GridView
+                        android:id="@+id/gv_oridetails_alreadySignPerson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical" />
                     <TextView
                         android:id="@+id/tv_oridetails_number"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_weight="1"
-                        android:gravity="right" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginLeft="10dp"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
 
-                        <GridView
-                            android:id="@+id/gv_oridetails_alreadySignPerson"
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:gravity="center_vertical" />
 
-                    </LinearLayout>
+
+
 
                 </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
 
-                <RelativeLayout
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="42dp"
                         android:gravity="center_vertical"
                         android:text="酬金:"
                         android:textColor="@color/actionbar" />
@@ -308,31 +274,25 @@
                     <TextView
                         android:id="@+id/tv_oridetails_price"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentRight="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="15dp"
+                        android:layout_height="wrap_content"
                         android:gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
                         android:textColor="@color/orage"
-                        android:textSize="16dp" />
-                </RelativeLayout>
+                        android:textSize="14dp" />
+                </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
 
-                <RelativeLayout
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="15dp"
                         android:gravity="center_vertical"
                         android:text="联系方式:"
                         android:textColor="@color/actionbar" />
@@ -340,14 +300,12 @@
                     <TextView
                         android:id="@+id/tv_oridetails_phonenuber"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentRight="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="15dp"
+                        android:layout_height="wrap_content"
                         android:gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
                         android:textColor="@color/hiteTextColor"
-                        android:textSize="16dp" />
-                </RelativeLayout>
+                        android:textSize="14dp" />
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"

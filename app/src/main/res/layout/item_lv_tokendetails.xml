@@ -69,6 +69,14 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
             android:src="@mipmap/faling" />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/tv_token_yifa"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/yifa" />
 
     </LinearLayout>
 

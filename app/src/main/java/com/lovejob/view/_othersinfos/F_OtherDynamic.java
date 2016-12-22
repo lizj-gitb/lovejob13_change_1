@@ -2,6 +2,7 @@ package com.lovejob.view._othersinfos;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.OrientationHelper;
@@ -11,6 +12,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +24,7 @@ import com.lovejob.controllers.task.LoveJob;
 import com.lovejob.controllers.task.OnAllParameListener;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
+import com.lovejob.view._home.DynDetailsAty;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
 import com.v.rapiddev.adpater.RecyclerItemClickListener;
@@ -56,6 +59,14 @@ public class F_OtherDynamic extends BaseFragment {
         userPid = getActivity().getIntent().getStringExtra("userId");
         initAdapter();
         addData();
+        lvMydynamic.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(context, DynDetailsAty.class);
+                intent.putExtra("dynPid", adapter.getItem(position).getPid());
+                startActivity(intent);
+            }
+        });
         return view;
     }
 

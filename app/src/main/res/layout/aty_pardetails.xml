@@ -111,101 +111,74 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
-                        android:textColor="@color/hiteTextColor" />
+                        android:textColor="@color/orage" />
                 </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
 
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="39dp"
-                    android:background="@color/white"
-                    android:gravity="center">
-
-                    <TextView
-                        android:id="@+id/tv_pardetails_time"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="15dp"
-                        android:ellipsize="marquee"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:gravity="center_vertical"
-                        android:marqueeRepeatLimit="marquee_forever"
-                        android:singleLine="true"
-                        android:textColor="@color/hiteTextColor"
-                        android:textSize="14.3dp" />
+                    android:background="@color/white">
 
                     <TextView
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginLeft="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
                         android:gravity="center_vertical"
                         android:text="上班时间:"
-
-                        android:textColor="@color/actionbar" />
-                </RelativeLayout>
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
-
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:gravity="center">
+                        android:textColor="@color/actionbar"
+                        android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/tv_pardetails_location"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:gravity="right"
-                        android:layout_marginRight="15dp"
-                        android:textColor="@color/hiteTextColor" />
+                        android:id="@+id/tv_pardetails_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:text="sss " />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
 
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:layout_marginLeft="10dp"
-                        android:text="工作地点:"
-                        android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="工作地点:"
                         android:textColor="@color/actionbar" />
-                </RelativeLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
+                    <TextView
+                        android:id="@+id/tv_pardetails_location"
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="15dp"
+                        android:text="陕西省西安市雁塔区朱雀大街青松路口雅"
+                        android:textColor="@color/hiteTextColor" />
 
-                <RelativeLayout
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="39dp"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
                         android:text="招聘人数:"
                         android:textColor="@color/actionbar" />
 
@@ -213,32 +186,22 @@
                         android:id="@+id/tv_pardetails_count"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="15dp"
-
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
                         android:textColor="@color/hiteTextColor"
-                        android:textSize="14.3dp" />
-                </RelativeLayout>
+                        android:textSize="14dp" />
+                </LinearLayout>
 
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
-
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="39dp"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
                         android:text="性别要求:"
                         android:textColor="@color/actionbar" />
 
@@ -246,37 +209,24 @@
                         android:id="@+id/tv_pardetails_sex"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="15dp"
-                        android:ellipsize="marquee"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:gravity="center_vertical"
-                        android:marqueeRepeatLimit="marquee_forever"
-                        android:singleLine="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
                         android:textColor="@color/hiteTextColor"
-                        android:textSize="14.3dp" />
-                </RelativeLayout>
+                        android:textSize="14dp" />
+                </LinearLayout>
 
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="39dp"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
                         android:text="经验要求:"
                         android:textColor="@color/actionbar" />
 
@@ -284,31 +234,25 @@
                         android:id="@+id/tv_pardetails_experience"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
                         android:textColor="@color/hiteTextColor"
-                        android:textSize="14.3dp" />
-                </RelativeLayout>
+                        android:textSize="14dp" />
+                </LinearLayout>
 
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
 
-                <RelativeLayout
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="39dp"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
                         android:text="学历要求:"
                         android:textColor="@color/actionbar" />
 
@@ -316,177 +260,127 @@
                         android:id="@+id/tv_pardetails_education"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="15dp"
-                        android:ellipsize="marquee"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:gravity="center_vertical"
-                        android:marqueeRepeatLimit="marquee_forever"
-                        android:singleLine="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
                         android:textColor="@color/hiteTextColor"
-                        android:textSize="14.3dp" />
-                </RelativeLayout>
+                        android:textSize="14dp" />
+                </LinearLayout>
 
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="10dp"
-                        android:text="技能要求:"
-                        android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="技能要求:"
                         android:textColor="@color/actionbar" />
 
                     <TextView
                         android:id="@+id/tv_pardetails_skill"
-                        android:layout_width="200dp"
+                        android:layout_width="260dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="15dp"
-                        android:layout_centerVertical="true"
-                        android:ellipsize="marquee"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:gravity="right"
-                        android:marqueeRepeatLimit="marquee_forever"
-                        android:singleLine="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
                         android:textColor="@color/hiteTextColor"
-                        android:textSize="14.3dp" />
-                </RelativeLayout>
+                        android:textSize="14dp" />
+                </LinearLayout>
 
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
                         android:gravity="center_vertical"
                         android:text="工作内容:"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginTop="10dp"
                         android:textColor="@color/actionbar" />
 
                     <TextView
                         android:id="@+id/tv_pardetails_content"
-                        android:layout_width="200dp"
+                        android:layout_width="260dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="15dp"
-                        android:layout_centerVertical="true"
-                        android:text=""
-                        android:gravity="right"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
                         android:textColor="@color/hiteTextColor"
-                        android:textSize="14.3dp" />
-                </RelativeLayout>
+                        android:textSize="14dp" />
+                </LinearLayout>
 
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
 
-                <RelativeLayout
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="29dp"
                         android:gravity="center_vertical"
                         android:text="倒计时:"
+
                         android:textColor="@color/actionbar" />
 
                     <TextView
                         android:id="@+id/tv_pardetails_countdown"
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@mipmap/button_send_code"
+                        android:layout_marginLeft="5dp"
+                        android:background="@mipmap/daojishi"
                         android:gravity="center_vertical"
                         android:textColor="@color/white"
                         android:textSize="13dp" />
-                </RelativeLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@color/white"
-                    android:gravity="right|center_vertical"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <TextView
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content" />
+
+                    <GridView
+                        android:id="@+id/gv_oridetails_alreadySignPerson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"></GridView>
+
+                    <TextView
                         android:id="@+id/tv_pardetails_number"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_weight="1"
-                        android:gravity="right" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginLeft="10dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <GridView
-                            android:id="@+id/gv_oridetails_alreadySignPerson"
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"></GridView>
-
-                    </LinearLayout>
-
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
-
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="45dp"
                         android:gravity="center_vertical"
                         android:text="酬金:"
                         android:textColor="@color/actionbar" />
@@ -494,31 +388,22 @@
                     <TextView
                         android:id="@+id/tv_pardetails_price"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentRight="true"
-                        android:layout_gravity="right"
-                        android:layout_marginRight="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
                         android:gravity="center_vertical"
                         android:textColor="@color/orage"
-                        android:textSize="16dp" />
-                </RelativeLayout>
+                        android:textSize="14dp" />
+                </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
-
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:background="@color/white"
-                    android:gravity="center">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="15dp"
                         android:gravity="center_vertical"
                         android:text="联系方式:"
                         android:textColor="@color/actionbar" />
@@ -526,19 +411,13 @@
                     <TextView
                         android:id="@+id/tv_pardetails_phonenuber"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentRight="true"
-                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
                         android:layout_marginRight="15dp"
                         android:gravity="center_vertical"
                         android:textColor="@color/hiteTextColor"
-                        android:textSize="16dp" />
-                </RelativeLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
+                        android:textSize="14dp" />
+                </LinearLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -566,11 +445,6 @@
                         android:textColor="@color/hiteTextColor" />
                 </RelativeLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -595,7 +469,6 @@
                         android:textSize="12sp"
                         android:visibility="gone" />
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -637,8 +510,8 @@
             android:id="@+id/hiteView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
             android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
             android:background="#00000000"
             android:gravity="center">
 

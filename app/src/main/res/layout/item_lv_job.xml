@@ -80,8 +80,10 @@
 
                     <TextView
                         android:id="@+id/tv_job_location"
-                        android:layout_width="wrap_content"
+                        android:layout_width="130dp"
                         android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:singleLine="true"
                         android:layout_marginTop="5dp"
                         android:text="雁塔区朱雀大街青松路..."
                         android:textColor="@color/hiteTextColor"
@@ -115,7 +117,7 @@
                             android:id="@+id/tv_job_xuanshangjinqian"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Y:100"
+                            android:text="￥:100"
                             android:textColor="@color/orage"
                             android:textSize="10sp" />
 

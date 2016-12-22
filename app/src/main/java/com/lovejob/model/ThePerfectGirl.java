@@ -1233,6 +1233,15 @@ public class ThePerfectGirl implements Serializable {
         private int commCount;
         private int goodCount;
         private int badCount;
+        private String state;
+
+        public String getState() {
+            return state;
+        }
+
+        public void setState(String state) {
+            this.state = state;
+        }
 
         public int getCommCount() {
             return commCount;
