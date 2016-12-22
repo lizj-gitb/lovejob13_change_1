@@ -117,6 +117,7 @@
                         android:src="@mipmap/icon_edit" />
 
                     <LinearLayout
+                        android:id="@+id/ll1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
@@ -126,6 +127,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:id="@+id/ttv1"
                             android:layout_height="wrap_content"
                             android:text="幽默:"
                             android:textColor="@color/white"
@@ -133,6 +135,7 @@
 
                         <TextView
                             android:id="@+id/tv_f_my_Humour"
+                            android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/white"
@@ -140,6 +143,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/ll2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
@@ -149,6 +153,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:id="@+id/ttv2"
                             android:layout_height="wrap_content"
                             android:text="可爱:"
                             android:textColor="@color/white"
@@ -156,6 +161,7 @@
 
                         <TextView
                             android:id="@+id/tv_f_my_Loveliness"
+                            android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/white"
@@ -163,6 +169,7 @@
                     </LinearLayout>
 <!--android:background="@mipmap/icon_outside"-->
                     <LinearLayout
+                        android:id="@+id/ll3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
@@ -171,6 +178,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/ttv3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="活波:"
@@ -179,6 +187,7 @@
 
                         <TextView
                             android:id="@+id/tv_f_my_Lively"
+                            android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/white"

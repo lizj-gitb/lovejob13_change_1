@@ -167,7 +167,8 @@ public class QQOrWeChatBoundAty extends BaseActivity {
 //                    return;
 //                }
                 String isP = Utils.checkPassword(inputModel.getParams()[1]);
-                if ((isP.equals("中") || isP.equals("强")) && inputModel.getParams()[1].length() > 6) {
+                if ((isP.equals("中") || isP.equals("强")) && inputModel.getParams()[1].length() > 6
+                        &&inputModel.getParams()[1].length()<16) {
                     V.d("will start bound...");
                     V.d("start exchange key...");
                     msgCode = inputModel.getParams()[0];
@@ -207,7 +208,7 @@ public class QQOrWeChatBoundAty extends BaseActivity {
                         }
                     }, 700);
                 } else {
-                    Utils.showToast(context, R.string.inputErrorPassword);
+                    Utils.showToast(context, "密码不符合规范");
                     return;
                 }
                 break;

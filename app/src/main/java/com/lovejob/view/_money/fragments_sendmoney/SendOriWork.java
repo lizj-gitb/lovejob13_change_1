@@ -200,7 +200,7 @@ public class SendOriWork extends BaseFragment {
             return;
         }
         String s = tvSendWorkOriPrice.getText().toString();
-        String s1 =s.substring(0,s.length()-2);
+        String s1 =s.substring(0,s.length()-3);
         Double money = Double.parseDouble(s1);
         if (money<=0){
             Utils.showToast(context, "支付金额不能小于0元");

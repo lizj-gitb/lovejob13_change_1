@@ -111,7 +111,8 @@ public class ForgotPassWordAty extends BaseActivity {
                     return;
                 }
                 String isP = Utils.checkPassword(inputModel.getParams()[1]);
-                if ((isP.equals("中") || isP.equals("强")) && inputModel.getParams()[1].length() > 6) {
+                if ((isP.equals("中") || isP.equals("强")) && inputModel.getParams()[1].length() > 6
+                        &&inputModel.getParams()[1].length()<16) {
                     phoneNumber = inputModel.getParams()[0];
                     passWord = inputModel.getParams()[1];
 //                    msgCode = inputModel.getParams()[3];
@@ -138,7 +139,7 @@ public class ForgotPassWordAty extends BaseActivity {
                         }
                     }));
                 } else {
-                    Utils.showToast(context, R.string.inputErrorPassword);
+                    Utils.showToast(context, "密码不符合规范");
                     return;
                 }
                 break;

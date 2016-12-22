@@ -316,7 +316,9 @@ public class Aty_ReleaseService extends BaseActivity {
         if (TextUtils.isEmpty(titie)
                 || TextUtils.isEmpty(introduce)) {
             Utils.showToast(context, "不能有空值");
-            dialog.dismiss();
+            if (dialog!=null) {
+                dialog.dismiss();
+            }
             return;
         }
 //        if (selectedPhotos.size()>0) {
