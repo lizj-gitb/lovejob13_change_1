@@ -55,6 +55,8 @@ public class WelcomeAcitvity extends Activity {
             R.mipmap.index3,
             R.mipmap.index4
     };
+    private String toOtherActivity;
+    private String otherId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,8 @@ public class WelcomeAcitvity extends Activity {
         ButterKnife.bind(this);
         V.d("into welcome activity...");
         initGuideGallery();
+        toOtherActivity = getIntent().getStringExtra("toOtherActivity");
+        otherId = getIntent().getStringExtra("otherId");
     }
 
     public class GalleryPagerAdapter extends PagerAdapter {
@@ -101,7 +105,10 @@ public class WelcomeAcitvity extends Activity {
             public void onClick(View view) {
                 if (isInto) {
                     new AppPreferences(WelcomeAcitvity.this).put(StaticParams.FileKey.__ISFIRSTSTARTAPP__, false);
-                    startActivity(new Intent(WelcomeAcitvity.this, LoginAcitvity.class));
+                    Intent intent =new Intent(WelcomeAcitvity.this, LoginAcitvity.class);
+                    intent.putExtra("otherId", otherId);
+                    intent.putExtra("toOtherActivity", toOtherActivity);
+                    startActivity(intent);
                     finish();
                 } else {
                     askPerm();

@@ -205,6 +205,11 @@ public class SendDynamic extends BaseActivity {
                 images = new ArrayList();
                 //获取所有上传前图片路径
                 String str = null;
+                if (photoAdapter.getList()==null
+                        ||photoAdapter.getList().size()==0){
+                    Utils.showToast(context,"图片不能为空");
+                    return;
+                }
                 for (int i = 0; i < photoAdapter.getList().size(); i++) {
                     V.d("图片信息：" + photoAdapter.getList().get(i).toString());
                     str = photoAdapter.getList().get(i);

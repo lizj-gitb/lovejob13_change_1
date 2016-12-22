@@ -283,11 +283,11 @@ public class F_Money extends BaseFragment {
             @Override
             protected void onclickListener(View v) {
                 V.d("进入用户" + adapter_lv_main.getItem(posstion).getReleaseInfo().getRealName() + "的个人中心");
-                if (userPid.equals(adapter_lv_main.getItem(posstion).getReleaseInfo().getUserId())){
+                if (userPid.equals(adapter_lv_main.getItem(posstion).getReleaseInfo().getUserId())) {
 
-                }else {
+                } else {
                     Intent intent = new Intent(context, Others.class);
-                    intent.putExtra("userType",adapter_lv_main.getItem(posstion).getReleaseInfo().getType());
+                    intent.putExtra("userType", adapter_lv_main.getItem(posstion).getReleaseInfo().getType());
                     intent.putExtra("userId", adapter_lv_main.getItem(posstion).getReleaseInfo().getUserId());
                     startActivity(intent);
                 }
@@ -330,23 +330,7 @@ public class F_Money extends BaseFragment {
             @Override
             public void onSuccess(ThePerfectGirl thePerfectGirl) {
                 Utils.showToast(context, "操作成功");
-//                isGetWork = !isGetWork;
-//                ThePerfectGirl.WorkInfoDTO workTokenDTO = thePerfectGirl.getData().getWorkInfoDTO();
-//                adapter.removeAll();
-
                 int maxSize = 0;
-//                if (workTokenDTO.getEmployeeInfo() != null) {
-//                    maxSize = workTokenDTO.getEmployeeInfo().size() > 3 ? 3 : workTokenDTO.getEmployeeInfo().size();
-//                    setGridView(gridView, maxSize);
-//
-//                    for (int i = 0; i < maxSize; i++) {
-//                        if (workTokenDTO.getEmployeeInfo().get(i) != null) {
-//                            adapter.addItem(workTokenDTO.getEmployeeInfo().get(i).getPortraitId() + "".trim());
-//                        }
-//                    }
-//                }
-//
-//                adapter.notifyDataSetChanged();
                 textView.setText(thePerfectGirl.getData().getWorkInfoDTO().getApplyCount() + "人已报名");
 
                 ThePerfectGirl.WorkInfoDTO workInfoDTO = adapter_lv_main.getItem(posstion);//适配器里的
@@ -358,7 +342,6 @@ public class F_Money extends BaseFragment {
 
             @Override
             public void onError(String msg) {
-//                dialog.dismiss();
                 Utils.showToast(context, msg);
                 if (isGetWork) {
                     imageView.setImageResource(R.mipmap.icon_buy);
@@ -388,9 +371,6 @@ public class F_Money extends BaseFragment {
         gridView.setHorizontalSpacing(5); // 设置列表项水平间距
         gridView.setStretchMode(GridView.NO_STRETCH);
         gridView.setNumColumns(size); // 设置列数量=列表集合数
-//        if (siz < 9) {
-//            gridView.setVisibility(View.VISIBLE);
-//        }
         gridView.setAdapter(adapter_lv_gridview);
     }
 
@@ -399,16 +379,7 @@ public class F_Money extends BaseFragment {
             @Override
             public View getViewHolder(int position, View convertView, ViewGroup parent) {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_f_money_gridview, position);
-//                if (!TextUtils.isEmpty(getItem(position))) {
-//                    Log.d("加载的用户头像：" + StaticParam.QiNiuYunUrl + getItem(position));
-//                    MyApplication.imageloader.displayImage(StaticParam.QiNiuYunUrl + getItem(position),
-//                            ((CircleImageView) viewHolder.getView(R.id.img_item_lv_f_money_gridview)), ImageMode.DefaultImage,
-//                            true, true);
-//                } else {
-//                    MyApplication.imageloader.displayImage(StaticParam.DefaultUserLogo, ((FFRoundImageView) viewHolder.getView(R.id.img_item_lv_f_money_gridview)), ImageMode.DefaultImage,
-//                            true, true);
-//                }
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position)).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) viewHolder.getView(R.id.img_item_lv_f_money_gridview));
+                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position)).dontAnimate().into((CircleImageView) viewHolder.getView(R.id.img_item_lv_f_money_gridview));
 
                 return viewHolder.getConvertView();
             }
@@ -652,7 +623,7 @@ public class F_Money extends BaseFragment {
         @Override
         public View getView(ViewGroup container, int position) {
             ImageView view = new ImageView(container.getContext());
-            Glide.with(context).load(StaticParams.QiNiuYunUrl_News + imgs.get(position).getPictrueid()).dontAnimate().placeholder(R.drawable.ic_launcher).into(view);
+            Glide.with(context).load(StaticParams.QiNiuYunUrl_News + imgs.get(position).getPictrueid()).dontAnimate().into(view);
             view.setScaleType(ImageView.ScaleType.CENTER_CROP);
             view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             return view;

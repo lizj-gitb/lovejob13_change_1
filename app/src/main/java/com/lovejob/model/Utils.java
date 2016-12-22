@@ -114,7 +114,7 @@ public class Utils {
         });
     }
 
-    public static void showToast(final Application context, final String msg) {
+    public static void showToast(final Context context, final String msg) {
         HandlerUtils.post(new Runnable() {
             @Override
             public void run() {
