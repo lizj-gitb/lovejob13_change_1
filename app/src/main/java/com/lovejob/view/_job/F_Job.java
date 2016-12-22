@@ -482,7 +482,8 @@ public class F_Job extends BaseFragment {
         @Override
         public View getView(ViewGroup container, int position) {
             ImageView view = new ImageView(container.getContext());
-            Glide.with(context).load(StaticParams.QiNiuYunUrl_News + imgs.get(position).getPictrueid()).dontAnimate().placeholder(R.drawable.ic_launcher).into(view);
+            Glide.with(context).load(StaticParams.QiNiuYunUrl_News + imgs.get(position).getPictrueid())
+                    .dontAnimate().into(view);
             view.setScaleType(ImageView.ScaleType.CENTER_CROP);
             view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             return view;

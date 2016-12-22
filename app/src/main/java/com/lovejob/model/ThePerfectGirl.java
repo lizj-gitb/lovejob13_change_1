@@ -70,6 +70,15 @@ public class ThePerfectGirl implements Serializable {
         private List<PositionTypeInfoDTO> positionTypeInfoDTOs;
 
         private List<InformationInfo> informationInfos;
+        private InformationInfo informationInfo;
+
+        public InformationInfo getInformationInfo() {
+            return informationInfo;
+        }
+
+        public void setInformationInfo(InformationInfo informationInfo) {
+            this.informationInfo = informationInfo;
+        }
         private ApliPayDTO apliPayDTO;
 
         private WeChatPayDTO weChatPayDTO;
@@ -1572,6 +1581,26 @@ public class ThePerfectGirl implements Serializable {
         }
     }
 
+    public class NewsContentDetails {
+        private String content;
+        private String pictrueid;
+
+        public String getContent() {
+            return content;
+        }
+
+        public void setContent(String content) {
+            this.content = content;
+        }
+
+        public String getPictrueid() {
+            return pictrueid;
+        }
+
+        public void setPictrueid(String pictrueid) {
+            this.pictrueid = pictrueid;
+        }
+    }
     public class InformationInfo implements Serializable{
         private String pid;
         private String title;
@@ -1581,7 +1610,15 @@ public class ThePerfectGirl implements Serializable {
         private String issuser;
         private long releaseTime;
         private int count;
+        private List<NewsContentDetails> informationInfoList;
 
+        public List<NewsContentDetails> getInformationInfoList() {
+            return informationInfoList;
+        }
+
+        public void setInformationInfoList(List<NewsContentDetails> informationInfoList) {
+            this.informationInfoList = informationInfoList;
+        }
         public String getPid() {
             return pid;
         }

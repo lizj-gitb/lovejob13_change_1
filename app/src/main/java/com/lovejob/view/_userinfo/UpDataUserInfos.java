@@ -18,6 +18,7 @@ import com.lovejob.BaseActivity;
 import com.lovejob.R;
 import com.lovejob.controllers.task.LoveJob;
 import com.lovejob.controllers.task.OnAllParameListener;
+import com.lovejob.model.CheckResponse;
 import com.lovejob.model.HandlerUtils;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
@@ -111,7 +112,7 @@ public class UpDataUserInfos extends BaseActivity {
     private void getUserDetails() {
         calls.add(LoveJob.getUserDetails(new OnAllParameListener() {
             @Override
-            public void onSuccess(ThePerfectGirl thePerfectGirl) {
+            public void onSuccess(final ThePerfectGirl thePerfectGirl) {
                 tvSetuserinfoName.setText(thePerfectGirl.getData().getUserInfoDTO().getRealName());
                 tvSetuserinfoSex.setText(thePerfectGirl.getData().getUserInfoDTO().getUserSex() == 0 ? "女" : "男");
                 tvSetuserinfoCommpl.setText(thePerfectGirl.getData().getUserInfoDTO().getCompany());
@@ -132,6 +133,18 @@ public class UpDataUserInfos extends BaseActivity {
 //                }
                 tvSetuserinfoJobstate.setText(TextUtils.isEmpty(thePerfectGirl.getData().getUserInfoDTO().getJobState()) ? "" : thePerfectGirl.getData().getUserInfoDTO().getJobState());
                 Glide.with(context).load(StaticParams.QiNiuYunUrl + thePerfectGirl.getData().getUserInfoDTO().getPortraitId()).placeholder(R.mipmap.ic_launcher).dontAnimate().into(imgSetuserinfoLogo);
+//                LoveJob.checkY(StaticParams.QiNiuYunUrl + thePerfectGirl.getData().getUserInfoDTO().getPortraitId(), new CheckResponse() {
+//                    @Override
+//                    public void onSucc() {
+//
+//                    }
+//
+//                    @Override
+//                    public void onError(String msg) {
+//
+//                    }
+//                });
+
             }
 
             @Override
@@ -238,8 +251,8 @@ public class UpDataUserInfos extends BaseActivity {
             case R.id.lt_setuserinfo_jobstate:
                 final ArrayList<PriceBean> jobstates = new ArrayList<>();
                 jobstates.add(new PriceBean("在职"));
-                jobstates.add(new PriceBean("离职"));
-                jobstates.add(new PriceBean("在职·寻找新机会"));
+                jobstates.add(new PriceBean("求职"));
+                jobstates.add(new PriceBean("寻找新机会"));
 
                 OptionsPickerView pvOptions1 = new OptionsPickerView(this);
                 pvOptions1.setPicker(jobstates);
@@ -354,7 +367,7 @@ public class UpDataUserInfos extends BaseActivity {
                                                         thePerfectGirl.getData().getUploadToken(), new UpCompletionHandler() {
                                                             @Override
                                                             public void complete(String key, ResponseInfo info, JSONObject response) {
-                                                                V.d("上传成功");
+
                                                             }
                                                         }, null);
                                             }

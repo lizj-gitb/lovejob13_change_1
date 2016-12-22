@@ -6,6 +6,7 @@ import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.multidex.MultiDex;
@@ -13,6 +14,8 @@ import android.support.multidex.MultiDexApplication;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -20,6 +23,7 @@ import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.location.Poi;
 import com.baidu.mapapi.SDKInitializer;
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.lovejob.controllers.task.LoveJob;
 import com.lovejob.model.StaticParams;
@@ -27,6 +31,7 @@ import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.ThreadPoolUtils;
 import com.lovejob.model.Utils;
 import com.lovejob.view.login.AQQQ;
+import com.lovejob.view.login.LoginAcitvity;
 import com.lovejob.view.login.SplashActivity;
 //import com.squareup.leakcanary.LeakCanary;
 import com.umeng.message.IUmengRegisterCallback;
@@ -41,6 +46,8 @@ import com.v.rapiddev.logger.Logger;
 import com.v.rapiddev.preferences.AppPreferences;
 import com.v.rapiddev.utils.Utils_RapidDev;
 import com.v.rapiddev.utils.V;
+import com.zwy.activitymanage.AppManager;
+import com.zwy.nineimageslook.NineGridView;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -76,7 +83,7 @@ public class MyApplication extends MultiDexApplication {
     }
 
     private static MyApplication mMyApplication;
-
+    public static PushAgent mPushAgent;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -121,6 +128,22 @@ public class MyApplication extends MultiDexApplication {
 //            LeakCanary.install(this);
 //        }
         SDKInitializer.initialize(this);
+        initNinePic();
+    }
+
+    private void initNinePic() {
+        NineGridView.setImageLoader(new NineGridView.ImageLoader() {
+            @Override
+            public void onDisplayImage(Context context, ImageView imageView, String url) {
+                //使用Glide加载图片
+                Glide.with(context).load(url).placeholder(R.mipmap.ic_launcher).into(imageView);
+            }
+
+            @Override
+            public Bitmap getCacheImage(String url) {
+                return null;
+            }
+        });
     }
 
     private void uploadCrachFile() {
@@ -241,7 +264,7 @@ public class MyApplication extends MultiDexApplication {
         V.d("start init umeng infos ...");
         PlatformConfig.setWeixin("wx28d1e39fb52b12bf", "69a672ed725aef9c15298986b32c376a");
         PlatformConfig.setQQZone("1105707606", "w7lxyDyD8RmZlMKq");
-        PushAgent mPushAgent = PushAgent.getInstance(this);
+         mPushAgent = PushAgent.getInstance(this);
         //注册推送服务，每次调用register方法都会回调该接口
         mPushAgent.register(new IUmengRegisterCallback() {
 
@@ -249,7 +272,7 @@ public class MyApplication extends MultiDexApplication {
             public void onSuccess(String deviceToken) {
                 //注册成功会返回device token
                 V.d("Umeng push init ok,DeviceToken：" + deviceToken);
-                StaticParams.DeviceToken = deviceToken+"1";
+                StaticParams.DeviceToken = deviceToken + "1";
             }
 
             @Override
@@ -293,34 +316,42 @@ public class MyApplication extends MultiDexApplication {
 //        };
 //        mPushAgent.setMessageHandler(messageHandler);
 
-        UmengMessageHandler messageHandler =new UmengMessageHandler(){
-            @Override
-            public void dealWithCustomMessage(Context context, UMessage uMessage) {
-                V.d("aaaa");
-                AQQQ aqqq =new Gson().fromJson(uMessage.custom,AQQQ.class);
-
-                if (uMessage!=null && uMessage.extra.size()>0){
-
-                }
-            }
-
-            @Override
-            public Notification getNotification(Context context, UMessage uMessage) {
-
-                switch (uMessage.builder_id){
-                    case 1:
-
-                        return null;
-                    default:
-                        return super.getNotification(context, uMessage);
-
-                }
-
-            }
-
-
-        };
-        mPushAgent.setMessageHandler(messageHandler);
+//        UmengMessageHandler messageHandler = new UmengMessageHandler() {
+//            @Override
+//            public void dealWithCustomMessage(Context context, UMessage uMessage) {
+//                V.d("aaaa");
+//                AQQQ aqqq = new Gson().fromJson(uMessage.custom, AQQQ.class);
+//
+//                if (aqqq != null && aqqq.getMessageType() != null
+//                        && !TextUtils.isEmpty(aqqq.getMessageType())) {
+//                    if (aqqq.getMessageType().equals("0")) {
+//                        Utils.showToast(getApplicationContext(), "您的账号在异地登录，请重新登录");
+//                        com.zwy.preferences.AppPreferences appPreferences = new com.zwy.preferences.AppPreferences(getApplicationContext());
+//                        appPreferences.put(StaticParams.FileKey.__LOCALTOKEN__, "");
+//                        AppManager.getAppManager().AppExit(context);
+//                        startActivity(new Intent(context, LoginAcitvity.class));
+//                    }
+//                }
+//
+//            }
+//
+////            @Override
+////            public Notification getNotification(Context context, UMessage uMessage) {
+////
+////                switch (uMessage.builder_id) {
+////                    case 1:
+////
+////                        return null;
+////                    default:
+////                        return super.getNotification(context, uMessage);
+////
+////                }
+////
+////            }
+//
+//
+//        };
+//        mPushAgent.setMessageHandler(messageHandler);
 
     }
 

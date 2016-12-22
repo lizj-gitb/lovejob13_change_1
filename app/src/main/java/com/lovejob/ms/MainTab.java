@@ -2,6 +2,7 @@ package com.lovejob.ms;
 
 import com.lovejob.R;
 import com.lovejob.view._home.F_Home;
+import com.lovejob.view._home.F_Home_2;
 import com.lovejob.view._job.F_Job;
 import com.lovejob.view._money.F_Money;
 import com.lovejob.view._userinfo.F_UserInfo;

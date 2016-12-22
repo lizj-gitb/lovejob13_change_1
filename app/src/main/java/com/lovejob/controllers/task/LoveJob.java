@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import com.google.gson.Gson;
 import com.lovejob.AppConfig;
 import com.lovejob.MyApplication;
+import com.lovejob.model.CheckResponse;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.UserInputModel;
@@ -2360,15 +2361,15 @@ public class LoveJob {
 
         map.put("position", position);
         map.put("address", address);
-        String st = "-1";
+        String st = "0";
         switch (jobstate) {
-            case "在职·寻找新机会":
+            case "寻找新机会":
                 st = "2";
                 break;
             case "在职":
                 st = "1";
                 break;
-            case "离职":
+            case "求职":
                 st = "0";
                 break;
 
@@ -2935,5 +2936,20 @@ public class LoveJob {
             }
         }, "删除动态");
     }
+//
+//
+//    public static Call checkY(String url, final CheckResponse checkResponse){
+//      return   ZokHttp.getInstance().doGet(url+"?pulp", new OnZokHttpResponse() {
+//            @Override
+//            public void OnSucc(String data) {
+//                checkResponse.onSucc();
+//            }
+//
+//            @Override
+//            public void OnError(String errorMsg) {
+//                checkResponse.onError(errorMsg);
+//            }
+//        });
+//    }
 
 }

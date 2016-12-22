@@ -1,5 +1,6 @@
 package com.lovejob.ms;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
 import com.lovejob.BaseActivity;
 import com.lovejob.MyApplication;
 import com.lovejob.R;
@@ -30,7 +32,12 @@ import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.ThreadPoolUtils;
 import com.lovejob.model.Utils;
+import com.lovejob.view._home.dyndetailstabs.NewsDetails;
+import com.lovejob.view.login.AQQQ;
+import com.lovejob.view.login.LoginAcitvity;
 import com.umeng.analytics.MobclickAgent;
+import com.umeng.message.UmengMessageHandler;
+import com.umeng.message.entity.UMessage;
 import com.umeng.socialize.UMShareAPI;
 import com.v.rapiddev.guide.GuideHelper;
 import com.v.rapiddev.notifactioninfo.Effects;
@@ -39,6 +46,8 @@ import com.v.rapiddev.preferences.AppPreferences;
 import com.v.rapiddev.swipebacklayout.SwipeBackLayout;
 import com.v.rapiddev.utils.V;
 import com.v.rapiddev.views.CircleImageView;
+import com.zwy.activitymanage.AppManager;
+import com.zwy.logger.Logger;
 
 import java.util.concurrent.ExecutionException;
 
@@ -60,8 +69,33 @@ public class MainActivityMs extends BaseActivity {
     @Bind(android.R.id.tabhost)
     MyFragmentTabHost mTabHost;
     private TabWidget tabWidget;
-    int maxIntRquest =0;
-    int maxIntResponse =0;
+    int maxIntRquest = 0;
+    int maxIntResponse = 0;
+
+    private void getParamFromHtml() {
+        String toOtherActivity = getIntent().getStringExtra("toOtherActivity");
+        String otherId = getIntent().getStringExtra("otherId");
+        Logger.e("从H5页面跳转进入首页,otherId=" + otherId + "，toOtherActivity=" + toOtherActivity);
+        switch (toOtherActivity) {
+            case "0":
+                //跳转新闻页面，带入参数
+                Logger.e("1111111111");
+                Intent intent = new Intent(MainActivityMs.this, NewsDetails.class);
+                Logger.e("22222222222");
+                intent.putExtra("newsId", otherId);
+                Logger.e("3333333333");
+//                AppManager.getAppManager().toNextPage(intent,false);
+                startActivity(intent);
+                Logger.e("跳转新闻详情页面,newsId:"+otherId+",intent==null"+(intent==null));
+                break;
+            case "1":
+                //跳转长期工作详情页面 带入参数
+//                intent = new Intent(context, NewsDetails.class);
+//                intent.putExtra("workId", otherId);
+                Logger.e("跳转工作详情页面");
+                break;
+        }
+    }
 
     @Override
     public void onCreate_(@Nullable Bundle savedInstanceState) {
@@ -78,50 +112,52 @@ public class MainActivityMs extends BaseActivity {
         //设置融云推送监听
         setRongIMPushListener();
         System.gc();
-        ThreadPoolUtils.getInstance ().addTask (new Runnable () {
+        Glide.get(MainActivityMs.this).clearMemory();
+        try {
+            getParamFromHtml();
+            V.e("页面从H5页面跳入，已将Id传给下个页面");
+        } catch (Exception e) {
+            V.e("页面不是从H5页面跳入，执行默认操作");
+            V.e("异常信息："+e.toString());
+        }
+
+        UmengMessageHandler messageHandler = new UmengMessageHandler() {
             @Override
-            public void run() {
-                Glide.get(MainActivityMs.this).clearDiskCache();
+            public void dealWithCustomMessage(Context context, UMessage uMessage) {
+                V.d("aaaa");
+                AQQQ aqqq = new Gson().fromJson(uMessage.custom, AQQQ.class);
+
+                if (aqqq != null && aqqq.getMessageType() != null
+                        && !TextUtils.isEmpty(aqqq.getMessageType())) {
+                    if (aqqq.getMessageType().equals("0")) {
+                        Utils.showToast(getApplicationContext(), "您的账号在异地登录，请重新登录");
+                        com.zwy.preferences.AppPreferences appPreferences = new com.zwy.preferences.AppPreferences(getApplicationContext());
+                        appPreferences.put(StaticParams.FileKey.__LOCALTOKEN__, "");
+//                        AppManager.getAppManager().AppExit(MainActivityMs.super.context);
+                        finish();
+                        startActivity(new Intent(context, LoginAcitvity.class));
+                    }
+                }
+
             }
-        });
-//
-//        new Handler().postDelayed(new Runnable() {
+
 //            @Override
-//            public void run() {
-//                new Thread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        for (int i = 0; i < 10000; i++) {
-//                            LoveJob.UUUUUUUUU(new OnAllParameListener() {
-//                                @Override
-//                                public void onSuccess(ThePerfectGirl thePerfectGirl) {
-////                                    V.d(thePerfectGirl.getData().getDynamicDTOList().toString());
-//                                    maxIntResponse++;
-//                                    V.d("请求成功"+maxIntResponse);
-//                                }
+//            public Notification getNotification(Context context, UMessage uMessage) {
 //
-//                                @Override
-//                                public void onError(String msg) {
-//                                    maxIntResponse++;
-//                                }
-//                            });
-//                            maxIntRquest++;
-//                            try {
-//                                Thread.sleep(50);
-//                            } catch (InterruptedException e) {
-//                                e.printStackTrace();
-//                            }
-//                        }
-//                        V.d("Success~maxIntRquest:"+maxIntRquest);
-//                        V.d("Success~maxIntResponse:"+maxIntResponse);
+//                switch (uMessage.builder_id) {
+//                    case 1:
 //
-////                    LoveJobImpl.getInstance().register("", "", new EventBusType(888));
-//                    }
-//                }).start();
+//                        return null;
+//                    default:
+//                        return super.getNotification(context, uMessage);
+//
+//                }
+//
 //            }
-//        },5000);
 
 
+        };
+        MyApplication.mPushAgent.setMessageHandler(messageHandler);
     }
 
     private void connectRongIM() {
@@ -424,7 +460,7 @@ public class MainActivityMs extends BaseActivity {
         intent.putExtra("resultCode", resultCode);
         if (data != null) {
             intent.putExtra("photos", data.getStringArrayListExtra(PhotoPicker.KEY_SELECTED_PHOTOS));
-            intent.putExtra("isRefresh",data.getBooleanExtra("isRefresh",false));
+            intent.putExtra("isRefresh", data.getBooleanExtra("isRefresh", false));
         }
         context.sendBroadcast(intent);
         V.d("MainActivity接收到用户进入onActivityResult的回调，已发出广播");

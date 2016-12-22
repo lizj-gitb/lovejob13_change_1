@@ -82,12 +82,16 @@ public class LoginAcitvity extends BaseActivity {
     private String phoneNumber, password;
     private UMShareAPI mShareAPI;
     private boolean isLoginOther = false;//是否为第三方登录
+    private String toOtherActivity;
+    private String otherId;
 
     @Override
     public void onCreate_(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.loginlayout);
         ButterKnife.bind(this);
         V.d("into login activity...");
+        toOtherActivity = getIntent().getStringExtra("toOtherActivity");
+        otherId = getIntent().getStringExtra("otherId");
         etLoginPhonenumber.setText(new AppPreferences(context.getApplicationContext()).getString(StaticParams.FileKey.__UserNumber__, ""));
         addEditTestListener();
         initView();
@@ -257,7 +261,10 @@ public class LoginAcitvity extends BaseActivity {
 //                                        if (!AppConfig.isConnectRongService) {
 //                                            RongIM.connect(MyApplication.getAppPreferences().getString(StaticParams.FileKey.__RONGTOKEN__, ""), new MyConnectCallback());
 //                                        } else {
-                                startActivity(new Intent(LoginAcitvity.this, MainActivityMs.class));
+                                Intent intent =new Intent(LoginAcitvity.this, MainActivityMs.class);
+                                intent.putExtra("otherId", otherId);
+                                intent.putExtra("toOtherActivity", toOtherActivity);
+                                startActivity(intent);
                                 new AppPreferences(context.getApplicationContext()).put(StaticParams.FileKey.__UserNumber__, etLoginPhonenumber.getText().toString());
                                 AppManager.getAppManager().finishActivity(context);
 //                                        }
@@ -303,7 +310,10 @@ public class LoginAcitvity extends BaseActivity {
             etLoginPassword.setText(data.getStringExtra("passWord"));
             Utils.showToast(context, R.string.registerSuccess);
         } else if (resultCode == StaticParams.RequestCode.RequestCode_Aty_Login_BoundQQOrWeChatAty) {
-            startActivity(new Intent(LoginAcitvity.this, MainActivityMs.class));
+            Intent intent =new Intent(LoginAcitvity.this, MainActivityMs.class);
+            intent.putExtra("otherId", otherId);
+            intent.putExtra("toOtherActivity", toOtherActivity);
+            startActivity(intent);
             AppManager.getAppManager().finishActivity(LoginAcitvity.class);
             new AppPreferences(context.getApplicationContext()).put(StaticParams.FileKey.__UserNumber__, etLoginPhonenumber.getText().toString());
 //            connectRongYun(MyApplication.getAppPreferences().getString(StaticParams.FileKey.__RONGTOKEN__, ""));
@@ -344,7 +354,10 @@ public class LoginAcitvity extends BaseActivity {
                         @Override
                         public void onSuccess(ThePerfectGirl thePerfectGirl) {
                             dialog.dismiss();
-                            startActivity(new Intent(LoginAcitvity.this, MainActivityMs.class));
+                            Intent intent =new Intent(LoginAcitvity.this, MainActivityMs.class);
+                            intent.putExtra("otherId", otherId);
+                            intent.putExtra("toOtherActivity", toOtherActivity);
+                            startActivity(intent);
                             AppManager.getAppManager().finishActivity(LoginAcitvity.class);
 //                            V.d("login success,start connect rong service...");
 //                            AppPreferences appPreferences = new AppPreferences(context);

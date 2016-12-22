@@ -1,0 +1,10 @@
+
+
+ mSwipeBackLayout = getSwipeBackLayout();
+        mSwipeBackLayout.setEdgeTrackingEnabled(SwipeBackLayout.EDGE_LEFT);
+
+
+        <uses-permission android:name="android.permission.VIBRATE"/>
+
+        在application父theme中添加如下标签
+        <item name="android:windowIsTranslucent">true</item>

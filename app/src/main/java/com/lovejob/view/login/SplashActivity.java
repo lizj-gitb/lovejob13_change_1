@@ -26,6 +26,7 @@ import com.v.rapiddev.base.AppManager;
 import com.v.rapiddev.http.okhttp3.Call;
 import com.v.rapiddev.preferences.AppPreferences;
 import com.v.rapiddev.utils.V;
+import com.zwy.logger.Logger;
 
 public class SplashActivity extends Activity {
     protected AppPreferences appPreferences = MyApplication.getAppPreferences();
@@ -52,6 +53,7 @@ public class SplashActivity extends Activity {
     }
 
     private void into() {
+
         //        /**
 //         * 隐藏标题
 //         */
@@ -81,7 +83,21 @@ public class SplashActivity extends Activity {
                 @Override
                 public void onSuccess(ThePerfectGirl thePerfectGirl) {
                     V.d("auth local token  success,start connect rong service...");
-                    startActivity(new Intent(SplashActivity.this, MainActivityMs.class));
+                    String toOtherActivity = "";
+                    String otherId = "";
+                    Intent intent = new Intent(SplashActivity.this, MainActivityMs.class);
+                    try {
+                        toOtherActivity = getIntent().getData().getQueryParameter("toOtherActivity");
+                        otherId = getIntent().getData().getQueryParameter("otherId");
+                        if (!TextUtils.isEmpty(toOtherActivity) || !TextUtils.isEmpty(otherId)) {
+                            intent.putExtra("otherId", otherId);
+                            intent.putExtra("toOtherActivity", toOtherActivity);
+                        }
+                        Logger.e("从H5页面跳转进入等待页面,otherId="+otherId+"，toOtherActivity="+toOtherActivity);
+                    } catch (Exception e) {
+//            return;
+                    }
+                    startActivity(intent);
                     AppManager.getAppManager().finishActivity(SplashActivity.this);
 //                    connectRongYun(appPreferences.getString(StaticParams.FileKey.__RONGTOKEN__, ""));
                 }
@@ -96,7 +112,21 @@ public class SplashActivity extends Activity {
                 }
             });
         } else {
-            startActivity(new Intent().setClass(this, isFirstStartApp() ? WelcomeAcitvity.class : LoginAcitvity.class));
+            String toOtherActivity = "";
+            String otherId = "";
+            Intent intent = new Intent();
+            try {
+                toOtherActivity = getIntent().getData().getQueryParameter("toOtherActivity");
+                otherId = getIntent().getData().getQueryParameter("otherId");
+                if (!TextUtils.isEmpty(toOtherActivity) || !TextUtils.isEmpty(otherId)) {
+                    intent.putExtra("otherId", otherId);
+                    intent.putExtra("toOtherActivity", toOtherActivity);
+                }
+            } catch (Exception e) {
+//            return;
+            }
+            intent.setClass(this, isFirstStartApp() ? WelcomeAcitvity.class : LoginAcitvity.class);
+            startActivity(intent);
             AppManager.getAppManager().finishActivity(SplashActivity.this);
         }
     }

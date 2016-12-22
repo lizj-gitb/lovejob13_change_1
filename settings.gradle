@@ -1,1 +1,1 @@
-include ':app', ':PhotoPicker', ':lib-bither-compress', ':Rong_Cloud_2_7_3', ':UMengPushSDK', ':rapiddev', ':GrantAndroidPermission'
+include ':app', ':PhotoPicker', ':lib-bither-compress', ':Rong_Cloud_2_7_3', ':UMengPushSDK', ':rapiddev', ':GrantAndroidPermission', ':mylibs'
