@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
     android:orientation="vertical">
     <LinearLayout
         android:id="@+id/rl_pinglun"
@@ -58,6 +59,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/img_pinglun_pic"
             android:layout_width="55dp"
+            android:focusable="false"
             android:layout_height="55dp"
             android:layout_marginLeft="20dp"
             android:layout_gravity="center_vertical"/>

@@ -190,38 +190,40 @@ public class DynCommDetails extends BaseActivity {
         call_getCommListItem_Resendlist = LoveJob.getCommListItem_Resendlist(dynamicCommentPid, new OnAllParameListener() {
             @Override
             public void onSuccess(ThePerfectGirl thePerfectGirl) {
-                ThePerfectGirl.UserInfoDTO uInfo = thePerfectGirl.getData().getDynamicCommentDTO().getReleaseInfo();
-                ThePerfectGirl.DynamicCommentDTO commDto = thePerfectGirl.getData().getDynamicCommentDTO();
-                List<ThePerfectGirl.DynamicCommentDetailDTO> replyDto = thePerfectGirl.getData().getDynamicCommentDTO().getReplyList();
-                if (isAddMainData) {
-                    //主评论的用户头像
-                    Glide.with(context).load(StaticParams.QiNiuYunUrl + uInfo.getPortraitId()).into(ivDyncommitemlistUserlogo);
+                if (thePerfectGirl.getData().getDynamicCommentDTO().getReleaseInfo() != null&&thePerfectGirl.getData().getDynamicCommentDTO()!=null) {
+                    ThePerfectGirl.UserInfoDTO uInfo = thePerfectGirl.getData().getDynamicCommentDTO().getReleaseInfo();
+                    ThePerfectGirl.DynamicCommentDTO commDto = thePerfectGirl.getData().getDynamicCommentDTO();
+                    List<ThePerfectGirl.DynamicCommentDetailDTO> replyDto = thePerfectGirl.getData().getDynamicCommentDTO().getReplyList();
+                    if (isAddMainData) {
+                        //主评论的用户头像
+                        Glide.with(context).load(StaticParams.QiNiuYunUrl + uInfo.getPortraitId()).into(ivDyncommitemlistUserlogo);
 
-                    //用户姓名
-                    tvDyncommitemlistUsername.setText(uInfo.getRealName());
-                    //是否点赞
-                    if (commDto.isPointGood()) {
-                        ivDyncommitemlistGood.setImageResource(R.mipmap.icon_good_on);
-                    } else {
-                        ivDyncommitemlistGood.setImageResource(R.mipmap.icon_good_common);
+                        //用户姓名
+                        tvDyncommitemlistUsername.setText(uInfo.getRealName());
+                        //是否点赞
+                        if (commDto.isPointGood()) {
+                            ivDyncommitemlistGood.setImageResource(R.mipmap.icon_good_on);
+                        } else {
+                            ivDyncommitemlistGood.setImageResource(R.mipmap.icon_good_common);
+                        }
+                        //点赞数量
+                        tvDyncommitemlistGood.setText(String.valueOf(commDto.getCount()));
+                        //评论内容
+                        tvDyncommitemlistContent.setText(commDto.getCommentContent());
+                        //友好时间
+                        tvDyncommitemlistTime.setText(commDto.getCreateDateDec());
+                        isAddMainData = false;
                     }
-                    //点赞数量
-                    tvDyncommitemlistGood.setText(String.valueOf(commDto.getCount()));
-                    //评论内容
-                    tvDyncommitemlistContent.setText(commDto.getCommentContent());
-                    //友好时间
-                    tvDyncommitemlistTime.setText(commDto.getCreateDateDec());
-                    isAddMainData = false;
-                }
-                if (replyDto == null) {
-                    lvDyncommitemlist.setVisibility(View.GONE);
-                    tvIsdefault.setVisibility(View.VISIBLE);
-                    return;
-                } else {
-                    lvDyncommitemlist.setVisibility(View.VISIBLE);
-                    tvIsdefault.setVisibility(View.GONE);
-                    for (int i = 0; i < replyDto.size(); i++) {
-                        adapter.addItem(replyDto.get(i));
+                    if (replyDto == null) {
+                        lvDyncommitemlist.setVisibility(View.GONE);
+                        tvIsdefault.setVisibility(View.VISIBLE);
+                        return;
+                    } else {
+                        lvDyncommitemlist.setVisibility(View.VISIBLE);
+                        tvIsdefault.setVisibility(View.GONE);
+                        for (int i = 0; i < replyDto.size(); i++) {
+                            adapter.addItem(replyDto.get(i));
+                        }
                     }
                 }
                 adapter.notifyDataSetChanged();

@@ -1,6 +1,7 @@
 package com.lovejob.view._userinfo.news;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.OrientationHelper;
@@ -9,6 +10,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -23,6 +25,8 @@ import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
 import com.lovejob.view.DragPointView;
+import com.lovejob.view._home.DynDetailsAty;
+import com.lovejob.view._home.dyndetailstabs.f_comm.DynCommDetails;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
 import com.v.rapiddev.base.AppManager;
@@ -73,25 +77,25 @@ public class Aty_dongtai extends BaseActivity {
     FastAdapter<ThePerfectGirl.DynamicPointPraiseInfo> goodadapter;
     FastAdapter<ThePerfectGirl.DynamicPointPraiseInfo> badadapter;
     private Call call_getNewsDynamic;
-    int dynamiccount,goodcount,badcount;
+    int dynamiccount, goodcount, badcount;
 
     @Override
     public void onCreate_(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.aty_newsdongtai);
         ButterKnife.bind(this);
         context = this;
-        dynamiccount =getIntent().getIntExtra("dynamiccount",0);
-        goodcount =getIntent().getIntExtra("goodcount",0);
-        badcount =getIntent().getIntExtra("badcount",0);
-        if (dynamiccount>0){
+        dynamiccount = getIntent().getIntExtra("dynamiccount", 0);
+        goodcount = getIntent().getIntExtra("goodcount", 0);
+        badcount = getIntent().getIntExtra("badcount", 0);
+        if (dynamiccount > 0) {
             tvDragComm.setVisibility(View.VISIBLE);
             tvDragComm.setText(String.valueOf(dynamiccount));
         }
-        if (goodcount>0){
+        if (goodcount > 0) {
             tvDragGood.setVisibility(View.VISIBLE);
             tvDragGood.setText(String.valueOf(goodcount));
         }
-        if (badcount>0){
+        if (badcount > 0) {
             tvDragBad.setVisibility(View.VISIBLE);
             tvDragBad.setText(String.valueOf(badcount));
         }
@@ -99,6 +103,7 @@ public class Aty_dongtai extends BaseActivity {
         addplData();
         line2.setVisibility(View.INVISIBLE);
         line3.setVisibility(View.INVISIBLE);
+
 
     }
 
@@ -149,7 +154,20 @@ public class Aty_dongtai extends BaseActivity {
                 ((TextView) viewHolder.getView(R.id.tv_pinglun_content)).setText(getItem(position).getContent());
                 Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getUserInfoDTO().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_pinglu_logo));
 //                ((TextView) viewHolder.getView(R.id.tv_pinglun_time)).setText(getItem(position).g);
-
+                lvNewsdongtaiPinglun.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        if (pladapter.getItem(position - 1).getType().equals("2")) {
+                            Intent intent = new Intent(context, DynCommDetails.class);
+                            intent.putExtra("dynamicCommentPid", pladapter.getItem(position - 1).getDynamicId());
+                            startActivity(intent);
+                        } else {
+                            Intent intent = new Intent(context, DynDetailsAty.class);
+                            intent.putExtra("dynPid", pladapter.getItem(position - 1).getDynamicId());
+                            startActivity(intent);
+                        }
+                    }
+                });
                 return viewHolder.getConvertView();
             }
         };
@@ -251,6 +269,14 @@ public class Aty_dongtai extends BaseActivity {
                     ((RecyclerView) viewHolder.getView(R.id.img_bad_pic)).setLayoutManager(new StaggeredGridLayoutManager(1, OrientationHelper.VERTICAL));
                     ((RecyclerView) viewHolder.getView(R.id.img_bad_pic)).setAdapter(photoAdapter);
                 }
+                lvNewsdongtaiBad.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Intent intent = new Intent(context, DynDetailsAty.class);
+                        intent.putExtra("dynPid", badadapter.getItem(position).getDynamicPid());
+                        startActivity(intent);
+                    }
+                });
                 return viewHolder.getConvertView();
             }
         };
@@ -282,7 +308,14 @@ public class Aty_dongtai extends BaseActivity {
                     ((RecyclerView) viewHolder.getView(R.id.img_good_pic)).setLayoutManager(new StaggeredGridLayoutManager(1, OrientationHelper.VERTICAL));
                     ((RecyclerView) viewHolder.getView(R.id.img_good_pic)).setAdapter(photoAdapter);
                 }
-
+                lvNewsdongtaiGood.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Intent intent = new Intent(context, DynDetailsAty.class);
+                        intent.putExtra("dynPid", goodadapter.getItem(position).getDynamicPid());
+                        startActivity(intent);
+                    }
+                });
                 return viewHolder.getConvertView();
             }
         };

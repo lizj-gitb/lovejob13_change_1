@@ -12,6 +12,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -89,16 +90,24 @@ public class Aty_SerSkillDetails extends BaseActivity {
         lvadapter = new FastAdapter<ThePerfectGirl.EvaluateInfoDTO>(context, R.layout.item_lv_ser_details) {
             @Override
             public View getViewHolder(int position, View convertView, ViewGroup parent) {
-                FFViewHolder viewHolder =FFViewHolder.get(context,convertView,parent,R.layout.item_lv_ser_details,position);
-
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getPortraitId().toString().trim()).into((CircleImageView) viewHolder.getView(R.id.img_f_my_other_logo));
-                ((TextView) viewHolder.getView(R.id.tv_serdetails_other_name)).setText(getItem(position).getRealName());
-                ((TextView) viewHolder.getView(R.id.tv_serdetails_other_content)).setText(getItem(position).getContent());
-                String s = String.format("%tR%n", getItem(position).getCreateDate());
-                ((TextView) viewHolder.getView(R.id.tv_serdetails_time)).setText(s);
-                ((RatingBar)viewHolder.getView(R.id.rating)).setRating(getItem(position).getLevel());
-//                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getMyPortraitId().toString().trim()).into((CircleImageView) viewHolder.getView(R.id.img_f_my_userlogo));
-//                ((TextView) viewHolder.getView(R.id.tv_serdetails_my_content)).setText(getItem(position).getMyContent());
+                FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_ser_details, position);
+                if (getItem(position).getPortraitId() != null) {
+                    Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getPortraitId().toString().trim()).into((CircleImageView) viewHolder.getView(R.id.img_f_my_other_logo));
+                    ((TextView) viewHolder.getView(R.id.tv_serdetails_other_name)).setText(getItem(position).getRealName());
+                    ((TextView) viewHolder.getView(R.id.tv_serdetails_other_content)).setText(getItem(position).getContent());
+                    String s = String.format("%tR%n", getItem(position).getCreateDate());
+                    ((TextView) viewHolder.getView(R.id.tv_serdetails_time)).setText(s);
+                    ((RatingBar) viewHolder.getView(R.id.rating)).setRating(getItem(position).getLevel());
+                }else {
+                    ((LinearLayout)viewHolder.getView(R.id.my_ll)).setVisibility(View.GONE);
+                }
+                if (getItem(position).getMyPortraitId() != null) {
+                    Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getMyPortraitId().toString().trim()).into((CircleImageView) viewHolder.getView(R.id.img_f_my_userlogo));
+                    ((TextView) viewHolder.getView(R.id.tv_serdetails_my_content)).setText(getItem(position).getMyContent());
+                } else {
+                    ((CircleImageView) viewHolder.getView(R.id.img_f_my_userlogo)).setVisibility(View.GONE);
+                    ((TextView) viewHolder.getView(R.id.tv_serdetails_my_content)).setVisibility(View.GONE);
+                }
                 return viewHolder.getConvertView();
             }
         };
@@ -111,17 +120,17 @@ public class Aty_SerSkillDetails extends BaseActivity {
             public void onSuccess(ThePerfectGirl thePerfectGirl) {
                 if (thePerfectGirl.getData().getServerDTO() != null) {
                     tvSerSkillTitle.setText(thePerfectGirl.getData().getServerDTO().getTitle());
-                    int serType =thePerfectGirl.getData().getServerDTO().getServiceType();
-                    if (serType==2){
+                    int serType = thePerfectGirl.getData().getServerDTO().getServiceType();
+                    if (serType == 2) {
                         tvSerSkillMoney.setVisibility(View.GONE);
                         tvSerSkillPayment.setVisibility(View.GONE);
                     }
-                    tvSerSkillPayment.setText("/"+thePerfectGirl.getData().getServerDTO().getPaymentDec());
-                    tvSerSkillMoney.setText(thePerfectGirl.getData().getServerDTO().getMoney()+"");
+                    tvSerSkillPayment.setText("/" + thePerfectGirl.getData().getServerDTO().getPaymentDec());
+                    tvSerSkillMoney.setText(thePerfectGirl.getData().getServerDTO().getMoney() + "");
                     tvSerSkillExplain.setText(thePerfectGirl.getData().getServerDTO().getContent());
                     tvSerSkillCount.setText(thePerfectGirl.getData().getServerDTO().getSoldCount());
                     tvSerSkillStar.setText(thePerfectGirl.getData().getServerDTO().getLevel());
-                  phoneNumber=thePerfectGirl.getData().getServerDTO().getUserInfo().getPhoneNumber();
+                    phoneNumber = thePerfectGirl.getData().getServerDTO().getUserInfo().getPhoneNumber();
                     if (thePerfectGirl.getData().getServerDTO().getEvaluateInfoDTOList() != null) {
                         for (int i = 0; i < thePerfectGirl.getData().getServerDTO().getEvaluateInfoDTOList().size(); i++) {
                             lvadapter.addItem(thePerfectGirl.getData().getServerDTO().getEvaluateInfoDTOList().get(i));
@@ -169,10 +178,9 @@ public class Aty_SerSkillDetails extends BaseActivity {
                 AppManager.getAppManager().finishActivity();
                 break;
             case R.id.img_oridetails_chat:
-            
+
                 break;
             case R.id.img_oridetails_call:
-                Utils.showToast(context,"sadasd");
                 if (TextUtils.isEmpty(phoneNumber)) {
                     Utils.showToast(context, "请稍后再试");
                     return;
