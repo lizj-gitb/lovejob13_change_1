@@ -224,6 +224,7 @@ public class F_Job extends BaseFragment {
                 ImageView xuanshang = ((ImageView) viewHolder.getView(R.id.img_job_shang));
                 ImageView jianghu = ((ImageView) viewHolder.getView(R.id.img_job_lingpai));
                 TextView tv_job_xuanshangjinqian = ((TextView) viewHolder.getView(R.id.tv_job_xuanshangjinqian));
+                ThePerfectGirl.WorkInfoDTO sssssddd = getItem(position);
                 if (getItem(position).getList() != null && getItem(position).getList().size() > 0) {
                     if (getItem(position).getList().size() == 1) {
                         if (getItem(position).getList().get(0).getType().equals("0")) {
@@ -236,7 +237,7 @@ public class F_Job extends BaseFragment {
                         if (getItem(position).getList().get(0).getType().equals("1")) {
                             //只返回一个江湖令
                             xuanshang.setVisibility(View.GONE);
-                            tv_job_xuanshangjinqian.setVisibility(View.INVISIBLE);
+                            tv_job_xuanshangjinqian.setVisibility(View.GONE);
                         }
                     }
 
@@ -254,7 +255,7 @@ public class F_Job extends BaseFragment {
                     }
                 } else {
                     xuanshang.setVisibility(View.GONE);
-                    tv_job_xuanshangjinqian.setVisibility(View.INVISIBLE);
+                    tv_job_xuanshangjinqian.setVisibility(View.GONE);
                     jianghu.setVisibility(View.GONE);
                 }
                 /**
@@ -380,6 +381,11 @@ public class F_Job extends BaseFragment {
         super.onResume();
         if (rollViewPager != null)
             rollViewPager.resume();
+        String city = MyApplication.getCity();
+        if (!TextUtils.isEmpty(city)) {
+            actionbarTvLocationtext.setText(city);
+        }
+
     }
 
     /**

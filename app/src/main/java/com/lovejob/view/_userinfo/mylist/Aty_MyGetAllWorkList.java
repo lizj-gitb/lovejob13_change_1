@@ -149,7 +149,6 @@ public class Aty_MyGetAllWorkList extends BaseActivity {
         lvMygetallworklist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Utils.showToast(context, adapter.getItem(position - 1).getPid());
                 //TODO
                 Intent intent = new Intent(Aty_MyGetAllWorkList.this, Aty_OriDetails.class);
                 intent.putExtra("workId", adapter.getItem(position - 1).getPid());

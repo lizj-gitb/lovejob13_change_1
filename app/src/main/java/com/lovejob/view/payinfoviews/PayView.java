@@ -368,7 +368,7 @@ public class PayView extends BaseActivity {
 
                 intent.putExtra("workPid", workPid);
                 intent.putExtra("token", new Token(etBuytokenCount1.getText().toString(),
-                        etBuytokenCount1.getText().toString(), etBuytokenCount3.getText().toString()
+                        etBuytokenCount2.getText().toString(), etBuytokenCount3.getText().toString()
                         , etBuytokenCount4.getText().toString(), etBuytokenCount5.getText().toString(), tvBuytokenTotal.getText().toString(), etBuytokenCount.getText().toString()));
                 intent.putExtra("price", tvBuytokenMoney.getText().toString());
                 intent.putExtra("PayTypeInfo", PayTypeInfo.SendJobWork);

@@ -66,14 +66,6 @@ import static android.app.Activity.RESULT_OK;
  */
 
 public class Utils {
-
-
-    /**
-     * 检测用户输入的值是否为空
-     *
-     * @param view view
-     * @return 不为空时返回true
-     */
     public static UserInputModel checkUserInputParams(View... view) {
         boolean isTrue = true;
         String[] params = new String[view.length];

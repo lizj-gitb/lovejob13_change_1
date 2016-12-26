@@ -84,7 +84,6 @@ public class Aty_Setting extends BaseActivity {
 
     @Override
     public void onResume_() {
-
     }
 
     @Override

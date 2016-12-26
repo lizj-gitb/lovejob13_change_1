@@ -69,6 +69,10 @@ public class Aty_MoneyCash extends BaseActivity {
                     Utils.showToast(context,"提现金额大于账户余额");
                     return;
                 }
+                if(a<1){
+                    Utils.showToast(context,"提现金额不能小于1元");
+                    return;
+                }
                 dialog = Utils.showProgressDliago(context,"正在提现，请稍后");
                 LoveJob.Withdrawals(tvAmount.getText().toString(), account, "0", new OnAllParameListener() {
                     @Override

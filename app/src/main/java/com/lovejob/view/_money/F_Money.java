@@ -565,7 +565,10 @@ public class F_Money extends BaseFragment {
         super.onResume();
         if (rollViewPager != null)
             rollViewPager.resume();
-
+        String city = MyApplication.getCity();
+        if (!TextUtils.isEmpty(city)) {
+            actionbarTvLocationtext.setText(city);
+        }
     }
 
     @Override

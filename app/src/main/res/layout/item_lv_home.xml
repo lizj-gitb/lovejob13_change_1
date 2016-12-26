@@ -92,13 +92,9 @@
                     android:layout_width="170dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:ellipsize="marquee"
-                    android:focusable="true"
-                    android:marqueeRepeatLimit="marquee_forever"
-                    android:singleLine="true"
-                    android:text="nidsfsdfsdffdsfgsdfsd111111111111ffdsfgsdfsdffdsfgsdfsdffdsfgsdfsdffdsfgsdfsdffdsfgdsfgdsf"
-                    android:focusableInTouchMode="true"
                     android:textColor="#b4b4b4"
+                    android:lines="1"
+                    android:singleLine="true"
                     android:textSize="13dp" />
 
                 <TextView

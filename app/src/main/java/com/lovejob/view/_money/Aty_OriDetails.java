@@ -124,6 +124,7 @@ public class Aty_OriDetails extends BaseActivity {
 
     private FastAdapter<Data_Comm_2_2> adapter_comm_2;
     private String phoneNumber;
+    private boolean isphone;
 
     @Override
     public void onCreate_(@Nullable Bundle savedInstanceState) {
@@ -250,6 +251,7 @@ public class Aty_OriDetails extends BaseActivity {
                 ThePerfectGirl.UserInfoDTO userInfo = thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo();
                     userId = userInfo.getUserId();
                     userName = userInfo.getRealName();
+                isphone = thePerfectGirl.getData().getWorkInfoDTO().isPhone();
                 Glide.with(context).load(StaticParams.QiNiuYunUrl + userInfo.getPortraitId()).placeholder(R.mipmap.ic_launcher).dontAnimate()
                         .into(imgOridetailsUserVo);
                 tvOridetailsUsername.setText(userInfo.getRealName() + "".trim());
@@ -498,19 +500,25 @@ public class Aty_OriDetails extends BaseActivity {
                 break;
             case R.id.img_oridetails_call:
                 V.d("打电话");
-                if (TextUtils.isEmpty(phoneNumber)) {
-                    Utils.showToast(context, "请稍后再试");
-                    return;
+                if (isphone){
+                    if (TextUtils.isEmpty(phoneNumber)) {
+                        Utils.showToast(context, "请稍后再试");
+                        return;
+                    }
+                    Intent intent_phone = new Intent(Intent.ACTION_CALL);
+                    Uri data = Uri.parse("tel:" + phoneNumber);
+                    intent_phone.setData(data);
+                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                        V.e("用户权限缺失");
+                        return;
+                    }
+                    startActivity(intent_phone);
+                    break;
+                }else {
+                    Utils.showToast(context,"未录取前不能打电话");
+                    break;
                 }
-                Intent intent_phone = new Intent(Intent.ACTION_CALL);
-                Uri data = Uri.parse("tel:" + phoneNumber);
-                intent_phone.setData(data);
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    V.e("用户权限缺失");
-                    return;
-                }
-                startActivity(intent_phone);
-                break;
+
             case R.id.img_oridetails_grad:
                 V.d("抢单");
                 doSignInOrCancel();

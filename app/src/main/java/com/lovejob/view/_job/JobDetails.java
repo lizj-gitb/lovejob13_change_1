@@ -152,6 +152,7 @@ public class JobDetails extends BaseActivity {
     private FastAdapter<ThePerfectGirl.WorkInfoDTO> adapter_commlist;//评论列表
     private String phoneNumber;
     boolean isGetWork = false;//是否可以报名
+    boolean isPhone = false;
 
     @Override
     public void onCreate_(@Nullable Bundle savedInstanceState) {
@@ -261,6 +262,7 @@ public class JobDetails extends BaseActivity {
                 sv_job.onRefreshComplete();
                 phoneNumber = thePerfectGirl.getData().getWorkInfoDTO().getContactPhone();
                 userName = thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo().getRealName();
+                isPhone = thePerfectGirl.getData().getWorkInfoDTO().isPhone();
                 if (thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo().getUserId().equals(new AppPreferences(context).getString(StaticParams.FileKey.__USERPID__, ""))) {
                     //可以购买
                     buytoken.setVisibility(View.VISIBLE);
@@ -283,6 +285,7 @@ public class JobDetails extends BaseActivity {
                 tvJobdetailsTitle.setText(thePerfectGirl.getData().getWorkInfoDTO().getTitle());
                 tvJobdetailsAddress.setText(thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo().getAddress());
                 tvJobdetailsBoss.setText(thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo().getRealName());
+                tvJobdetailsCompany.setText(thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo().getCompany());
                 //TODO 返回时间
                 String s1 = String.format("%tF%n", thePerfectGirl.getData().getWorkInfoDTO().getReleaseDate());
                 String s2 = String.format("%tR%n", thePerfectGirl.getData().getWorkInfoDTO().getReleaseDate());
@@ -435,17 +438,23 @@ public class JobDetails extends BaseActivity {
                 //启动聚合会话列表界面(暂时没用到)
 //                if (RongIM.getInstance() != null)
 //                    RongIM.getInstance().startSubConversationList(this, Conversation.ConversationType.GROUP);
-                V.d("打电话");
+                if (isPhone){
+                    V.d("打电话");
 
-                Intent intent_phone = new Intent(Intent.ACTION_CALL);
-                Uri data = Uri.parse("tel:" + phoneNumber);
-                intent_phone.setData(data);
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    V.e("用户权限缺失");
-                    return;
+                    Intent intent_phone = new Intent(Intent.ACTION_CALL);
+                    Uri data = Uri.parse("tel:" + phoneNumber);
+                    intent_phone.setData(data);
+                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                        V.e("用户权限缺失");
+                        return;
+                    }
+                    startActivity(intent_phone);
+                    break;
+                }else {
+                    Utils.showToast(context,"未录取前不能打电话");
+                    break;
                 }
-                startActivity(intent_phone);
-                break;
+
             case R.id.img_jobdetails_apply:
                 V.d("申请");
                 doSignInOrCancel();

@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.lovejob.BaseActivity;
 import com.lovejob.R;
 import com.v.rapiddev.base.AppManager;
+import com.v.rapiddev.utils.V;
+import com.zwy.Utils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -36,6 +38,8 @@ public class Aty_SystemEdition extends BaseActivity {
     }
 
     private void AddData() {
+        V.d("banbenhao:"+Utils.getAppVersionName(context));
+//        Utils.getAppVersionName(context);
         //TODO 添加版本信息
         //如果用户是最新版本，则不显示更新按钮，只显示：您目前已是最新版本无需更新。
     }

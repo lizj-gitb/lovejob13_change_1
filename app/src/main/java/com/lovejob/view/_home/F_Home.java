@@ -362,6 +362,10 @@ public class F_Home extends BaseFragment {
     public void onResume() {
         super.onResume();
         adapter_dynList.notifyDataSetChanged();
+        String city = MyApplication.getCity();
+        if (!TextUtils.isEmpty(city)) {
+            actionbarTvLocationtext.setText(city);
+        }
     }
 
     @Override

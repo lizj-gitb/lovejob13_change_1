@@ -753,6 +753,15 @@ public class ThePerfectGirl implements Serializable {
         private List<Integer> riveToken;
         //悬赏令
         private List<WorkTokenDTO> rewardToken;
+        private boolean phone;
+
+        public boolean isPhone() {
+            return phone;
+        }
+
+        public void setPhone(boolean phone) {
+            this.phone = phone;
+        }
 
         public List<WorkTokenDTO> getRewardToken() {
             return rewardToken;
