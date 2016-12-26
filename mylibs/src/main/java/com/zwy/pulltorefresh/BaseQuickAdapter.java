@@ -153,7 +153,7 @@ public abstract class BaseQuickAdapter<T, K extends BaseViewHolder> extends Recy
 
     /**
      * @return Whether the Adapter is actively showing load
-     * progress.
+     * progress. 是否展示"正在加载。。。"
      */
     public boolean isLoading() {
         return mLoading;
@@ -162,6 +162,7 @@ public abstract class BaseQuickAdapter<T, K extends BaseViewHolder> extends Recy
 
     /**
      * Refresh end, no more data
+     * 加载结束  没有更多数据
      */
     public void loadMoreEnd() {
         loadMoreEnd(false);
@@ -169,6 +170,7 @@ public abstract class BaseQuickAdapter<T, K extends BaseViewHolder> extends Recy
 
     /**
      * Refresh end, no more data
+     * 加载结束  是否西安市 没有更多数据  true为隐藏
      *
      * @param gone if true gone the load more view
      */
@@ -189,6 +191,7 @@ public abstract class BaseQuickAdapter<T, K extends BaseViewHolder> extends Recy
 
     /**
      * Refresh complete
+     * 加载更多结束  关闭加载更多
      */
     public void loadMoreComplete() {
         if (getLoadMoreViewCount() == 0) {
@@ -200,7 +203,7 @@ public abstract class BaseQuickAdapter<T, K extends BaseViewHolder> extends Recy
     }
 
     /**
-     * Refresh failed
+     * Refresh failed  数据加载失败
      */
     public void loadMoreFail() {
         if (getLoadMoreViewCount() == 0) {
@@ -213,6 +216,7 @@ public abstract class BaseQuickAdapter<T, K extends BaseViewHolder> extends Recy
 
     /**
      * Set the enabled state of load more.
+     * 是否开启加载更多   当刷新时不开启加载更多，防止数据错乱
      *
      * @param enable True if load more is enabled, false otherwise.
      */

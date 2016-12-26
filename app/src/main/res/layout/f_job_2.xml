@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.v.rapiddev.views.InputMethodLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:id="@+id/editkeybox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include
+            layout="@layout/lovejobactionbar"
+            android:layout_width="match_parent"
+            android:layout_height="52dp" />
+
+        <com.v.rapiddev.pulltorefresh.PullToRefreshScrollView
+            android:id="@+id/pull_to_refresh_job"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_job"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#00000000"
+                    android:dividerHeight="5dp" />
+            </LinearLayout>
+
+        </com.v.rapiddev.pulltorefresh.PullToRefreshScrollView>
+    </LinearLayout>
+</com.v.rapiddev.views.InputMethodLayout>

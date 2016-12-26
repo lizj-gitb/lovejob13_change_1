@@ -4,6 +4,7 @@ import com.lovejob.R;
 import com.lovejob.view._home.F_Home;
 import com.lovejob.view._home.F_Home_2;
 import com.lovejob.view._job.F_Job;
+import com.lovejob.view._job.F_Job_2;
 import com.lovejob.view._money.F_Money;
 import com.lovejob.view._userinfo.F_UserInfo;
 
@@ -14,7 +15,7 @@ public enum MainTab {
 			F_Home.class),
 
 	tab2(1, R.string.job_hunt, R.drawable.tab_icon_job,
-			F_Job.class),
+			F_Job_2.class),
 
 	tab3(2, R.string.money, R.drawable.tab_icon_money, F_Money.class),
 
