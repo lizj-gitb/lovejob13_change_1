@@ -77,8 +77,7 @@ public class StaticParams {
         public static final String __UserNumber__ = "usernumber";
         public static final String __CrashDeviceType__ = "crashdevicetype";
 
-        public static final String __DynamicContent__ ="dynamcicontent";
-
+        public static final String __DynamicContent__ = "dynamcicontent";
 
 
         //异常文本信息

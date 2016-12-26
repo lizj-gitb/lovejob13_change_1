@@ -23,6 +23,7 @@ import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.location.Poi;
 import com.baidu.mapapi.SDKInitializer;
+import com.bugtags.library.Bugtags;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.lovejob.controllers.task.LoveJob;
@@ -92,6 +93,7 @@ public class MyApplication extends MultiDexApplication {
         V.d("into MyApplication...");
         mMyApplication = this;
         UMShareAPI.get(this);
+        Bugtags.start("460ae597c3b8c859470b1600fa16371a", this, Bugtags.BTGInvocationEventBubble);
         /**
          * 初始化UMeng相关数据
          */

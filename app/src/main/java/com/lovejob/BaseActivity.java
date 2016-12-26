@@ -7,8 +7,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.widget.Toast;
 
+import com.bugtags.library.Bugtags;
 import com.v.rapiddev.base.AppManager;
 import com.v.rapiddev.dialogs.core.MaterialDialog;
 import com.v.rapiddev.dialogs.zdialog.ZDialog;
@@ -59,15 +61,22 @@ public abstract class BaseActivity extends SwipeBackActivity {
     protected void onResume() {
         super.onResume();
         onResume_();
+        Bugtags.onResume(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        Bugtags.onPause(this);
         System.gc();
         System.runFinalization();
     }
-
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        //注：回调 3
+        Bugtags.onDispatchTouchEvent(this, event);
+        return super.dispatchTouchEvent(event);
+    }
     @Override
     protected void onDestroy() {
         for (Call call: callList){

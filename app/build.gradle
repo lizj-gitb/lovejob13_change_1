@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.bugtags.library.plugin'
 android {
+    useLibrary 'org.apache.http.legacy'
     signingConfigs {
         config {
             keyAlias 'lovejob'
@@ -24,6 +25,10 @@ android {
         ndk {
             abiFilters 'armeabi-v7a', 'armeabi', 'x86'
         }
+        ndk {
+            // 设置支持的 SO 库构架
+            abiFilters 'armeabi'// 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
     }
     buildTypes {
         release {
@@ -46,7 +51,16 @@ android {
         }
     }
 }
+//Bugtags 插件配置
+bugtags {
+    //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考帮助中心->符号表->Android 符号表->配置自动上传符号表
+    appKey "460ae597c3b8c859470b1600fa16371a"  //这里是你的 appKey
+    appSecret "1f9517a87993eeca68b402fcf85e30b7"    //这里是你的 appSecret，管理员在设置页可以查看
+    mappingUploadEnabled true
 
+    //网络跟踪功能配置(企业版)
+    trackingNetworkEnabled true
+}
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -75,4 +89,5 @@ dependencies {
     compile files('libs/IndoorscapeAlbumPlugin.jar')
     compile project(':GrantAndroidPermission')
     compile project(':mylibs')
+    compile 'com.bugtags.library:bugtags-lib:latest.integration'
 }
