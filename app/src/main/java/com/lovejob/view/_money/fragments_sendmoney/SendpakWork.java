@@ -222,6 +222,9 @@ public class SendpakWork extends BaseFragment {
         strs[12] = tvSendWorkParHight.getText().toString();
         strs[13] = positionNumber;
         inputModel.setParams(strs);
+        Double i1 = Double.parseDouble(tvSendWorkParWanttonum.getText().toString());
+        String amount=String.valueOf(i1*money);
+        inputModel.getParams()[5] = amount;
         //跳转支付页面
         Intent intent = new Intent(context, PayViewSelectPayment.class);
         intent.putExtra("inputModel", inputModel);
@@ -352,7 +355,7 @@ public class SendpakWork extends BaseFragment {
             case R.id.rl_send_work_par_context:
                 title = "请输入工作内容";
                 content = tvSendWorkParContext.getText().toString();
-                maxLenth = 50;
+                maxLenth = 100;
                 requestCode = RequestCode_SendPakWork_TO_WriteView_Context;
 
                 break;
@@ -442,7 +445,7 @@ public class SendpakWork extends BaseFragment {
                 tvSendWorkParLocation.setText(content);
                 break;
             case RequestCode_SendPakWork_TO_WriteView_Wanttonum:
-                tvSendWorkParWanttonum.setText(content + "人");
+                tvSendWorkParWanttonum.setText(content );
                 break;
 
             case RequestCode_SendPakWork_TO_WriteView_Price:

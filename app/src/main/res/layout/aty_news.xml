@@ -139,17 +139,17 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="16dp"
+                android:layout_centerVertical="true"
                 android:src="@mipmap/icon_enter" />
 
             <TextView
                 android:id="@+id/tv_news_tongzhi_time"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/img_222"
-                android:gravity="center_vertical"
                 android:text="09:21"
+                android:layout_centerVertical="true"
                 android:textColor="@color/hiteTextColor"
                 android:textSize="12sp" />
         </RelativeLayout>
@@ -181,17 +181,17 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="16dp"
+                android:layout_centerVertical="true"
                 android:src="@mipmap/icon_enter" />
 
             <TextView
                 android:id="@+id/tv_news_dongtai_time"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/img_333"
-                android:gravity="center_vertical"
                 android:text="09:21"
+                android:layout_centerVertical="true"
                 android:textColor="@color/hiteTextColor"
                 android:textSize="12sp" />
 

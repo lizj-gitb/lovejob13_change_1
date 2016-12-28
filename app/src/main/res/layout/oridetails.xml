@@ -242,7 +242,7 @@
                     <GridView
                         android:id="@+id/gv_oridetails_alreadySignPerson"
                         android:layout_width="wrap_content"
-                        android:layout_height="45dp"
+                        android:layout_height="35dp"
                         android:gravity="center_vertical" />
                     <TextView
                         android:id="@+id/tv_oridetails_number"

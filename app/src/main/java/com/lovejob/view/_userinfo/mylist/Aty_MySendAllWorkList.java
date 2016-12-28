@@ -136,7 +136,6 @@ public class Aty_MySendAllWorkList extends BaseActivity {
         lvRefreshMysendallwork.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Utils.showToast(Aty_MySendAllWorkList.this, adapter.getItem(position - 1).getPid());
                 //TODO   详情
                 Intent intent = new Intent(Aty_MySendAllWorkList.this, Aty_OriDetails.class);
                 intent.putExtra("workId", adapter.getItem(position - 1).getPid());

@@ -416,7 +416,6 @@ public class F_Money extends BaseFragment {
         rollViewPager.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                Utils.showToast(context, "内容：" + newsList.get(position).getContent());
                 String newsId = newsList.get(position).getPid();
                 Intent intent = new Intent(context, NewsDetails.class);
                 intent.putExtra("newsId", newsId);

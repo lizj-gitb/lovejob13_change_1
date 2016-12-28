@@ -328,7 +328,7 @@ public class SendOriWork extends BaseFragment {
                 title = "请输入工作需求";
                 content = tvSendWorkOriWant.getText().toString().trim();
                 requestCode = RequestCode_SendOriWork_TO_WriteView_Want;
-                maxLenth = 50;
+                maxLenth = 200;
                 break;
             case R.id.rt_send_work_ori_location:
 //                title = "请输入工作地点";

@@ -63,6 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="工作需求"
+            android:lines="1"
             android:textColor="@color/actionbar"
             android:textSize="14.3dp" />
 
@@ -82,12 +83,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:ellipsize="marquee"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
                 android:gravity="right"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:singleLine="true"
                 android:textSize="14.3dp" />
 
             <ImageView
@@ -129,12 +125,9 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:ellipsize="marquee"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
                 android:gravity="right"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:singleLine="true"
+                android:lines="1"
+                android:text=""
                 android:textSize="14.3dp" />
 
             <ImageView

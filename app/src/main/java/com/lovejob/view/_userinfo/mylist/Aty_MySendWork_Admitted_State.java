@@ -11,6 +11,7 @@ import android.support.v4.app.ActivityCompat;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -24,6 +25,7 @@ import com.lovejob.controllers.task.OnAllParameListener;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
+import com.lovejob.view._othersinfos.Others;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
 import com.v.rapiddev.base.AppManager;
@@ -169,6 +171,15 @@ public class Aty_MySendWork_Admitted_State extends BaseActivity {
             }
         };
         lvAtyWorkbusinessList.setAdapter(adapter);
+        lvAtyWorkbusinessList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(context, Others.class);
+                intent.putExtra("userType",adapter.getItem(position).getType());
+                intent.putExtra("userId", adapter.getItem(position).getUserId());
+                startActivity(intent);
+            }
+        });
     }
 
     private void addData() {

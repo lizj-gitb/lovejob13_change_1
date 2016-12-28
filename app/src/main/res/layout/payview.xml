@@ -362,7 +362,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="10dp"
-                    android:text="悬赏天下英雄，帮我招到合适的人才上班后，可获得赏金哦！（上班10天后与公司签订合同之后，在能领导赏金，若没有招到，15天之后可以随时全额退款）。"
+                    android:text="悬赏天下英雄，帮我招到合适的人才上班后，可获得赏金哦！（上班10天后与公司签订合同之后，才能领到赏金，若没有招到，15天之后可以随时全额退款）。"
                     android:textColor="@color/defaultTextColor"
                     android:textSize="10sp" />
 
