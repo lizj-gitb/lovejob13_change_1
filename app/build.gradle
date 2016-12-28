@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.bugtags.library.plugin'
 android {
     useLibrary 'org.apache.http.legacy'
-    signingConfigs {
-        config {
-            keyAlias 'lovejob'
-            keyPassword 'ai930225'
-            storeFile file('D:/git/lovejob.jks')
-            storePassword 'ai930225'
-        }
-    }
+//    signingConfigs {
+//        config {
+//            keyAlias 'lovejob'
+//            keyPassword 'ai930225'
+//            storeFile file('D:/git/lovejob.jks')
+//            storePassword 'ai930225'
+//        }
+//    }
     compileSdkVersion 24
     // buildToolsVersion "24.0.1"
     buildToolsVersion '23.0.2'
@@ -56,10 +56,10 @@ bugtags {
     //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考帮助中心->符号表->Android 符号表->配置自动上传符号表
     appKey "460ae597c3b8c859470b1600fa16371a"  //这里是你的 appKey
     appSecret "1f9517a87993eeca68b402fcf85e30b7"    //这里是你的 appSecret，管理员在设置页可以查看
-    mappingUploadEnabled true
+    mappingUploadEnabled false
 
     //网络跟踪功能配置(企业版)
-    trackingNetworkEnabled true
+    trackingNetworkEnabled false
 }
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')

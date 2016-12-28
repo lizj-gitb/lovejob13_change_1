@@ -548,7 +548,14 @@
                 android:layout_marginRight="25dp"
                 android:src="@mipmap/button_focus_suspend_off" />
 
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:text="薪资已提前预付，完成后即可到账。"
+                android:textSize="12sp" />
         </RelativeLayout>
 
     </RelativeLayout>

@@ -35,7 +35,7 @@
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/appicon"
+        android:icon="@mipmap/appcion"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

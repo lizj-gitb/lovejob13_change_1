@@ -93,7 +93,7 @@ public class MyApplication extends MultiDexApplication {
         V.d("into MyApplication...");
         mMyApplication = this;
         UMShareAPI.get(this);
-        Bugtags.start("460ae597c3b8c859470b1600fa16371a", this, Bugtags.BTGInvocationEventBubble);
+//        Bugtags.start("460ae597c3b8c859470b1600fa16371a", this, Bugtags.BTGInvocationEventBubble);
         /**
          * 初始化UMeng相关数据
          */

@@ -380,7 +380,7 @@ public class SendpakWork extends BaseFragment {
                 title = "请输入酬金，单位元";
                 content = tvSendWorkParPrice.getText().toString();
                 maxLenth = 8;
-                writeType = 2;
+                writeType = 3;
                 requestCode = RequestCode_SendPakWork_TO_WriteView_Price;
 
                 break;

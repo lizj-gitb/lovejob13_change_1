@@ -116,7 +116,6 @@
                 </LinearLayout>
 
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -183,16 +182,16 @@
 
 
                     <TextView
+                        android:id="@+id/textView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="8dp"
                         android:gravity="center_vertical"
                         android:text="工作地点:"
-                        android:layout_marginLeft="15dp"
-                        android:textColor="@color/actionbar"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:id="@+id/textView6" />
+                        android:textColor="@color/actionbar" />
 
                     <TextView
                         android:id="@+id/tv_oridetails_location"
@@ -202,7 +201,6 @@
                         android:layout_marginLeft="5dp"
                         android:textColor="@color/hiteTextColor" />
                 </LinearLayout>
-
 
 
                 <LinearLayout
@@ -236,26 +234,24 @@
                     android:background="@color/white"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="88dp"
                         android:layout_height="wrap_content" />
+
                     <GridView
                         android:id="@+id/gv_oridetails_alreadySignPerson"
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
                         android:gravity="center_vertical" />
+
                     <TextView
                         android:id="@+id/tv_oridetails_number"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
 
-
-
-
-
                 </LinearLayout>
-
 
 
                 <LinearLayout
@@ -275,12 +271,11 @@
                         android:id="@+id/tv_oridetails_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
                         android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
                         android:textColor="@color/orage"
                         android:textSize="14dp" />
                 </LinearLayout>
-
 
 
                 <LinearLayout
@@ -301,8 +296,8 @@
                         android:id="@+id/tv_oridetails_phonenuber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
                         android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
                         android:textColor="@color/hiteTextColor"
                         android:textSize="14dp" />
                 </LinearLayout>
@@ -447,6 +442,14 @@
                 android:layout_marginRight="25dp"
                 android:src="@mipmap/button_focus_suspend_off" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:text="薪资已提前预付，完成后即可到账。"
+                android:textSize="12sp" />
 
         </RelativeLayout>
 

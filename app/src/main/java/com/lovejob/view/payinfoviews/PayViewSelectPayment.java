@@ -135,6 +135,7 @@ public class PayViewSelectPayment extends BaseActivity {
                 }
 //                workPid = getIntent().getStringExtra("workPid");
                 price = userInputModel.getParams()[2].substring(0, userInputModel.getParams()[2].length() - 3);
+                price = userInputModel.getParams()[2];
                 photosPaths = getIntent().getStringArrayListExtra("photosPaths");
                 break;
             case SnedMoneyWork_Pak:
@@ -146,7 +147,8 @@ public class PayViewSelectPayment extends BaseActivity {
                     return;
                 }
 //                workPid = getIntent().getStringExtra("workPid");
-                price = userInputModel.getParams()[5].substring(0, userInputModel.getParams()[5].length() - 3);
+//                price = userInputModel.getParams()[5].substring(0, userInputModel.getParams()[5].length() - 3);
+                price = userInputModel.getParams()[5];
                 break;
 
             case BuyUserService:
