@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.bugtags.library.plugin'
 android {
     useLibrary 'org.apache.http.legacy'
-//    signingConfigs {
-//        config {
-//            keyAlias 'lovejob'
-//            keyPassword 'ai930225'
-//            storeFile file('D:/git/lovejob.jks')
-//            storePassword 'ai930225'
-//        }
-//    }
+    signingConfigs {
+        config {
+            keyAlias 'lovejob'
+            keyPassword 'ai930225'
+            storeFile file('/Users/wenyunzhao/Desktop/lovejob.jks')
+            storePassword 'ai930225'
+        }
+    }
     compileSdkVersion 24
     // buildToolsVersion "24.0.1"
     buildToolsVersion '23.0.2'

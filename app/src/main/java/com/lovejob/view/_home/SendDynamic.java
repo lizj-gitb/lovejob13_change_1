@@ -228,8 +228,12 @@ public class SendDynamic extends BaseActivity {
 
                     @Override
                     public void onError(String msg) {
-                        dialog.dismiss();
-                        Utils.showToast(context, msg);
+                        try {
+                            dialog.dismiss();
+                            Utils.showToast(context, msg);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                 });
 //                sendDynamicTask = new SendDynamicTask(address, content, lat, lng, sb.toString());

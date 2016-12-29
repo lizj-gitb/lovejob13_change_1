@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/userbg"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/userbg"
 
-    android:orientation="vertical">
+              android:orientation="vertical">
 
     <com.v.rapiddev.pulltorefresh.PullToRefreshScrollView
         android:id="@+id/sv_f_my_refreshview"
@@ -36,7 +36,7 @@
                         android:id="@+id/img_f_my_userlogo"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/defaultuserlogo" />
+                        android:src="@drawable/defaultuserlogo"/>
 
                     <ImageView
                         android:id="@+id/img_f_my_sex"
@@ -45,7 +45,7 @@
                         android:layout_alignBottom="@id/img_f_my_userlogo"
                         android:layout_alignRight="@id/img_f_my_userlogo"
                         android:layout_marginRight="15dp"
-                        android:src="@mipmap/icon_male" />
+                        android:src="@mipmap/icon_male"/>
                 </RelativeLayout>
 
                 <LinearLayout
@@ -63,7 +63,7 @@
                         android:layout_marginTop="25dp"
                         android:textColor="@color/white"
                         android:textSize="22dp"
-                        android:textStyle="normal" />
+                        android:textStyle="normal"/>
 
                     <ProgressBar
                         android:id="@+id/pb_f_my_progressbar"
@@ -74,7 +74,7 @@
                         android:layout_marginTop="6dp"
                         android:background="@drawable/progressbar_bg"
                         android:max="100"
-                        android:progress="50" />
+                        android:progress="50"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -90,14 +90,14 @@
                             android:layout_gravity="center_vertical"
                             android:text="资料完整度:"
                             android:textColor="@color/white"
-                            android:textSize="11dp" />
+                            android:textSize="11dp"/>
 
                         <TextView
                             android:id="@+id/tv_f_my_userdatanum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/white"
-                            android:textSize="11dp" />
+                            android:textSize="11dp"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -114,7 +114,7 @@
                         android:layout_gravity="right"
                         android:layout_marginRight="15dp"
                         android:layout_marginTop="15dp"
-                        android:src="@mipmap/icon_edit" />
+                        android:src="@mipmap/icon_edit"/>
 
                     <LinearLayout
                         android:id="@+id/ll1"
@@ -126,20 +126,20 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="wrap_content"
                             android:id="@+id/ttv1"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="幽默:"
                             android:textColor="@color/white"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"/>
 
                         <TextView
                             android:id="@+id/tv_f_my_Humour"
-                            android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
                             android:textColor="@color/white"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -152,22 +152,22 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="wrap_content"
                             android:id="@+id/ttv2"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="可爱:"
                             android:textColor="@color/white"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"/>
 
                         <TextView
                             android:id="@+id/tv_f_my_Loveliness"
-                            android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
                             android:textColor="@color/white"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"/>
                     </LinearLayout>
-<!--android:background="@mipmap/icon_outside"-->
+                    <!--android:background="@mipmap/icon_outside"-->
                     <LinearLayout
                         android:id="@+id/ll3"
                         android:layout_width="wrap_content"
@@ -183,15 +183,15 @@
                             android:layout_height="wrap_content"
                             android:text="活波:"
                             android:textColor="@color/white"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"/>
 
                         <TextView
                             android:id="@+id/tv_f_my_Lively"
-                            android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
                             android:textColor="@color/white"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -211,13 +211,13 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="我的发帖(0)"
-                    android:textColor="@color/hiteTextColor" />
+                    android:textColor="@color/hiteTextColor"/>
 
 
                 <View
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="#eeeeee" />
+                    android:background="#eeeeee"/>
 
                 <TextView
                     android:id="@+id/tv_f_my_RepliesCount"
@@ -226,7 +226,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="我的回帖()"
-                    android:textColor="@color/hiteTextColor" />
+                    android:textColor="@color/hiteTextColor"/>
             </LinearLayout>
 
             <LinearLayout
@@ -243,14 +243,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:src="@mipmap/icon_user_message" />
+                    android:src="@mipmap/icon_user_message"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="消息"
-                    android:textColor="@color/hiteTextColor" />
+                    android:textColor="@color/hiteTextColor"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -266,13 +266,13 @@
                         android:gravity="center"
                         android:textColor="@color/white"
                         android:textSize="12dp"
-                        android:visibility="gone" />
+                        android:visibility="gone"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="18dp"
-                        android:src="@mipmap/icon_enter" />
+                        android:src="@mipmap/icon_enter"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -280,7 +280,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#eeeeee" />
+                android:background="#eeeeee"/>
 
             <LinearLayout
                 android:id="@+id/lt_f_my_dyn"
@@ -295,14 +295,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:src="@mipmap/icon_user_news" />
+                    android:src="@mipmap/icon_user_news"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="动态"
-                    android:textColor="@color/hiteTextColor" />
+                    android:textColor="@color/hiteTextColor"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -318,13 +318,13 @@
                         android:gravity="center"
                         android:textColor="@color/white"
                         android:textSize="12dp"
-                        android:visibility="gone" />
+                        android:visibility="gone"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="18dp"
-                        android:src="@mipmap/icon_enter" />
+                        android:src="@mipmap/icon_enter"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -343,14 +343,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:src="@mipmap/icon_user_wallet" />
+                    android:src="@mipmap/icon_user_wallet"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="钱包"
-                    android:textColor="@color/hiteTextColor" />
+                    android:textColor="@color/hiteTextColor"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -361,7 +361,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="18dp"
-                        android:src="@mipmap/icon_enter" />
+                        android:src="@mipmap/icon_enter"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -369,7 +369,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#eeeeee" />
+                android:background="#eeeeee"/>
 
             <LinearLayout
                 android:id="@+id/lt_f_my_list"
@@ -384,14 +384,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:src="@mipmap/icon_user_list" />
+                    android:src="@mipmap/icon_user_list"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="账单"
-                    android:textColor="@color/hiteTextColor" />
+                    android:textColor="@color/hiteTextColor"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -402,7 +402,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="18dp"
-                        android:src="@mipmap/icon_enter" />
+                        android:src="@mipmap/icon_enter"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -410,7 +410,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#eeeeee" />
+                android:background="#eeeeee"/>
 
             <LinearLayout
                 android:id="@+id/lt_f_my_myservice"
@@ -425,14 +425,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:src="@mipmap/icon_user_service" />
+                    android:src="@mipmap/icon_user_service"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="我的服务"
-                    android:textColor="@color/hiteTextColor" />
+                    android:textColor="@color/hiteTextColor"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -443,7 +443,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="18dp"
-                        android:src="@mipmap/icon_enter" />
+                        android:src="@mipmap/icon_enter"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -451,7 +451,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#eeeeee" />
+                android:background="#eeeeee"/>
 
             <LinearLayout
                 android:id="@+id/lt_f_my_redeme"
@@ -466,14 +466,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:src="@mipmap/icon_user_resume" />
+                    android:src="@mipmap/icon_user_resume"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="我的简历"
-                    android:textColor="@color/hiteTextColor" />
+                    android:textColor="@color/hiteTextColor"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -484,7 +484,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="18dp"
-                        android:src="@mipmap/icon_enter" />
+                        android:src="@mipmap/icon_enter"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -503,14 +503,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:src="@mipmap/icon_user_setting" />
+                    android:src="@mipmap/icon_user_setting"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="设置"
-                    android:textColor="@color/hiteTextColor" />
+                    android:textColor="@color/hiteTextColor"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -521,7 +521,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="18dp"
-                        android:src="@mipmap/icon_enter" />
+                        android:src="@mipmap/icon_enter"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -529,7 +529,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#eeeeee" />
+                android:background="#eeeeee"/>
         </LinearLayout>
     </com.v.rapiddev.pulltorefresh.PullToRefreshScrollView>
 </LinearLayout>

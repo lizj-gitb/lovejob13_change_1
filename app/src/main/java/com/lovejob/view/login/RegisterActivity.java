@@ -99,8 +99,12 @@ public class RegisterActivity extends BaseActivity {
 
     @Override
     public void onDestroy_() {
-        if (timer != null)
-            timer.cancle();
+        try {
+            if (timer != null)
+                timer.cancle();
+        } catch (Exception e) {
+
+        }
     }
 
     @Override
@@ -241,8 +245,13 @@ public class RegisterActivity extends BaseActivity {
 
                                         @Override
                                         public void onError(String msg) {
-                                            dialog.dismiss();
-                                            Utils.showToast(context, msg);
+
+                                            try {
+                                                dialog.dismiss();
+                                                Utils.showToast(context, msg);
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
                                         }
                                     });
                                 }

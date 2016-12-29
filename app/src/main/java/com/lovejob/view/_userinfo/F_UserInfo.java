@@ -320,8 +320,12 @@ public class F_UserInfo extends BaseFragment {
 
                     @Override
                     public void onError(String msg) {
-                        svFMyRefreshview.onRefreshComplete();
-                        Utils.showToast(context, msg);
+                        try {
+                            svFMyRefreshview.onRefreshComplete();
+                            Utils.showToast(context, msg);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                 }));
     }

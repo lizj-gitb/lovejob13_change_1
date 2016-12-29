@@ -29,6 +29,7 @@ import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
 import com.lovejob.view._home.F_Home_2;
+import com.lovejob.view._home.dyndetailstabs.NewsDetails;
 import com.lovejob.view._othersinfos.Others;
 import com.lovejob.view.cityselector.CityPickerActivity;
 import com.umeng.socialize.ShareAction;
@@ -88,6 +89,7 @@ public class F_Job_2 extends BaseFragment {
     private int page = 1;//请求的页数 默认1
     private String address;//定位的地址 可为空
     private String jobName;//用户搜索框的内容 可为空
+    private TestNomalAdapter newAdapter;
 
     @Override
     public View initView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -109,7 +111,8 @@ public class F_Job_2 extends BaseFragment {
         setOnItemClickListener();
         return mainView;
     }
-    public class SpaceItemDecoration extends RecyclerView.ItemDecoration{
+
+    public class SpaceItemDecoration extends RecyclerView.ItemDecoration {
 
         private int space;
 
@@ -127,6 +130,7 @@ public class F_Job_2 extends BaseFragment {
 
         }
     }
+
     private void setOnItemClickListener() {
         mRvJob.addOnItemTouchListener(new OnItemClickListener() {
             @Override
@@ -312,7 +316,8 @@ public class F_Job_2 extends BaseFragment {
                 for (int i = 0; i < thePerfectGirl.getData().getInformationInfos().size(); i++) {
                     newsList.add(thePerfectGirl.getData().getInformationInfos().get(i));
                 }
-                gv_home_news.setAdapter(new TestNomalAdapter(newsList));
+                newAdapter = new TestNomalAdapter(newsList);
+                gv_home_news.setAdapter(newAdapter);
             }
 
             @Override
@@ -327,6 +332,16 @@ public class F_Job_2 extends BaseFragment {
         gv_home_news = (RollPagerView) view.findViewById(R.id.roll_view_pager);
 //        initNewsInfo(gv_home_news);
         addDataToNewsList();
+        gv_home_news.setOnItemClickListener(new com.jude.rollviewpager.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                String newsId = newAdapter.getItem(position).getPid();
+                Intent intent = new Intent(context, NewsDetails.class);
+                intent.putExtra("newsId", newsId);
+                context.startActivityForResult(intent, StaticParams.RequestCode.RequestCode_F_Job_TO_NewsDetails);
+                context.overridePendingTransition(R.anim.base_slide_right_in, R.anim.slide_out_to_right);
+            }
+        });
         return view;
     }
 
@@ -451,6 +466,10 @@ public class F_Job_2 extends BaseFragment {
 
         public TestNomalAdapter(List<ThePerfectGirl.InformationInfo> newsList) {
             this.imgs = newsList;
+        }
+
+        public ThePerfectGirl.InformationInfo getItem(int p) {
+            return imgs.get(p);
         }
 
         @Override

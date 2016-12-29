@@ -85,6 +85,7 @@ public class MyApplication extends MultiDexApplication {
 
     private static MyApplication mMyApplication;
     public static PushAgent mPushAgent;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -106,9 +107,9 @@ public class MyApplication extends MultiDexApplication {
          * 初始化融云相关参数
          */
         RongIM.init(this);
-//        /**
-//         * 初始化facebook图片加载
-//         */
+        /**
+         * 初始化facebook图片加载
+         */
 //        Fresco.initialize(getApplicationContext());
         Logger.init(StaticParams.TAG);
 
@@ -266,7 +267,7 @@ public class MyApplication extends MultiDexApplication {
         V.d("start init umeng infos ...");
         PlatformConfig.setWeixin("wx28d1e39fb52b12bf", "69a672ed725aef9c15298986b32c376a");
         PlatformConfig.setQQZone("1105707606", "w7lxyDyD8RmZlMKq");
-         mPushAgent = PushAgent.getInstance(this);
+        mPushAgent = PushAgent.getInstance(this);
         //注册推送服务，每次调用register方法都会回调该接口
         mPushAgent.register(new IUmengRegisterCallback() {
 
