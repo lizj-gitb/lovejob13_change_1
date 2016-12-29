@@ -212,6 +212,7 @@ public class SendOriWork extends BaseFragment {
         for (int i = 0; i < inputModel.getParams().length; i++) {
             strs[i] = inputModel.getParams()[i];
         }
+        strs[2] =String.valueOf(money);
         strs[5] = want;
         strs[6] = person;
         //压缩
