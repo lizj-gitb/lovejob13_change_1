@@ -90,6 +90,7 @@ public class F_Job_2 extends BaseFragment {
     private String address;//定位的地址 可为空
     private String jobName;//用户搜索框的内容 可为空
     private TestNomalAdapter newAdapter;
+    private boolean isAdd=false;
 
     @Override
     public View initView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -283,7 +284,12 @@ public class F_Job_2 extends BaseFragment {
                     Utils.showToast(context, "没有更多工作信息");
                     return;
                 }
-                mRvAdapter.setNewData(workInfoDTOs);
+                if (isAdd){
+                    isAdd=false;
+                    mRvAdapter.addData(workInfoDTOs);
+                }else {
+                    mRvAdapter.setNewData(workInfoDTOs);
+                }
 //                for (int i = 0; i < workInfoDTOs.size(); i++) {
 //                    adapter_lv.addItem(workInfoDTOs.get(i));
 //                }
@@ -382,6 +388,7 @@ public class F_Job_2 extends BaseFragment {
             public void onPullUpToRefresh(PullToRefreshBase<ScrollView> refreshView) {
                 page++;
 //                StaticParams.ROWS = "20";
+                isAdd=true;
                 adDataToJobList();
             }
         });
@@ -429,6 +436,7 @@ public class F_Job_2 extends BaseFragment {
 
                     if (item.getList().get(0).getType().equals("1")) {
                         //只返回一个江湖令
+                        jianghu.setVisibility(View.VISIBLE);
                         xuanshang.setVisibility(View.GONE);
                         tv_job_xuanshangjinqian.setVisibility(View.GONE);
                     }

@@ -470,7 +470,7 @@ public class PayViewSelectPayment extends BaseActivity {
 //
 //            }
 //        });
-        callList.add(LoveJob.sendOriWork(userInputModel, payType, price, "用户发布创意工作", "用户发布长期工作的预付金",
+        callList.add(LoveJob.sendOriWork(userInputModel, payType, price, "用户发布创意工作", "用户发布创意工作的预付金",
                 new OnAllParameListener() {
                     @Override
                     public void onSuccess(final ThePerfectGirl thePerfectGirl) {
