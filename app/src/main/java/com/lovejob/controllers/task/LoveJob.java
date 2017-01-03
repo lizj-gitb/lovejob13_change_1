@@ -2490,7 +2490,7 @@ public class LoveJob {
         }
 
         map.put("address", strs[1]);
-        map.put("salary", strs[2].substring(0, strs[2].length() - 3));
+        map.put("salary", strs[2]);
         map.put("workPayment", "0");//创意工作限制为日  0 ci   3月  2日
         if (!TextUtils.isEmpty(strs[6])) {
             map.put("contact", strs[6]);
