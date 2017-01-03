@@ -143,7 +143,7 @@ public class NewsDetails extends BaseActivity {
                         .withText(((MyAdapter) mRvNewsdetails.getAdapter()).getData().get(0).getContent())
                         .withMedia(new UMImage(context, shardURL))
                         .withTitle(mTvNewsdetailsSubtitle.getText().toString())
-                        .withTargetUrl("http://192.168.3.171:8080/ghjbkn?otherId=" + newsId + "&toOtherActivity=0")
+                        .withTargetUrl("http://xiechaobin.xicp.io/AAAa/text.html?otherId=" + newsId + "&toOtherActivity=0")
                         .setCallback(new UMShareListener() {
                             @Override
                             public void onResult(SHARE_MEDIA share_media) {

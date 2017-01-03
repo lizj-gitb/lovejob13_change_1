@@ -15,7 +15,6 @@ public class AppContext extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d("123");
-        Log.e("321");
+
     }
 }

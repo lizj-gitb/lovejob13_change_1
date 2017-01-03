@@ -66,7 +66,6 @@ public class ThePerfectGirl implements Serializable {
         private List<AccountDTO> accountDTOs;
         private List<UserInfoDTO> userInfoDTOs;
         private UserInfoDTO userInfoDTO;
-
         private List<PositionTypeInfoDTO> positionTypeInfoDTOs;
 
         private List<InformationInfo> informationInfos;
@@ -116,6 +115,17 @@ public class ThePerfectGirl implements Serializable {
         private boolean boundQQ;
         private boolean boundWeChat;
         private boolean identify;
+
+        private AboutMe aboutusDTO;
+
+
+        public AboutMe getAboutusDTO() {
+            return aboutusDTO;
+        }
+
+        public void setAboutusDTO(AboutMe aboutusDTO) {
+            this.aboutusDTO = aboutusDTO;
+        }
 
         public boolean isIdentify() {
             return identify;
@@ -609,6 +619,83 @@ public class ThePerfectGirl implements Serializable {
         this.data = data;
     }
 
+    public class AboutMe implements Serializable{
+
+
+        /**
+         * pid : null
+         * version : 1.0.1
+         * about_us : 【爱上工作】 是一个立体招聘平台，包含招聘求职，实习兼职，个人技能或服务交易，同时，也可以通过分享信息或者推荐好友获得丰厚报酬，解决整个社会的用人需求，帮助个人实现劳动价值，构建全方位立体真实的劳动生态价值体系。||应用特点：|【工作方式任你选】 全职、实习、兼职、自由职业、总能找到适合你的工作；|【实名认证有保障】 所有的用户都已实名认证，放心无忧找工作；|【提问点名不怕坑】 查看职位问答、面试评价、HR风格、办公环境、提前知晓；|【及时沟通不用等】 与HR或与未来上级直接沟通，当场拍板，闪电入职；|【一对一专家指导】 为求职者提供从职业规划、建立编制、面试技巧等专业的指导；|【推荐人才赢奖金】 推荐给企业的人才入职后，最高可获得数千元的推荐奖金！|【转发信息得红包】 随手帮别人转发信息一条，根据相应身份等级可获得现金红包；|【技能服务可出售】 技能也是可以拿来出售滴，不仅帮助了别人，也能交到很多朋友；【成为劳动界的网红】 随时随地的秀出你的工作状态，或许下一个网红就是你哦；|我们还在努力给您带来更棒的用户体验！如果使用过程中有任何问题或是建议，请联系：|官方网站：www.congxinwl.com |官方微博：@爱上工作 |微信订阅号：爱上工作APP |微信服务号：赚点现钱 |QQ群：414083738
+         * create_date : 1480230851000
+         * update_date : 1480230857000
+         * title : 刘超
+         * sort : 4
+         */
+
+        private Object pid;
+        private String version;
+        private String about_us;
+        private long create_date;
+        private long update_date;
+        private String title;
+        private String sort;
+
+        public Object getPid() {
+            return pid;
+        }
+
+        public void setPid(Object pid) {
+            this.pid = pid;
+        }
+
+        public String getVersion() {
+            return version;
+        }
+
+        public void setVersion(String version) {
+            this.version = version;
+        }
+
+        public String getAbout_us() {
+            return about_us;
+        }
+
+        public void setAbout_us(String about_us) {
+            this.about_us = about_us;
+        }
+
+        public long getCreate_date() {
+            return create_date;
+        }
+
+        public void setCreate_date(long create_date) {
+            this.create_date = create_date;
+        }
+
+        public long getUpdate_date() {
+            return update_date;
+        }
+
+        public void setUpdate_date(long update_date) {
+            this.update_date = update_date;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public String getSort() {
+            return sort;
+        }
+
+        public void setSort(String sort) {
+            this.sort = sort;
+        }
+    }
 
     //TODO *********************************************华丽的分割线*********************************************
     //TODO *********************************************类2*********************************************

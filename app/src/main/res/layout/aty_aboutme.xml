@@ -29,71 +29,8 @@
             android:textSize="24sp" />
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="15dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="功能介绍
-            《爱上工作》为每一位劳动者量身打造的智能化APP。花钱用淘宝，赚钱用爱上工作。"
-            android:textColor="@color/hiteTextColor"
-            android:textSize="12sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/background_color" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="1.首页(动态圈)
-            每一位劳动者自己的平台，晒出自己的工作成就、工作心得，让你更好地爱上工作。"
-            android:textColor="@color/hiteTextColor"
-            android:textSize="12sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="2.求职
-            企业免费终身免费招聘，一对一沟通聊天，快捷高效，让找工作变得简单，还能领令牌赚钱。"
-            android:textColor="@color/hiteTextColor"
-            android:textSize="12sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="3.赚点现钱
-            提供需求和解决需求，链接人与人之间的劳动关系，能够在我想挣钱的时候做我能够做的事情去挣钱。"
-            android:textColor="@color/hiteTextColor"
-            android:textSize="12sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="4.工作圈
-            答疑解惑，了解朋友，这里都能解决。"
-            android:textColor="@color/hiteTextColor"
-            android:textSize="12sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="5.我(很重要)
-            简历、钱包、账单都在这里了，一定要好好经营。"
-            android:textColor="@color/hiteTextColor"
-            android:textSize="12sp" />
-    </LinearLayout>
+   <TextView
+       android:id="@+id/tv_aboutme"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"/>
 </LinearLayout>

@@ -358,7 +358,9 @@ public class MyApplication extends MultiDexApplication {
 
     }
 
-
+    public static AppPreferences getAppPrefrence(){
+        return new AppPreferences(getContext());
+    }
     public class MyLocationListener implements BDLocationListener {
         private Context context = null;
 

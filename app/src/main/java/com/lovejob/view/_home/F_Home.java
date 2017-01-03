@@ -366,6 +366,11 @@ public class F_Home extends BaseFragment {
         if (!TextUtils.isEmpty(city)) {
             actionbarTvLocationtext.setText(city);
         }
+        //todo
+        if (!MyApplication.getAppPreferences().getString(StaticParams.FileKey.__City__,"").equals("西安市")){
+            MyApplication.getAppPreferences().put(StaticParams.FileKey.__City__,"西安市");
+            actionbarTvLocationtext.setText("西安市");
+        }
     }
 
     @Override

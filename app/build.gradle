@@ -6,7 +6,7 @@ android {
         config {
             keyAlias 'lovejob'
             keyPassword 'ai930225'
-            storeFile file('/Users/wenyunzhao/Desktop/lovejob.jks')
+            storeFile file('/Users/wenyunzhao/Desktop/workspace/lovejob.jks')
             storePassword 'ai930225'
         }
     }
@@ -18,7 +18,7 @@ android {
         minSdkVersion 15
 //        targetSdkVersion 23
         versionCode 1
-        versionName "1.2.1"
+        versionName "1.2.3"
         resValue "string", "tray__authority", "com.lovejob.preferences"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true

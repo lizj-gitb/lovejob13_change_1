@@ -90,7 +90,7 @@ public class F_Job_2 extends BaseFragment {
     private String address;//定位的地址 可为空
     private String jobName;//用户搜索框的内容 可为空
     private TestNomalAdapter newAdapter;
-    private boolean isAdd=false;
+    private boolean isAdd = false;
 
     @Override
     public View initView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -223,7 +223,7 @@ public class F_Job_2 extends BaseFragment {
         new ShareAction(context).withText(workPid)
 
 //                .setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
-//
+                .withTargetUrl("http://xiechaobin.xicp.io/AAAa/text.html?otherId=" + workPid + "&toOtherActivity=1")
                 .setDisplayList(SHARE_MEDIA.WEIXIN_CIRCLE)
                 .setCallback(new UMShareListener() {
                     @Override
@@ -284,10 +284,10 @@ public class F_Job_2 extends BaseFragment {
                     Utils.showToast(context, "没有更多工作信息");
                     return;
                 }
-                if (isAdd){
-                    isAdd=false;
+                if (isAdd) {
+                    isAdd = false;
                     mRvAdapter.addData(workInfoDTOs);
-                }else {
+                } else {
                     mRvAdapter.setNewData(workInfoDTOs);
                 }
 //                for (int i = 0; i < workInfoDTOs.size(); i++) {
@@ -388,7 +388,7 @@ public class F_Job_2 extends BaseFragment {
             public void onPullUpToRefresh(PullToRefreshBase<ScrollView> refreshView) {
                 page++;
 //                StaticParams.ROWS = "20";
-                isAdd=true;
+                isAdd = true;
                 adDataToJobList();
             }
         });

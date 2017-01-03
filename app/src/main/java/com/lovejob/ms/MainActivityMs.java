@@ -90,9 +90,10 @@ public class MainActivityMs extends BaseActivity {
                 break;
             case "1":
                 //跳转长期工作详情页面 带入参数
-//                intent = new Intent(context, NewsDetails.class);
-//                intent.putExtra("workId", otherId);
+                intent = new Intent(context, NewsDetails.class);
+                intent.putExtra("workId", otherId);
                 Logger.e("跳转工作详情页面");
+                startActivity(intent);
                 break;
         }
     }

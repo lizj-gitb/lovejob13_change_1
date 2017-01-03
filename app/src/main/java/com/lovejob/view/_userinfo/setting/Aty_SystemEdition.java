@@ -9,7 +9,11 @@ import android.widget.TextView;
 
 import com.lovejob.BaseActivity;
 import com.lovejob.R;
+import com.lovejob.controllers.task.LoveJob;
+import com.lovejob.controllers.task.OnAllParameListener;
+import com.lovejob.model.ThePerfectGirl;
 import com.v.rapiddev.base.AppManager;
+import com.v.rapiddev.http.okhttp3.OkHttpClient;
 import com.v.rapiddev.utils.V;
 import com.zwy.Utils;
 
@@ -38,15 +42,32 @@ public class Aty_SystemEdition extends BaseActivity {
     }
 
     private void AddData() {
-        V.d("banbenhao:"+Utils.getAppVersionName(context));
+        V.d("banbenhao:" + Utils.getAppVersionName(context));
 //        Utils.getAppVersionName(context);
         //TODO 添加版本信息
         //如果用户是最新版本，则不显示更新按钮，只显示：您目前已是最新版本无需更新。
+        LoveJob.getSystemVersion(new OnAllParameListener() {
+            @Override
+            public void onSuccess(ThePerfectGirl thePerfectGirl) {
+                String v = thePerfectGirl.getData().getAboutusDTO().getVersion();
+                if (Utils.getAppVersionName(context).equals(v)) {
+                    systemUpdate.setVisibility(View.GONE);
+                } else {
+                    systemUpdate.setVisibility(View.VISIBLE);
+                }
+                tvNewSystem.setText("V"+v);
+            }
+
+            @Override
+            public void onError(String msg) {
+                com.lovejob.model.Utils.showToast(context, msg);
+            }
+        });
     }
 
     @Override
     public void onResume_() {
-
+        tvNowSystem.setText("V" + Utils.getAppVersionName(context));
     }
 
     @Override
@@ -61,7 +82,7 @@ public class Aty_SystemEdition extends BaseActivity {
                 AppManager.getAppManager().finishActivity();
                 break;
             case R.id.system_update:
-
+                com.lovejob.model.Utils.showToast(context, "尽情期待");
                 break;
         }
     }
