@@ -146,12 +146,23 @@ public class Aty_Setting extends BaseActivity {
             case R.id.bind_qq:
                 dialog = Utils.showProgressDliago(context, "正在绑定");
                 otherType = OtherType.QQ;
-                mShareAPI.getPlatformInfo(context, SHARE_MEDIA.QQ, ongetUserInfos);
+                if (mShareAPI.isInstall(context,SHARE_MEDIA.QQ)){
+                    mShareAPI.getPlatformInfo(context, SHARE_MEDIA.QQ, ongetUserInfos);
+                }else {
+                    Utils.showToast(context, "请下载最新版QQ");
+                    dialog.dismiss();
+                }
                 break;
             case R.id.bind_wechat:
                 dialog = Utils.showProgressDliago(context, "正在绑定");
                 otherType = OtherType.WeChat;
-                mShareAPI.getPlatformInfo(context, SHARE_MEDIA.WEIXIN, ongetUserInfos);
+                if (mShareAPI.isInstall(context,SHARE_MEDIA.WEIXIN)){
+                    mShareAPI.getPlatformInfo(context, SHARE_MEDIA.WEIXIN, ongetUserInfos);
+                }else {
+                    Utils.showToast(context, "请下载最新版微信");
+                    dialog.dismiss();
+                }
+
                 break;
             case R.id.systemCancellation:
                 if (isoncl){

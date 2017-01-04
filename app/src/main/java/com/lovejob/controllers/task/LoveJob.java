@@ -44,7 +44,7 @@ public class LoveJob {
     public static Call getSystemVersion(final OnAllParameListener onAllParameListener) {
         Map hashMap = new HashMap();
         hashMap.put("requestType", "703");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, hashMap, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, hashMap, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -76,7 +76,7 @@ public class LoveJob {
         hashMap.put("devicePid", mAppPreferences.getString(AppException_ExceptionType, ""));//设备型号
         hashMap.put("exceptionDec", mExceptionContent);//错误详细信息
         mAppPreferences = null;
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, hashMap, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, hashMap, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -107,7 +107,7 @@ public class LoveJob {
             map.put("requestType", "124");
             map.put("clientKey", publickKey);
             map.put("userIndex", "1");
-            return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+            return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
                 @Override
                 public void OnSucc(String data) {
                     ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -166,7 +166,7 @@ public class LoveJob {
                 map.put("password", Utils.encrypt(context, FFMD5Util.getMD5String(password)));
                 map.put("requestType", "11");
             }
-            return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+            return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
                 @Override
                 public void OnSucc(String data) {
                     ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -221,7 +221,7 @@ public class LoveJob {
         map.put("requestType", "01");
         map.put("data", msgCodeType);
         map.put("phoneNumber", phoneNumber);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -263,7 +263,7 @@ public class LoveJob {
             onAllParameListener.onError("系统不安全");
             return null;
         }
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -322,7 +322,7 @@ public class LoveJob {
             map.put("userType", userType);
             map.put("phoneNumber", userNumber);
             map.put("captcha", captcha);
-            return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+            return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
                 @Override
                 public void OnSucc(String data) {
                     ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -362,7 +362,7 @@ public class LoveJob {
             map.put("password", Utils.encrypt(context, FFMD5Util.getMD5String(password)));
             map.put("captcha", captcha);
             map.put("userIndex", "1");
-            return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+            return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
                 @Override
                 public void OnSucc(String data) {
                     ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -398,7 +398,7 @@ public class LoveJob {
         map.put("requestType", "14");
         map.put("userIndex", "1");
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
 
@@ -443,7 +443,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "20");
         map.put("type", newstype);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -484,7 +484,7 @@ public class LoveJob {
             map.put("username", userName);
         }
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -513,7 +513,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("informationPid", newsId);
         map.put("requestType", "21");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -551,7 +551,7 @@ public class LoveJob {
         map.put("lat", lat);
         map.put("requestType", "511");
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -580,7 +580,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "513");
         map.put("dynamicPid", dynamicPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -609,7 +609,7 @@ public class LoveJob {
         map.put("requestType", "515");
         map.put("dynamicPid", dynPid);
         map.put("state", String.valueOf(state));
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -638,7 +638,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "520");
         map.put("dynamicCommentPid", dynamicCommentPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -667,7 +667,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "519");
         map.put("dynamicCommentPid", dynamicCommentPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -700,7 +700,7 @@ public class LoveJob {
         map.put("commentPid", dynamicCommentPid);
         map.put("detailContent", content);
         map.put("reUserPid", userid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -731,7 +731,7 @@ public class LoveJob {
         map.put("requestType", "514");
         map.put("dynamicPid", dynamicPid);
         map.put("state", String.valueOf(state));
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -761,7 +761,7 @@ public class LoveJob {
 //        map.put("page", String.valueOf(page));
 //        map.put("rows", "5");
 //        map.put("dynamicPid", dynPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -793,7 +793,7 @@ public class LoveJob {
         map.put("page", String.valueOf(page));
         map.put("rows", "5");
         map.put("dynamicPid", dynPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -824,7 +824,7 @@ public class LoveJob {
         map.put("content", msg);
         map.put("dynamicPid", dynPid);
         map.put("requestType", "516");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -865,7 +865,7 @@ public class LoveJob {
         if (!TextUtils.isEmpty(jobName)) {
             map.put("title", jobName);
         }
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -888,7 +888,7 @@ public class LoveJob {
         map.put("requestType", requestType);
         map.put("page", page);
         map.put("rows", "5");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -917,7 +917,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "32");
         map.put("workPid", workPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -944,7 +944,7 @@ public class LoveJob {
     public static Call getPosstionTypeList(final OnAllParameListener onAllParameListener) {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "02");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1085,7 +1085,7 @@ public class LoveJob {
         map.put("content", params[10]);
         map.put("workHours", params[11]);
         map.put("contactPhone", params[12]);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1132,7 +1132,7 @@ public class LoveJob {
         map.put("levelSix", TextUtils.isEmpty(token.getLv6()) ? "0" : token.getLv6());
         map.put("count", TextUtils.isEmpty(token.getCount()) ? "0" : token.getCount());
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1160,7 +1160,7 @@ public class LoveJob {
         map.put("orderTitle", orderTitle);
         map.put("orderBody", orderBody);
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1239,7 +1239,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", requestType);
         map.put("workPid", workPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1269,7 +1269,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("workPid", workPid);
         map.put("requestType", "32");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1299,7 +1299,7 @@ public class LoveJob {
         map.put("content", content);
 //        map.put("parentPid", parentPid);
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1331,7 +1331,7 @@ public class LoveJob {
 //        map.put("questionPid", questionPid);
 
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1361,7 +1361,7 @@ public class LoveJob {
         map.put("workPid", workPid);
         map.put("requestType", "37");
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1387,7 +1387,7 @@ public class LoveJob {
 
         map.put("level", level);
         map.put("content", content);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1410,7 +1410,7 @@ public class LoveJob {
         map.put("requestType", "67");
         map.put("serverRelationPid", pid);
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1435,7 +1435,7 @@ public class LoveJob {
         map.put("workPid", pid);
         map.put("employeePid", employeePid);
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1460,7 +1460,7 @@ public class LoveJob {
         map.put("state", state);
         map.put("serverPid", serpid);
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1487,7 +1487,7 @@ public class LoveJob {
         map.put("name", name);
         map.put("type", type);
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1513,7 +1513,7 @@ public class LoveJob {
         map.put("money", money);
         map.put("type", type);
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1536,7 +1536,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "41");
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1559,7 +1559,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "42");
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1584,7 +1584,7 @@ public class LoveJob {
 
         map.put("level", level);
         map.put("content", content);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1609,7 +1609,7 @@ public class LoveJob {
         map.put("level", level);
         map.put("argued", argued);
         map.put("requestType", "311");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1631,7 +1631,7 @@ public class LoveJob {
     public static Call getServiceList(String requestType, final OnAllParameListener onAllParameListener) {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", requestType);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1653,7 +1653,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "63");
         map.put("serverPid", serverPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1678,7 +1678,7 @@ public class LoveJob {
         map.put("rows", "5");
         map.put("applaySate", "1");
         map.put("requestType", requestType);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1702,7 +1702,7 @@ public class LoveJob {
         map.put("workPid", workPid);
         map.put("isApply", "flase");
         map.put("requestType", "34");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1724,7 +1724,7 @@ public class LoveJob {
     public static Call getAllNumber(final OnAllParameListener onAllParameListener) {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "43");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1746,7 +1746,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", requestType);
         map.put("serverRelationPid", serverPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1771,7 +1771,7 @@ public class LoveJob {
         map.put("employeePid", employeePid);
         map.put("workPid", workPid);
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1794,7 +1794,7 @@ public class LoveJob {
         map.put("workPid", workPid);
         map.put("employeePid", employeePid);
         map.put("requestType", "39");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1820,7 +1820,7 @@ public class LoveJob {
         }
         map.put("serviceType", serviceType);
         map.put("requestType", requestType);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1854,8 +1854,8 @@ public class LoveJob {
         if (serverPid != null) {
             map.put("serverPid", serverPid);
         }
-        map.put("requestType", "60");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        map.put("requestType", "20");
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1876,7 +1876,7 @@ public class LoveJob {
     public static Call getBalance(final OnAllParameListener onAllParameListener) {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "316");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1900,7 +1900,7 @@ public class LoveJob {
         map.put("workPid", workPid);
         map.put("requestType", "34");
         map.put("isApply", "true");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1922,7 +1922,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("userPid", userPid);
         map.put("requestType", "423");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1962,7 +1962,7 @@ public class LoveJob {
         map.put("experience", experience);
         map.put("skill", skill);
         map.put("personalEvaluation", mine);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -1993,7 +1993,7 @@ public class LoveJob {
         map.put("organizationCode", organizationCode);
         map.put("website", website);
         map.put("mainBusiness", mainBusiness);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2017,7 +2017,7 @@ public class LoveJob {
             map.put("userPid", userPid);
         }
         map.put("requestType", "40");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2041,7 +2041,7 @@ public class LoveJob {
         map.put("requestType", "145");
         map.put("userPids", userid);
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2064,7 +2064,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "139");
         map.put("userPid", userid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2087,7 +2087,7 @@ public class LoveJob {
         map.put("requestType", "12");
         map.put("userPid", userPid);
         map.put("token", token);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2109,7 +2109,7 @@ public class LoveJob {
     public static Call getNewsDynamic(final OnAllParameListener onAllParameListener) {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "135");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2130,7 +2130,7 @@ public class LoveJob {
     public static Call getNewsDynamicGood(String request, final OnAllParameListener onAllParameListener) {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", request);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2152,7 +2152,7 @@ public class LoveJob {
     public static Call getMyToken(final OnAllParameListener onAllParameListener) {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "317");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2174,7 +2174,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "314");
         map.put("workTokenPid", worktokenPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2197,7 +2197,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "318");
         map.put("workTokenPid", worktokenPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2220,7 +2220,7 @@ public class LoveJob {
         map.put("requestType", "319");
         map.put("userPid", userPid);
         map.put("workPid", workPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2241,7 +2241,7 @@ public class LoveJob {
     public static Call getBillDetailed(final OnAllParameListener onAllParameListener) {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "129");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2262,7 +2262,7 @@ public class LoveJob {
     public static Call getMoneyRecordList(final OnAllParameListener onAllParameListener) {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "704");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2287,7 +2287,7 @@ public class LoveJob {
         if (userPid != null) {
             map.put("userPid", userPid);
         }
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2309,7 +2309,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", requestType);
         map.put("userPid", userPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2331,7 +2331,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", requestType);
         map.put("workPid", Workpid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2355,7 +2355,7 @@ public class LoveJob {
         map.put("content", content);
         map.put("evaluationuser", envaluationuser);
         map.put("type", type);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2399,7 +2399,7 @@ public class LoveJob {
         map.put("jobState", st);
 
         map.put("requestType", "415");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2423,7 +2423,7 @@ public class LoveJob {
         map.put("portraitId", portraitId);
         map.put("requestType", "414");
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2468,7 +2468,7 @@ public class LoveJob {
         map.put("background", portraitId);
         map.put("requestType", "140");
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2533,7 +2533,7 @@ public class LoveJob {
         map.put("orderTitle", orderTitle);
         map.put("orderBody", orderBody);
 //
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2660,7 +2660,7 @@ public class LoveJob {
         Map<String, String> map = new HashMap<>();
         map.put("requestType", "37");
         map.put("workPid", workPid);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2690,7 +2690,7 @@ public class LoveJob {
         map.put("requestType", "34");
         map.put("workPid", workPid);
         map.put("isApply", grab ? "true" : "false");
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2726,7 +2726,7 @@ public class LoveJob {
             map.put("parentPid", reQuestPid);
         }
         map.put("content", content);
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
@@ -2917,7 +2917,7 @@ public class LoveJob {
         map.put("payment", payType == PayType.WeiXin ? "2" : "1");
         map.put("outTradeNo", outTradeNo);
 
-        return ZokHttp.getInstance(60).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, map, new OnZokHttpResponse() {
             @Override
             public void OnSucc(String data) {
                 ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
