@@ -10,10 +10,12 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.lovejob.BaseActivity;
 import com.lovejob.R;
 import com.lovejob.controllers.task.LoveJob;
 import com.lovejob.controllers.task.OnAllParameListener;
+import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
 import com.v.rapiddev.base.AppManager;
@@ -41,7 +43,7 @@ public class Aty_CommServer extends BaseActivity {
     @Bind(R.id.et_comm_edit)
     EditText etCommEdit;
     Activity context;
-    String serverPid,useid;
+    String serverPid,useid,pictrue;
     String requestType;
     private Call call_comMent;
 
@@ -53,6 +55,8 @@ public class Aty_CommServer extends BaseActivity {
         context = this;
         serverPid = getIntent().getStringExtra("serverPid");
         useid = getIntent().getStringExtra("userid");
+        pictrue=getIntent().getStringExtra("pictrue");
+        Glide.with(context).load(StaticParams.QiNiuYunUrl+pictrue).into(imgCommLogo);
     }
 
     @Override

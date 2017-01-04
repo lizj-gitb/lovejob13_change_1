@@ -6,9 +6,9 @@ android {
         config {
             keyAlias 'lovejob'
             keyPassword 'ai930225'
-            storeFile file('E:/AndroidStudioProjects/aishang_jobwork1/lovejob.jks')
+            storeFile file('/Users/wenyunzhao/Desktop/workspace/lovejob.jks')
             storePassword 'ai930225'
-        }
+        }///Users/wenyunzhao/Desktop/workspace
     }
     compileSdkVersion 24
     // buildToolsVersion "24.0.1"
