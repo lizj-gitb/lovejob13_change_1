@@ -18,14 +18,13 @@ public class StaticParams {
     //
 //    public static final String URL = "http://192.168.3.90/lovejob";
     public static final String URL = "http://192.168.3.129/lovejob";
-
     //    public static final String URL = "http://192.168.3.8:8084/lovejob";
 //    public static final String URL = "http://192.168.3.37/lovejob";
 //    public static final String URL = "http://192.168.3.23/lovejob";
 //    public static final String URL = "http://www.congxinwl.com/lovejob";
 //    public static final String URL = "http://117.34.116.121:8084/lovejob";
 
-
+    public static final String URL_Shared = "http://www.congxinwl.com/share.html";
     //友盟推送注册成功返回
     public static String DeviceToken = "";
     //QQ微信授权回调的结果里

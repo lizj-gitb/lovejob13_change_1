@@ -223,7 +223,7 @@ public class F_Job_2 extends BaseFragment {
         new ShareAction(context).withText(workPid)
 
 //                .setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
-                .withTargetUrl("http://xiechaobin.xicp.io/AAAa/text.html?otherId=" + workPid + "&toOtherActivity=1")
+                .withTargetUrl(StaticParams.URL_Shared+"?otherId=" + workPid + "&toOtherActivity=1")
                 .setDisplayList(SHARE_MEDIA.WEIXIN_CIRCLE)
                 .setCallback(new UMShareListener() {
                     @Override
