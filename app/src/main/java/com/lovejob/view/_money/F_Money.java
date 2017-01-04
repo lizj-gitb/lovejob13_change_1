@@ -114,7 +114,7 @@ public class F_Money extends BaseFragment {
         setActionbar();
 
         /**
-         * 设置edittext状态监听
+             * 设置edittext状态监听
          */
         setKeyBoxListener();
 

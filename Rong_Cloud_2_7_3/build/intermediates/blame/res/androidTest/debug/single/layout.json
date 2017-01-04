@@ -1,902 +1,1202 @@
 [
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_file_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_file_list.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_input.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_input.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_mention_list_item.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_mention_list_item.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_preview_fragment.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_preview_fragment.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_emoji_gridview.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_emoji_gridview.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_input.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_input.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_message.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_emoji_item.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_emoji_item.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation_member.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation_member.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_mention_members.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_mention_members.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_provider.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_provider.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_vo_popup.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_vo_popup.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_mention_members.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_mention_members.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_plugins.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_plugins.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_plugins.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_plugins.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_cs_alert_human_evaluation.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_cs_alert_human_evaluation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_pic_popup_window.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_pic_popup_window.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fragment_base_setting.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fragment_base_setting.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_sub_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_sub_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_picsel_activity.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_picsel_activity.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_sub_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_sub_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messagelist.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messagelist.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_single_choice_layout.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_single_choice_layout.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_plugins.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_plugins.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_vo_provider.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_vo_provider.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_provider.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_provider.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_file_download.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_file_download.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_albums.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_albums.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_picture_pager.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_picture_pager.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_grid_camera.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_grid_camera.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_input_menus.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_input_menus.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_grid_item.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_grid_item.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_file_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_file_list.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_notification_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_notification_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_mention_members.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_mention_members.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_warning.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_warning.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_notice.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_notice.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu_item.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu_item.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_public_service_search.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_public_service_search.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_albums.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_albums.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_base_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_base_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_voice_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_voice_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_input.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_input.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fragment_base_setting.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fragment_base_setting.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_pic_popup_window.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_pic_popup_window.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_file_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_file_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_notice.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_notice.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_grid_camera.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_grid_camera.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_rich_content_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_rich_content_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_picprev_activity.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_picprev_activity.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_webview.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_webview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_txt_provider.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_txt_provider.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_multi_rich_content_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_multi_rich_content_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_text_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_text_message.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_file_list.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_file_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_input_pager_layout.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_input_pager_layout.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_list.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messageinput.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messageinput.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fragment_base_setting.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fragment_base_setting.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_cs_single_choice_layout.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_cs_single_choice_layout.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_single_choice_layout.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_single_choice_layout.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_cs_alert_warning.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_cs_alert_warning.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_robot_evaluation.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_robot_evaluation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_text_message_evaluate.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_text_message_evaluate.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_single_choice_layout.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_single_choice_layout.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_conversationlist.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_conversationlist.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_picture_pager.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_picture_pager.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_camera.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_camera.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_camera.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_camera.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fragment_base_setting.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fragment_base_setting.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_plugin_gridview.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_plugin_gridview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_file_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_file_message.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block_popup.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block_popup.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_emoji_item.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_emoji_item.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_human_evaluation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_human_evaluation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_albums.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_albums.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_input.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_input.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fragment_base_setting.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fragment_base_setting.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_picsel_catalog_listview.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_picsel_catalog_listview.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_download.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_download.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_search.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_search.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_list.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_group_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_group_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_dialog_alter.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_dialog_alter.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_dialog_alter.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_dialog_alter.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation_member.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation_member.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_file_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_file_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_location_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_location_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_progress.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_progress.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_location_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_location_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_emoji_item.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_emoji_item.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_notice.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_notice.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_warning.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_warning.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_group_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_group_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_voice_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_voice_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_activity.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_activity.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_sub_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_sub_list.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_input_pager_layout.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_input_pager_layout.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_vo_popup.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_vo_popup.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menus.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menus.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_picprev_activity.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_picprev_activity.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_provider.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_provider.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_cs_alert_robot_evaluation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_cs_alert_robot_evaluation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_camera.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_camera.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_search.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_search.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_search.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_search.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_manager.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_manager.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_app_service_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_app_service_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_picsel_grid_item.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_picsel_grid_item.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_mention_list_item.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_mention_list_item.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_inf.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_inf.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_input.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_input.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_preview_fragment.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_preview_fragment.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_app_service_conversation.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_app_service_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_messagelist.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_messagelist.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_txt_provider.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_txt_provider.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_webview.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_webview.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_human_evaluation.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_human_evaluation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_dialog_alter.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_dialog_alter.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_text_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_text_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_cs_item_single_choice.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_cs_item_single_choice.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_text_message_evaluate.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_text_message_evaluate.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_file_download.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_file_download.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation_member_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation_member_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_conversation_member_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_conversation_member_list.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messageinput.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messageinput.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_plugin_gridview.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_plugin_gridview.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_file_list_adapter.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_file_list_adapter.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_vo_provider.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_vo_provider.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_file_list_adapter.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_file_list_adapter.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_file_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_file_list.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_image_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_image_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block_popup.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block_popup.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_progress.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_progress.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_emoji_item.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_emoji_item.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_emoji_gridview.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_emoji_gridview.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_base_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_base_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_file_list_adapter.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_file_list_adapter.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_input_menu.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_input_menu.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation_member.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation_member.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_file_list_adapter.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_file_list_adapter.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fragment_base_setting.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fragment_base_setting.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_plugins.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_plugins.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messageinput.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messageinput.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_public_service_inf.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_public_service_inf.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_input.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_input.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_photo.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_photo.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_text_btn.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_text_btn.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_preview_fragment.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_preview_fragment.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_input_pager_layout.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_input_pager_layout.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_image.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_image.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_popup.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_popup.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_human_evaluation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_human_evaluation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_search.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_search.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_rich_content_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_rich_content_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_human_evaluation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_human_evaluation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_cs_single_choice_layout.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_cs_single_choice_layout.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_rich_content_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_rich_content_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_base_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_base_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_catalog_listview.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_catalog_listview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_camera.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_camera.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_base_conversation.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_base_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_picsel_grid_item.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_picsel_grid_item.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_notice.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_notice.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_search.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_search.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_mention_members.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_mention_members.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_messageinput.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_messageinput.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_robot_evaluation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_robot_evaluation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_app_service_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_app_service_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_text_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_text_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_system_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_system_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_mention_list_item.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_mention_list_item.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_public_service_sub_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_public_service_sub_list.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_inf.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_inf.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menus.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menus.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_location_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_location_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_input_pager_layout.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_input_pager_layout.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_txt_provider.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_txt_provider.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_webview.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_webview.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menus.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menus.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_discussion_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_discussion_conversation.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_text_btn.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_text_btn.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_text_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_text_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_plugin_gridview.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_plugin_gridview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_public_service_sub_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_public_service_sub_list.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_input_menus.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_input_menus.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_file_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_file_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation_member.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation_member.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_text_btn.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_text_btn.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_progress.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_progress.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_progress.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_progress.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_app_service_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_app_service_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_warning.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_warning.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_multi_rich_content_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_multi_rich_content_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_notification_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_notification_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_block_popup.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_block_popup.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_catalog_listview.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_catalog_listview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_conversation_member_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_conversation_member_list.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_progress.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_progress.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_plugin_gridview.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_plugin_gridview.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_rich_content_message.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_rich_content_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_discussion_notification_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_discussion_notification_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_input_pager_layout.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_input_pager_layout.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_picture_pager.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_picture_pager.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picprev_activity.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picprev_activity.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menus.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menus.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_block.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_block.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_sub_list.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_sub_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_block.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_block.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_warning.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_warning.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_input_menu_item.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_input_menu_item.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picprev_activity.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picprev_activity.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_txt_provider.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_txt_provider.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_group_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_group_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_image.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_image.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_activity.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_activity.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_file_list_adapter.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_file_list_adapter.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_photo.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_photo.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_picsel_grid_camera.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_picsel_grid_camera.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_manager.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_manager.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_file_manager.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_file_manager.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_information_notification_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_information_notification_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_picsel_catalog_listview.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_picsel_catalog_listview.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_search.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_search.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_popup.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_popup.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_input_pager_layout.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_input_pager_layout.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_file_manager.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_file_manager.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_provider.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_provider.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_preview_fragment.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_preview_fragment.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_information_notification_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_information_notification_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messagelist.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messagelist.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_dialog_alter.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_dialog_alter.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_text_message.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_text_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_webview.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_webview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_file_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_file_list.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_photo.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_photo.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_conversation.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_item_single_choice.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_item_single_choice.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_download.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_download.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_system_conversation.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_system_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_messageinput.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_messageinput.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_provider.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_provider.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_file_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_file_list.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_file_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_file_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_pic_popup_window.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_pic_popup_window.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_albums.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_albums.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_mention_list_item.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_mention_list_item.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_mention_list_item.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_mention_list_item.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_rich_content_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_rich_content_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_location_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_location_message.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messagelist.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messagelist.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_mention_list_item.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_mention_list_item.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_picture_pager.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_picture_pager.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_text_btn.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_text_btn.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_webview.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_webview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_multi_rich_content_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_multi_rich_content_message.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_single_choice_layout.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_single_choice_layout.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_location_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_location_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_voice_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_voice_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_multi_rich_content_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_multi_rich_content_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_image_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_image_message.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_public_service_inf.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_public_service_inf.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fragment_base_setting.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fragment_base_setting.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_picture_pager.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_picture_pager.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_progress.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_progress.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_multi_rich_content_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_multi_rich_content_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menus.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menus.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_conversation.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_search.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_search.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_catalog_listview.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_catalog_listview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_cs_alert_warning.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_cs_alert_warning.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_app_service_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_app_service_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_photo.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_photo.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_catalog_listview.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_catalog_listview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_picsel_grid_camera.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_picsel_grid_camera.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_emoji_gridview.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_emoji_gridview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_cs_alert_human_evaluation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_cs_alert_human_evaluation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_robot_evaluation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_robot_evaluation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu_item.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu_item.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_location_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_location_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_emoji_gridview.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_emoji_gridview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_rich_content_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_rich_content_message.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_group_conversation.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_group_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_albums.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_albums.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_conversation.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_plugins.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_plugins.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_manager.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_manager.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_notice.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_notice.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_image.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_image.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_txt_provider.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_txt_provider.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_cs_alert_robot_evaluation.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_cs_alert_robot_evaluation.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_voice_message.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_voice_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_group_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_group_conversation.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_rich_content_message.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_rich_content_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_activity.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_activity.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_photo.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_photo.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block_popup.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block_popup.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_webview.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_webview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_rich_content_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_rich_content_message.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_image.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_image.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_cs_item_single_choice.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_cs_item_single_choice.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_progress.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_progress.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_discussion_notification_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_discussion_notification_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_pic_popup_window.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_pic_popup_window.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_single_choice_layout.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_single_choice_layout.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_system_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_system_conversation.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_location_message.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_location_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_item_single_choice.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_item_single_choice.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_mention_list_item.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_mention_list_item.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_camera.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_camera.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_inf.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_inf.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_conversation_member.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_conversation_member.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_file_list_adapter.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_file_list_adapter.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_mention_members.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_mention_members.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_system_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_system_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_conversationlist.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_conversationlist.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messageinput.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messageinput.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_list.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_plugin_gridview.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_plugin_gridview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_text_btn.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_text_btn.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_emoji_gridview.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_emoji_gridview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_messagelist.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_messagelist.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_txt_provider.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_txt_provider.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_rich_content_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_rich_content_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_dialog_alter.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_dialog_alter.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_picture_pager.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_picture_pager.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_text_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_text_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_item_single_choice.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_item_single_choice.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_human_evaluation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_human_evaluation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_information_notification_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_information_notification_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation_member_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation_member_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_file_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_file_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_rich_content_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_rich_content_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_image.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_image.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_input_pager_layout.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_input_pager_layout.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_item_single_choice.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_item_single_choice.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_input_menu.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_input_menu.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_pic_popup_window.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_pic_popup_window.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_albums.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_albums.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_conversation.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_block_popup.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_block_popup.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_base_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_base_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversationlist.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversationlist.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_file_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_file_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_notification_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_notification_message.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_file_list_adapter.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_file_list_adapter.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_voice_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_voice_message.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_preview_fragment.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_preview_fragment.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_emoji_gridview.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_emoji_gridview.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_group_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_group_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_text_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_text_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_grid_camera.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_grid_camera.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_photo.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_photo.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_wi_text_btn.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_wi_text_btn.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_txt_provider.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_txt_provider.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_system_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_system_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_grid_item.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_grid_item.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_rich_content_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_rich_content_message.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_information_notification_message.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_information_notification_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_picsel_activity.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_picsel_activity.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_popup.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_popup.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_list.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_inf.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_inf.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_grid_item.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_grid_item.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_inf.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_inf.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_message.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_message.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_text_message_evaluate.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_text_message_evaluate.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_file_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_file_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_robot_evaluation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_robot_evaluation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_image_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_image_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_discussion_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_discussion_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messagelist.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messagelist.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_message.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu_item.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu_item.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_information_notification_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_information_notification_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_sub_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_sub_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_emoji_item.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_emoji_item.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_grid_item.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_grid_item.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_plugin_gridview.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_plugin_gridview.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_emoji_gridview.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_emoji_gridview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_list.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_plugins.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_plugins.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_information_notification_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_information_notification_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_catalog_listview.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_catalog_listview.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_dialog_alter.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_dialog_alter.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_base_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_base_conversation.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_plugin_gridview.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_plugin_gridview.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_search.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_search.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_photo.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_photo.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_preview_fragment.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_preview_fragment.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_grid_camera.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_grid_camera.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messageinput.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messageinput.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_rich_content_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_rich_content_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_text_message_evaluate.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_text_message_evaluate.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_emoji_item.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_emoji_item.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_public_service_search.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_public_service_search.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_conversation.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_conversation_member.xml",
-        "source": "/Users/wenyunzhao/Desktop/workspace/lovejob13/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_conversation_member.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picprev_activity.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picprev_activity.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_app_service_conversation.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_app_service_conversation.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_activity.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_activity.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_fr_image.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_fr_image.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_list.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_item_public_service_input_menu_item.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_item_public_service_input_menu_item.xml"
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_grid_camera.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_grid_camera.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_image_message.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_image_message.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_mention_members.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_mention_members.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/res/merged/androidTest/debug/layout/rc_ac_webview.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/Rong_Cloud_2_7_3/build/intermediates/bundles/debug/res/layout/rc_ac_webview.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_voice_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_voice_message.xml"
     },
     {
-        "merged": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation_member_list.xml",
-        "source": "/Users/wenyunzhao/Desktop/lovejob11/D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation_member_list.xml"
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_text_message_evaluate.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_text_message_evaluate.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation_member_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation_member_list.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversationlist.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversationlist.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block_popup.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block_popup.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_manager.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_manager.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_rich_content_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_rich_content_message.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_file_message.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_file_message.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_text_message_evaluate.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_text_message_evaluate.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_manager.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_manager.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_download.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_download.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_image.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_image.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_group_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_group_conversation.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_search.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_search.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_multi_rich_content_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_multi_rich_content_message.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_grid_item.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_grid_item.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_picture_pager.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_picture_pager.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_image_message.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_image_message.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_emoji_item.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_emoji_item.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_list.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_list.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_search.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_search.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_image_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_image_message.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_popup.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_popup.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_information_notification_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_information_notification_message.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_vo_popup.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_vo_popup.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_notice.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_notice.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_text_message_evaluate.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_text_message_evaluate.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_camera.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_camera.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_list.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_file_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_file_list.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_robot_evaluation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_robot_evaluation.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_messagelist.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_messagelist.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_preview_fragment.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_preview_fragment.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_search.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_search.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu_item.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu_item.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_notification_message.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_notification_message.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_download.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_download.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_text_btn.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_text_btn.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_image_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_image_message.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picprev_activity.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picprev_activity.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversationlist.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversationlist.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversation_member_list.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversation_member_list.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_notice.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_notice.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_input.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_input.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_alert_warning.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_alert_warning.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversationlist.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversationlist.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picsel_activity.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picsel_activity.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_picprev_activity.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_picprev_activity.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_message.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_message.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_base_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_base_conversation.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_camera.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_camera.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_system_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_system_conversation.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_multi_rich_content_message.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_multi_rich_content_message.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block_popup.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block_popup.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_public_service_search.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_public_service_search.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_pic_popup_window.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_pic_popup_window.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_conversationlist.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_conversationlist.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_system_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_system_conversation.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_plugins.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_plugins.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_albums.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_albums.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_message.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation_member.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation_member.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_wi_block.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_wi_block.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_mention_members.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_mention_members.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_fr_dialog_alter.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_fr_dialog_alter.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_voice_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\workspace\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_voice_message.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_pic_popup_window.xml",
+        "source": "E:\\AndroidStudioProjects\\aishang_jobwork1\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_pic_popup_window.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_app_service_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_app_service_conversation.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_conversation.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_conversation.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_input_menu_item.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_input_menu_item.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_download.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_download.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_public_service_rich_content_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_public_service_rich_content_message.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_item_discussion_notification_message.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\D:\\git\\lovejob13\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_item_discussion_notification_message.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_ac_file_list.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_ac_file_list.xml"
+    },
+    {
+        "merged": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rc_cs_item_single_choice.xml",
+        "source": "E:\\Users\\wenyunzhao\\Desktop\\lovejob11\\Rong_Cloud_2_7_3\\build\\intermediates\\bundles\\debug\\res\\layout\\rc_cs_item_single_choice.xml"
     }
 ]

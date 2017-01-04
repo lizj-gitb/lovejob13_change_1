@@ -195,7 +195,7 @@ public class PayViewSelectPayment extends BaseActivity {
         switch (view.getId()) {
 
             case R.id.actionbar_back:
-                AppManager.getAppManager().finishActivity(this);
+                AppManager.getAppManager().finishActivity(PayViewSelectPayment.this);
                 break;
             case R.id.rl_payment_payforWechat:
                 imgPaymentSelectorWechat.setImageResource(R.mipmap.xuanzhong);
@@ -786,11 +786,6 @@ public class PayViewSelectPayment extends BaseActivity {
         });
     }
 
-
-    @OnClick(R.id.actionbar_back)
-    public void onClick() {
-        AppManager.getAppManager().finishActivity();
-    }
 
     public class MyWeChatPayListener extends BroadcastReceiver {
         OnPayListener onPayListener;
