@@ -2627,8 +2627,8 @@ public class LoveJob {
         map.put("height", params[12].substring(0, params[12].length() - 2));
         map.put("content", params[7]);
         map.put("address", params[3]);
-        map.put("number", params[4].substring(0, params[4].length() - 1));
-        map.put("salary", params[5].substring(0, params[5].length() - 3));
+        map.put("number", params[4]);
+        map.put("salary", params[5]);
         map.put("deadline", params[8]);
         map.put("workPayment", "2");
         map.put("contactPhone", params[6]);

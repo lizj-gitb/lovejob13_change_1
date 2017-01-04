@@ -148,7 +148,9 @@ public class PayViewSelectPayment extends BaseActivity {
                 }
 //                workPid = getIntent().getStringExtra("workPid");
 //                price = userInputModel.getParams()[5].substring(0, userInputModel.getParams()[5].length() - 3);
-                price = userInputModel.getParams()[5];
+                int personNumber = Integer.valueOf(userInputModel.getParams()[4]);
+                Double price_ = Double.valueOf(userInputModel.getParams()[5]);
+                price = String.valueOf(personNumber*price_);
                 break;
 
             case BuyUserService:

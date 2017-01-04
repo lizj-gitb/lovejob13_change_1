@@ -148,9 +148,9 @@ public class SendpakWork extends BaseFragment {
         view = inflater.inflate(R.layout.sendpakwork, null);
         ButterKnife.bind(this, view);
         AppPreferences preferences = new AppPreferences(context);
-        identify = preferences.getString(StaticParams.FileKey.__IDENTIFY__,"");
-        if (identify.equals("false")){
-            Utils.showToast(context,"请填写个人资料");
+        identify = preferences.getString(StaticParams.FileKey.__IDENTIFY__, "");
+        if (identify.equals("false")) {
+            Utils.showToast(context, "请填写个人资料");
             AppManager.getAppManager().finishActivity();
             return view;
         }
@@ -199,16 +199,16 @@ public class SendpakWork extends BaseFragment {
 
     private void sendParkWork() {
         UserInputModel inputModel = Utils.checkUserInputParams(tvSendWorkParTitle, tvSendWorkParType, tvSendWorkParSex
-                , tvSendWorkParLocation, tvSendWorkParWanttonum, tvSendWorkParPrice, tvSendWorkParPhonenumber, tvSendWorkParContext,tvSendWorkParCountdown);
+                , tvSendWorkParLocation, tvSendWorkParWanttonum, tvSendWorkParPrice, tvSendWorkParPhonenumber, tvSendWorkParContext, tvSendWorkParCountdown);
 
         if (!inputModel.isNotEmpty()) {
             Utils.showToast(context, "不能有空值");
             return;
         }
         String s = tvSendWorkParPrice.getText().toString();
-        String s1 =s.substring(0,s.length()-3);
+        String s1 = s.substring(0, s.length() - 3);
         Double money = Double.parseDouble(s1);
-        if (money<=0){
+        if (money <= 0) {
             Utils.showToast(context, "支付金额不能小于0元");
             return;
         }
@@ -222,9 +222,9 @@ public class SendpakWork extends BaseFragment {
         strs[12] = tvSendWorkParHight.getText().toString();
         strs[13] = positionNumber;
         inputModel.setParams(strs);
-        Double i1 = Double.parseDouble(tvSendWorkParWanttonum.getText().toString());
-        String amount=String.valueOf(i1*money);
-        inputModel.getParams()[5] = amount;
+//        int i1 = Integer.valueOf(tvSendWorkParWanttonum.getText().toString());
+//        String amount=String.valueOf(i1*money);
+        inputModel.getParams()[5] = inputModel.getParams()[5].substring(0, inputModel.getParams()[5].length() - 3);
         //跳转支付页面
         Intent intent = new Intent(context, PayViewSelectPayment.class);
         intent.putExtra("inputModel", inputModel);
@@ -365,7 +365,7 @@ public class SendpakWork extends BaseFragment {
 //                maxLenth = 20;
 //                requestCode = RequestCode_SendPakWork_TO_Location;
 
-                Intent intent_1 = new Intent(context,BaiDuMapCitySelctor.class);
+                Intent intent_1 = new Intent(context, BaiDuMapCitySelctor.class);
                 intent_1.putExtra("requestCode", RequestCode_SendPakWork_LocationSelected);
                 context.startActivityForResult(intent_1, RequestCode_SendPakWork_LocationSelected);
                 break;
@@ -445,7 +445,7 @@ public class SendpakWork extends BaseFragment {
                 tvSendWorkParLocation.setText(content);
                 break;
             case RequestCode_SendPakWork_TO_WriteView_Wanttonum:
-                tvSendWorkParWanttonum.setText(content );
+                tvSendWorkParWanttonum.setText(content);
                 break;
 
             case RequestCode_SendPakWork_TO_WriteView_Price:
