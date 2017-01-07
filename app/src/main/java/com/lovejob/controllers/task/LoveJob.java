@@ -180,7 +180,7 @@ public class LoveJob {
                         preferences.put(StaticParams.FileKey.__LEVEL__, thePerfectGirl.getData().getLevel());
                         try {
                             preferences.put(StaticParams.FileKey.__LOCALTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getLocalToken()));
-                            preferences.put(StaticParams.FileKey.__RONGTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getRongCloudToken()));
+//                            preferences.put(StaticParams.FileKey.__RONGTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getRongCloudToken()));
                             V.d("saved login some data success");
 
                             AppPreferences p = new AppPreferences(context);
@@ -191,7 +191,7 @@ public class LoveJob {
                             onAllParameListener.onSuccess(thePerfectGirl);
                         } catch (Exception e) {
                             e.printStackTrace();
-                            onAllParameListener.onError("V,请稍后再试");
+                            onAllParameListener.onError("请稍后再试");
                         }
                         preferences = null;
                     } else {

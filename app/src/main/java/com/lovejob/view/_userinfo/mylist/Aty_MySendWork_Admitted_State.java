@@ -25,7 +25,9 @@ import com.lovejob.controllers.task.OnAllParameListener;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
+import com.lovejob.ms.MainActivityMs;
 import com.lovejob.view._othersinfos.Others;
+import com.lovejob.view.cityselector.cityselector.utils.ToastUtils;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
 import com.v.rapiddev.base.AppManager;
@@ -39,7 +41,6 @@ import com.v.rapiddev.views.MyListView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.rong.imkit.RongIM;
 
 /**
  * Created by Administrator on 2016/11/29.
@@ -123,8 +124,12 @@ public class Aty_MySendWork_Admitted_State extends BaseActivity {
                                 getThisPerson(position);
                                 break;
                             case R.id.img_aty_published_chat:
-                                if (RongIM.getInstance() != null && getItem(position).getUserId() != null && !TextUtils.isEmpty(getItem(position).getUserId())) {
-                                    RongIM.getInstance().startPrivateChat(context, getItem(position).getUserId(), getItem(position).getRealName());
+                                if (getItem(position).getUserId() != null && !TextUtils.isEmpty(getItem(position).getUserId())) {
+                                    if (!StaticParams.isConnectChetService) {
+                                        ToastUtils.showToast(context, "您未连接到聊天服务器，可能是网络异常，请退出重新登录");
+                                        return;
+                                    }
+                                    startActivity(MainActivityMs.mIMKit.getChattingActivityIntent(getItem(position).getUserId()));
                                 } else {
                                     Utils.showToast(context, "请重新登录后再试");
                                     V.e("用户Id未获取成功");

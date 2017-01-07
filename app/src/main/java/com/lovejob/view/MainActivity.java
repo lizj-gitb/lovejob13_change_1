@@ -51,9 +51,6 @@ import java.util.concurrent.ExecutionException;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.rong.imkit.RongIM;
-import io.rong.imlib.RongIMClient;
-import io.rong.imlib.model.Message;
 
 /**
  * ClassType: 展示5个fragment
@@ -144,33 +141,33 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setRongIMPushListener() {
-        RongIM.getInstance().setOnReceiveMessageListener(new RongIMClient.OnReceiveMessageListener() {
-            @Override
-            public boolean onReceived(final Message message, int i) {
-                V.d("接收到消息：" + message.getExtra() + "\n" + message.getObjectName() + "\n" + message.getSenderUserId()
-                        + "\n" + message.getUId() + "\n" + "\n" +
-                        message);
-                //根据UerId获取用户的昵称和头像
-                call_getUserNameAndUserLogo = LoveJob.getUserNameAndUserLogo(message.getSenderUserId(), new OnAllParameListener() {
-                    @Override
-                    public void onSuccess(ThePerfectGirl thePerfectGirl) {
-                        if (thePerfectGirl.getData().getUserInfoDTOs() == null || thePerfectGirl.getData().getUserInfoDTOs().size() == 0) {
-                            Utils.showToast(context, "获取用户资料失败");
-                            V.e("获取用户资料失败");
-                            return;
-                        }
-                        push(message.getObjectName(), thePerfectGirl.getData().getUserInfoDTOs().get(0).getRealName(), StaticParams.QiNiuYunUrl + thePerfectGirl.getData().getUserInfoDTOs().get(0).getPortraitId());
-                    }
-
-                    @Override
-                    public void onError(String msg) {
-
-                    }
-                });
-                callList.add(call_getUserNameAndUserLogo);
-                return false;
-            }
-        });
+//        RongIM.getInstance().setOnReceiveMessageListener(new RongIMClient.OnReceiveMessageListener() {
+//            @Override
+//            public boolean onReceived(final Message message, int i) {
+//                V.d("接收到消息：" + message.getExtra() + "\n" + message.getObjectName() + "\n" + message.getSenderUserId()
+//                        + "\n" + message.getUId() + "\n" + "\n" +
+//                        message);
+//                //根据UerId获取用户的昵称和头像
+//                call_getUserNameAndUserLogo = LoveJob.getUserNameAndUserLogo(message.getSenderUserId(), new OnAllParameListener() {
+//                    @Override
+//                    public void onSuccess(ThePerfectGirl thePerfectGirl) {
+//                        if (thePerfectGirl.getData().getUserInfoDTOs() == null || thePerfectGirl.getData().getUserInfoDTOs().size() == 0) {
+//                            Utils.showToast(context, "获取用户资料失败");
+//                            V.e("获取用户资料失败");
+//                            return;
+//                        }
+//                        push(message.getObjectName(), thePerfectGirl.getData().getUserInfoDTOs().get(0).getRealName(), StaticParams.QiNiuYunUrl + thePerfectGirl.getData().getUserInfoDTOs().get(0).getPortraitId());
+//                    }
+//
+//                    @Override
+//                    public void onError(String msg) {
+//
+//                    }
+//                });
+//                callList.add(call_getUserNameAndUserLogo);
+//                return false;
+//            }
+//        });
 
 
     }

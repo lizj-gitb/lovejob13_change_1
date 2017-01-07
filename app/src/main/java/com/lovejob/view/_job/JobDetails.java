@@ -32,7 +32,9 @@ import com.lovejob.controllers.task.OnAllParameListener;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
+import com.lovejob.ms.MainActivityMs;
 import com.lovejob.view.WriteView;
+import com.lovejob.view.cityselector.cityselector.utils.ToastUtils;
 import com.lovejob.view.payinfoviews.PayView;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
@@ -54,9 +56,6 @@ import java.util.Map;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.rong.imageloader.utils.L;
-import io.rong.imkit.RongIM;
-import io.rong.imlib.model.Conversation;
 
 import static com.lovejob.model.StaticParams.RequestCode.RequestCode_JobDetailsReComm_WriteView;
 
@@ -305,7 +304,7 @@ public class JobDetails extends BaseActivity {
 //                tvJobdetailsPhone.setText(thePerfectGirl.getData().getWorkInfoDTO().getContactPhone() + "".trim());
                 String s = thePerfectGirl.getData().getWorkInfoDTO().getContactPhone();
                 String s3 = s.substring(0, s.length() - 4);
-                tvJobdetailsPhone.setText(s3+"****");
+                tvJobdetailsPhone.setText(s3 + "****");
                 if (thePerfectGirl.getData().getWorkInfoDTO().getShowApplyBtn() == 2) {
                     imgJobdetailsApply.setImageResource(R.mipmap.button_focus_suspend_cancle1);
                     isGetWork = false;
@@ -427,18 +426,18 @@ public class JobDetails extends BaseActivity {
             case R.id.img_jobdetails_chat:
                 V.d("聊天");
                 //打开单聊对话界面
-                if (RongIM.getInstance() != null && userId != null && !TextUtils.isEmpty(userId)) {
-                    RongIM.getInstance().startPrivateChat(this, userId, userName);
-                } else {
-                    Utils.showToast(context, "请重新登录后再试");
-                    V.e("用户Id未获取成功");
+                if (!StaticParams.isConnectChetService) {
+                    ToastUtils.showToast(context, "您未连接到聊天服务器，可能是网络异常，请退出重新登录");
+                    return;
                 }
+                startActivity(MainActivityMs.mIMKit.getChattingActivityIntent(userId));
+
                 break;
             case R.id.img_jobdetails_call:
                 //启动聚合会话列表界面(暂时没用到)
 //                if (RongIM.getInstance() != null)
 //                    RongIM.getInstance().startSubConversationList(this, Conversation.ConversationType.GROUP);
-                if (isPhone){
+                if (isPhone) {
                     V.d("打电话");
 
                     Intent intent_phone = new Intent(Intent.ACTION_CALL);
@@ -450,8 +449,8 @@ public class JobDetails extends BaseActivity {
                     }
                     startActivity(intent_phone);
                     break;
-                }else {
-                    Utils.showToast(context,"未录取前不能打电话");
+                } else {
+                    Utils.showToast(context, "未录取前不能打电话");
                     break;
                 }
 

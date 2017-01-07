@@ -98,7 +98,9 @@ public class Aty_MySerever_WaitBuy extends BaseActivity {
                 ((TextView) viewHolder.getView(R.id.tv_tobesure_name)).setText(getItem(position).getUserInfo().getRealName());
                 ((TextView) viewHolder.getView(R.id.tv_tobesure_money)).setText(getItem(position).getMoney() + "元");
                 ((TextView) viewHolder.getView(R.id.tv_tobesure_address)).setText(getItem(position).getUserInfo().getAddress());
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getUserInfo().getPortraitId().toString().trim()).into((CircleImageView) viewHolder.getView(R.id.img_tobesure_logo));
+                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position)
+                        .getUserInfo().getPortraitId().toString().trim())
+                        .into((CircleImageView) viewHolder.getView(R.id.img_tobesure_logo));
                 return viewHolder.getConvertView();
             }
         };

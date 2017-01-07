@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_gravity="center_vertical"
-                android:text=""
+                android:text="11111"
                 android:textColor="@color/actionbar"
                 android:textSize="14sp" />
 
@@ -58,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
-                android:text=""
+                android:text="2313123123123"
                 android:layout_gravity="center_vertical"
                 android:textColor="@color/orage"
                 android:textSize="15sp" />
@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="13dp"
-                android:text=""
+                android:text="元/次"
                 android:textColor="@color/hiteTextColor"
                 android:textSize="10sp" />
         </LinearLayout>
@@ -168,46 +168,46 @@
         </LinearLayout>
     </LinearLayout>
     <RelativeLayout
-        android:id="@+id/hiteView"
+    android:id="@+id/hiteView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="#00000000"
+    android:gravity="center">
+
+    <View
         android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/oridetails" />
+
+    <ImageView
+        android:id="@+id/img_oridetails_chat"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#00000000"
-        android:gravity="center">
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="35dp"
+        android:src="@mipmap/button_chatup" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="30dp"
-            android:background="@color/oridetails" />
+    <ImageView
+        android:id="@+id/img_oridetails_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/button_call" />
 
-        <ImageView
-            android:id="@+id/img_oridetails_chat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="35dp"
-            android:src="@mipmap/button_chatup" />
-
-        <ImageView
-            android:id="@+id/img_oridetails_call"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:src="@mipmap/button_call" />
-
-        <ImageView
-            android:id="@+id/img_oridetails_grad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="25dp"
-            android:src="@mipmap/button_focus_suspend_off1" />
+    <ImageView
+        android:id="@+id/img_oridetails_grad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="25dp"
+        android:src="@mipmap/button_focus_suspend_off1" />
 
 
-    </RelativeLayout>
+</RelativeLayout>
 </RelativeLayout>

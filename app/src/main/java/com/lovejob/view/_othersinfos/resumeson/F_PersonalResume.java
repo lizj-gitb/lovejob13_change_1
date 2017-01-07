@@ -23,6 +23,8 @@ import com.lovejob.controllers.task.OnAllParameListener;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
+import com.lovejob.ms.MainActivityMs;
+import com.lovejob.view.cityselector.cityselector.utils.ToastUtils;
 import com.v.rapiddev.adpater.RecyclerItemClickListener;
 import com.v.rapiddev.utils.V;
 import com.v.rapiddev.views.CircleImageView;
@@ -32,7 +34,6 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.rong.imkit.RongIM;
 import me.iwf.photopicker.PhotoPreview;
 
 /**
@@ -102,8 +103,13 @@ public class F_PersonalResume extends BaseFragment {
         buttonchat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (RongIM.getInstance() != null && usePid != null && !TextUtils.isEmpty(usePid)) {
-                    RongIM.getInstance().startPrivateChat(context, usePid, userName);
+                if (usePid != null && !TextUtils.isEmpty(usePid)) {
+                    //打开单聊对话界面
+                    if (!StaticParams.isConnectChetService) {
+                        ToastUtils.showToast(context, "您未连接到聊天服务器，可能是网络异常，请退出重新登录");
+                        return;
+                    }
+                    startActivity(MainActivityMs.mIMKit.getChattingActivityIntent(usePid));
                 } else {
                     Utils.showToast(context, "请重新登录后再试");
                     V.e("用户Id未获取成功");

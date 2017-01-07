@@ -344,7 +344,8 @@ public class Aty_ReleaseService extends BaseActivity {
                             if (serverDTO != null && serverDTO.getServerPid() != null) {
                                 pid = serverDTO.getServerPid();
                             }
-                            callList.add(LoveJob.sendService(titie, introduce,price, stringBuffer.toString(), serverType, pid, new OnAllParameListener() {
+                            callList.add(LoveJob.sendService(titie, introduce,price, stringBuffer.toString(), serverType,
+                                    pid, new OnAllParameListener() {
                                 @Override
                                 public void onSuccess(ThePerfectGirl thePerfectGirl) {
                                     String token = thePerfectGirl.getData().getUploadToken();

@@ -47,6 +47,7 @@ import com.lovejob.view._userinfo.myserver.ServiceMyActivity;
 import com.lovejob.view._userinfo.mywalletinfos.Aty_Money;
 import com.lovejob.view._userinfo.news.Aty_News;
 import com.lovejob.view._userinfo.setting.Aty_Setting;
+import com.lovejob.view.cityselector.cityselector.utils.ToastUtils;
 import com.v.rapiddev.http.okhttp3.Call;
 import com.v.rapiddev.preferences.AppPreferences;
 import com.v.rapiddev.pulltorefresh.PullToRefreshBase;
@@ -64,8 +65,6 @@ import java.util.concurrent.ExecutionException;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.rong.imkit.RongIM;
-import io.rong.imlib.RongIMClient;
 import me.iwf.photopicker.PhotoPicker;
 import me.iwf.photopicker.PhotoPreview;
 
@@ -291,31 +290,37 @@ public class F_UserInfo extends BaseFragment {
 //                        V.d("所有未读消息数：" + i);
 //                    }
 //                });
-                        RongIM.getInstance().getTotalUnreadCount(new RongIMClient.ResultCallback<Integer>() {
-                            @Override
-                            public void onSuccess(Integer integer) {
-                                svFMyRefreshview.onRefreshComplete();
-                                V.d("获取未读消息数成功：" + integer);
-                                if (userInfo.getCount() + integer > 0) {
-                                    InformationCount.setVisibility(View.VISIBLE);
-                                    InformationCount.setText(String.valueOf(userInfo.getCount() + integer));
-                                } else {
-                                    InformationCount.setVisibility(View.GONE);
-                                }
-                            }
-
-                            @Override
-                            public void onError(RongIMClient.ErrorCode errorCode) {
-                                V.e("获取未读消息数失败：" + errorCode);
-                                svFMyRefreshview.onRefreshComplete();
-                            }
-                        });
+//                        RongIM.getInstance().getTotalUnreadCount(new RongIMClient.ResultCallback<Integer>() {
+//                            @Override
+//                            public void onSuccess(Integer integer) {
+//                                svFMyRefreshview.onRefreshComplete();
+//                                V.d("获取未读消息数成功：" + integer);
+//                                if (userInfo.getCount() + integer > 0) {
+//                                    InformationCount.setVisibility(View.VISIBLE);
+//                                    InformationCount.setText(String.valueOf(userInfo.getCount() + integer));
+//                                } else {
+//                                    InformationCount.setVisibility(View.GONE);
+//                                }
+//                            }
+//
+//                            @Override
+//                            public void onError(RongIMClient.ErrorCode errorCode) {
+//                                V.e("获取未读消息数失败：" + errorCode);
+//                                svFMyRefreshview.onRefreshComplete();
+//                            }
+//                        });
 //                RongIM.getInstance().addUnReadMessageCountChangedObserver(new IUnReadMessageObserver() {
 //                    @Override
 //                    public void onCountChanged(int i) {
 //                        V.d("接收到未读消息数：" + i);
 //                    }
 //                });
+//                        MainActivityMs.mIMKit.getIMCore().
+//                        if (!StaticParams.isConnectChetService) {
+//                            ToastUtils.showToast(context, "您未连接到聊天服务器，可能是网络异常，请退出重新登录");
+//                            return;
+//                        }
+//                        startActivity(MainActivityMs.mIMKit.getChattingActivityIntent(usePid));
                     }
 
                     @Override

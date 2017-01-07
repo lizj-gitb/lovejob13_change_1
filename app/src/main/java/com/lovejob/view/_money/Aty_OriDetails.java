@@ -31,8 +31,10 @@ import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
 import com.lovejob.model.bean.Data_Comm_2_2;
+import com.lovejob.ms.MainActivityMs;
 import com.lovejob.qiniuyun.storage.UploadManager;
 import com.lovejob.view.WriteView;
+import com.lovejob.view.cityselector.cityselector.utils.ToastUtils;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
 import com.v.rapiddev.base.AppManager;
@@ -50,7 +52,6 @@ import java.util.Map;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.rong.imkit.RongIM;
 
 import static com.lovejob.model.StaticParams.RequestCode.RequestCode_OriWork_To_WriteView_WriteComm;
 import static com.lovejob.model.StaticParams.RequestCode.RequestCode_OriWork_To_WriteView_WriteReComm;
@@ -491,12 +492,11 @@ public class Aty_OriDetails extends BaseActivity {
             case R.id.img_oridetails_chat:
                 V.d("聊天");
                 //打开单聊对话界面
-                if (RongIM.getInstance() != null && userId != null && !TextUtils.isEmpty(userId)) {
-                    RongIM.getInstance().startPrivateChat(this, userId, userName);
-                } else {
-                    Utils.showToast(context, "请重新登录后再试");
-                    V.e("用户Id未获取成功");
+                if (!StaticParams.isConnectChetService) {
+                    ToastUtils.showToast(context, "您未连接到聊天服务器，可能是网络异常，请退出重新登录");
+                    return;
                 }
+                startActivity(MainActivityMs.mIMKit.getChattingActivityIntent(userId));
                 break;
             case R.id.img_oridetails_call:
                 V.d("打电话");

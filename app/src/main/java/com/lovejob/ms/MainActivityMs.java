@@ -19,6 +19,11 @@ import android.widget.TabWidget;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.mobileim.IYWLoginService;
+import com.alibaba.mobileim.YWAPI;
+import com.alibaba.mobileim.YWIMKit;
+import com.alibaba.mobileim.YWLoginParam;
+import com.alibaba.mobileim.channel.event.IWxCallback;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.lovejob.BaseActivity;
@@ -33,6 +38,7 @@ import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.ThreadPoolUtils;
 import com.lovejob.model.Utils;
 import com.lovejob.view._home.dyndetailstabs.NewsDetails;
+import com.lovejob.view.cityselector.cityselector.utils.ToastUtils;
 import com.lovejob.view.login.AQQQ;
 import com.lovejob.view.login.LoginAcitvity;
 import com.umeng.analytics.MobclickAgent;
@@ -48,14 +54,15 @@ import com.v.rapiddev.utils.V;
 import com.v.rapiddev.views.CircleImageView;
 import com.zwy.activitymanage.AppManager;
 import com.zwy.logger.Logger;
+import com.zwy.security.FFMD5Util;
 
 import java.util.concurrent.ExecutionException;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import io.rong.imkit.RongIM;
-import io.rong.imlib.RongIMClient;
 import me.iwf.photopicker.PhotoPicker;
+
+import static com.lovejob.model.StaticParams.isConnectChetService;
 
 /**
  * ClassType: 展示5个fragment
@@ -71,6 +78,7 @@ public class MainActivityMs extends BaseActivity {
     private TabWidget tabWidget;
     int maxIntRquest = 0;
     int maxIntResponse = 0;
+    public static YWIMKit mIMKit;
 
     private void getParamFromHtml() {
         String toOtherActivity = getIntent().getStringExtra("toOtherActivity");
@@ -86,7 +94,7 @@ public class MainActivityMs extends BaseActivity {
                 Logger.e("3333333333");
 //                AppManager.getAppManager().toNextPage(intent,false);
                 startActivity(intent);
-                Logger.e("跳转新闻详情页面,newsId:"+otherId+",intent==null"+(intent==null));
+                Logger.e("跳转新闻详情页面,newsId:" + otherId + ",intent==null" + (intent == null));
                 break;
             case "1":
                 //跳转长期工作详情页面 带入参数
@@ -96,6 +104,35 @@ public class MainActivityMs extends BaseActivity {
                 startActivity(intent);
                 break;
         }
+
+    }
+
+    private void connetChatServer() {
+        //开始登录到聊天服务器
+        String uid = new AppPreferences(context).getString(StaticParams.FileKey.__USERPID__, "");
+        mIMKit = YWAPI.getIMKitInstance(uid, MyApplication.APP_KEY);
+        IYWLoginService loginService = mIMKit.getLoginService();
+        YWLoginParam loginParam = YWLoginParam.createLoginParam(uid, FFMD5Util.getMD5String(uid));
+        loginService.login(loginParam, new IWxCallback() {
+
+            @Override
+            public void onSuccess(Object... arg0) {
+                V.d("登录到聊天服务器成功");
+                isConnectChetService = true;
+            }
+
+            @Override
+            public void onProgress(int arg0) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onError(int errCode, String description) {
+                //如果登录失败，errCode为错误码,description是错误的具体描述信息
+                ToastUtils.showToast(context, "连接到聊天服务器失败，" + description);
+                V.e("登录到聊天服务器失败" + description);
+            }
+        });
     }
 
     @Override
@@ -109,9 +146,10 @@ public class MainActivityMs extends BaseActivity {
         initView();
 //        showDuide();
         V.d("测试当前登录用户的ID：" + new AppPreferences(context).getString(StaticParams.FileKey.__USERPID__, ""));
-        connectRongIM();
+//        connectRongIM();
         //设置融云推送监听
-        setRongIMPushListener();
+//        setRongIMPushListener();
+        connetChatServer();
         System.gc();
         Glide.get(MainActivityMs.this).clearMemory();
         try {
@@ -119,9 +157,9 @@ public class MainActivityMs extends BaseActivity {
             V.e("页面从H5页面跳入，已将Id传给下个页面");
         } catch (Exception e) {
             V.e("页面不是从H5页面跳入，执行默认操作");
-            V.e("异常信息："+e.toString());
+            V.e("异常信息：" + e.toString());
         }
-
+        connetChatServer();
         UmengMessageHandler messageHandler = new UmengMessageHandler() {
             @Override
             public void dealWithCustomMessage(Context context, UMessage uMessage) {
@@ -161,71 +199,71 @@ public class MainActivityMs extends BaseActivity {
         MyApplication.mPushAgent.setMessageHandler(messageHandler);
     }
 
-    private void connectRongIM() {
-        HandlerUtils.post(new Runnable() {
-            @Override
-            public void run() {
-                RongIM.connect(MyApplication.getAppPreferences().getString(StaticParams.FileKey.__RONGTOKEN__, ""), new RongIMClient.ConnectCallback() {
-                    @Override
-                    public void onTokenIncorrect() {
-                        Utils.showToast(context, "连接到聊天服务器失败");
-                        V.e("连接到聊天服务器失败");
-                    }
+//    private void connectRongIM() {
+//        HandlerUtils.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                RongIM.connect(MyApplication.getAppPreferences().getString(StaticParams.FileKey.__RONGTOKEN__, ""), new RongIMClient.ConnectCallback() {
+//                    @Override
+//                    public void onTokenIncorrect() {
+//                        Utils.showToast(context, "连接到聊天服务器失败");
+//                        V.e("连接到聊天服务器失败");
+//                    }
+//
+//                    @Override
+//                    public void onSuccess(String s) {
+//                        //
+//                        V.d("连接到融云聊天服务器成功，s=" + s);
+//                    }
+//
+//                    @Override
+//                    public void onError(RongIMClient.ErrorCode errorCode) {
+//                        //
+//                        Utils.showToast(context, "连接到聊天服务器失败");
+//                        V.e("连接到聊天服务器失败,errorCode=" + errorCode);
+//                    }
+//                });
+//            }
+//        });
+//    }
 
-                    @Override
-                    public void onSuccess(String s) {
-                        //
-                        V.d("连接到融云聊天服务器成功，s=" + s);
-                    }
-
-                    @Override
-                    public void onError(RongIMClient.ErrorCode errorCode) {
-                        //
-                        Utils.showToast(context, "连接到聊天服务器失败");
-                        V.e("连接到聊天服务器失败,errorCode=" + errorCode);
-                    }
-                });
-            }
-        });
-    }
-
-    private void setRongIMPushListener() {
-        HandlerUtils.post(new Runnable() {
-            @Override
-            public void run() {
-                RongIM.getInstance().setOnReceiveMessageListener(new RongIMClient.OnReceiveMessageListener() {
-                    @Override
-                    public boolean onReceived(final io.rong.imlib.model.Message message, int i) {
-                        V.d("接收到消息：" + message.getExtra() + "\n" + message.getObjectName() + "\n" + message.getSenderUserId()
-                                + "\n" + message.getUId() + "\n" + "\n" +
-                                message);
-                        //根据UerId获取用户的昵称和头像
-                        callList.add(LoveJob.getUserNameAndUserLogo(message.getSenderUserId(), new OnAllParameListener() {
-                            @Override
-                            public void onSuccess(ThePerfectGirl thePerfectGirl) {
-                                if (thePerfectGirl.getData().getUserInfoDTOs() == null || thePerfectGirl.getData().getUserInfoDTOs().size() == 0) {
-                                    Utils.showToast(context, "获取用户资料失败");
-                                    V.e("获取用户资料失败");
-                                    return;
-                                }
-                                if (thePerfectGirl.getData().getUserInfoDTOs().get(0) == null) {
-                                    push(message.getObjectName(), "", "");
-                                    return;
-                                }
-                                push(message.getObjectName(), thePerfectGirl.getData().getUserInfoDTOs().get(0).getRealName(), StaticParams.QiNiuYunUrl + thePerfectGirl.getData().getUserInfoDTOs().get(0).getPortraitId());
-                            }
-
-                            @Override
-                            public void onError(String msg) {
-                                V.d("1");
-                            }
-                        }));
-                        return false;
-                    }
-                });
-            }
-        });
-    }
+//    private void setRongIMPushListener() {
+//        HandlerUtils.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                RongIM.getInstance().setOnReceiveMessageListener(new RongIMClient.OnReceiveMessageListener() {
+//                    @Override
+//                    public boolean onReceived(final io.rong.imlib.model.Message message, int i) {
+//                        V.d("接收到消息：" + message.getExtra() + "\n" + message.getObjectName() + "\n" + message.getSenderUserId()
+//                                + "\n" + message.getUId() + "\n" + "\n" +
+//                                message);
+//                        //根据UerId获取用户的昵称和头像
+//                        callList.add(LoveJob.getUserNameAndUserLogo(message.getSenderUserId(), new OnAllParameListener() {
+//                            @Override
+//                            public void onSuccess(ThePerfectGirl thePerfectGirl) {
+//                                if (thePerfectGirl.getData().getUserInfoDTOs() == null || thePerfectGirl.getData().getUserInfoDTOs().size() == 0) {
+//                                    Utils.showToast(context, "获取用户资料失败");
+//                                    V.e("获取用户资料失败");
+//                                    return;
+//                                }
+//                                if (thePerfectGirl.getData().getUserInfoDTOs().get(0) == null) {
+//                                    push(message.getObjectName(), "", "");
+//                                    return;
+//                                }
+//                                push(message.getObjectName(), thePerfectGirl.getData().getUserInfoDTOs().get(0).getRealName(), StaticParams.QiNiuYunUrl + thePerfectGirl.getData().getUserInfoDTOs().get(0).getPortraitId());
+//                            }
+//
+//                            @Override
+//                            public void onError(String msg) {
+//                                V.d("1");
+//                            }
+//                        }));
+//                        return false;
+//                    }
+//                });
+//            }
+//        });
+//    }
 
     private void push(String type, final String userName, final String userLogo) {
 

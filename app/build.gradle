@@ -8,7 +8,7 @@ android {
             keyPassword 'ai930225'
             storeFile file('/Users/wenyunzhao/Desktop/workspace/lovejob.jks')
             storePassword 'ai930225'
-        }///Users/wenyunzhao/Desktop/workspace
+        }//Users/wenyunzhao/Desktop/workspace
     }
     compileSdkVersion 24
     // buildToolsVersion "24.0.1"
@@ -18,7 +18,7 @@ android {
         minSdkVersion 15
 //        targetSdkVersion 23
         versionCode 1
-        versionName "1.2.3"
+        versionName "1.2.4"
         resValue "string", "tray__authority", "com.lovejob.preferences"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
@@ -51,6 +51,14 @@ android {
         }
     }
 }
+
+
+repositories {
+    maven { url 'http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/' }
+    flatDir {
+        dirs 'libs'
+    }
+}
 //Bugtags 插件配置
 bugtags {
     //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考帮助中心->符号表->Android 符号表->配置自动上传符号表
@@ -70,7 +78,6 @@ dependencies {
     compile project(':lib-bither-compress')
     compile project(':PhotoPicker')
     compile project(':rapiddev')
-    compile project(':Rong_Cloud_2_7_3')
     compile project(':UMengPushSDK')
     compile 'com.qiniu:happy-dns:0.2.7'
     compile 'com.android.support:multidex:1.0.0'
@@ -90,4 +97,24 @@ dependencies {
     compile project(':GrantAndroidPermission')
     compile project(':mylibs')
     compile 'com.bugtags.library:bugtags-lib:latest.integration'
+
+    //======== 百川 即时通讯 小视频==============
+    //必选
+    compile 'com.alibaba.mobileim:IMCore:2.0.1@aar'
+    //可选，如果使用SDK的UI必须添加该依赖，如果不使用SDK的UI，完全自己开发UI则无需添加该依赖
+    compile 'com.alibaba.mobileim:IMKit:2.0.1@aar'
+    //可选，如果使用小视频功能必须添加该依赖，如果不使用小视频功能则无需添加该依赖
+    //    compile 'com.alibaba.mobileim:RecorderSDK:1.0.0@aar'
+    // ======== 百川 即时通讯 小视频==============
+
+
+    //======== 阿里百川即时通讯==============
+    compile files('libs/mediaservice-4.1.7.jar')
+    //======== 阿里百川即时通讯==============
+    //======== 阿里百川用户反馈==============
+    compile 'com.android.support:support-v4:25.1.0'
+    compile(name:'alisdk-feedback-release', ext:'aar')
+    compile(name:'securityguardaar3-5.1.81', ext:'aar')
+    compile files('libs/app-monitor-sdk-2.5.1.1_for_bc_proguard.jar')
+    //======== 阿里百川用户反馈==============
 }

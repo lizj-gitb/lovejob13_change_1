@@ -17,6 +17,7 @@ import com.lovejob.controllers.task.OnAllParameListener;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
+import com.lovejob.ms.MainActivityMs;
 import com.lovejob.qiniuyun.storage.UploadManager;
 import com.lovejob.view.MainActivity;
 import com.lovejob.view.login.LoginAcitvity;
@@ -126,7 +127,9 @@ public class Aty_Setting extends BaseActivity {
             }
         }));
     }
-    private boolean isoncl=true;
+
+    private boolean isoncl = true;
+
     @OnClick({R.id.back_setting, R.id.help, R.id.about, R.id.systemversion, R.id.bind_qq, R.id.bind_wechat, R.id.systemCancellation})
     public void onClick(View view) {
         switch (view.getId()) {
@@ -146,9 +149,9 @@ public class Aty_Setting extends BaseActivity {
             case R.id.bind_qq:
                 dialog = Utils.showProgressDliago(context, "正在绑定");
                 otherType = OtherType.QQ;
-                if (mShareAPI.isInstall(context,SHARE_MEDIA.QQ)){
+                if (mShareAPI.isInstall(context, SHARE_MEDIA.QQ)) {
                     mShareAPI.getPlatformInfo(context, SHARE_MEDIA.QQ, ongetUserInfos);
-                }else {
+                } else {
                     Utils.showToast(context, "请下载最新版QQ");
                     dialog.dismiss();
                 }
@@ -156,16 +159,16 @@ public class Aty_Setting extends BaseActivity {
             case R.id.bind_wechat:
                 dialog = Utils.showProgressDliago(context, "正在绑定");
                 otherType = OtherType.WeChat;
-                if (mShareAPI.isInstall(context,SHARE_MEDIA.WEIXIN)){
+                if (mShareAPI.isInstall(context, SHARE_MEDIA.WEIXIN)) {
                     mShareAPI.getPlatformInfo(context, SHARE_MEDIA.WEIXIN, ongetUserInfos);
-                }else {
+                } else {
                     Utils.showToast(context, "请下载最新版微信");
                     dialog.dismiss();
                 }
 
                 break;
             case R.id.systemCancellation:
-                if (isoncl){
+                if (isoncl) {
                     Utils.showToast(context, "注销");
                     LoveJob.Cancellation(userPid, token, new OnAllParameListener() {
                         @Override

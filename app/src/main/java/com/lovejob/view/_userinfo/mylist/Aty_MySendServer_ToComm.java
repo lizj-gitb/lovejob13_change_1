@@ -110,7 +110,6 @@ public class Aty_MySendServer_ToComm extends BaseActivity {
                         intent.putExtra("serverPid", getItem(position).getServerRelationPid());
                         intent.putExtra("userid",getItem(position).getUserInfo().getUserId());
                         intent.putExtra("pictrue",getItem(position).getUserInfo().getPortraitId());
-
                         startActivity(intent);
                     }
                 });

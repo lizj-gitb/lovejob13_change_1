@@ -31,7 +31,9 @@ import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
 import com.lovejob.model.bean.Data_Comm_2_2;
+import com.lovejob.ms.MainActivityMs;
 import com.lovejob.view.WriteView;
+import com.lovejob.view.cityselector.cityselector.utils.ToastUtils;
 import com.umeng.analytics.MobclickAgent;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
@@ -49,7 +51,6 @@ import java.util.Map;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.rong.imkit.RongIM;
 
 import static com.lovejob.model.StaticParams.RequestCode.RequestCode_OriWork_To_WriteView_WriteComm;
 import static com.lovejob.model.StaticParams.RequestCode.RequestCode_OriWork_To_WriteView_WriteReComm;
@@ -223,7 +224,7 @@ public class Aty_ParDetails extends BaseActivity {
 //                tvPardetailsPhonenuber.setText(workinfoDto.getContactPhone());
                 String s = workinfoDto.getContactPhone();
                 String s3 = s.substring(0, s.length() - 4);
-                tvPardetailsPhonenuber.setText(s3+"****");
+                tvPardetailsPhonenuber.setText(s3 + "****");
                 //TODO 点评列表
                 List<ThePerfectGirl.UserInfoDTO> lists = workinfoDto.getEmployeeInfo();
                 int size = 0;
@@ -375,6 +376,7 @@ public class Aty_ParDetails extends BaseActivity {
             }
         });
     }
+
     public void reSendComm(String name) {
         Intent intent = new Intent(context, WriteView.class);
         intent.putExtra("title", "给" + name + "回复");
@@ -382,6 +384,7 @@ public class Aty_ParDetails extends BaseActivity {
         intent.putExtra("requestCode", RequestCode_OriWork_To_WriteView_WriteReComm);
         AppManager.getAppManager().toNextPage(intent, RequestCode_OriWork_To_WriteView_WriteReComm);
     }
+
     private void sendComm() {
         Intent intent = new Intent(context, WriteView.class);
         intent.putExtra("title", "请输入您要评论的内容");
@@ -389,6 +392,7 @@ public class Aty_ParDetails extends BaseActivity {
         intent.putExtra("requestCode", RequestCode_OriWork_To_WriteView_WriteComm);
         AppManager.getAppManager().toNextPage(intent, RequestCode_OriWork_To_WriteView_WriteComm);
     }
+
     private void initAleadySignInPersonImgGridView() {
         adapter_alreadySignInPersonImg = new FastAdapter<String>(this, R.layout.item_lv_f_money_gridview) {
             @Override
@@ -446,13 +450,12 @@ public class Aty_ParDetails extends BaseActivity {
                 break;
             case R.id.img_pardetails_chat:
                 Utils.showToast(this, "聊天");
-
-                if (RongIM.getInstance() != null && userId != null && !TextUtils.isEmpty(userId)) {
-                    RongIM.getInstance().startPrivateChat(this, userId, userName);
-                } else {
-                    Utils.showToast(context, "请重新登录后再试");
-                    V.e("用户Id未获取成功");
+                    //打开单聊对话界面
+                if (!StaticParams.isConnectChetService) {
+                    ToastUtils.showToast(context, "您未连接到聊天服务器，可能是网络异常，请退出重新登录");
+                    return;
                 }
+                startActivity(MainActivityMs.mIMKit.getChattingActivityIntent(userId));
                 break;
             case R.id.img_pardetails_call:
                 if (isphone) {
@@ -469,8 +472,8 @@ public class Aty_ParDetails extends BaseActivity {
                     }
                     startActivity(intent_phone);
                     break;
-                }else {
-                    Utils.showToast(context,"未录取前不能打电话");
+                } else {
+                    Utils.showToast(context, "未录取前不能打电话");
                     break;
                 }
             case R.id.img_pardetails_grad:
@@ -512,6 +515,7 @@ public class Aty_ParDetails extends BaseActivity {
             }
         }));
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (data == null) {

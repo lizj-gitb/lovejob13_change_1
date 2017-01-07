@@ -17,6 +17,10 @@ import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.alibaba.mobileim.YWAPI;
+import com.alibaba.sdk.android.feedback.impl.FeedbackAPI;
+import com.alibaba.sdk.android.media.WantuService;
+import com.alibaba.wxlib.util.SysUtil;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -47,21 +51,14 @@ import com.v.rapiddev.logger.Logger;
 import com.v.rapiddev.preferences.AppPreferences;
 import com.v.rapiddev.utils.Utils_RapidDev;
 import com.v.rapiddev.utils.V;
-import com.zwy.activitymanage.AppManager;
 import com.zwy.nineimageslook.NineGridView;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.util.List;
 
-import io.rong.imkit.RongIM;
-import io.rong.imlib.RongIMClient;
-
-import static android.os.Build.VERSION.SDK;
-import static com.lovejob.model.StaticParams.RequestCode.Android6_PerM_Request;
 
 
 /**
@@ -78,6 +75,7 @@ public class MyApplication extends MultiDexApplication {
     private static Handler mHandler;
     private static AppPreferences appPreferences;
     private static ThePerfectGirl thePerfectGirl;
+    public static WantuService wantuService;
 
     public static Handler getHandler() {
         return mHandler;
@@ -85,7 +83,7 @@ public class MyApplication extends MultiDexApplication {
 
     private static MyApplication mMyApplication;
     public static PushAgent mPushAgent;
-
+    public static final String APP_KEY = "23584517";//阿里百川appid
     @Override
     public void onCreate() {
         super.onCreate();
@@ -103,10 +101,10 @@ public class MyApplication extends MultiDexApplication {
          * 初始化百度定位相关参数
          */
         initBaiDuLocationInfos();
-        /**
-         * 初始化融云相关参数
-         */
-        RongIM.init(this);
+//        /**
+//         * 初始化融云相关参数
+//         */
+//        RongIM.init(this);
         /**
          * 初始化facebook图片加载
          */
@@ -132,6 +130,41 @@ public class MyApplication extends MultiDexApplication {
 //        }
         SDKInitializer.initialize(this);
         initNinePic();
+        initBaiChuan();
+    }
+
+    /**
+     * 百川多媒体初始化2
+     */
+    private void initBaiChuan() {
+        //百川多媒体初始化
+        WantuService.enableHttpDNS(); // 可选。为了避免域名劫持，建议开发者启用HttpDNS
+        WantuService.enableLog(); //在调试时，可以打开日志。正式上线前可以关闭
+        wantuService = WantuService.getInstance();
+        wantuService.asyncInit(this);
+//        Log.d("百川多媒体初始化成功");
+        //百川即时通讯初始化
+        //必须首先执行这部分代码, 如果在":TCMSSevice"进程中，无需进行云旺（OpenIM）和app业务的初始化，以节省内存;
+        SysUtil.setApplication(this);
+//        if (SysUtil.isTCMSServiceProcess(this)) {
+//            return;
+//        }
+        //第一个参数是Application Context
+        //这里的APP_KEY即应用创建时申请的APP_KEY，同时初始化必须是在主进程中
+        YWAPI.init(this,APP_KEY );
+//        Log.d("阿里百川即时通讯初始化成功");
+        FeedbackAPI.init(this,APP_KEY );
+//        Log.d("阿里百川用户反馈初始化成功");
+//        Log.d("Application初始化完成：" + new Date().getTime());
+//        String path = "cxwl_-9774673245782_lovejob.jpg";
+//
+//        String index = "SMALL";
+//
+//        if (path.indexOf(index) != -1) {
+//            Log.d("缩略图");
+//        } else {
+//            Log.d("大图");
+//        }
     }
 
     private void initNinePic() {

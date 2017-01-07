@@ -12,7 +12,10 @@ import com.lovejob.BaseActivity;
 import com.lovejob.R;
 import com.lovejob.controllers.task.LoveJob;
 import com.lovejob.controllers.task.OnAllParameListener;
+import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
+import com.lovejob.ms.MainActivityMs;
+import com.lovejob.view.cityselector.cityselector.utils.ToastUtils;
 import com.v.rapiddev.utils.V;
 
 import java.text.SimpleDateFormat;
@@ -21,9 +24,6 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.rong.imkit.RongIM;
-import io.rong.imlib.RongIMClient;
-import io.rong.imlib.model.Conversation;
 
 /**
  * Created by Administrator on 2016/11/28.
@@ -66,6 +66,7 @@ public class Aty_News extends BaseActivity {
     int dynamiccount=0;
     int goodcount=0;
     int badcount=0;
+    private String userPid;
 
     @Override
     public void onCreate_(@Nullable Bundle savedInstanceState) {
@@ -73,35 +74,35 @@ public class Aty_News extends BaseActivity {
         ButterKnife.bind(this);
 
         //获取未读消息数
-        RongIM.getInstance().getTotalUnreadCount(new RongIMClient.ResultCallback<Integer>() {
-            @Override
-            public void onSuccess(Integer integer) {
-                V.d("获取未读消息数成功：" + integer);
-                if (integer > 0) {
-                    tvNewMsg.setVisibility(View.VISIBLE);
-                    tvNewMsgNumber.setVisibility(View.VISIBLE);
-                    tvNewMsgNumber.setText(String.valueOf(integer) + "条");
-                } else {
-                    tvNewMsg.setVisibility(View.GONE);
-                    tvNewMsgNumber.setVisibility(View.GONE);
-                }
-            }
-
-            @Override
-            public void onError(RongIMClient.ErrorCode errorCode) {
-                V.e("获取未读消息数失败：" + errorCode);
-            }
-        });
+//        RongIM.getInstance().getTotalUnreadCount(new RongIMClient.ResultCallback<Integer>() {
+//            @Override
+//            public void onSuccess(Integer integer) {
+//                V.d("获取未读消息数成功：" + integer);
+//                if (integer > 0) {
+//                    tvNewMsg.setVisibility(View.VISIBLE);
+//                    tvNewMsgNumber.setVisibility(View.VISIBLE);
+//                    tvNewMsgNumber.setText(String.valueOf(integer) + "条");
+//                } else {
+//                    tvNewMsg.setVisibility(View.GONE);
+//                    tvNewMsgNumber.setVisibility(View.GONE);
+//                }
+//            }
+//
+//            @Override
+//            public void onError(RongIMClient.ErrorCode errorCode) {
+//                V.e("获取未读消息数失败：" + errorCode);
+//            }
+//        });
 
         //获取最后一条消息的时间
-        List<Conversation> conversationlist = RongIMClient.getInstance().getConversationList();
-        if (conversationlist != null && conversationlist.size() > 0) {
-            tvNewsXiaoxiTime.setVisibility(View.VISIBLE);
-            V.d(new SimpleDateFormat("MM-dd HH:mm:ss").format(conversationlist.get(0).getSentTime()));
-            tvNewsXiaoxiTime.setText(new SimpleDateFormat("HH:mm").format(conversationlist.get(0).getSentTime()));
-        } else {
-            tvNewsXiaoxiTime.setVisibility(View.GONE);
-        }
+//        List<Conversation> conversationlist = RongIMClient.getInstance().getConversationList();
+//        if (conversationlist != null && conversationlist.size() > 0) {
+//            tvNewsXiaoxiTime.setVisibility(View.VISIBLE);
+//            V.d(new SimpleDateFormat("MM-dd HH:mm:ss").format(conversationlist.get(0).getSentTime()));
+//            tvNewsXiaoxiTime.setText(new SimpleDateFormat("HH:mm").format(conversationlist.get(0).getSentTime()));
+//        } else {
+//            tvNewsXiaoxiTime.setVisibility(View.GONE);
+//        }
     }
 
     private void addData() {
@@ -116,6 +117,7 @@ public class Aty_News extends BaseActivity {
                     tvNewsTongzhi.setVisibility(View.GONE);
                     tvNewsTongzhiTime.setVisibility(View.GONE);
                 }
+                userPid = thePerfectGirl.getData().getUserInfoDTO().getUserId();
                 tvNewsTongzhi.setText(thePerfectGirl.getData().getUserInfoDTO().getInformCount() + "条");
                 String s1 = String.format("%tR%n", thePerfectGirl.getData().getUserInfoDTO().getLastTime());
                 tvNewsTongzhiTime.setText(s1);
@@ -157,8 +159,11 @@ public class Aty_News extends BaseActivity {
                 break;
             case R.id.rl_news_xiaoxi:
                 //打开所有会话列表
-                if (RongIM.getInstance() != null)
-                    RongIM.getInstance().startConversationList(this);
+                if (!StaticParams.isConnectChetService) {
+                    ToastUtils.showToast(context, "您未连接到聊天服务器，可能是网络异常，请退出重新登录");
+                    return;
+                }
+                startActivity(MainActivityMs.mIMKit.getChattingActivityIntent(userPid));
                 V.d("消息");
                 break;
             case R.id.rl_news_tongzhi:
