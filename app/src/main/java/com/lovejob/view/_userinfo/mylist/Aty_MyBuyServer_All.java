@@ -119,7 +119,7 @@ public class Aty_MyBuyServer_All extends BaseActivity {
                         tvState.setText("已完成");
                         break;
                 }
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getUserInfo().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_myserbuy_logo));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getUserInfo().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_myserbuy_logo));
                 return viewHolder.getConvertView();
             }
         };

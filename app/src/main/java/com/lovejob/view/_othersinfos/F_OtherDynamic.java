@@ -121,13 +121,13 @@ public class F_OtherDynamic extends BaseFragment {
                     } else if (imgs.length == 1) {
                         imgView.setVisibility(View.VISIBLE);
                         recyclerView.setVisibility(View.GONE);
-                        Glide.with(context).load(StaticParams.QiNiuYunUrl + imgs[0]).into(imgView);
+                        Glide.with(context).load(StaticParams.ImageURL + imgs[0]).into(imgView);
                     }else {
                         if (imgs.length > 0 && !TextUtils.isEmpty(imgs[0])) {
                             recyclerView.setVisibility(View.VISIBLE);
                             imgView.setVisibility(View.GONE);
                             for (int i = 0; i < imgs.length; i++) {
-                                selectedPhotos.add(StaticParams.QiNiuYunUrl + imgs[i]);
+                                selectedPhotos.add(StaticParams.ImageURL + imgs[i]);
                             }
                         }
                 }
@@ -141,7 +141,7 @@ public class F_OtherDynamic extends BaseFragment {
                             final ArrayList<String> photos = new ArrayList<>();
                             String[] imgs = getItem((int) recyclerView.getTag()).getPictrueid().split("\\|");
                             for (int i = 0; i < imgs.length; i++) {
-                                photos.add(StaticParams.QiNiuYunUrl + imgs[i]);
+                                photos.add(StaticParams.ImageURL + imgs[i]);
                             }
                             PhotoPreview.builder()
                                     //http://oejyij5hl.bkt.clouddn.com/lovejob_195107463214808463580161563989879.jpg

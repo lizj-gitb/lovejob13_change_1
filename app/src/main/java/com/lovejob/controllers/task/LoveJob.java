@@ -41,6 +41,29 @@ public class LoveJob {
     public static Context context = MyApplication.getContext();
 
 
+    public static Call getUpLoadImageToken(final OnAllParameListener onAllParameListener) {
+        Map hashMap = new HashMap();
+        hashMap.put("requestType", "22");
+        hashMap.put("type", "0");
+
+        return ZokHttp.getInstance(20).doPost(StaticParams.URL, hashMap, new OnZokHttpResponse() {
+            @Override
+            public void OnSucc(String data) {
+                ThePerfectGirl thePerfectGirl = new Gson().fromJson(data, ThePerfectGirl.class);
+                if (thePerfectGirl.isSuccess()) {
+                    onAllParameListener.onSuccess(thePerfectGirl);
+                } else {
+                    onAllParameListener.onError(thePerfectGirl.getErrmsg());
+                }
+            }
+
+            @Override
+            public void OnError(String errorMsg) {
+                V.e("版本获取失败");
+            }
+        }, "获取系统最新版本");
+    }
+
     public static Call getSystemVersion(final OnAllParameListener onAllParameListener) {
         Map hashMap = new HashMap();
         hashMap.put("requestType", "703");

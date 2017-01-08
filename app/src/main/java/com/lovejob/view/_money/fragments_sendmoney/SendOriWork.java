@@ -26,18 +26,17 @@ import android.widget.TextView;
 import com.lovejob.BaseFragment;
 import com.lovejob.R;
 import com.lovejob.baidumap.BaiDuMapCitySelctor;
+import com.lovejob.controllers.OnUpLoadImagesListener;
 import com.lovejob.controllers.adapter.PhotoAdapter;
 import com.lovejob.controllers.task.LoveJob;
 import com.lovejob.controllers.task.OnAllParameListener;
+import com.lovejob.model.ImageModle;
 import com.lovejob.model.MyOnClickListener;
 import com.lovejob.model.PayTypeInfo;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.UserInputModel;
 import com.lovejob.model.Utils;
-import com.lovejob.qiniuyun.http.ResponseInfo;
-import com.lovejob.qiniuyun.storage.UpCompletionHandler;
-import com.lovejob.qiniuyun.storage.UploadManager;
 import com.lovejob.view.WriteView;
 import com.lovejob.view.payinfoviews.PayInfoParams;
 import com.lovejob.view.payinfoviews.PayViewSelectPayment;
@@ -52,9 +51,11 @@ import com.v.rapiddev.utils.V;
 
 import org.json.JSONObject;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 import butterknife.Bind;
@@ -136,9 +137,9 @@ public class SendOriWork extends BaseFragment {
         view = inflater.inflate(R.layout.sendoriwork, null);
         ButterKnife.bind(this, view);
         AppPreferences preferences = new AppPreferences(context);
-        identify = preferences.getString(StaticParams.FileKey.__IDENTIFY__,"");
-        if (identify.equals("false")){
-            Utils.showToast(context,"请填写个人资料");
+        identify = preferences.getString(StaticParams.FileKey.__IDENTIFY__, "");
+        if (identify.equals("false")) {
+            Utils.showToast(context, "请填写个人资料");
             AppManager.getAppManager().finishActivity();
             return view;
         }
@@ -199,10 +200,10 @@ public class SendOriWork extends BaseFragment {
             Utils.showToast(context, "不能有空值");
             return;
         }
-        String s = tvSendWorkOriPrice.getText().toString();
-        String s1 =s.substring(0,s.length()-3);
+        final String s = tvSendWorkOriPrice.getText().toString();
+        String s1 = s.substring(0, s.length() - 3);
         Double money = Double.parseDouble(s1);
-        if (money<=0){
+        if (money <= 0) {
             Utils.showToast(context, "支付金额不能小于0元");
             return;
         }
@@ -212,35 +213,60 @@ public class SendOriWork extends BaseFragment {
         for (int i = 0; i < inputModel.getParams().length; i++) {
             strs[i] = inputModel.getParams()[i];
         }
-        strs[2] =String.valueOf(money);
+        strs[2] = String.valueOf(money);
         strs[5] = want;
         strs[6] = person;
         //压缩
         //跳转支付页面  传入支付以及发布工作所需参数
         final Intent intent = new Intent(context, PayViewSelectPayment.class);
         if (selectedPhotos.size() > 0) {
-            Utils.yasuo(context, selectedPhotos, new Handler() {
+            List<File> files = new ArrayList<>();
+            for (int i = 0; i < selectedPhotos.size(); i++) {
+                files.add(new File(selectedPhotos.get(i)));
+            }
+            Utils.ImageCo(files, context, true, new OnUpLoadImagesListener() {
                 @Override
-                public void handleMessage(Message msg) {
-                    if (msg.arg1 == 9000) {
-                        String path = msg.getData().getString("path");
-                        final int index = msg.getData().getInt("index");
-                        V.d("第" + (index + 1) + "张图片压缩成功,压缩后的地址：" + path);
-//                        stringBuffer_Path.append(path).append("|");
-                        arrayList_path.add(path);
-                        stringBuffer_Name.append("lovejob" + new Date().getTime() + "cxwl" + new Random().nextInt() + path.substring(path.lastIndexOf("."))).append("|");
-                        if ((index + 1) == selectedPhotos.size()) {
-                            strs[7] = stringBuffer_Name.toString();
-                            inputModel.setParams(strs);
-                            V.d("全部图片已压缩完成,即将上送的图片路径：\n paths:" + arrayList_path.toString() + "\nnames:" + stringBuffer_Name.toString());
-                            intent.putExtra("photosPaths", arrayList_path);/*压缩后图片路径的集合*/
-                            intent.putExtra("inputModel", inputModel);/*该对象包括用户页面上输入的信息以及[7]为压缩完的图片名称sb*/
-                            intent.putExtra("PayTypeInfo", PayTypeInfo.SendMoneyWork_Ori);/*支付的类型*/
-                            AppManager.getAppManager().toNextPage(intent, true);
-                        }
+                public void onSucc(List<ImageModle> imageModleList) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    for (int i = 0; i < imageModleList.size(); i++) {
+                        stringBuffer.append(imageModleList.get(i).getSmallFileName());
                     }
+
+                    strs[7] = stringBuffer.toString();
+                    inputModel.setParams(strs);
+                    intent.putExtra("photosPaths", arrayList_path);/*压缩后图片路径的集合*/
+                    intent.putExtra("inputModel", inputModel);/*该对象包括用户页面上输入的信息以及[7]为压缩完的图片名称sb*/
+                    intent.putExtra("PayTypeInfo", PayTypeInfo.SendMoneyWork_Ori);/*支付的类型*/
+                    AppManager.getAppManager().toNextPage(intent, true);
+                }
+
+                @Override
+                public void onError() {
+                    Utils.showToast(context, "图片上传失败，请稍后再试");
                 }
             });
+//            Utils.yasuo(context, selectedPhotos, new Handler() {
+//                @Override
+//                public void handleMessage(Message msg) {
+//                    if (msg.arg1 == 9000) {
+//                        String path = msg.getData().getString("path");
+//                        final int index = msg.getData().getInt("index");
+//                        V.d("第" + (index + 1) + "张图片压缩成功,压缩后的地址：" + path);
+////                        stringBuffer_Path.append(path).append("|");
+//                        arrayList_path.add(path);
+//                        stringBuffer_Name.append("lovejob" + new Date().getTime() + "cxwl" + new Random().nextInt() + path.substring(path.lastIndexOf("."))).append("|");
+//                        if ((index + 1) == selectedPhotos.size()) {
+//                            strs[7] = stringBuffer_Name.toString();
+//                            inputModel.setParams(strs);
+//                            V.d("全部图片已压缩完成,即将上送的图片路径：\n paths:" + arrayList_path.toString() + "\nnames:" + stringBuffer_Name.toString());
+//                            intent.putExtra("photosPaths", arrayList_path);/*压缩后图片路径的集合*/
+//                            intent.putExtra("inputModel", inputModel);/*该对象包括用户页面上输入的信息以及[7]为压缩完的图片名称sb*/
+//                            intent.putExtra("PayTypeInfo", PayTypeInfo.SendMoneyWork_Ori);/*支付的类型*/
+//                            AppManager.getAppManager().toNextPage(intent, true);
+//                        }
+//                    }
+//                }
+//            });
         } else {
             strs[7] = "";
             inputModel.setParams(strs);

@@ -92,7 +92,7 @@ public class Aty_SerSkillDetails extends BaseActivity {
             public View getViewHolder(int position, View convertView, ViewGroup parent) {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_ser_details, position);
                 if (getItem(position).getPortraitId() != null) {
-                    Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getPortraitId().toString().trim()).into((CircleImageView) viewHolder.getView(R.id.img_f_my_other_logo));
+                    Glide.with(context).load(StaticParams.ImageURL + getItem(position).getPortraitId().toString().trim()).into((CircleImageView) viewHolder.getView(R.id.img_f_my_other_logo));
                     ((TextView) viewHolder.getView(R.id.tv_serdetails_other_name)).setText(getItem(position).getRealName());
                     ((TextView) viewHolder.getView(R.id.tv_serdetails_other_content)).setText(getItem(position).getContent());
                     String s = String.format("%tR%n", getItem(position).getCreateDate());
@@ -102,7 +102,7 @@ public class Aty_SerSkillDetails extends BaseActivity {
                     ((LinearLayout)viewHolder.getView(R.id.my_ll)).setVisibility(View.GONE);
                 }
                 if (getItem(position).getMyPortraitId() != null) {
-                    Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getMyPortraitId().toString().trim()).into((CircleImageView) viewHolder.getView(R.id.img_f_my_userlogo));
+                    Glide.with(context).load(StaticParams.ImageURL + getItem(position).getMyPortraitId().toString().trim()).into((CircleImageView) viewHolder.getView(R.id.img_f_my_userlogo));
                     ((TextView) viewHolder.getView(R.id.tv_serdetails_my_content)).setText(getItem(position).getMyContent());
                 } else {
                     ((CircleImageView) viewHolder.getView(R.id.img_f_my_userlogo)).setVisibility(View.GONE);
@@ -142,7 +142,7 @@ public class Aty_SerSkillDetails extends BaseActivity {
                         final ArrayList<String> selectedPhotos = new ArrayList<>();
                         String[] l = thePerfectGirl.getData().getServerDTO().getPictrueId().split("\\|");
                         for (int i = 0; i < l.length; i++) {
-                            selectedPhotos.add(StaticParams.QiNiuYunUrl + l[i]);
+                            selectedPhotos.add(StaticParams.ImageURL + l[i]);
                         }
                         final PhotoAdapter photoAdapter = new PhotoAdapter(context, selectedPhotos, true);
                         gvSerDetails.setLayoutManager(new StaggeredGridLayoutManager(3, OrientationHelper.VERTICAL));

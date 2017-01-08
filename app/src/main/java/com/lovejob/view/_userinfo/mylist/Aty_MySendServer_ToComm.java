@@ -102,7 +102,7 @@ public class Aty_MySendServer_ToComm extends BaseActivity {
                 ((TextView) viewHolder.getView(R.id.tv_tobecomm_posetion)).setText(getItem(position).getUserInfo().getPosition());
                 ((TextView) viewHolder.getView(R.id.tv_tobecomm_price)).setText(getItem(position).getMoney()+"元");
                 ((TextView) viewHolder.getView(R.id.tv_tobecomm_commpl)).setText(getItem(position).getUserInfo().getCompany());
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getUserInfo().getPortraitId().toString().trim()).into((CircleImageView) viewHolder.getView(R.id.img_tobecomm_logo));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getUserInfo().getPortraitId().toString().trim()).into((CircleImageView) viewHolder.getView(R.id.img_tobecomm_logo));
                 ((TextView) viewHolder.getView(R.id.tv_tobecomm_commit)).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

@@ -16,15 +16,15 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.lovejob.BaseActivity;
 import com.lovejob.R;
+import com.lovejob.controllers.OnUpLoadImagesListener;
 import com.lovejob.controllers.task.LoveJob;
 import com.lovejob.controllers.task.OnAllParameListener;
+import com.lovejob.model.ImageModle;
+import com.lovejob.model.PayTypeInfo;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
 import com.lovejob.model.bean.PriceBean;
-import com.lovejob.qiniuyun.http.ResponseInfo;
-import com.lovejob.qiniuyun.storage.UpCompletionHandler;
-import com.lovejob.qiniuyun.storage.UploadManager;
 import com.lovejob.view.WriteView;
 import com.v.rapiddev.base.AppManager;
 import com.v.rapiddev.http.okhttp3.Call;
@@ -33,7 +33,9 @@ import com.v.rapiddev.preferences.AppPreferences;
 
 import org.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -173,7 +175,7 @@ public class Aty_Information extends BaseActivity {
                     etInforWorke.setText(thePerfectGirl.getData().getResumeDTO().getExperience() + "".trim());
                     etInforSkill.setText(thePerfectGirl.getData().getResumeDTO().getSkill() + "".trim());
                     etInforMine.setText(thePerfectGirl.getData().getResumeDTO().getPersonalEvaluation());
-                    Glide.with(context).load(StaticParams.QiNiuYunUrl+thePerfectGirl.getData().getResumeDTO().getPortraitId()).dontAnimate().into(imgUserHead);
+                    Glide.with(context).load(StaticParams.ImageURL+thePerfectGirl.getData().getResumeDTO().getPortraitId()).dontAnimate().into(imgUserHead);
 
                 }
             }
@@ -326,25 +328,26 @@ public class Aty_Information extends BaseActivity {
             Utils.showToast(this, "用户地址不可为空");
             return;
         }
+
         call_saveResume = LoveJob.saveResume(path, tvInforName.getText().toString(), Sex, tvInforHeight.getText().toString(),
                 tvInforAge.getText().toString(), tvInforAddress.getText().toString(), tvInforEducation.getText().toString()
                 , tvInforMajor.getText().toString(), tvInforSchool.getText().toString(), etInforExperience.getText().toString(), etInforIndustry.getText().toString(),
                 etInforWorke.getText().toString(), etInforSkill.getText().toString(), etInforMine.getText().toString(), new OnAllParameListener() {
                     @Override
                     public void onSuccess(ThePerfectGirl thePerfectGirl) {
-                            UploadManager uploadManager = new UploadManager();
-                        if (path==null){
-                            dialog.dismiss();
+//                            UploadManager uploadManager = new UploadManager();
+//                        if (path==null){
+//                            dialog.dismiss();
                             Utils.showToast(context, "保存成功");
-                            return;
-                        }
-                            uploadManager.put(path, path, thePerfectGirl.getData().getUploadToken(), new UpCompletionHandler() {
-                                @Override
-                                public void complete(String key, ResponseInfo info, JSONObject response) {
-                                    dialog.dismiss();
-                                    Utils.showToast(context, "保存成功");
-                                }
-                            }, null);
+//                            return;
+//                        }
+//                            uploadManager.put(path, path, thePerfectGirl.getData().getUploadToken(), new UpCompletionHandler() {
+//                                @Override
+//                                public void complete(String key, ResponseInfo info, JSONObject response) {
+//                                    dialog.dismiss();
+//                                    Utils.showToast(context, "保存成功");
+//                                }
+//                            }, null);
                     }
 
                     @Override
@@ -385,15 +388,34 @@ public class Aty_Information extends BaseActivity {
                 ArrayList<String> photos = data.getStringArrayListExtra(PhotoPicker.KEY_SELECTED_PHOTOS);
                 if (photos.size() > 0) {
                     imgUserHead.setImageBitmap(Utils.getBitmapFromPath(photos.get(0)));
-                    Utils.yasuo(context, photos, new Handler() {
+//                    Utils.yasuo(context, photos, new Handler() {
+//                        @Override
+//                        public void handleMessage(Message msg) {
+//                            if (msg.arg1 == 9000) {
+////                                    File saveFile = new File(getExternalCacheDir(), "compress_" + System.currentTimeMillis() + ".jpg");
+////                                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), Uri.parse(msg.getData().getString("path")));
+////                                    NativeUtil.compressBitmap(bitmap, saveFile.getAbsolutePath());
+//                                path = msg.getData().getString("path");
+//                            }
+//                        }
+//                    });
+                    List<File> files = new ArrayList<>();
+                    for (int i = 0; i < selectedPhotos.size(); i++) {
+                        files.add(new File(selectedPhotos.get(i)));
+                    }
+                    Utils.ImageCo(files, context, true, new OnUpLoadImagesListener() {
                         @Override
-                        public void handleMessage(Message msg) {
-                            if (msg.arg1 == 9000) {
-//                                    File saveFile = new File(getExternalCacheDir(), "compress_" + System.currentTimeMillis() + ".jpg");
-//                                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), Uri.parse(msg.getData().getString("path")));
-//                                    NativeUtil.compressBitmap(bitmap, saveFile.getAbsolutePath());
-                                path = msg.getData().getString("path");
+                        public void onSucc(List<ImageModle> imageModleList) {
+                            StringBuffer stringBuffer = new StringBuffer();
+                            for (int i = 0; i < imageModleList.size(); i++) {
+                                stringBuffer.append(imageModleList.get(i).getSmallFileName());
                             }
+                            path=stringBuffer.toString();
+                        }
+
+                        @Override
+                        public void onError() {
+                            Utils.showToast(context, "图片上传失败，请稍后再试");
                         }
                     });
                 }

@@ -22,21 +22,26 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.sdk.android.media.upload.UploadListener;
+import com.alibaba.sdk.android.media.upload.UploadTask;
+import com.alibaba.sdk.android.media.utils.FailReason;
+import com.lovejob.MyApplication;
 import com.lovejob.R;
+import com.lovejob.controllers.OnUpLoadImagesListener;
 import com.lovejob.controllers.adapter.PhotoAdapter;
-import com.lovejob.qiniuyun.http.ResponseInfo;
-import com.lovejob.qiniuyun.storage.UpCompletionHandler;
-import com.lovejob.qiniuyun.storage.UploadManager;
 import com.v.rapiddev.dialogs.core.MaterialDialog;
 import com.v.rapiddev.dialogs.zdialog.ZDialog;
 import com.v.rapiddev.preferences.AppPreferences;
 import com.v.rapiddev.security.FFRSAUtils;
 import com.v.rapiddev.utils.V;
+import com.zwy.luban.Luban;
+import com.zwy.luban.OnMultiCompressListener;
 
 import net.bither.util.NativeUtil;
 
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -46,6 +51,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.Timer;
@@ -66,6 +72,156 @@ import static android.app.Activity.RESULT_OK;
  */
 
 public class Utils {
+
+
+    private static int uploadlenth = 0;//上传图片的数量  从0开始  当uploadlenth==传入的文件集合大小的时候为上传成功
+
+    /**
+     * 获取新的图片名称  转换成类似：cxwl_6546578778578_lovejob_31037649902.jpg
+     *
+     * @param files                  需要处理的图片集合
+     * @param context                上下文
+     * @param isUpLoad               是否上传
+     * @param onUpLoadImagesListener 回调监听   如果isUpLoad 为true时 该回调会在上传完成后执行   为false时 压缩完就执行
+     */
+    public static void ImageCo(final List<File> files, Context context, final boolean isUpLoad,
+                               final OnUpLoadImagesListener onUpLoadImagesListener) {
+        final String token = StaticParams.UpLoadImageToken;
+        if (isUpLoad && TextUtils.isEmpty(token)) {
+            throw new NullPointerException("当选择上传图片时token不能为空");
+        }
+        final List<ImageModle> imageModleList = new ArrayList<>();
+        final String afterName = "cxwl";// 1
+        final String and = "-";// 连接符//2  4
+        final String lastName = "lovejob";// 5
+        final String smallIndex = "SMALL";//小图在 6 后拼接该符号
+        Luban.get(context).load(files).putGear(Luban.THIRD_GEAR).launch(new OnMultiCompressListener() {
+            @Override
+            public void onStart() {
+
+            }
+
+            @Override
+            public void onSuccess(List<File> fileList) {
+                V.d("图片压缩完成");
+                for (int i = 0; i < fileList.size(); i++) {
+                    String filePath = files.get(i).getAbsolutePath();
+                    int random = new Random().nextInt();//3
+                    long timeThis = new Date().getTime();//6
+                    String lastPath = filePath.substring(filePath.lastIndexOf("."));//7
+                    //获取原图名称和文件
+                    String bitImageName = afterName + and + random + and + lastName + timeThis + lastPath;//原图名称
+                    File bigFile = files.get(i);//原图文件
+
+                    //获取缩略图名称和文件
+                    String smallImageName = afterName + and + random + and + lastName + timeThis + smallIndex + lastPath;//缩略图名称
+                    File smallFile = fileList.get(i);//缩略图文件 压缩后的图片名称
+                    imageModleList.add(new ImageModle(bigFile, bitImageName, smallFile, smallImageName));
+                }
+
+                if (isUpLoad) {
+                    V.d(">>>>>>>>>>>>>>>>>>>>>>>>>>>开始上传大图文件>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                    for (int i = 0; i < imageModleList.size(); i++) {
+                        MyApplication.wantuService.upload(getBytes(imageModleList.get(i).getBigFile().getPath()), imageModleList.get(i).getBigFileName(), null, new UploadListener() {
+                            @Override
+                            public void onUploading(UploadTask uploadTask) {
+
+                            }
+
+                            @Override
+                            public void onUploadFailed(UploadTask uploadTask, FailReason failReason) {
+                                onUpLoadImagesListener.onError();
+                                return;
+                            }
+
+                            @Override
+                            public void onUploadComplete(UploadTask uploadTask) {
+                                //每上传一张 uploadlenth 自增一
+                                uploadlenth++;
+                                if (uploadlenth == imageModleList.size()) {
+                                    uploadlenth = 0;//参数复位
+                                    V.d("<<<<<<<<<<<<<<<<<<<<<<<<<<<<大图文件文件上传成功<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+                                    V.d(">>>>>>>>>>>>>>>>>>>>>>>>>>>开始上传缩略图文件>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                                    for (int j = 0; j < imageModleList.size(); j++) {
+                                        MyApplication.wantuService.upload(getBytes(imageModleList.get(j).getSmallFile().getPath()), imageModleList.get(j).getSmallFileName(),
+                                                null, new UploadListener() {
+                                                    @Override
+                                                    public void onUploading(UploadTask uploadTask) {
+
+                                                    }
+
+                                                    @Override
+                                                    public void onUploadFailed(UploadTask uploadTask, FailReason failReason) {
+                                                        onUpLoadImagesListener.onError();
+                                                        return;
+                                                    }
+
+                                                    @Override
+                                                    public void onUploadComplete(UploadTask uploadTask) {
+                                                        uploadlenth++;
+                                                        if (uploadlenth == imageModleList.size()) {
+                                                            uploadlenth = 0;
+                                                            V.d("<<<<<<<<<<<<<<<<<<<<<<<<<<<<缩略图文件上传成功<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+                                                            onUpLoadImagesListener.onSucc(imageModleList);
+                                                        }
+                                                    }
+
+                                                    @Override
+                                                    public void onUploadCancelled(UploadTask uploadTask) {
+
+                                                    }
+                                                }, token);
+                                    }
+                                }
+                            }
+
+                            @Override
+                            public void onUploadCancelled(UploadTask uploadTask) {
+                                onUpLoadImagesListener.onError();
+                                return;
+                            }
+                        }, token);
+                    }
+
+                } else {
+                    //不需上传时直接回调
+                    onUpLoadImagesListener.onSucc(imageModleList);
+                }
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                onUpLoadImagesListener.onError();
+            }
+        });
+    }
+
+
+    /**
+     * 获得指定文件的byte数组
+     */
+    private static byte[] getBytes(String filePath) {
+        byte[] buffer = null;
+        try {
+            File file = new File(filePath);
+            FileInputStream fis = new FileInputStream(file);
+            ByteArrayOutputStream bos = new ByteArrayOutputStream(1000);
+            byte[] b = new byte[1000];
+            int n;
+            while ((n = fis.read(b)) != -1) {
+                bos.write(b, 0, n);
+            }
+            fis.close();
+            bos.close();
+            buffer = bos.toByteArray();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return buffer;
+    }
+
     public static UserInputModel checkUserInputParams(View... view) {
         boolean isTrue = true;
         String[] params = new String[view.length];
@@ -120,6 +276,7 @@ public class Utils {
             }
         });
     }
+
     public static void showToast(final Activity context, final int msg) {
         HandlerUtils.post(new Runnable() {
             @Override
@@ -326,70 +483,70 @@ public class Utils {
     }
 
 
-    /**
-     * @param context
-     * @param photoAdapter 适配器
-     * @param imgNames     上送的图片名车个集合，该名称集合长度必须与适配器填充的数据集合长度相等
-     * @param uploadToken
-     */
-    public static void upLoadImgToQINIUYUN(final Activity context, final PhotoAdapter photoAdapter, final List<String> imgNames, final String uploadToken, final int resultCode) {
-        final UploadManager uploadManager = new UploadManager();
-        final int[] uploadImgToQNY_size_add = {0};
-        yasuo(context, photoAdapter.getList(), new Handler() {
-            @Override
-            public void handleMessage(final Message msg) {
-                if (msg.arg1 == 9000) {
-
-                    uploadManager.put(msg.getData().getString("path"), imgNames.get(msg.getData().getInt("index")), uploadToken,
-                            new UpCompletionHandler() {
-                                @Override
-                                public void complete(String key, ResponseInfo info, JSONObject res) {
-                                    //res包含hash、key等信息，具体字段取决于上传策略的设置。
-                                    V.d("上传状态回调：" + key + ",\r\n " + info + ",\r\n " + res);
-                                    uploadImgToQNY_size_add[0]++;
-                                    V.d("index:" + uploadImgToQNY_size_add[0]);
-                                    V.d("size:" + ((photoAdapter.getList().size())));
-                                    if (uploadImgToQNY_size_add[0] == photoAdapter.getList().size()) {
-                                        Utils.showToast(context, "发布成功");
-//                                        Utils.dissmissDiV(context);
-                                        Intent intent =new Intent();
-                                        intent.putExtra("isRefresh",true);
-                                        context.setResult(resultCode,intent);
-                                        context.finish();
-                                    }
-                                }
-                            }, null);
-                } else {
-                    V.e("压缩失败一次");
-                }
-            }
-        });
-    }
-
-    public static void yasuo(final Activity context, final ArrayList<String> list, final Handler handler) {
-
-
-        ThreadPoolUtils.getInstance().addTask(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 0; i < list.size(); i++) {
-                    Bundle bundle = new Bundle();
-                    Message message = handler.obtainMessage();
-                    try {
-                        bundle.putString("path", compressImage(context, Uri.fromFile(new File(list.get(i)))));
-                        bundle.putInt("index", i);
-                        message.arg1 = 9000;
-                    } catch (Exception e) {
-                        message.arg1 = -1;
-                    }
-                    message.setData(bundle);
-                    handler.sendMessage(message);
-                }
-            }
-        });
-
-
-    }
+//    /**
+//     * @param context
+//     * @param photoAdapter 适配器
+//     * @param imgNames     上送的图片名车个集合，该名称集合长度必须与适配器填充的数据集合长度相等
+//     * @param uploadToken
+//     */
+//    public static void upLoadImgToQINIUYUN(final Activity context, final PhotoAdapter photoAdapter, final List<String> imgNames, final String uploadToken, final int resultCode) {
+//        final UploadManager uploadManager = new UploadManager();
+//        final int[] uploadImgToQNY_size_add = {0};
+//        yasuo(context, photoAdapter.getList(), new Handler() {
+//            @Override
+//            public void handleMessage(final Message msg) {
+//                if (msg.arg1 == 9000) {
+//
+//                    uploadManager.put(msg.getData().getString("path"), imgNames.get(msg.getData().getInt("index")), uploadToken,
+//                            new UpCompletionHandler() {
+//                                @Override
+//                                public void complete(String key, ResponseInfo info, JSONObject res) {
+//                                    //res包含hash、key等信息，具体字段取决于上传策略的设置。
+//                                    V.d("上传状态回调：" + key + ",\r\n " + info + ",\r\n " + res);
+//                                    uploadImgToQNY_size_add[0]++;
+//                                    V.d("index:" + uploadImgToQNY_size_add[0]);
+//                                    V.d("size:" + ((photoAdapter.getList().size())));
+//                                    if (uploadImgToQNY_size_add[0] == photoAdapter.getList().size()) {
+//                                        Utils.showToast(context, "发布成功");
+////                                        Utils.dissmissDiV(context);
+//                                        Intent intent =new Intent();
+//                                        intent.putExtra("isRefresh",true);
+//                                        context.setResult(resultCode,intent);
+//                                        context.finish();
+//                                    }
+//                                }
+//                            }, null);
+//                } else {
+//                    V.e("压缩失败一次");
+//                }
+//            }
+//        });
+//    }
+//
+//    public static void yasuo(final Activity context, final ArrayList<String> list, final Handler handler) {
+//
+//
+//        ThreadPoolUtils.getInstance().addTask(new Runnable() {
+//            @Override
+//            public void run() {
+//                for (int i = 0; i < list.size(); i++) {
+//                    Bundle bundle = new Bundle();
+//                    Message message = handler.obtainMessage();
+//                    try {
+//                        bundle.putString("path", compressImage(context, Uri.fromFile(new File(list.get(i)))));
+//                        bundle.putInt("index", i);
+//                        message.arg1 = 9000;
+//                    } catch (Exception e) {
+//                        message.arg1 = -1;
+//                    }
+//                    message.setData(bundle);
+//                    handler.sendMessage(message);
+//                }
+//            }
+//        });
+//
+//
+//    }
 //
 //    public static void dissmissDiV(Context context) {
 //        if (context == null) {
@@ -418,25 +575,25 @@ public class Utils {
 //        FFSVProgressHUD.showSuccessWithStatus(context, msg);
 //    }
 
-    public static String compressImage(Activity activity, final Uri uri) {
-
-        V.d("************************华丽的分割线************************");
-        File saveFile = new File(activity.getExternalCacheDir(), "compress_" + System.currentTimeMillis() + ".jpg");
-        try {
-            Bitmap bitmap = MediaStore.Images.Media.getBitmap(activity.getContentResolver(), uri);
-            V.d(">>>>>>>>>>>>>>>>>压缩前路径：" + uri.getPath() + ",大小：" + bitmap.getByteCount() + "<<<<<<<<<<<<<<<<<<<");
-            V.d("=>=>=>=>=>=>=>=>" + "开始压缩" + "<=<=<=<=<=<=<=<=<=<=");
-            NativeUtil.compressBitmap(bitmap, saveFile.getAbsolutePath());
-            V.d("=>=>=>=>=>=>=>=>" + "压缩完成" + "<=<=<=<=<=<=<=<=<=<=");
-            V.d(">>>>>>>>>>>>>>>>>压缩后路径：" + saveFile.getAbsolutePath() + ",大小：" + Utils.getBitmapFromPath(saveFile.getAbsolutePath()).getByteCount() + "<<<<<<<<<<<<<<<<<<<");
-            bitmap = null;
-        } catch (IOException e) {
-            e.printStackTrace();
-            V.e(e.toString());
-        }
-        V.d("************************华丽的分割线************************");
-        return saveFile.getAbsolutePath();
-    }
+//    public static String compressImage(Activity activity, final Uri uri) {
+//
+//        V.d("************************华丽的分割线************************");
+//        File saveFile = new File(activity.getExternalCacheDir(), "compress_" + System.currentTimeMillis() + ".jpg");
+//        try {
+//            Bitmap bitmap = MediaStore.Images.Media.getBitmap(activity.getContentResolver(), uri);
+//            V.d(">>>>>>>>>>>>>>>>>压缩前路径：" + uri.getPath() + ",大小：" + bitmap.getByteCount() + "<<<<<<<<<<<<<<<<<<<");
+//            V.d("=>=>=>=>=>=>=>=>" + "开始压缩" + "<=<=<=<=<=<=<=<=<=<=");
+//            NativeUtil.compressBitmap(bitmap, saveFile.getAbsolutePath());
+//            V.d("=>=>=>=>=>=>=>=>" + "压缩完成" + "<=<=<=<=<=<=<=<=<=<=");
+//            V.d(">>>>>>>>>>>>>>>>>压缩后路径：" + saveFile.getAbsolutePath() + ",大小：" + Utils.getBitmapFromPath(saveFile.getAbsolutePath()).getByteCount() + "<<<<<<<<<<<<<<<<<<<");
+//            bitmap = null;
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            V.e(e.toString());
+//        }
+//        V.d("************************华丽的分割线************************");
+//        return saveFile.getAbsolutePath();
+//    }
 
     /**
      * 保存方法

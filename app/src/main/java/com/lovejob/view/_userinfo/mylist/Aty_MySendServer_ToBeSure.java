@@ -104,7 +104,7 @@ public class Aty_MySendServer_ToBeSure extends BaseActivity {
                         viewHolder.getView(R.id.tv_tobesure_tuikuanzhong).setVisibility(View.VISIBLE);
                         break;
                 }
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getUserInfo().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_ser_tobesure_logo));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getUserInfo().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_ser_tobesure_logo));
                 setOnItemListener(viewHolder.getConvertView(), position, serverPid);
                 return viewHolder.getConvertView();
             }

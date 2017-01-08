@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.alibaba.sdk.android.feedback.impl.FeedbackAPI;
+import com.alibaba.sdk.android.feedback.util.IUnreadCountCallback;
 import com.lovejob.BaseActivity;
 import com.lovejob.R;
 import com.lovejob.controllers.task.LoveJob;
@@ -17,9 +19,6 @@ import com.lovejob.controllers.task.OnAllParameListener;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
-import com.lovejob.ms.MainActivityMs;
-import com.lovejob.qiniuyun.storage.UploadManager;
-import com.lovejob.view.MainActivity;
 import com.lovejob.view.login.LoginAcitvity;
 import com.umeng.socialize.UMAuthListener;
 import com.umeng.socialize.UMShareAPI;
@@ -59,6 +58,8 @@ public class Aty_Setting extends BaseActivity {
     TextView wechatbounded;
     @Bind(R.id.isupdata)
     TextView isupdata;
+    @Bind(R.id.ishelpread)
+    TextView ishelpread;
     String userPid, token;
     private Activity context;
     private UMShareAPI mShareAPI;
@@ -126,6 +127,28 @@ public class Aty_Setting extends BaseActivity {
 
             }
         }));
+
+        //获取帮助与反馈未读条数
+        FeedbackAPI.getFeedbackUnreadCount(new IUnreadCountCallback() {
+            @Override
+            public void onSuccess(final int i) {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (i > 0) {
+                            ishelpread.setVisibility(View.VISIBLE);
+                        } else {
+                            ishelpread.setVisibility(View.INVISIBLE);
+                        }
+                    }
+                });
+            }
+
+            @Override
+            public void onError(int i, String s) {
+                Utils.showToast(context, s);
+            }
+        });
     }
 
     private boolean isoncl = true;
@@ -137,7 +160,8 @@ public class Aty_Setting extends BaseActivity {
                 AppManager.getAppManager().finishActivity();
                 break;
             case R.id.help:
-                startActivity(new Intent(context, Aty_Help.class));
+//                startActivity(new Intent(context, Aty_Help.class));
+                FeedbackAPI.openFeedbackActivity();
                 break;
             case R.id.about:
                 startActivity(new Intent(context, Aty_AboutMe.class));

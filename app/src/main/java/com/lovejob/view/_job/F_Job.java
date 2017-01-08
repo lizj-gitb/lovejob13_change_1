@@ -209,7 +209,7 @@ public class F_Job extends BaseFragment {
             @Override
             public View getViewHolder(int position, View convertView, ViewGroup parent) {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_job, position);
-                Glide.with(context).load((StaticParams.QiNiuYunUrl + getItem(position).getReleaseInfo().getPortraitId())).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) viewHolder.getView(R.id.img_job_logo));
+                Glide.with(context).load((StaticParams.ImageURL + getItem(position).getReleaseInfo().getPortraitId())).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) viewHolder.getView(R.id.img_job_logo));
                 ((TextView) viewHolder.getView(R.id.tv_job_title)).setText(getItem(position).getTitle() == null ? "用户未填写" : getItem(position).getTitle());
                 ((TextView) viewHolder.getView(R.id.tv_job_com)).setText(getItem(position).getReleaseInfo().getCompany() == null ? "公司名称未填写" : getItem(position).getReleaseInfo().getCompany());
 
@@ -488,7 +488,7 @@ public class F_Job extends BaseFragment {
         @Override
         public View getView(ViewGroup container, int position) {
             ImageView view = new ImageView(container.getContext());
-            Glide.with(context).load(StaticParams.QiNiuYunUrl_News + imgs.get(position).getPictrueid())
+            Glide.with(context).load(StaticParams.ImageNewsURL + imgs.get(position).getPictrueid())
                     .dontAnimate().into(view);
             view.setScaleType(ImageView.ScaleType.CENTER_CROP);
             view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));

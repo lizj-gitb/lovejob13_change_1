@@ -274,7 +274,7 @@ public class JobDetails extends BaseActivity {
                     btJobdetailsOthers.setVisibility(View.VISIBLE);
                     btJobdetailsOwnLingpai.setVisibility(View.GONE);
                 }
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo().getPortraitId()).dontAnimate()
+                Glide.with(context).load(StaticParams.ImageURL + thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo().getPortraitId()).dontAnimate()
                         .placeholder(R.drawable.ic_launcher).into(imgJobdetailsBoosHead);
                 userId = thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo().getUserId();
                 actionbarSave.setVisibility(View.GONE);
@@ -328,7 +328,7 @@ public class JobDetails extends BaseActivity {
                 for (int i = 0; i < person.size(); i++) {
                     alreadySiginPersonNumber++;
                     //gv添加一个item
-                    adapter_alreadySiginPerson.addItem(StaticParams.QiNiuYunUrl + person.get(i).getPortraitId());
+                    adapter_alreadySiginPerson.addItem(StaticParams.ImageURL + person.get(i).getPortraitId());
                 }
                 alreadySignPersonNumber.setText(String.valueOf(alreadySiginPersonNumber));
 

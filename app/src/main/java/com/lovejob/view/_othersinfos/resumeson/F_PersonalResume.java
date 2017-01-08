@@ -135,7 +135,7 @@ public class F_PersonalResume extends BaseFragment {
                     final ArrayList<String> selectedPhotos = new ArrayList<>();
                     String[] l = thePerfectGirl.getData().getResumeDTO().getBusinessLicense().split("\\|");
                     for (int i = 0; i < l.length; i++) {
-                        selectedPhotos.add(StaticParams.QiNiuYunUrl + l[i]);
+                        selectedPhotos.add(StaticParams.ImageURL + l[i]);
                     }
                     final PhotoAdapter photoAdapter = new PhotoAdapter(context, selectedPhotos, true);
                     gvCommpanyInfoImg.setLayoutManager(new StaggeredGridLayoutManager(3, OrientationHelper.VERTICAL));
@@ -147,7 +147,7 @@ public class F_PersonalResume extends BaseFragment {
                             final ArrayList<String> photos = new ArrayList<>();
                             String[] l = thePerfectGirl.getData().getResumeDTO().getBusinessLicense().split("\\|");
                             for (int i = 0; i < l.length; i++) {
-                                photos.add(StaticParams.QiNiuYunUrl + l[i]);
+                                photos.add(StaticParams.ImageURL + l[i]);
                             }
                             PhotoPreview.builder()
                                     //http://oejyij5hl.bkt.clouddn.com/lovejob_195107463214808463580161563989879.jpg
@@ -188,7 +188,7 @@ public class F_PersonalResume extends BaseFragment {
                     tvInforSkill.setText(girl.getSkill());
                     tvInforWorke.setText(girl.getExperience());
                     tvInforMine.setText(girl.getPersonalEvaluation());
-                    Glide.with(context).load(StaticParams.QiNiuYunUrl+thePerfectGirl.getData().getResumeDTO().getPortraitId()).dontAnimate().placeholder(R.drawable.ic_launcher).into(imgUserHead);
+                    Glide.with(context).load(StaticParams.ImageURL+thePerfectGirl.getData().getResumeDTO().getPortraitId()).dontAnimate().placeholder(R.drawable.ic_launcher).into(imgUserHead);
                 }
             }
 

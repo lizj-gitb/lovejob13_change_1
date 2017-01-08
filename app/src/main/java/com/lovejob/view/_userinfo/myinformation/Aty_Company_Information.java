@@ -24,15 +24,15 @@ import android.widget.TextView;
 
 import com.lovejob.BaseActivity;
 import com.lovejob.R;
+import com.lovejob.controllers.OnUpLoadImagesListener;
 import com.lovejob.controllers.adapter.PhotoAdapter;
 import com.lovejob.controllers.task.LoveJob;
 import com.lovejob.controllers.task.OnAllParameListener;
+import com.lovejob.model.ImageModle;
+import com.lovejob.model.PayTypeInfo;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
-import com.lovejob.qiniuyun.http.ResponseInfo;
-import com.lovejob.qiniuyun.storage.UpCompletionHandler;
-import com.lovejob.qiniuyun.storage.UploadManager;
 import com.v.rapiddev.adpater.RecyclerItemClickListener;
 import com.v.rapiddev.base.AppManager;
 import com.v.rapiddev.http.okhttp3.Call;
@@ -40,10 +40,12 @@ import com.v.rapiddev.preferences.AppPreferences;
 
 import org.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -216,26 +218,47 @@ public class Aty_Company_Information extends BaseActivity {
 //        }
         if (photoAdapter.getList().size() > 0) {
             //压缩图片
-            Utils.yasuo(context, photoAdapter.getList(), new Handler() {
+
+            List<File> files = new ArrayList<>();
+            for (int i = 0; i < selectedPhotos.size(); i++) {
+                files.add(new File(selectedPhotos.get(i)));
+            }
+            Utils.ImageCo(files, context, true, new OnUpLoadImagesListener() {
                 @Override
-                public void handleMessage(Message msg) {
-                    if (msg.arg1 == 9000) {
-                        String path = msg.getData().getString("path");
-                        maxImagesLenth++;
-                        images.put("lovejob_" + new Random().nextInt() + "cxwl" + new Date().getTime() + path.substring(path.lastIndexOf(".")), path);
-                        if (maxImagesLenth == photoAdapter.getList().size()) {
-                            //压缩完成
-                            for (Iterator iter = images.entrySet().iterator(); iter.hasNext(); ) {
-                                Map.Entry element = (Map.Entry) iter.next();
-                                Object strKey = element.getKey();
-                                Object strObj = element.getValue();
-                                sb.append(strKey).append("|");
-                            }
-                            uploadImagesAndPushDate(sb.toString());
-                        }
+                public void onSucc(List<ImageModle> imageModleList) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    for (int i = 0; i < imageModleList.size(); i++) {
+                        stringBuffer.append(imageModleList.get(i).getSmallFileName());
                     }
+                    uploadImagesAndPushDate(stringBuffer.toString());
+                }
+
+                @Override
+                public void onError() {
+                    dialog.dismiss();
+                    Utils.showToast(context, "图片上传失败，请稍后再试");
                 }
             });
+//            Utils.yasuo(context, photoAdapter.getList(), new Handler() {
+//                @Override
+//                public void handleMessage(Message msg) {
+//                    if (msg.arg1 == 9000) {
+//                        String path = msg.getData().getString("path");
+//                        maxImagesLenth++;
+//                        images.put("lovejob_" + new Random().nextInt() + "cxwl" + new Date().getTime() + path.substring(path.lastIndexOf(".")), path);
+//                        if (maxImagesLenth == photoAdapter.getList().size()) {
+//                            //压缩完成
+//                            for (Iterator iter = images.entrySet().iterator(); iter.hasNext(); ) {
+//                                Map.Entry element = (Map.Entry) iter.next();
+//                                Object strKey = element.getKey();
+//                                Object strObj = element.getValue();
+//                                sb.append(strKey).append("|");
+//                            }
+//                            uploadImagesAndPushDate(sb.toString());
+//                        }
+//                    }
+//                }
+//            });
         } else {
             uploadImagesAndPushDate(null);
         }
@@ -248,27 +271,28 @@ public class Aty_Company_Information extends BaseActivity {
                 etCommInfoAddress.getText().toString(), etCommInfoWebsite.getText().toString(), etCommInfoBusiness.getText().toString(), new OnAllParameListener() {
                     @Override
                     public void onSuccess(ThePerfectGirl thePerfectGirl) {
+                        Utils.showToast(context, "修改成功");
 //                        Utils.showToast(context, "保存成功");
-                        //TODO 上传图片
-                        if (!TextUtils.isEmpty(thePerfectGirl.getData().getUploadToken())) {
-                            UploadManager uploadManager = new UploadManager();
-                            for (Iterator iter = images.entrySet().iterator(); iter.hasNext(); ) {
-                                Map.Entry element = (Map.Entry) iter.next();
-                                Object strKey = element.getKey();
-                                Object strObj = element.getValue();
-                                uploadManager.put(strObj.toString(), strKey.toString(), thePerfectGirl.getData().getUploadToken(), new UpCompletionHandler() {
-                                    @Override
-                                    public void complete(String key, ResponseInfo info, JSONObject response) {
-                                        maxImagesLenth++;
-                                        if (images.size() == maxImagesLenth) {
-                                            Utils.showToast(context, "修改成功");
-                                        }
-                                    }
-                                }, null);
-                            }
-                        } else {
-                            Utils.showToast(context, "修改成功");
-                        }
+//                        //TODO 上传图片
+//                        if (!TextUtils.isEmpty(thePerfectGirl.getData().getUploadToken())) {
+//                            UploadManager uploadManager = new UploadManager();
+//                            for (Iterator iter = images.entrySet().iterator(); iter.hasNext(); ) {
+//                                Map.Entry element = (Map.Entry) iter.next();
+//                                Object strKey = element.getKey();
+//                                Object strObj = element.getValue();
+//                                uploadManager.put(strObj.toString(), strKey.toString(), thePerfectGirl.getData().getUploadToken(), new UpCompletionHandler() {
+//                                    @Override
+//                                    public void complete(String key, ResponseInfo info, JSONObject response) {
+//                                        maxImagesLenth++;
+//                                        if (images.size() == maxImagesLenth) {
+//                                            Utils.showToast(context, "修改成功");
+//                                        }
+//                                    }
+//                                }, null);
+//                            }
+//                        } else {
+//                            Utils.showToast(context, "修改成功");
+//                        }
                     }
 
                     @Override

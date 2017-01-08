@@ -156,7 +156,7 @@ public class MainActivity extends BaseActivity {
 //                            V.e("获取用户资料失败");
 //                            return;
 //                        }
-//                        push(message.getObjectName(), thePerfectGirl.getData().getUserInfoDTOs().get(0).getRealName(), StaticParams.QiNiuYunUrl + thePerfectGirl.getData().getUserInfoDTOs().get(0).getPortraitId());
+//                        push(message.getObjectName(), thePerfectGirl.getData().getUserInfoDTOs().get(0).getRealName(), StaticParams.ImageURL + thePerfectGirl.getData().getUserInfoDTOs().get(0).getPortraitId());
 //                    }
 //
 //                    @Override

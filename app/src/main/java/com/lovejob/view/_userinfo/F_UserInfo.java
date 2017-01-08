@@ -28,18 +28,16 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.lovejob.BaseFragment;
 import com.lovejob.R;
+import com.lovejob.controllers.OnUpLoadImagesListener;
 import com.lovejob.controllers.task.LoveJob;
 import com.lovejob.controllers.task.OnAllParameListener;
 import com.lovejob.model.HandlerUtils;
+import com.lovejob.model.ImageModle;
+import com.lovejob.model.PayTypeInfo;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.ThreadPoolUtils;
 import com.lovejob.model.Utils;
-import com.lovejob.ms.MainActivityMs;
-import com.lovejob.qiniuyun.http.ResponseInfo;
-import com.lovejob.qiniuyun.storage.UpCompletionHandler;
-import com.lovejob.qiniuyun.storage.UploadManager;
-import com.lovejob.view._home.F_Home;
 import com.lovejob.view._othersinfos.Others;
 import com.lovejob.view._userinfo.myinformation.Aty_Resume;
 import com.lovejob.view._userinfo.mylist.Aty_MyList;
@@ -47,17 +45,16 @@ import com.lovejob.view._userinfo.myserver.ServiceMyActivity;
 import com.lovejob.view._userinfo.mywalletinfos.Aty_Money;
 import com.lovejob.view._userinfo.news.Aty_News;
 import com.lovejob.view._userinfo.setting.Aty_Setting;
-import com.lovejob.view.cityselector.cityselector.utils.ToastUtils;
+import com.v.rapiddev.base.AppManager;
 import com.v.rapiddev.http.okhttp3.Call;
-import com.v.rapiddev.preferences.AppPreferences;
 import com.v.rapiddev.pulltorefresh.PullToRefreshBase;
 import com.v.rapiddev.pulltorefresh.PullToRefreshScrollView;
-import com.v.rapiddev.utils.Utils_RapidDev;
 import com.v.rapiddev.utils.V;
 import com.v.rapiddev.views.CircleImageView;
 
 import org.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -197,13 +194,13 @@ public class F_UserInfo extends BaseFragment {
 
     private void addUserInfoData() {
         calls.add(
-                LoveJob.getUserHomeInfos(null,new OnAllParameListener() {
+                LoveJob.getUserHomeInfos(null, new OnAllParameListener() {
                     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
                     @Override
                     public void onSuccess(ThePerfectGirl thePerfectGirl) {
 
                         final ThePerfectGirl.UserInfoDTO userInfo = thePerfectGirl.getData().getUserInfoDTO();
-                        Glide.with(context).load(StaticParams.QiNiuYunUrl + userInfo.getPortraitId()).dontAnimate().placeholder(R.drawable.ic_launcher).into(imgFMyUserlogo);
+                        Glide.with(context).load(StaticParams.ImageURL + userInfo.getPortraitId()).dontAnimate().placeholder(R.drawable.ic_launcher).into(imgFMyUserlogo);
 
                         int userSex = userInfo.getUserSex() == 1 ? R.mipmap.icon_male : R.mipmap.icon_famale;
 
@@ -211,43 +208,43 @@ public class F_UserInfo extends BaseFragment {
                         tvFMyUsername.setText(userInfo.getRealName());
                         //userImpression 用户标签 TODO
                         //TODO 资料完整度、消息数、
-                        int i = (int) (thePerfectGirl.getData().getUserInfoDTO().getImproveDegree()*100);
+                        int i = (int) (thePerfectGirl.getData().getUserInfoDTO().getImproveDegree() * 100);
                         pbFMyProgressbar.setProgress(i);//模拟
-                        tvFMyUserdatanum.setText((thePerfectGirl.getData().getUserInfoDTO().getImproveDegree()*100)+"%".trim());//模拟
+                        tvFMyUserdatanum.setText((thePerfectGirl.getData().getUserInfoDTO().getImproveDegree() * 100) + "%".trim());//模拟
                         if (userInfo.getCount() > 0) {
                             InformationCount.setVisibility(View.VISIBLE);
                             InformationCount.setText(String.valueOf(userInfo.getCount()));
                         } else {
                             InformationCount.setVisibility(View.GONE);
                         }
-                    if (thePerfectGirl.getData().getUserInfoDTO().getUserImpression()==null
-                            ||thePerfectGirl.getData().getUserInfoDTO().getUserImpression().size()==0){
-                        ll1.setVisibility(View.GONE);
-                        ll2.setVisibility(View.GONE);
-                        ll3.setVisibility(View.GONE);
+                        if (thePerfectGirl.getData().getUserInfoDTO().getUserImpression() == null
+                                || thePerfectGirl.getData().getUserInfoDTO().getUserImpression().size() == 0) {
+                            ll1.setVisibility(View.GONE);
+                            ll2.setVisibility(View.GONE);
+                            ll3.setVisibility(View.GONE);
 
-                    }else {
-                        List<ThePerfectGirl.ImpressionDTO> ss = thePerfectGirl.getData().getUserInfoDTO().getUserImpression();
-                        try {
-                            ttv1.setText(ss.get(0).getImpression());
-                            tvFMyHumour.setText("  :"+String.valueOf(ss.get(0).getCount()));
-                        }catch (Exception e){
+                        } else {
+                            List<ThePerfectGirl.ImpressionDTO> ss = thePerfectGirl.getData().getUserInfoDTO().getUserImpression();
+                            try {
+                                ttv1.setText(ss.get(0).getImpression());
+                                tvFMyHumour.setText("  :" + String.valueOf(ss.get(0).getCount()));
+                            } catch (Exception e) {
+
+                            }
+                            try {
+                                ttv2.setText(ss.get(1).getImpression());
+                                tvFMyLoveliness.setText("  :" + String.valueOf(ss.get(1).getCount()));
+                            } catch (Exception e) {
+
+                            }
+                            try {
+                                ttv3.setText(ss.get(2).getImpression());
+                                tvFMyLively.setText("  :" + String.valueOf(ss.get(2).getCount()));
+                            } catch (Exception e) {
+
+                            }
 
                         }
-                        try {
-                            ttv2.setText(ss.get(1).getImpression());
-                            tvFMyLoveliness.setText("  :"+String.valueOf(ss.get(1).getCount()));
-                        }catch (Exception e){
-
-                        }
-                        try {
-                            ttv3.setText(ss.get(2).getImpression());
-                            tvFMyLively.setText("  :"+String.valueOf(ss.get(2).getCount()));
-                        }catch (Exception e){
-
-                        }
-
-                    }
                         if (!TextUtils.isEmpty(userInfo.getBackground())) {
 
                             ThreadPoolUtils.getInstance().addTask(new Runnable() {
@@ -255,7 +252,7 @@ public class F_UserInfo extends BaseFragment {
                                 public void run() {
                                     try {
                                         Bitmap myBitmap = Glide.with(context)
-                                                .load(StaticParams.QiNiuYunUrl + userInfo.getBackground())
+                                                .load(StaticParams.ImageURL + userInfo.getBackground())
                                                 .asBitmap() //必须
                                                 .centerCrop()
                                                 .into(500, 500)
@@ -341,7 +338,7 @@ public class F_UserInfo extends BaseFragment {
         for (Call mCall : calls) {
             if (mCall != null && !mCall.isCanceled()) mCall.cancel();
         }
-        calls=null;
+        calls = null;
         context.unregisterReceiver(broadcastReceiver);
         ButterKnife.unbind(this);
     }
@@ -418,65 +415,101 @@ public class F_UserInfo extends BaseFragment {
 //
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     private void updataUserBg(final ArrayList<String> photos) {
-        if (photos!=null &&photos.size() > 0) {
-            Utils.yasuo(context, photos, new Handler() {
+        if (photos != null && photos.size() > 0) {
+
+            List<File> files = new ArrayList<>();
+            for (int i = 0; i < selectedPhotos.size(); i++) {
+                files.add(new File(selectedPhotos.get(i)));
+            }
+            Utils.ImageCo(files, context, true, new OnUpLoadImagesListener() {
                 @Override
-                public void handleMessage(Message msg) {
-                    if (msg.arg1 == 9000) {
-//                                    File saveFile = new File(getExternalCacheDir(), "compress_" + System.currentTimeMillis() + ".jpg");
-//                                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), Uri.parse(msg.getData().getString("path")));
-//                                    NativeUtil.compressBitmap(bitmap, saveFile.getAbsolutePath());
-                        final String path = msg.getData().getString("path");
-                        //开始上传图片  上传的图片路径为msg.getData().getString("path")
-                        HandlerUtils.post(new Runnable() {
-                            @Override
-                            public void run() {
-
-                                calls.add(LoveJob.uploadUserBg(path, new OnAllParameListener() {
-                                    @Override
-                                    public void onSuccess(ThePerfectGirl thePerfectGirl) {
-
-                                        UploadManager uploadManager = new UploadManager();
-                                        uploadManager.put(path, path,
-
-                                                thePerfectGirl.getData().getUploadToken(), new UpCompletionHandler() {
-                                                    @Override
-                                                    public void complete(String key, ResponseInfo info, JSONObject response) {
-                                                        V.d("上传成功");
-                                                        lt_userbg.setBackground(BitmapDrawable.createFromPath(photos.get(0)));
-                                                    }
-                                                }, null);
-                                    }
-
-                                    @Override
-                                    public void onError(String msg) {
-                                        Utils.showToast(context, msg);
-                                    }
-                                }));
-                            }
-                        });
-//                                uploadManager.put(msg.getData().getString("path"), imgNames.get(msg.getData().getInt("index")), uploadToken,
-//                                        new UpCompletionHandler() {
-//                                            @Override
-//                                            public void complete(String key, ResponseInfo info, JSONObject res) {
-//                                                //res包含hash、key等信息，具体字段取决于上传策略的设置。
-//                                                V.d("上传状态回调：" + key + ",\r\n " + info + ",\r\n " + res);
-//                                                uploadImgToQNY_size_add[0]++;
-//                                                V.d("index:" + uploadImgToQNY_size_add[0]);
-//                                                V.d("size:" + ((photoAdapter.getList().size())));
-//                                                if (uploadImgToQNY_size_add[0] == photoAdapter.getList().size()) {
-//                                                    Utils.showToast(context, "发布成功");
-////                                        Utils.dissmissDiV(context);
-//                                                    context.setResult(resultCode);
-//                                                    context.finish();
-//                                                }
-//                                            }
-//                                        }, null);
-                    } else {
-                        V.e("压缩失败一次");
+                public void onSucc(List<ImageModle> imageModleList) {
+                    final StringBuffer stringBuffer = new StringBuffer();
+                    for (int i = 0; i < imageModleList.size(); i++) {
+                        stringBuffer.append(imageModleList.get(i).getSmallFileName());
                     }
+                    HandlerUtils.post(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            calls.add(LoveJob.uploadUserBg(stringBuffer.toString(), new OnAllParameListener() {
+                                @Override
+                                public void onSuccess(ThePerfectGirl thePerfectGirl) {
+                                    lt_userbg.setBackground(BitmapDrawable.createFromPath(photos.get(0)));
+                                }
+
+                                @Override
+                                public void onError(String msg) {
+                                    Utils.showToast(context, msg);
+                                }
+                            }));
+                        }
+                    });
+                }
+
+                @Override
+                public void onError() {
+                    Utils.showToast(context, "图片上传失败，请稍后再试");
                 }
             });
+//            Utils.yasuo(context, photos, new Handler() {
+//                @Override
+//                public void handleMessage(Message msg) {
+//                    if (msg.arg1 == 9000) {
+////                                    File saveFile = new File(getExternalCacheDir(), "compress_" + System.currentTimeMillis() + ".jpg");
+////                                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), Uri.parse(msg.getData().getString("path")));
+////                                    NativeUtil.compressBitmap(bitmap, saveFile.getAbsolutePath());
+//                        final String path = msg.getData().getString("path");
+//                        //开始上传图片  上传的图片路径为msg.getData().getString("path")
+//                        HandlerUtils.post(new Runnable() {
+//                            @Override
+//                            public void run() {
+//
+//                                calls.add(LoveJob.uploadUserBg(path, new OnAllParameListener() {
+//                                    @Override
+//                                    public void onSuccess(ThePerfectGirl thePerfectGirl) {
+//
+//                                        UploadManager uploadManager = new UploadManager();
+//                                        uploadManager.put(path, path,
+//
+//                                                thePerfectGirl.getData().getUploadToken(), new UpCompletionHandler() {
+//                                                    @Override
+//                                                    public void complete(String key, ResponseInfo info, JSONObject response) {
+//                                                        V.d("上传成功");
+//                                                        lt_userbg.setBackground(BitmapDrawable.createFromPath(photos.get(0)));
+//                                                    }
+//                                                }, null);
+//                                    }
+//
+//                                    @Override
+//                                    public void onError(String msg) {
+//                                        Utils.showToast(context, msg);
+//                                    }
+//                                }));
+//                            }
+//                        });
+////                                uploadManager.put(msg.getData().getString("path"), imgNames.get(msg.getData().getInt("index")), uploadToken,
+////                                        new UpCompletionHandler() {
+////                                            @Override
+////                                            public void complete(String key, ResponseInfo info, JSONObject res) {
+////                                                //res包含hash、key等信息，具体字段取决于上传策略的设置。
+////                                                V.d("上传状态回调：" + key + ",\r\n " + info + ",\r\n " + res);
+////                                                uploadImgToQNY_size_add[0]++;
+////                                                V.d("index:" + uploadImgToQNY_size_add[0]);
+////                                                V.d("size:" + ((photoAdapter.getList().size())));
+////                                                if (uploadImgToQNY_size_add[0] == photoAdapter.getList().size()) {
+////                                                    Utils.showToast(context, "发布成功");
+//////                                        Utils.dissmissDiV(context);
+////                                                    context.setResult(resultCode);
+////                                                    context.finish();
+////                                                }
+////                                            }
+////                                        }, null);
+//                    } else {
+//                        V.e("压缩失败一次");
+//                    }
+//                }
+//            });
         }
         isUpLoadUserBg = false;
     }
@@ -488,8 +521,8 @@ public class F_UserInfo extends BaseFragment {
                 V.d("F_UserInfo接收到广播");
                 int requestCode = intent.getIntExtra("requestCode", -1);
                 int resultCode = intent.getIntExtra("resultCode", -1);
-                if (F_UserInfo.this.isVisible()){
-                        updataUserBg(intent.getStringArrayListExtra("photos"));
+                if (F_UserInfo.this.isVisible()) {
+                    updataUserBg(intent.getStringArrayListExtra("photos"));
                 }
             }
         }

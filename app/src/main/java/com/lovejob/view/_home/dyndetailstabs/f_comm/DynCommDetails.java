@@ -135,7 +135,7 @@ public class DynCommDetails extends BaseActivity {
             public View getViewHolder(final int position, View convertView, ViewGroup parent) {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_dyndetails_commentlist_2, position);
                 CircleImageView iv_dyncommlist_userlogo = (CircleImageView) viewHolder.getView(R.id.iv_dyncommlist_userlogo);
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getPortraitid()).into(iv_dyncommlist_userlogo);
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getPortraitid()).into(iv_dyncommlist_userlogo);
 //                MyApplication.imageloader.displayImage(StaticParam.QiNiuYunUrl + getItem(position).getPortraitid(), iv_dyncommlist_userlogo,
 //                        ImageMode.DefaultImage, true, true);
                 //回复人姓名
@@ -196,7 +196,7 @@ public class DynCommDetails extends BaseActivity {
                     List<ThePerfectGirl.DynamicCommentDetailDTO> replyDto = thePerfectGirl.getData().getDynamicCommentDTO().getReplyList();
                     if (isAddMainData) {
                         //主评论的用户头像
-                        Glide.with(context).load(StaticParams.QiNiuYunUrl + uInfo.getPortraitId()).into(ivDyncommitemlistUserlogo);
+                        Glide.with(context).load(StaticParams.ImageURL + uInfo.getPortraitId()).into(ivDyncommitemlistUserlogo);
 
                         //用户姓名
                         tvDyncommitemlistUsername.setText(uInfo.getRealName());

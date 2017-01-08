@@ -56,7 +56,7 @@ public class Aty_CommServer extends BaseActivity {
         serverPid = getIntent().getStringExtra("serverPid");
         useid = getIntent().getStringExtra("userid");
         pictrue=getIntent().getStringExtra("pictrue");
-        Glide.with(context).load(StaticParams.QiNiuYunUrl+pictrue).into(imgCommLogo);
+        Glide.with(context).load(StaticParams.ImageURL+pictrue).into(imgCommLogo);
     }
 
     @Override

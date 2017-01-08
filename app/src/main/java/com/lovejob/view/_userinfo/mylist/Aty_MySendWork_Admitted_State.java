@@ -90,7 +90,7 @@ public class Aty_MySendWork_Admitted_State extends BaseActivity {
                 setOnclickListener(position, imgAtyPublishedGetthisperson);
                 setOnclickListener(position, imgAtyPublishedChat);
                 setOnclickListener(position, imgAtyPublishedCall);
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getPortraitId() + "".trim()).into(imgTobeconfirmIcon);
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getPortraitId() + "".trim()).into(imgTobeconfirmIcon);
                 tvTobeconfirmName.setText(getItem(position).getRealName() + "".trim());
                 tvTobeconfirmCraft.setText(getItem(position).getPosition() + "".trim());
                 tvCommpl.setText(getItem(position).getCompany() + "".trim());

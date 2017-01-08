@@ -197,7 +197,21 @@ public class MainActivityMs extends BaseActivity {
 
         };
         MyApplication.mPushAgent.setMessageHandler(messageHandler);
+
+        //获取上传图片的token
+        LoveJob.getUpLoadImageToken(new OnAllParameListener() {
+            @Override
+            public void onSuccess(ThePerfectGirl thePerfectGirl) {
+                StaticParams.UpLoadImageToken = thePerfectGirl.getData().getUploadToken();
+            }
+
+            @Override
+            public void onError(String msg) {
+                V.e("上传图片的token获取失败，请稍后再试、");
+            }
+        });
     }
+
 
 //    private void connectRongIM() {
 //        HandlerUtils.post(new Runnable() {
@@ -250,7 +264,7 @@ public class MainActivityMs extends BaseActivity {
 //                                    push(message.getObjectName(), "", "");
 //                                    return;
 //                                }
-//                                push(message.getObjectName(), thePerfectGirl.getData().getUserInfoDTOs().get(0).getRealName(), StaticParams.QiNiuYunUrl + thePerfectGirl.getData().getUserInfoDTOs().get(0).getPortraitId());
+//                                push(message.getObjectName(), thePerfectGirl.getData().getUserInfoDTOs().get(0).getRealName(), StaticParams.ImageURL + thePerfectGirl.getData().getUserInfoDTOs().get(0).getPortraitId());
 //                            }
 //
 //                            @Override

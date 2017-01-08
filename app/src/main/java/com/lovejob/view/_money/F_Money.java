@@ -186,7 +186,7 @@ public class F_Money extends BaseFragment {
 //                //gv_f_money_alreadySignPerson
                 time = getItem(position).getFirstRefreshTime() + "".trim();
 //                //发布者头像
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getReleaseInfo().getPortraitId().toString().trim()).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) viewHolder.getView(R.id.img_item_lv_f_money_main_userlogo));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getReleaseInfo().getPortraitId().toString().trim()).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) viewHolder.getView(R.id.img_item_lv_f_money_main_userlogo));
 //                //工作标题
                 ((TextView) viewHolder.getView(R.id.tv_item_lv_f_money_main_title)).setText(getItem(position).getTitle());
 //
@@ -379,7 +379,7 @@ public class F_Money extends BaseFragment {
             @Override
             public View getViewHolder(int position, View convertView, ViewGroup parent) {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_f_money_gridview, position);
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position)).dontAnimate().into((CircleImageView) viewHolder.getView(R.id.img_item_lv_f_money_gridview));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position)).dontAnimate().into((CircleImageView) viewHolder.getView(R.id.img_item_lv_f_money_gridview));
 
                 return viewHolder.getConvertView();
             }
@@ -625,7 +625,7 @@ public class F_Money extends BaseFragment {
         @Override
         public View getView(ViewGroup container, int position) {
             ImageView view = new ImageView(container.getContext());
-            Glide.with(context).load(StaticParams.QiNiuYunUrl_News + imgs.get(position).getPictrueid()).dontAnimate().into(view);
+            Glide.with(context).load(StaticParams.ImageNewsURL + imgs.get(position).getPictrueid()).dontAnimate().into(view);
             view.setScaleType(ImageView.ScaleType.CENTER_CROP);
             view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             return view;

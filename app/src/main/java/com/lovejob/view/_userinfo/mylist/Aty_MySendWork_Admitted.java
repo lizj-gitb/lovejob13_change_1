@@ -119,7 +119,7 @@ public class Aty_MySendWork_Admitted extends BaseActivity {
                     public View getViewHolder(int position, View convertView, ViewGroup parent) {
                         FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_f_money_gridview, position);
                         CircleImageView img_item_lv_f_money_gridview = (CircleImageView) viewHolder.getView(R.id.img_item_lv_f_money_gridview);
-                        Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position)).placeholder(R.mipmap.ic_launcher).dontAnimate().into(img_item_lv_f_money_gridview);
+                        Glide.with(context).load(StaticParams.ImageURL + getItem(position)).placeholder(R.mipmap.ic_launcher).dontAnimate().into(img_item_lv_f_money_gridview);
                         return viewHolder.getConvertView();
                     }
                 };

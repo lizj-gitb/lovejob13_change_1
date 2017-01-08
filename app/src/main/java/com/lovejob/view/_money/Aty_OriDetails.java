@@ -32,7 +32,6 @@ import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
 import com.lovejob.model.bean.Data_Comm_2_2;
 import com.lovejob.ms.MainActivityMs;
-import com.lovejob.qiniuyun.storage.UploadManager;
 import com.lovejob.view.WriteView;
 import com.lovejob.view.cityselector.cityselector.utils.ToastUtils;
 import com.v.rapiddev.adpater.FFViewHolder;
@@ -253,7 +252,7 @@ public class Aty_OriDetails extends BaseActivity {
                     userId = userInfo.getUserId();
                     userName = userInfo.getRealName();
                 isphone = thePerfectGirl.getData().getWorkInfoDTO().isPhone();
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + userInfo.getPortraitId()).placeholder(R.mipmap.ic_launcher).dontAnimate()
+                Glide.with(context).load(StaticParams.ImageURL + userInfo.getPortraitId()).placeholder(R.mipmap.ic_launcher).dontAnimate()
                         .into(imgOridetailsUserVo);
                 tvOridetailsUsername.setText(userInfo.getRealName() + "".trim());
                 tvOridetailsPosition.setText(userInfo.getPosition() + "".trim());
@@ -273,7 +272,7 @@ public class Aty_OriDetails extends BaseActivity {
                     hitviewDetaile.setVisibility(View.VISIBLE);
                     setGridView(115, gvOridetailsContentimg, adapter_contentImg, img.length);
                     for (int i = 0; i < img.length; i++) {
-                        adapter_contentImg.addItem(StaticParams.QiNiuYunUrl + img[i].trim());
+                        adapter_contentImg.addItem(StaticParams.ImageURL + img[i].trim());
                     }
                 } else {
                     hitviewDetaile.setVisibility(View.GONE);
@@ -304,7 +303,7 @@ public class Aty_OriDetails extends BaseActivity {
                 if (lists != null) {
                     size = lists.size();
                     for (int i = 0; i < thePerfectGirl.getData().getWorkInfoDTO().getEmployeeInfo().size(); i++) {
-                        adapter_alreadySignInPersonImg.addItem(StaticParams.QiNiuYunUrl + thePerfectGirl.getData().getWorkInfoDTO().getEmployeeInfo().get(i).getPortraitId());
+                        adapter_alreadySignInPersonImg.addItem(StaticParams.ImageURL + thePerfectGirl.getData().getWorkInfoDTO().getEmployeeInfo().get(i).getPortraitId());
                     }
                     adapter_alreadySignInPersonImg.notifyDataSetChanged();
                 }

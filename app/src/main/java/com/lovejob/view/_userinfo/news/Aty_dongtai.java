@@ -143,7 +143,7 @@ public class Aty_dongtai extends BaseActivity {
                     String[] imgs = getItem(position).getfPicture().split("\\|");
                     if (imgs.length > 0 && !TextUtils.isEmpty(imgs[0])) {
                         ((RecyclerView) viewHolder.getView(R.id.img_pinglun_pic)).setVisibility(View.VISIBLE);
-                        selectedPhotos.add(StaticParams.QiNiuYunUrl + imgs[0]);
+                        selectedPhotos.add(StaticParams.ImageURL + imgs[0]);
                     } else {
                         ((RecyclerView) viewHolder.getView(R.id.img_pinglun_pic)).setVisibility(View.GONE);
                     }
@@ -152,7 +152,7 @@ public class Aty_dongtai extends BaseActivity {
                     ((RecyclerView) viewHolder.getView(R.id.img_pinglun_pic)).setAdapter(photoAdapter);
                 }
                 ((TextView) viewHolder.getView(R.id.tv_pinglun_content)).setText(getItem(position).getContent());
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getUserInfoDTO().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_pinglu_logo));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getUserInfoDTO().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_pinglu_logo));
 //                ((TextView) viewHolder.getView(R.id.tv_pinglun_time)).setText(getItem(position).g);
                 lvNewsdongtaiPinglun.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -251,7 +251,7 @@ public class Aty_dongtai extends BaseActivity {
                 ((TextView) viewHolder.getView(R.id.tv_bad_name)).setText(getItem(position).getUserInfo().getRealName());
                 ((TextView) viewHolder.getView(R.id.tv_bad_time)).setText(getItem(position).getCreateTimeDec());
 
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getUserInfo().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_bad_logo));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getUserInfo().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_bad_logo));
                 if (getItem(position).getfPicture() == null) {
                     viewHolder.getView(R.id.tv_bad_content).setVisibility(View.VISIBLE);
                     viewHolder.getView(R.id.img_bad_pic).setVisibility(View.GONE);
@@ -261,7 +261,7 @@ public class Aty_dongtai extends BaseActivity {
                     String[] imgs = getItem(position).getfPicture().split("\\|");
                     if (imgs.length > 0 && !TextUtils.isEmpty(imgs[0])) {
                         ((RecyclerView) viewHolder.getView(R.id.img_bad_pic)).setVisibility(View.VISIBLE);
-                        selectedPhotos.add(StaticParams.QiNiuYunUrl + imgs[0]);
+                        selectedPhotos.add(StaticParams.ImageURL + imgs[0]);
                     } else {
                         ((RecyclerView) viewHolder.getView(R.id.img_bad_pic)).setVisibility(View.GONE);
                     }
@@ -290,7 +290,7 @@ public class Aty_dongtai extends BaseActivity {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_newsgood, position);
                 ((TextView) viewHolder.getView(R.id.tv_good_name)).setText(getItem(position).getUserInfo().getRealName());
                 ((TextView) viewHolder.getView(R.id.tv_good_time)).setText(getItem(position).getCreateTimeDec());
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getUserInfo().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_good_logo));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getUserInfo().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_good_logo));
                 if (getItem(position).getfPicture() == null) {
                     viewHolder.getView(R.id.tv_good_content).setVisibility(View.VISIBLE);
                     viewHolder.getView(R.id.img_good_pic).setVisibility(View.GONE);
@@ -300,7 +300,7 @@ public class Aty_dongtai extends BaseActivity {
                     String[] imgs = getItem(position).getfPicture().split("\\|");
                     if (imgs.length > 0 && !TextUtils.isEmpty(imgs[0])) {
                         ((RecyclerView) viewHolder.getView(R.id.img_good_pic)).setVisibility(View.VISIBLE);
-                        selectedPhotos.add(StaticParams.QiNiuYunUrl + imgs[0]);
+                        selectedPhotos.add(StaticParams.ImageURL + imgs[0]);
                     } else {
                         ((RecyclerView) viewHolder.getView(R.id.img_good_pic)).setVisibility(View.GONE);
                     }

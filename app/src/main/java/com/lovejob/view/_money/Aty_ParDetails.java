@@ -196,7 +196,7 @@ public class Aty_ParDetails extends BaseActivity {
                 userId = userinfo.getUserId();
                 userName = userinfo.getRealName();
                 isphone = workinfoDto.isPhone();
-                Glide.with(context).load(StaticParams.QiNiuYunUrl
+                Glide.with(context).load(StaticParams.ImageURL
                         + userinfo.getPortraitId()).placeholder(R.mipmap.ic_launcher).dontAnimate().into(imgOridetailsUserVo);
                 tvOridetailsUsername.setText(userinfo.getRealName());
                 //imgOridetailsUserleavl
@@ -231,7 +231,7 @@ public class Aty_ParDetails extends BaseActivity {
                 if (lists != null) {
                     size = lists.size();
                     for (int i = 0; i < workinfoDto.getEmployeeInfo().size(); i++) {
-                        adapter_alreadySignInPersonImg.addItem(StaticParams.QiNiuYunUrl + workinfoDto.getEmployeeInfo().get(i).getPortraitId());
+                        adapter_alreadySignInPersonImg.addItem(StaticParams.ImageURL + workinfoDto.getEmployeeInfo().get(i).getPortraitId());
                     }
                     adapter_alreadySignInPersonImg.notifyDataSetChanged();
                 }

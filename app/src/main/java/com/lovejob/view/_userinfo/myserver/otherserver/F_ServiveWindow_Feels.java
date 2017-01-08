@@ -106,7 +106,7 @@ public class F_ServiveWindow_Feels extends BaseFragment {
                     final ArrayList<String> selectedPhotos = new ArrayList<>();
                     String[] l = getItem(position).getPictrueId().split("\\|");
                     for (int i = 0; i < l.length; i++) {
-                        selectedPhotos.add(StaticParams.QiNiuYunUrl + l[i]);
+                        selectedPhotos.add(StaticParams.ImageURL + l[i]);
                     }
 
                     final PhotoAdapter photoAdapter = new PhotoAdapter(context, selectedPhotos, true);

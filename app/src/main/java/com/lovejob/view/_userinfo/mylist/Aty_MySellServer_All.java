@@ -81,7 +81,7 @@ public class Aty_MySellServer_All extends BaseActivity {
                 ((TextView)viewHolder.getView(R.id.tv_mysersell_name)).setText(getItem(position).getUserInfo().getRealName());
                 ((TextView)viewHolder.getView(R.id.tv_mysersell_position)).setText(getItem(position).getUserInfo().getPosition());
                 ((TextView)viewHolder.getView(R.id.tv_mysersell_company)).setText(getItem(position).getUserInfo().getCompany());
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getUserInfo().getPortraitId().toString().trim()).into((CircleImageView) viewHolder.getView(R.id.img_mysersell_logo));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getUserInfo().getPortraitId().toString().trim()).into((CircleImageView) viewHolder.getView(R.id.img_mysersell_logo));
                 return viewHolder.getConvertView();
             }
         };

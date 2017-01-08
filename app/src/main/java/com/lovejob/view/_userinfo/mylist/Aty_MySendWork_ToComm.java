@@ -113,7 +113,7 @@ public class Aty_MySendWork_ToComm extends BaseActivity {
                 tvTobecommPosetion.setText(getItem(position).getReleaseInfo().getPosition() + "");
                 tvTobecommCommpl.setText(getItem(position).getReleaseInfo().getCompany() + "");
                 tvTobecommPrice.setText(getItem(position).getSalary() + "/" + getItem(position).getPaymentDec());
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getReleaseInfo().getPortraitId()).into(imgTobecommLogo);
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getReleaseInfo().getPortraitId()).into(imgTobecommLogo);
                 tvTobecommCommit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

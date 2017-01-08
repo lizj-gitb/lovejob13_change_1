@@ -183,7 +183,7 @@ public class DynDetailsAty extends BaseActivity {
 
                     girl = thePerfectGirl.getData().getDynamicDTO().getReleaseInfo();
                     ThePerfectGirl.DynamicDTO dynamicDTO = thePerfectGirl.getData().getDynamicDTO();
-                    Glide.with(context).load(StaticParams.QiNiuYunUrl + dynamicDTO.getReleaseInfo().getPortraitId()).placeholder(R.drawable.ic_launcher).into(imgDyndetailsUserlogo);
+                    Glide.with(context).load(StaticParams.ImageURL + dynamicDTO.getReleaseInfo().getPortraitId()).placeholder(R.drawable.ic_launcher).into(imgDyndetailsUserlogo);
                     tvDyndetailsUsername.setText(dynamicDTO.getReleaseInfo().getRealName());
                     tvDyndetailsDate.setText(dynamicDTO.getCreateTimeDec());
                     tvDyndetailsContent.setText(dynamicDTO.getContent());
@@ -197,7 +197,7 @@ public class DynDetailsAty extends BaseActivity {
                         String[] img = dynamicDTO.getPictrueid().split("\\|");
                         for (int i = 0; i < img.length; i++) {
                             if (!TextUtils.isEmpty(img[i])) {
-                                selectedPhotos.add(StaticParams.QiNiuYunUrl + img[i]);
+                                selectedPhotos.add(StaticParams.ImageURL + img[i]);
                             }
                         }
                     }

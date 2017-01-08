@@ -28,9 +28,6 @@ import com.lovejob.model.ThreadPoolUtils;
 import com.lovejob.model.UserInputModel;
 import com.lovejob.model.Utils;
 import com.lovejob.model.bean.Token;
-import com.lovejob.qiniuyun.http.ResponseInfo;
-import com.lovejob.qiniuyun.storage.UpCompletionHandler;
-import com.lovejob.qiniuyun.storage.UploadManager;
 import com.lovejob.view._job.JobDetails;
 import com.lovejob.view._money.Aty_OriDetails;
 import com.lovejob.view._money.Aty_ParDetails;
@@ -478,25 +475,25 @@ public class PayViewSelectPayment extends BaseActivity {
                     public void onSuccess(final ThePerfectGirl thePerfectGirl) {
                         workPid = thePerfectGirl.getData().getWorkPid();
                         //创意订单生成成功，开始上传图片 并发起支付
-                        V.d("用户发布创意工作成功，已经返回上传图片的token和支付的订单号");
-                        if (thePerfectGirl.getData().getUploadToken() != null) {
-                            //上传图片
-                            ThreadPoolUtils.getInstance().addTask(new Runnable() {
-                                @Override
-                                public void run() {
-                                    String[] imgName = userInputModel.getParams()[7].split("\\|");
-                                    for (int i = 0; i < imgName.length; i++) {
-                                        UploadManager m = new UploadManager();
-                                        m.put(photosPaths.get(i), imgName[i], thePerfectGirl.getData().getUploadToken(), new UpCompletionHandler() {
-                                            @Override
-                                            public void complete(String key, ResponseInfo info, JSONObject response) {
-                                                V.d("支付页面生成订单后的图片上传成功");
-                                            }
-                                        }, null);
-                                    }
-                                }
-                            });
-                        }
+//                        V.d("用户发布创意工作成功，已经返回上传图片的token和支付的订单号");
+//                        if (thePerfectGirl.getData().getUploadToken() != null) {
+//                            //上传图片
+//                            ThreadPoolUtils.getInstance().addTask(new Runnable() {
+//                                @Override
+//                                public void run() {
+//                                    String[] imgName = userInputModel.getParams()[7].split("\\|");
+//                                    for (int i = 0; i < imgName.length; i++) {
+//                                        UploadManager m = new UploadManager();
+//                                        m.put(photosPaths.get(i), imgName[i], thePerfectGirl.getData().getUploadToken(), new UpCompletionHandler() {
+//                                            @Override
+//                                            public void complete(String key, ResponseInfo info, JSONObject response) {
+//                                                V.d("支付页面生成订单后的图片上传成功");
+//                                            }
+//                                        }, null);
+//                                    }
+//                                }
+//                            });
+//                        }
 
                         switch (payType) {
                             case Aliapay:

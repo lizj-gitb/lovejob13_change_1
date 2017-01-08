@@ -79,7 +79,6 @@ dependencies {
     compile project(':PhotoPicker')
     compile project(':rapiddev')
     compile project(':UMengPushSDK')
-    compile 'com.qiniu:happy-dns:0.2.7'
     compile 'com.android.support:multidex:1.0.0'
     // 内存泄漏检测 上线删除↓
     //======== start==============

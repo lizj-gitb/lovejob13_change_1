@@ -77,7 +77,7 @@ public class Aty_TokenDetails extends BaseActivity {
             @Override
             public View getViewHolder(final int position, View convertView, ViewGroup parent) {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_tokendetails, position);
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_token_logo));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_token_logo));
                 ((TextView) viewHolder.getView(R.id.tv_token_name)).setText(getItem(position).getRealName());
                 ((TextView) viewHolder.getView(R.id.tv_token_position)).setText(getItem(position).getPosition());
                 ((TextView) viewHolder.getView(R.id.tv_token_company)).setText(getItem(position).getCompany());

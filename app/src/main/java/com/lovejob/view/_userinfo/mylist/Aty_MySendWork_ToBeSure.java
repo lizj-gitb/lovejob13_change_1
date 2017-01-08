@@ -103,7 +103,7 @@ public class Aty_MySendWork_ToBeSure extends BaseActivity {
                 tvTobesurePosetion.setText(getItem(position).getReleaseInfo().getPosition() + "");
                 tvTobesureCommpl.setText(getItem(position).getReleaseInfo().getCompany() + "");
                 tvTobesurePrice.setText(getItem(position).getSalary() + "/" + getItem(position).getPaymentDec());
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getReleaseInfo().getPortraitId()).into(imgTobesureLogo);
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getReleaseInfo().getPortraitId()).into(imgTobesureLogo);
                 tvTobeshureYanshou.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

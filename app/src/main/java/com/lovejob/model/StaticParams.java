@@ -30,21 +30,26 @@ public class StaticParams {
     //QQ微信授权回调的结果里
     public static String openId = "";
 
-    /*
-       青牛云图片加载URL前缀（项目所有涉及图片的请求均需加入该前缀）
-    */
-    public static final String QiNiuYunUrl = "http://oejyij5hl.bkt.clouddn.com/";
-
-    /*
-        青牛云图片加载URL前缀（新闻）
-         */
-    public static final String QiNiuYunUrl_News = "http://oek6mvktl.bkt.clouddn.com/";
     /**
      * 默认获取列表的数量
      */
     public static String ROWS = "5";
 
 
+    public static String UpLoadImageToken = "";
+
+    /**
+     * 图片加载的前缀
+     */
+    public static final String ImageURL = "http://cxwl-images.image.alimmdn.com/";
+    /**
+     * 新闻图片加载的前缀
+     */
+    public static final String ImageNewsURL = "http://cxwl-images-news.image.alimmdn.com/";
+    /**
+     * 视频加载的前缀
+     */
+    public static final String ImageVideoURL = "http://cxwl-video.image.alimmdn.com/";
     public static class FileKey {
         //是否为第一次启动
         public static final String __ISFIRSTSTARTAPP__ = "isFirstStartApp";

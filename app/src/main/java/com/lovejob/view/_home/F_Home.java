@@ -384,7 +384,7 @@ public class F_Home extends BaseFragment {
             public View getViewHolder(int position, View convertView, ViewGroup parent) {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_gv_home, position);
                 ImageView view = viewHolder.getView(R.id.item_gv_img);
-                Glide.with(context).load(StaticParams.QiNiuYunUrl_News + getItem(position).getPictrueid()).placeholder(R.drawable.ic_launcher).dontAnimate().into(view);
+                Glide.with(context).load(StaticParams.ImageNewsURL + getItem(position).getPictrueid()).placeholder(R.drawable.ic_launcher).dontAnimate().into(view);
                 ((TextView) viewHolder.getView(R.id.item_tv_tv)).setText(getItem(position).getTitle());
                 return viewHolder.getConvertView();
             }
@@ -403,7 +403,7 @@ public class F_Home extends BaseFragment {
                 ThePerfectGirl.UserInfoDTO userReleseInfo = dynamicDTO.getReleaseInfo();
                 //用户头像
                 CircleImageView userLogo = (CircleImageView) viewHolder.getView(R.id.roundview);
-                String url = StaticParams.QiNiuYunUrl + userReleseInfo.getPortraitId();
+                String url = StaticParams.ImageURL + userReleseInfo.getPortraitId();
 //                Log.d ("F_Home", "url:"+url);
 //                Log.d ("F_Home", "width:"+userLogo.getWidth ());
 //                userLogo.measure (0,0);
@@ -513,7 +513,7 @@ public class F_Home extends BaseFragment {
                 if (imgs.length > 0 && !TextUtils.isEmpty(imgs[0])) {
                     recyclerView.setVisibility(View.VISIBLE);
                     for (int i = 0; i < imgs.length; i++) {
-                        selectedPhotos.add(StaticParams.QiNiuYunUrl + imgs[i]);
+                        selectedPhotos.add(StaticParams.ImageURL + imgs[i]);
                     }
                 } else {
                     recyclerView.setVisibility(View.GONE);
@@ -530,7 +530,7 @@ public class F_Home extends BaseFragment {
                         final ArrayList<String> photos = new ArrayList<>();
                         String[] imgs = getItem((int) recyclerView.getTag()).getPictrueid().split("\\|");
                         for (int i = 0; i < imgs.length; i++) {
-                            photos.add(StaticParams.QiNiuYunUrl + imgs[i]);
+                            photos.add(StaticParams.ImageURL + imgs[i]);
                         }
                         PhotoPreview.builder()
                                 //http://oejyij5hl.bkt.clouddn.com/lovejob_195107463214808463580161563989879.jpg

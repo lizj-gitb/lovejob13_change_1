@@ -94,7 +94,7 @@ public class F_Good extends BaseFragment {
             @Override
             public View getViewHolder(int position, View convertView, ViewGroup parent) {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_good_list, position);
-                Glide.with(context).load(StaticParams.QiNiuYunUrl + getItem(position).getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.item_dyndetails_img));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.item_dyndetails_img));
                 ((TextView) viewHolder.getView(R.id.item_dyndetails_name)).setText(getItem(position).getRealName());
                 return viewHolder.getConvertView();
             }

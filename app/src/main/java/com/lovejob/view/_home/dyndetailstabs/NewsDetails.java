@@ -197,8 +197,9 @@ public class NewsDetails extends BaseActivity {
                 String[] imgs = item.getPictrueid().split("\\|");
                 for (int i = 0; i < imgs.length; i++) {
                     if (!TextUtils.isEmpty(imgs[i])) {
-                        imageInfos.add(new ImageInfo(StaticParams.QiNiuYunUrl_News + imgs[i], StaticParams.QiNiuYunUrl_News + imgs[i]));
-                        shardURL = StaticParams.QiNiuYunUrl_News + imgs[i];
+
+                        imageInfos.add(new ImageInfo(StaticParams.ImageNewsURL + imgs[i], StaticParams.ImageNewsURL + imgs[i]));
+                        shardURL = StaticParams.ImageNewsURL + imgs[i];
                         Logger.e("++++++++" + shardURL);
                     }
                 }

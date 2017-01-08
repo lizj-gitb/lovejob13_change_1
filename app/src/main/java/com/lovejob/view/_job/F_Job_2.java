@@ -408,7 +408,7 @@ public class F_Job_2 extends BaseFragment {
          */
         @Override
         protected void convert(BaseViewHolder helper, ThePerfectGirl.WorkInfoDTO item) {
-            Glide.with(context).load((StaticParams.QiNiuYunUrl + item.getReleaseInfo().getPortraitId())).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) helper.getView(R.id.img_job_logo));
+            Glide.with(context).load((StaticParams.ImageURL + item.getReleaseInfo().getPortraitId())).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) helper.getView(R.id.img_job_logo));
 
             ((TextView) helper.getView(R.id.tv_job_title)).setText(item.getTitle() == null ? "用户未填写" : item.getTitle());
             ((TextView) helper.getView(R.id.tv_job_com)).setText(item.getReleaseInfo().getCompany() == null ? "公司名称未填写" : item.getReleaseInfo().getCompany());
@@ -483,7 +483,7 @@ public class F_Job_2 extends BaseFragment {
         @Override
         public View getView(ViewGroup container, int position) {
             ImageView view = new ImageView(container.getContext());
-            Glide.with(context).load(StaticParams.QiNiuYunUrl_News + imgs.get(position).getPictrueid())
+            Glide.with(context).load(StaticParams.ImageNewsURL + imgs.get(position).getPictrueid())
                     .dontAnimate().into(view);
             view.setScaleType(ImageView.ScaleType.CENTER_CROP);
             view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));

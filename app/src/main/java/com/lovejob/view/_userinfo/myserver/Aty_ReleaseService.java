@@ -25,15 +25,15 @@ import android.widget.TextView;
 
 import com.lovejob.BaseActivity;
 import com.lovejob.R;
+import com.lovejob.controllers.OnUpLoadImagesListener;
 import com.lovejob.controllers.adapter.PhotoAdapter;
 import com.lovejob.controllers.task.LoveJob;
 import com.lovejob.controllers.task.OnAllParameListener;
+import com.lovejob.model.ImageModle;
+import com.lovejob.model.PayTypeInfo;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.Utils;
-import com.lovejob.qiniuyun.http.ResponseInfo;
-import com.lovejob.qiniuyun.storage.UpCompletionHandler;
-import com.lovejob.qiniuyun.storage.UploadManager;
 import com.lovejob.view.WriteView;
 import com.v.rapiddev.adpater.RecyclerItemClickListener;
 import com.v.rapiddev.base.AppManager;
@@ -41,6 +41,7 @@ import com.v.rapiddev.utils.V;
 
 import org.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -155,7 +156,7 @@ public class Aty_ReleaseService extends BaseActivity {
             selectedPhotos.clear();
             try {
                 for (int i = 0; i < photos.split("\\|").length; i++) {
-                    selectedPhotos.add(StaticParams.QiNiuYunUrl + photos.split("\\|")[i]);
+                    selectedPhotos.add(StaticParams.ImageURL + photos.split("\\|")[i]);
                 }
                 photoAdapter.addItem(selectedPhotos);
             } catch (Exception e) {
@@ -324,23 +325,22 @@ public class Aty_ReleaseService extends BaseActivity {
 //        if (selectedPhotos.size()>0) {
         if (selectedPhotos.size() > 0) {
             //压缩
-            Utils.yasuo(context, selectedPhotos, new Handler() {
+
+
+            List<File> files = new ArrayList<>();
+            for (int i = 0; i < selectedPhotos.size(); i++) {
+                files.add(new File(selectedPhotos.get(i)));
+            }
+            Utils.ImageCo(files, context, true, new OnUpLoadImagesListener() {
                 @Override
-                public void handleMessage(Message msg) {
-                    if (msg.arg1 == 9000) {
-                        V.d("压缩完成的图片路径：" + msg.getData().getString("path"));
-                        String str = msg.getData().getString("path");
-                        path.add("lovejob_" + new Date().getTime() + "lobejob" + new Random().nextInt() + str.substring(str.lastIndexOf(".")));
-                        path_local.add(str);
-                        maxImagesLegth++;
-                        if (maxImagesLegth == selectedPhotos.size()) {
-                            V.d("所有图片压缩完成");
-                            StringBuffer stringBuffer = new StringBuffer();
-                            for (String p : path) {
-                                stringBuffer.append(p).append("|");
-                            }
-                            //TODO ip
-                            String pid = null;
+                public void onSucc(List<ImageModle> imageModleList) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    for (int i = 0; i < imageModleList.size(); i++) {
+                        stringBuffer.append(imageModleList.get(i).getSmallFileName());
+                    }
+
+
+                                                String pid = null;
                             if (serverDTO != null && serverDTO.getServerPid() != null) {
                                 pid = serverDTO.getServerPid();
                             }
@@ -348,23 +348,23 @@ public class Aty_ReleaseService extends BaseActivity {
                                     pid, new OnAllParameListener() {
                                 @Override
                                 public void onSuccess(ThePerfectGirl thePerfectGirl) {
-                                    String token = thePerfectGirl.getData().getUploadToken();
-                                    UploadManager uploadManager = new UploadManager();
-                                    maxImagesLegth = 0;
-                                    for (int i = 0; i < path_local.size(); i++) {
-                                        uploadManager.put(path_local.get(i), path.get(i), token, new UpCompletionHandler() {
-                                            @Override
-                                            public void complete(String key, ResponseInfo info, JSONObject response) {
-                                                maxImagesLegth++;
-                                                if (maxImagesLegth == selectedPhotos.size()) {
-                                                    V.d("工作发布成功");
+//                                    String token = thePerfectGirl.getData().getUploadToken();
+//                                    UploadManager uploadManager = new UploadManager();
+//                                    maxImagesLegth = 0;
+//                                    for (int i = 0; i < path_local.size(); i++) {
+//                                        uploadManager.put(path_local.get(i), path.get(i), token, new UpCompletionHandler() {
+//                                            @Override
+//                                            public void complete(String key, ResponseInfo info, JSONObject response) {
+//                                                maxImagesLegth++;
+//                                                if (maxImagesLegth == selectedPhotos.size()) {
+//                                                    V.d("工作发布成功");
                                                     dialog.dismiss();
                                                     Utils.showToast(context, "发布成功");
                                                     AppManager.getAppManager().finishActivity();
-                                                }
-                                            }
-                                        }, null);
-                                    }
+//                                                }
+//                                            }
+//                                        }, null);
+//                                    }
                                 }
 
                                 @Override
@@ -373,11 +373,67 @@ public class Aty_ReleaseService extends BaseActivity {
                                     Utils.showToast(context, msg);
                                 }
                             }));
+                }
 
-                        }
-                    }
+                @Override
+                public void onError() {
+                    Utils.showToast(context, "图片上传失败，请稍后再试");
                 }
             });
+//            Utils.yasuo(context, selectedPhotos, new Handler() {
+//                @Override
+//                public void handleMessage(Message msg) {
+//                    if (msg.arg1 == 9000) {
+//                        V.d("压缩完成的图片路径：" + msg.getData().getString("path"));
+//                        String str = msg.getData().getString("path");
+//                        path.add("lovejob_" + new Date().getTime() + "lobejob" + new Random().nextInt() + str.substring(str.lastIndexOf(".")));
+//                        path_local.add(str);
+//                        maxImagesLegth++;
+//                        if (maxImagesLegth == selectedPhotos.size()) {
+//                            V.d("所有图片压缩完成");
+//                            StringBuffer stringBuffer = new StringBuffer();
+//                            for (String p : path) {
+//                                stringBuffer.append(p).append("|");
+//                            }
+//                            //TODO ip
+//                            String pid = null;
+//                            if (serverDTO != null && serverDTO.getServerPid() != null) {
+//                                pid = serverDTO.getServerPid();
+//                            }
+//                            callList.add(LoveJob.sendService(titie, introduce,price, stringBuffer.toString(), serverType,
+//                                    pid, new OnAllParameListener() {
+//                                @Override
+//                                public void onSuccess(ThePerfectGirl thePerfectGirl) {
+//                                    String token = thePerfectGirl.getData().getUploadToken();
+//                                    UploadManager uploadManager = new UploadManager();
+//                                    maxImagesLegth = 0;
+//                                    for (int i = 0; i < path_local.size(); i++) {
+//                                        uploadManager.put(path_local.get(i), path.get(i), token, new UpCompletionHandler() {
+//                                            @Override
+//                                            public void complete(String key, ResponseInfo info, JSONObject response) {
+//                                                maxImagesLegth++;
+//                                                if (maxImagesLegth == selectedPhotos.size()) {
+//                                                    V.d("工作发布成功");
+//                                                    dialog.dismiss();
+//                                                    Utils.showToast(context, "发布成功");
+//                                                    AppManager.getAppManager().finishActivity();
+//                                                }
+//                                            }
+//                                        }, null);
+//                                    }
+//                                }
+//
+//                                @Override
+//                                public void onError(String msg) {
+//                                    dialog.dismiss();
+//                                    Utils.showToast(context, msg);
+//                                }
+//                            }));
+//
+//                        }
+//                    }
+//                }
+//            });
         } else {
 
             if (serverDTO != null) {

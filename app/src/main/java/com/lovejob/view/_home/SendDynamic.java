@@ -23,10 +23,13 @@ import android.widget.Toast;
 
 import com.lovejob.BaseActivity;
 import com.lovejob.R;
+import com.lovejob.controllers.OnUpLoadImagesListener;
 import com.lovejob.controllers.adapter.PhotoAdapter;
 import com.lovejob.controllers.task.LoveJob;
 import com.lovejob.controllers.task.OnAllParameListener;
 import com.lovejob.model.HandlerUtils;
+import com.lovejob.model.ImageModle;
+import com.lovejob.model.PayTypeInfo;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.UserInputModel;
@@ -38,6 +41,7 @@ import com.v.rapiddev.preferences.AppPreferences;
 import com.v.rapiddev.utils.V;
 import com.v.rapiddev.views.InputMethodLayout;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -90,15 +94,16 @@ public class SendDynamic extends BaseActivity {
     private PhotoAdapter photoAdapter;
     private List<String> images = null;
     private Call call_senDyn;
-    private String content,identify;
+    private String content, identify;
+
     @Override
     public void onCreate_(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.aty_senddynamic);
         ButterKnife.bind(this);
         AppPreferences preferences = new AppPreferences(context);
-        identify = preferences.getString(StaticParams.FileKey.__IDENTIFY__,"");
-        if (identify.equals("false")){
-            Utils.showToast(context,"请填写个人资料");
+        identify = preferences.getString(StaticParams.FileKey.__IDENTIFY__, "");
+        if (identify.equals("false")) {
+            Utils.showToast(context, "请填写个人资料");
             AppManager.getAppManager().finishActivity();
             return;
         }
@@ -121,8 +126,8 @@ public class SendDynamic extends BaseActivity {
                 }
             }
         });
-        content = preferences.getString(StaticParams.FileKey.__DynamicContent__,"");
-        if (!TextUtils.isEmpty(content)){
+        content = preferences.getString(StaticParams.FileKey.__DynamicContent__, "");
+        if (!TextUtils.isEmpty(content)) {
             etSendDynamic.setText(content);
         }
     }
@@ -163,10 +168,10 @@ public class SendDynamic extends BaseActivity {
 
     private void saveContent() {
         AppPreferences preferences = new AppPreferences(context);
-        if (!TextUtils.isEmpty(etSendDynamic.getText().toString())){
-            preferences.put(StaticParams.FileKey.__DynamicContent__,etSendDynamic.getText().toString());
-        }else{
-            preferences.put(StaticParams.FileKey.__DynamicContent__,"");
+        if (!TextUtils.isEmpty(etSendDynamic.getText().toString())) {
+            preferences.put(StaticParams.FileKey.__DynamicContent__, etSendDynamic.getText().toString());
+        } else {
+            preferences.put(StaticParams.FileKey.__DynamicContent__, "");
 
         }
     }
@@ -181,19 +186,19 @@ public class SendDynamic extends BaseActivity {
             case R.id.actionbar_save:
                 //发布动态
                 AppPreferences appPreferences = new AppPreferences(context);
-                String address = appPreferences.getString(StaticParams.FileKey.__City__, "");
-                String lng = appPreferences.getString(StaticParams.FileKey.__LONGITUDE__, "");
-                String lat = appPreferences.getString(StaticParams.FileKey.__LATITUDE__, "");
+                final String address = appPreferences.getString(StaticParams.FileKey.__City__, "");
+                final String lng = appPreferences.getString(StaticParams.FileKey.__LONGITUDE__, "");
+                final String lat = appPreferences.getString(StaticParams.FileKey.__LATITUDE__, "");
                 if (TextUtils.isEmpty(lng) || TextUtils.isEmpty(lat)) {
                     Utils.showToast(context, "请先定位后再试");
                     return;
                 }
-                UserInputModel inputModel = Utils.checkUserInputParams(etSendDynamic);
+                final UserInputModel inputModel = Utils.checkUserInputParams(etSendDynamic);
                 if (!inputModel.isNotEmpty()) {
                     Utils.showToast(context, R.string.inputNull);
                     return;
                 }
-                String content = inputModel.getParams()[0];
+                final String content = inputModel.getParams()[0];
 //                Utils.showProgreceBar(context, "正在发布动态，请稍后");
                 HandlerUtils.post(new Runnable() {
                     @Override
@@ -201,41 +206,62 @@ public class SendDynamic extends BaseActivity {
                         dialog = Utils.showProgressDliago(context, "正在发布动态，请稍后");
                     }
                 });
-                StringBuffer sb = new StringBuffer();
-                images = new ArrayList();
-                //获取所有上传前图片路径
-                String str = null;
-                if (photoAdapter.getList()==null
-                        ||photoAdapter.getList().size()==0){
-                    Utils.showToast(context,"图片不能为空");
+
+                if (selectedPhotos.size() == 0) {
+                    etSendDynamic.setText("");
+                    Utils.showToast(context, "发布成功");
+                    dialog.dismiss();
+                    Utils.showToast(context, R.string.senddynamic);
+                    Intent intent = new Intent();
+                    intent.putExtra("isRefresh", true);
+                    setResult(RequestCode_F_Home_TO_SendDyn, intent);
+                    finish();
                     return;
                 }
-                for (int i = 0; i < photoAdapter.getList().size(); i++) {
-                    V.d("图片信息：" + photoAdapter.getList().get(i).toString());
-                    str = photoAdapter.getList().get(i);
-                    images.add(i, Utils.getImgName(str));
-                    sb.append(images.get(i)).append("|");
-                    str = null;
+                List<File> files = new ArrayList<>();
+                for (int i = 0; i < selectedPhotos.size(); i++) {
+                    files.add(new File(selectedPhotos.get(i)));
                 }
 
-                call_senDyn = LoveJob.sendDyn(address, content, lat, lng, sb.toString(), new OnAllParameListener() {
+                Utils.ImageCo(files, context, true, new OnUpLoadImagesListener() {
                     @Override
-                    public void onSuccess(ThePerfectGirl thePerfectGirl) {
-                        //上传图片到七牛云
-                        etSendDynamic.setText("");
-                        uploadImages(thePerfectGirl.getData().getUploadToken());
+                    public void onSucc(List<ImageModle> imageModleList) {
+                        StringBuffer stringBuffer = new StringBuffer();
+                        for (int i = 0; i < imageModleList.size(); i++) {
+                            stringBuffer.append(imageModleList.get(i).getSmallFileName());
+                        }
+                        call_senDyn = LoveJob.sendDyn(address, content, lat, lng, stringBuffer.toString(), new OnAllParameListener() {
+                            @Override
+                            public void onSuccess(ThePerfectGirl thePerfectGirl) {
+                                //上传图片到七牛云
+                                etSendDynamic.setText("");
+                                Utils.showToast(context, "发布成功");
+                                dialog.dismiss();
+                                Utils.showToast(context, R.string.senddynamic);
+                                Intent intent = new Intent();
+                                intent.putExtra("isRefresh", true);
+                                setResult(RequestCode_F_Home_TO_SendDyn, intent);
+                                finish();
+                            }
+
+                            @Override
+                            public void onError(String msg) {
+                                try {
+                                    dialog.dismiss();
+                                    Utils.showToast(context, msg);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
                     }
 
                     @Override
-                    public void onError(String msg) {
-                        try {
-                            dialog.dismiss();
-                            Utils.showToast(context, msg);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
+                    public void onError() {
+                        Utils.showToast(context, "图片上传失败，请稍后再试");
                     }
                 });
+
 //                sendDynamicTask = new SendDynamicTask(address, content, lat, lng, sb.toString());
 //                taskHelper.execute(sendDynamicTask, SendDynamicTaskCallBack);
                 break;
@@ -258,20 +284,6 @@ public class SendDynamic extends BaseActivity {
                         .setSelected(selectedPhotos)
                         .start(this);
                 break;
-        }
-    }
-
-    private void uploadImages(String uploadToken) {
-        if (images.size() == 0) {
-            dialog.dismiss();
-            Utils.showToast(context, R.string.senddynamic);
-            Intent intent = new Intent();
-            intent.putExtra("isRefresh", true);
-            setResult(RequestCode_F_Home_TO_SendDyn, intent);
-            AppManager.getAppManager().finishActivity(this);
-        } else {
-            V.d("开始上传图片");
-            Utils.upLoadImgToQINIUYUN(context, photoAdapter, images, uploadToken, RequestCode_F_Home_TO_SendDyn);
         }
     }
 

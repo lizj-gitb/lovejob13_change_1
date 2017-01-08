@@ -46,8 +46,18 @@
             android:gravity="center_vertical"
             android:text="帮助与反馈"
             android:textColor="@color/hiteTextColor"/>
-
+        <TextView
+            android:id="@+id/ishelpread"
+            android:layout_width="10dp"
+            android:layout_toLeftOf="@+id/vvvv"
+            android:layout_height="10dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/icon_tips"
+            android:gravity="center_vertical"/>
         <ImageView
+            android:id="@+id/vvvv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
