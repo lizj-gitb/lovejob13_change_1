@@ -116,14 +116,14 @@ public class Others extends BaseActivity {
                 tvFOthersPosstion.setText(thePerfectGirl.getData().getUserInfoDTO().getPosition());
                 int userSex = thePerfectGirl.getData().getUserInfoDTO().getUserSex() == 1 ? R.mipmap.icon_male : R.mipmap.icon_famale;
                 imgFMySex.setImageResource(userSex);
-                Glide.with(context).load(StaticParams.ImageURL + thePerfectGirl.getData().getUserInfoDTO().getPortraitId()).into(imgFOthersLogo);
+                Glide.with(context).load(StaticParams.ImageURL + thePerfectGirl.getData().getUserInfoDTO().getPortraitId()+"!logo").into(imgFOthersLogo);
                 imgFOthersLevel.setImageResource(getUserLever(thePerfectGirl.getData().getUserInfoDTO().getLevel()));
                 ThreadPoolUtils.getInstance().addTask(new Runnable() {
                     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
                     @Override
                     public void run() {
                         try {
-                            final Bitmap bitmap = Glide.with(context).load(StaticParams.ImageURL + thePerfectGirl.getData().getUserInfoDTO().getBackground())
+                            final Bitmap bitmap = Glide.with(context).load(StaticParams.ImageURL + thePerfectGirl.getData().getUserInfoDTO().getBackground()+"!logo")
                                     .asBitmap().into(150, 100).get();
                             HandlerUtils.post(new Runnable() {
                                 @Override

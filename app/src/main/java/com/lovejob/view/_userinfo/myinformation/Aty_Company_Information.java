@@ -228,7 +228,7 @@ public class Aty_Company_Information extends BaseActivity {
                 public void onSucc(List<ImageModle> imageModleList) {
                     StringBuffer stringBuffer = new StringBuffer();
                     for (int i = 0; i < imageModleList.size(); i++) {
-                        stringBuffer.append(imageModleList.get(i).getSmallFileName());
+                        stringBuffer.append(imageModleList.get(i).getSmallFileName()).append("|");
                     }
                     uploadImagesAndPushDate(stringBuffer.toString());
                 }

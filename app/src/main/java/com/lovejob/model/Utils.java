@@ -111,7 +111,9 @@ public class Utils {
                     String lastPath = filePath.substring(filePath.lastIndexOf("."));//7
                     //获取原图名称和文件
                     String bitImageName = afterName + and + random + and + lastName + timeThis + lastPath;//原图名称
-                    File bigFile = files.get(i);//原图文件
+//                    File bigFile = files.get(i);//原图文件
+                    File bigFile = fileList.get(i);//狸猫换太子
+
 
                     //获取缩略图名称和文件
                     String smallImageName = afterName + and + random + and + lastName + timeThis + smallIndex + lastPath;//缩略图名称

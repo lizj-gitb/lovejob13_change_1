@@ -175,7 +175,7 @@ public class Aty_Information extends BaseActivity {
                     etInforWorke.setText(thePerfectGirl.getData().getResumeDTO().getExperience() + "".trim());
                     etInforSkill.setText(thePerfectGirl.getData().getResumeDTO().getSkill() + "".trim());
                     etInforMine.setText(thePerfectGirl.getData().getResumeDTO().getPersonalEvaluation());
-                    Glide.with(context).load(StaticParams.ImageURL+thePerfectGirl.getData().getResumeDTO().getPortraitId()).dontAnimate().into(imgUserHead);
+                    Glide.with(context).load(StaticParams.ImageURL+thePerfectGirl.getData().getResumeDTO().getPortraitId()+"!logo").dontAnimate().into(imgUserHead);
 
                 }
             }
@@ -408,7 +408,7 @@ public class Aty_Information extends BaseActivity {
                         public void onSucc(List<ImageModle> imageModleList) {
                             StringBuffer stringBuffer = new StringBuffer();
                             for (int i = 0; i < imageModleList.size(); i++) {
-                                stringBuffer.append(imageModleList.get(i).getSmallFileName());
+                                stringBuffer.append(imageModleList.get(i).getSmallFileName()).append("|");
                             }
                             path=stringBuffer.toString();
                         }

@@ -252,7 +252,7 @@ public class Aty_OriDetails extends BaseActivity {
                     userId = userInfo.getUserId();
                     userName = userInfo.getRealName();
                 isphone = thePerfectGirl.getData().getWorkInfoDTO().isPhone();
-                Glide.with(context).load(StaticParams.ImageURL + userInfo.getPortraitId()).placeholder(R.mipmap.ic_launcher).dontAnimate()
+                Glide.with(context).load(StaticParams.ImageURL + userInfo.getPortraitId()+"!logo").placeholder(R.mipmap.ic_launcher).dontAnimate()
                         .into(imgOridetailsUserVo);
                 tvOridetailsUsername.setText(userInfo.getRealName() + "".trim());
                 tvOridetailsPosition.setText(userInfo.getPosition() + "".trim());
@@ -272,7 +272,7 @@ public class Aty_OriDetails extends BaseActivity {
                     hitviewDetaile.setVisibility(View.VISIBLE);
                     setGridView(115, gvOridetailsContentimg, adapter_contentImg, img.length);
                     for (int i = 0; i < img.length; i++) {
-                        adapter_contentImg.addItem(StaticParams.ImageURL + img[i].trim());
+                        adapter_contentImg.addItem(StaticParams.ImageURL + img[i].trim()+"!logo");
                     }
                 } else {
                     hitviewDetaile.setVisibility(View.GONE);
@@ -303,7 +303,7 @@ public class Aty_OriDetails extends BaseActivity {
                 if (lists != null) {
                     size = lists.size();
                     for (int i = 0; i < thePerfectGirl.getData().getWorkInfoDTO().getEmployeeInfo().size(); i++) {
-                        adapter_alreadySignInPersonImg.addItem(StaticParams.ImageURL + thePerfectGirl.getData().getWorkInfoDTO().getEmployeeInfo().get(i).getPortraitId());
+                        adapter_alreadySignInPersonImg.addItem(StaticParams.ImageURL + thePerfectGirl.getData().getWorkInfoDTO().getEmployeeInfo().get(i).getPortraitId()+"!logo");
                     }
                     adapter_alreadySignInPersonImg.notifyDataSetChanged();
                 }

@@ -355,7 +355,7 @@ public class UpDataUserInfos extends BaseActivity {
                         public void onSucc(List<ImageModle> imageModleList) {
                             final StringBuffer stringBuffer = new StringBuffer();
                             for (int i = 0; i < imageModleList.size(); i++) {
-                                stringBuffer.append(imageModleList.get(i).getSmallFileName());
+                                stringBuffer.append(imageModleList.get(i).getSmallFileName()).append("|");
                             }
                             HandlerUtils.post(new Runnable() {
                                 @Override
@@ -385,7 +385,7 @@ public class UpDataUserInfos extends BaseActivity {
                         }
                     });
 //                    Utils.yasuo(context, photos, new Handler() {
-//                        @Override
+//                        @Override  08
 //                        public void handleMessage(Message msg) {
 //                            if (msg.arg1 == 9000) {
 ////                                    File saveFile = new File(getExternalCacheDir(), "compress_" + System.currentTimeMillis() + ".jpg");

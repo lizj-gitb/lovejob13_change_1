@@ -209,7 +209,7 @@ public class F_Job extends BaseFragment {
             @Override
             public View getViewHolder(int position, View convertView, ViewGroup parent) {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_job, position);
-                Glide.with(context).load((StaticParams.ImageURL + getItem(position).getReleaseInfo().getPortraitId())).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) viewHolder.getView(R.id.img_job_logo));
+                Glide.with(context).load((StaticParams.ImageURL + getItem(position).getReleaseInfo().getPortraitId()+"!logo")).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) viewHolder.getView(R.id.img_job_logo));
                 ((TextView) viewHolder.getView(R.id.tv_job_title)).setText(getItem(position).getTitle() == null ? "用户未填写" : getItem(position).getTitle());
                 ((TextView) viewHolder.getView(R.id.tv_job_com)).setText(getItem(position).getReleaseInfo().getCompany() == null ? "公司名称未填写" : getItem(position).getReleaseInfo().getCompany());
 

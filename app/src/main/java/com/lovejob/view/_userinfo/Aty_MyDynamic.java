@@ -124,7 +124,7 @@ public class Aty_MyDynamic extends BaseActivity {
                         public void run() {
                             try {
                                 Bitmap myBitmap = Glide.with(context)
-                                        .load(StaticParams.ImageURL + thePerfectGirl.getData().getUserInfoDTO().getBackground())
+                                        .load(StaticParams.ImageURL + thePerfectGirl.getData().getUserInfoDTO().getBackground()+"!logo")
                                         .asBitmap() //必须
                                         .centerCrop()
                                         .into(500, 500)
@@ -147,7 +147,7 @@ public class Aty_MyDynamic extends BaseActivity {
                 } else {
                     dynamicBeij.setBackgroundResource(R.mipmap.beij);
                 }
-                Glide.with(context).load(StaticParams.ImageURL + thePerfectGirl.getData().getUserInfoDTO().getPortraitId()).into(imgDynamicLogo);
+                Glide.with(context).load(StaticParams.ImageURL + thePerfectGirl.getData().getUserInfoDTO().getPortraitId()+"!logo").into(imgDynamicLogo);
             }
 
             @Override
@@ -218,13 +218,13 @@ public class Aty_MyDynamic extends BaseActivity {
                 } else if (imgs.length == 1) {
                     imgView.setVisibility(View.VISIBLE);
                     recyclerView.setVisibility(View.GONE);
-                    Glide.with(context).load(StaticParams.ImageURL + imgs[0]).into(imgView);
+                    Glide.with(context).load(StaticParams.ImageURL + imgs[0]+"!logo").into(imgView);
                 } else {
                     if (imgs.length > 0 && !TextUtils.isEmpty(imgs[0])) {
                         recyclerView.setVisibility(View.VISIBLE);
                         imgView.setVisibility(View.GONE);
                         for (int i = 0; i < imgs.length; i++) {
-                            selectedPhotos.add(StaticParams.ImageURL + imgs[i]);
+                            selectedPhotos.add(StaticParams.ImageURL + imgs[i]+"!logo");
                         }
                     }
                     final PhotoAdapter photoAdapter = new PhotoAdapter(context, selectedPhotos, true);
@@ -237,7 +237,7 @@ public class Aty_MyDynamic extends BaseActivity {
                             final ArrayList<String> photos = new ArrayList<>();
                             String[] imgs = getItem((int) recyclerView.getTag()).getPictrueid().split("\\|");
                             for (int i = 0; i < imgs.length; i++) {
-                                photos.add(StaticParams.ImageURL + imgs[i]);
+                                photos.add(StaticParams.ImageURL + imgs[i]+"!logo");
                             }
                             PhotoPreview.builder()
                                     //http://oejyij5hl.bkt.clouddn.com/lovejob_195107463214808463580161563989879.jpg

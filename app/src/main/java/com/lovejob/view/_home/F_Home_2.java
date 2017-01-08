@@ -287,7 +287,7 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                 ThePerfectGirl.UserInfoDTO userReleseInfo = item.getReleaseInfo();
                 //用户头像
                 CircleImageView userLogo = (CircleImageView) viewHolder.getView(R.id.roundview);
-                String url = StaticParams.ImageURL + userReleseInfo.getPortraitId();
+                String url = StaticParams.ImageURL + userReleseInfo.getPortraitId()+"!logo";
 //                Log.d ("F_Home", "url:"+url);
 //                Log.d ("F_Home", "width:"+userLogo.getWidth ());
 //                userLogo.measure (0,0);
@@ -368,7 +368,7 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                     String[] backImgs = item.getPictrueid().split("\\|");
                     for (int i = 0; i < backImgs.length; i++) {
                         if (!TextUtils.isEmpty(backImgs[i])) {
-                            imageInfos.add(new ImageInfo(StaticParams.ImageURL + backImgs[i], StaticParams.ImageURL + backImgs[i]));
+                            imageInfos.add(new ImageInfo(StaticParams.ImageURL + backImgs[i]+"!logo", StaticParams.ImageURL + backImgs[i]));
                         }
                     }
                 }

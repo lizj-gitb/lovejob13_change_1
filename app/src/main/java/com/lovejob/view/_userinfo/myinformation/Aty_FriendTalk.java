@@ -87,7 +87,7 @@ public class Aty_FriendTalk extends BaseActivity {
                 ((TextView) viewHolder.getView(R.id.img_friendtalk_company)).setText(getItem(position).getUserInfo().getCompany());
                 ((TextView) viewHolder.getView(R.id.img_friendtalk_position)).setText(getItem(position).getUserInfo().getPosition());
                 ((TextView) viewHolder.getView(R.id.content)).setText(getItem(position).getContent());
-                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getUserInfo().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_friendtalk_userlogo));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getUserInfo().getPortraitId()+"!logo").into((CircleImageView) viewHolder.getView(R.id.img_friendtalk_userlogo));
                 setItemOnClickListener(viewHolder.getConvertView(), position);
                 return viewHolder.getConvertView();
             }

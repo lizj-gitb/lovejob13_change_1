@@ -200,7 +200,7 @@ public class F_UserInfo extends BaseFragment {
                     public void onSuccess(ThePerfectGirl thePerfectGirl) {
 
                         final ThePerfectGirl.UserInfoDTO userInfo = thePerfectGirl.getData().getUserInfoDTO();
-                        Glide.with(context).load(StaticParams.ImageURL + userInfo.getPortraitId()).dontAnimate().placeholder(R.drawable.ic_launcher).into(imgFMyUserlogo);
+                        Glide.with(context).load(StaticParams.ImageURL + userInfo.getPortraitId()+"!logo").dontAnimate().placeholder(R.drawable.ic_launcher).into(imgFMyUserlogo);
 
                         int userSex = userInfo.getUserSex() == 1 ? R.mipmap.icon_male : R.mipmap.icon_famale;
 
@@ -252,7 +252,7 @@ public class F_UserInfo extends BaseFragment {
                                 public void run() {
                                     try {
                                         Bitmap myBitmap = Glide.with(context)
-                                                .load(StaticParams.ImageURL + userInfo.getBackground())
+                                                .load(StaticParams.ImageURL + userInfo.getBackground()+"!logo")
                                                 .asBitmap() //必须
                                                 .centerCrop()
                                                 .into(500, 500)
@@ -426,7 +426,7 @@ public class F_UserInfo extends BaseFragment {
                 public void onSucc(List<ImageModle> imageModleList) {
                     final StringBuffer stringBuffer = new StringBuffer();
                     for (int i = 0; i < imageModleList.size(); i++) {
-                        stringBuffer.append(imageModleList.get(i).getSmallFileName());
+                        stringBuffer.append(imageModleList.get(i).getSmallFileName()).append("|");
                     }
                     HandlerUtils.post(new Runnable() {
                         @Override

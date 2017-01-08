@@ -98,7 +98,7 @@ public class F_comm extends BaseFragment {
                     ((ImageView) viewHolder.getView(R.id.img_dyncommlist_more)).setVisibility(View.VISIBLE);
                 }
                 //评论人头像
-                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getReleaseInfo().getPortraitId()).into(ivDyncommlistUserlogo);
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getReleaseInfo().getPortraitId()+"!logo").into(ivDyncommlistUserlogo);
 
                 //评论人姓名
                 tvDyncommlistUsername.setText(getItem(position).getReleaseInfo().getRealName());

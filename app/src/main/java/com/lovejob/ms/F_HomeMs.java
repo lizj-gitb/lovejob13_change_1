@@ -369,7 +369,7 @@ public class F_HomeMs extends BaseFragment {
                 ThePerfectGirl.UserInfoDTO userReleseInfo = dynamicDTO.getReleaseInfo();
                 //用户头像
                 CircleImageView userLogo = (CircleImageView) viewHolder.getView(R.id.roundview);
-                String url = StaticParams.ImageURL + userReleseInfo.getPortraitId ();
+                String url = StaticParams.ImageURL + userReleseInfo.getPortraitId ()+"!logo";
 //                Log.d ("F_Home", "url:"+url);
 //                Log.d ("F_Home", "width:"+userLogo.getWidth ());
 //                userLogo.measure (0,0);

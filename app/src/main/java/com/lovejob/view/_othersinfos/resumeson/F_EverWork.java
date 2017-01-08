@@ -86,7 +86,7 @@ public class F_EverWork extends BaseFragment {
                 ((TextView) viewHolder.getView(R.id.tv_history_company)).setText(getItem(position).getCriticInfo().getCompany());
                 ((TextView) viewHolder.getView(R.id.tv_history_content)).setText(getItem(position).getContent());
                 ((TextView) viewHolder.getView(R.id.tv_history_othercontent)).setText(getItem(position).getContent2());
-                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getCriticInfo().getPortraitId()).into((CircleImageView) viewHolder.getView(R.id.img_history_logo));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getCriticInfo().getPortraitId()+"!logo").into((CircleImageView) viewHolder.getView(R.id.img_history_logo));
                 String s1 = String.format("%tF%n", getItem(position).getCreatDate());
                 ((TextView) viewHolder.getView(R.id.tv_history_time)).setText(s1);
                 ((RatingBar)viewHolder.getView(R.id.rating)).setRating(getItem(position).getLevel());

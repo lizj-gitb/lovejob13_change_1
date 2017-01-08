@@ -200,40 +200,62 @@ public class SendDynamic extends BaseActivity {
                 }
                 final String content = inputModel.getParams()[0];
 //                Utils.showProgreceBar(context, "正在发布动态，请稍后");
-                HandlerUtils.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        dialog = Utils.showProgressDliago(context, "正在发布动态，请稍后");
-                    }
-                });
-
                 if (selectedPhotos.size() == 0) {
-                    etSendDynamic.setText("");
-                    Utils.showToast(context, "发布成功");
-                    dialog.dismiss();
-                    Utils.showToast(context, R.string.senddynamic);
-                    Intent intent = new Intent();
-                    intent.putExtra("isRefresh", true);
-                    setResult(RequestCode_F_Home_TO_SendDyn, intent);
-                    finish();
+                    HandlerUtils.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            dialog = Utils.showProgressDliago(context, "正在发布动态，请稍后");
+                        }
+                    });
+                    call_senDyn = LoveJob.sendDyn(address, content, lat, lng, "", new OnAllParameListener() {
+                        @Override
+                        public void onSuccess(ThePerfectGirl thePerfectGirl) {
+                            //上传图片到七牛云
+                            etSendDynamic.setText("");
+                            Utils.showToast(context, "发布成功");
+                            dialog.dismiss();
+                            Utils.showToast(context, R.string.senddynamic);
+                            Intent intent = new Intent();
+                            intent.putExtra("isRefresh", true);
+                            setResult(RequestCode_F_Home_TO_SendDyn, intent);
+                            finish();
+                        }
+
+                        @Override
+                        public void onError(String msg) {
+                            try {
+                                dialog.dismiss();
+                                Utils.showToast(context, msg);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
                     return;
                 }
                 List<File> files = new ArrayList<>();
                 for (int i = 0; i < selectedPhotos.size(); i++) {
                     files.add(new File(selectedPhotos.get(i)));
                 }
-
+                HandlerUtils.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog = Utils.showProgressDliago(context, "图片压缩中……");
+                    }
+                });
                 Utils.ImageCo(files, context, true, new OnUpLoadImagesListener() {
                     @Override
                     public void onSucc(List<ImageModle> imageModleList) {
+                        dialog.setContent("发布中……");
                         StringBuffer stringBuffer = new StringBuffer();
                         for (int i = 0; i < imageModleList.size(); i++) {
-                            stringBuffer.append(imageModleList.get(i).getSmallFileName());
+                            stringBuffer.append(imageModleList.get(i).getSmallFileName()).append("|");
                         }
                         call_senDyn = LoveJob.sendDyn(address, content, lat, lng, stringBuffer.toString(), new OnAllParameListener() {
                             @Override
                             public void onSuccess(ThePerfectGirl thePerfectGirl) {
                                 //上传图片到七牛云
+                                dialog.dismiss();
                                 etSendDynamic.setText("");
                                 Utils.showToast(context, "发布成功");
                                 dialog.dismiss();

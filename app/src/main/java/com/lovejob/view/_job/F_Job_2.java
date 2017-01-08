@@ -408,7 +408,7 @@ public class F_Job_2 extends BaseFragment {
          */
         @Override
         protected void convert(BaseViewHolder helper, ThePerfectGirl.WorkInfoDTO item) {
-            Glide.with(context).load((StaticParams.ImageURL + item.getReleaseInfo().getPortraitId())).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) helper.getView(R.id.img_job_logo));
+            Glide.with(context).load((StaticParams.ImageURL + item.getReleaseInfo().getPortraitId()+"!logo")).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) helper.getView(R.id.img_job_logo));
 
             ((TextView) helper.getView(R.id.tv_job_title)).setText(item.getTitle() == null ? "用户未填写" : item.getTitle());
             ((TextView) helper.getView(R.id.tv_job_com)).setText(item.getReleaseInfo().getCompany() == null ? "公司名称未填写" : item.getReleaseInfo().getCompany());
