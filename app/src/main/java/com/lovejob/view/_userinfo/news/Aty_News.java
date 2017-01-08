@@ -163,7 +163,9 @@ public class Aty_News extends BaseActivity {
                     ToastUtils.showToast(context, "您未连接到聊天服务器，可能是网络异常，请退出重新登录");
                     return;
                 }
-                startActivity(MainActivityMs.mIMKit.getChattingActivityIntent(userPid));
+                 //最近聊天列表
+                Intent intent1 = MainActivityMs.mIMKit.getConversationActivityIntent();
+                 startActivity(intent1);
                 V.d("消息");
                 break;
             case R.id.rl_news_tongzhi:
