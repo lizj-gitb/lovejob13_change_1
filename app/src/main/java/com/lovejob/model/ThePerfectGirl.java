@@ -70,6 +70,15 @@ public class ThePerfectGirl implements Serializable {
 
         private List<InformationInfo> informationInfos;
         private InformationInfo informationInfo;
+        private String portraitId;
+
+        public String getPortraitId() {
+            return portraitId;
+        }
+
+        public void setPortraitId(String portraitId) {
+            this.portraitId = portraitId;
+        }
 
         public InformationInfo getInformationInfo() {
             return informationInfo;
@@ -78,6 +87,7 @@ public class ThePerfectGirl implements Serializable {
         public void setInformationInfo(InformationInfo informationInfo) {
             this.informationInfo = informationInfo;
         }
+
         private ApliPayDTO apliPayDTO;
 
         private WeChatPayDTO weChatPayDTO;
@@ -102,14 +112,14 @@ public class ThePerfectGirl implements Serializable {
         private List<DynamicCommentDTO> list;
         private DynamicCommentDTO dynamicCommentDTO;
         private UserImpressionInfo userImpressionInfo;
-        private  List<UserImpressionInfo> userImpressionInfoList;
+        private List<UserImpressionInfo> userImpressionInfoList;
         private orderDetail orderDetail;
         private List<orderDetail> orderDetails;
         private List<WorkTokenDTO> userTokenList;
         private List<ViewDynamic> viewDynamics;
         private List<DynamicPointPraiseInfo> dynamicGoodPointPraiseInfos;
         private List<workPushDTO> workPushDTO;
-        private List<AdviceInfor>adviceInforList;
+        private List<AdviceInfor> adviceInforList;
         private String account;
         private String systemVersionUpdate;
         private boolean boundQQ;
@@ -619,7 +629,7 @@ public class ThePerfectGirl implements Serializable {
         this.data = data;
     }
 
-    public class AboutMe implements Serializable{
+    public class AboutMe implements Serializable {
 
 
         /**
@@ -1292,7 +1302,7 @@ public class ThePerfectGirl implements Serializable {
     //TODO *********************************************华丽的分割线*********************************************
     //TODO *********************************************类3*********************************************
     //TODO *********************************************华丽的分割线*********************************************
-    public class UserInfoDTO implements Serializable{
+    public static class UserInfoDTO implements Serializable {
 
         private String userId;
 
@@ -1339,6 +1349,39 @@ public class ThePerfectGirl implements Serializable {
         private int goodCount;
         private int badCount;
         private String state;
+
+
+        public UserInfoDTO(String address, int applaySate, String background, int badCount, int commCount, String company, int count, int dynamicCount, long dynamicNewTime, int goodCount, double improveDegree, int informCount, String jobState, long lastTime, int level, int messageCount, String phoneNumber, String portraitId, String position, int postNumber, int praiseCount, String realName, int repliesNumber, String sexDec, String state, String type, String userId, List<ImpressionDTO> userImpression, int userSex) {
+            this.address = address;
+            this.applaySate = applaySate;
+            this.background = background;
+            this.badCount = badCount;
+            this.commCount = commCount;
+            this.company = company;
+            this.count = count;
+            this.dynamicCount = dynamicCount;
+            this.dynamicNewTime = dynamicNewTime;
+            this.goodCount = goodCount;
+            this.improveDegree = improveDegree;
+            this.informCount = informCount;
+            this.jobState = jobState;
+            this.lastTime = lastTime;
+            this.level = level;
+            this.messageCount = messageCount;
+            this.phoneNumber = phoneNumber;
+            this.portraitId = portraitId;
+            this.position = position;
+            this.postNumber = postNumber;
+            this.praiseCount = praiseCount;
+            this.realName = realName;
+            this.repliesNumber = repliesNumber;
+            this.sexDec = sexDec;
+            this.state = state;
+            this.type = type;
+            this.userId = userId;
+            this.userImpression = userImpression;
+            this.userSex = userSex;
+        }
 
         public String getState() {
             return state;
@@ -1647,7 +1690,7 @@ public class ThePerfectGirl implements Serializable {
         }
     }
 
-    public class PositionTypeInfo implements Serializable{
+    public class PositionTypeInfo implements Serializable {
         private String positionNumber;
         private String positionName;
         private String parentNumber;
@@ -1697,7 +1740,8 @@ public class ThePerfectGirl implements Serializable {
             this.pictrueid = pictrueid;
         }
     }
-    public class InformationInfo implements Serializable{
+
+    public class InformationInfo implements Serializable {
         private String pid;
         private String title;
         private String subTitle;
@@ -1715,6 +1759,7 @@ public class ThePerfectGirl implements Serializable {
         public void setInformationInfoList(List<NewsContentDetails> informationInfoList) {
             this.informationInfoList = informationInfoList;
         }
+
         public String getPid() {
             return pid;
         }
@@ -1814,7 +1859,6 @@ public class ThePerfectGirl implements Serializable {
         }
 
 
-
         public String getPosition() {
             return position;
         }
@@ -1860,7 +1904,7 @@ public class ThePerfectGirl implements Serializable {
         }
     }
 
-    public class WeChatPayDTO implements Serializable{
+    public class WeChatPayDTO implements Serializable {
         private String appid;
         private String partnerid;
         private String prepayid;
@@ -1932,7 +1976,7 @@ public class ThePerfectGirl implements Serializable {
     //TODO *********************************************华丽的分割线*********************************************
     //TODO *********************************************类5********************************************
     //TODO *********************************************华丽的分割线*********************************************
-    public class ServerDTO implements Serializable{
+    public class ServerDTO implements Serializable {
         private String serverPid;
         private String title;
         private String payment;
@@ -2103,7 +2147,7 @@ public class ThePerfectGirl implements Serializable {
     //TODO *********************************************华丽的分割线*********************************************
     //TODO *********************************************类6********************************************
     //TODO *********************************************华丽的分割线*********************************************
-    public class DynamicDTO implements Serializable{
+    public static class DynamicDTO implements Serializable {
         String distance;
         private String pid;
         private String pictrueid;//图片
@@ -2122,6 +2166,27 @@ public class ThePerfectGirl implements Serializable {
         private String createTimeDec;
         private boolean isComment;
         private String timeDec;
+
+        public DynamicDTO(int badCount, int commentCount, String content, String createBy, long createTime, String createTimeDec, String distance, String dynamicPid, String firstRefreshTime, int goodCount, boolean isComment, int isPointGood, Double lat, Double lng, String pictrueid, String pid, UserInfoDTO releaseInfo, String timeDec) {
+            this.badCount = badCount;
+            this.commentCount = commentCount;
+            this.content = content;
+            this.createBy = createBy;
+            this.createTime = createTime;
+            this.createTimeDec = createTimeDec;
+            this.distance = distance;
+            this.dynamicPid = dynamicPid;
+            this.firstRefreshTime = firstRefreshTime;
+            this.goodCount = goodCount;
+            this.isComment = isComment;
+            this.isPointGood = isPointGood;
+            this.lat = lat;
+            this.lng = lng;
+            this.pictrueid = pictrueid;
+            this.pid = pid;
+            this.releaseInfo = releaseInfo;
+            this.timeDec = timeDec;
+        }
 
         @Override
         public String toString() {
@@ -2295,7 +2360,7 @@ public class ThePerfectGirl implements Serializable {
     //TODO *********************************************华丽的分割线*********************************************
     //TODO *********************************************类7********************************************
     //TODO *********************************************华丽的分割线*********************************************
-    public class ResumeDTO implements Serializable{
+    public class ResumeDTO implements Serializable {
         //基本信息
         private String pid;
         private String userPid;
@@ -2537,12 +2602,12 @@ public class ThePerfectGirl implements Serializable {
     //TODO *********************************************华丽的分割线*********************************************
     //TODO *********************************************类7********************************************
     //TODO *********************************************华丽的分割线*********************************************
-    public class AccountDTO implements Serializable{
+    public class AccountDTO implements Serializable {
         private String userPid;
         private double amount;
 
         //个人账单明细
-        private double   money;
+        private double money;
         private String description;
         private String adminAccountPid;
         private String type;
@@ -2641,7 +2706,7 @@ public class ThePerfectGirl implements Serializable {
     //TODO *********************************************华丽的分割线*********************************************
     //TODO *********************************************类7********************************************
     //TODO *********************************************华丽的分割线*********************************************
-    public class WorkEvaluateView implements Serializable{
+    public class WorkEvaluateView implements Serializable {
         private String pid;
         private String workId;
         private String title;
@@ -2769,7 +2834,8 @@ public class ThePerfectGirl implements Serializable {
         }
 
     }
-    public class orderDetail implements Serializable{
+
+    public class orderDetail implements Serializable {
         private String tradeNo;
         private String subject;
         private Double amount;
@@ -3105,7 +3171,7 @@ public class ThePerfectGirl implements Serializable {
         }
     }
 
-    public class DynamicCommentDTO implements Serializable{
+    public class DynamicCommentDTO implements Serializable {
         private String dynamicPid;
         private String dynamicCommentPid;
         private String commentContent;
@@ -3226,7 +3292,7 @@ public class ThePerfectGirl implements Serializable {
         }
     }
 
-    public class DynamicCommentDetailDTO implements Serializable{
+    public class DynamicCommentDetailDTO implements Serializable {
         private int count;
 
         private String commentDetailPid;
@@ -3348,7 +3414,8 @@ public class ThePerfectGirl implements Serializable {
             this.createTimeDec = createTimeDec;
         }
     }
-    public class UserImpressionInfo implements Serializable{
+
+    public class UserImpressionInfo implements Serializable {
         private String content;   //对用户的评价
 
         private int count;  //对评论的点赞数
@@ -3438,11 +3505,12 @@ public class ThePerfectGirl implements Serializable {
             this.userInfo = userInfo;
         }
     }
-    public  class ViewDynamic implements Serializable{
+
+    public class ViewDynamic implements Serializable {
         private String dynamicId;   //动态id
         private String criticId;    //评论人或者点赞人的id
         private String content;     //内容
-        private long  createDate;    //
+        private long createDate;    //
         private UserInfoDTO userInfoDTO;   //用户信息
         private String fContent;    //评论或动态内容
         private String fPicture;       //评论或者动态的图像
@@ -3521,7 +3589,8 @@ public class ThePerfectGirl implements Serializable {
             this.createDateDec = createDateDec;
         }
     }
-    public class DynamicPointPraiseInfo implements Serializable{
+
+    public class DynamicPointPraiseInfo implements Serializable {
         private String pid;
         private String dynamicPid;      //动态id
         private String pointPraise;
@@ -3613,7 +3682,8 @@ public class ThePerfectGirl implements Serializable {
             this.createTimeDec = createTimeDec;
         }
     }
-    public class EvaluateInfoDTO implements Serializable{
+
+    public class EvaluateInfoDTO implements Serializable {
 
         private String userPid;
         private String portraitId;
@@ -3732,9 +3802,10 @@ public class ThePerfectGirl implements Serializable {
             this.myCreateDate = myCreateDate;
         }
     }
-    public  class  workPushDTO implements Serializable{
+
+    public class workPushDTO implements Serializable {
         private String pid;
-        private String  workPid;
+        private String workPid;
 
         private String userPid;
         private String userName;
@@ -3751,6 +3822,7 @@ public class ThePerfectGirl implements Serializable {
         private String beUserName;
         private String typeDec;
         private long createDate;
+
         @Override
         public String toString() {
             return "workPushDTO{" +
@@ -3862,7 +3934,8 @@ public class ThePerfectGirl implements Serializable {
             this.beUserName = beUserName;
         }
     }
-    public class AdviceInfor implements Serializable{
+
+    public class AdviceInfor implements Serializable {
         private String pid;
         private String content;
         private long createdate;

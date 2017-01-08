@@ -184,7 +184,7 @@ public class DynDetailsAty extends BaseActivity {
                     girl = thePerfectGirl.getData().getDynamicDTO().getReleaseInfo();
                     ThePerfectGirl.DynamicDTO dynamicDTO = thePerfectGirl.getData().getDynamicDTO();
                     Glide.with(context).load(StaticParams.ImageURL + dynamicDTO.getReleaseInfo()
-                            .getPortraitId()+"!logo").placeholder(R.drawable.ic_launcher).into(imgDyndetailsUserlogo);
+                            .getPortraitId()).into(imgDyndetailsUserlogo);
                     tvDyndetailsUsername.setText(dynamicDTO.getReleaseInfo().getRealName());
                     tvDyndetailsDate.setText(dynamicDTO.getCreateTimeDec());
                     tvDyndetailsContent.setText(dynamicDTO.getContent());

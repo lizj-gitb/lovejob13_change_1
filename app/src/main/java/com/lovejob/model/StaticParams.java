@@ -30,6 +30,7 @@ public class StaticParams {
     //QQ微信授权回调的结果里
     public static String openId = "";
 
+    public static boolean isHaveNotDoSomeThing =false;
     /**
      * 默认获取列表的数量
      */
@@ -73,6 +74,10 @@ public class StaticParams {
         public static final String __LEVEL__ = "level";
         public static final String __RONGTOKEN__ = "rongToken";
         public static final String __IDENTIFY__ = "false";
+        public static final String __USERSEX__ = "usersex";
+        public static final String __USERPIC__ = "userpic";
+
+
 
         //百度定位相关参数存储
         public static final String __City__ = "city";

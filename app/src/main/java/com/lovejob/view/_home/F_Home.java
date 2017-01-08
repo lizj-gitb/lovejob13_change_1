@@ -801,7 +801,6 @@ public class F_Home extends BaseFragment {
             if (intent.getAction().equals("com.lovejob.onactivityresult")) {
                 V.d("F_Home接收到广播");
                 int requestCode = intent.getIntExtra("requestCode", -1);
-                Intent data = intent.getSelector();
                 if (F_Home.this.isVisible()) {
                     if (requestCode == StaticParams.RequestCode.RequestCode_F_Home_TO_CitySelector) {
                         V.d("从城市选择页面返回");

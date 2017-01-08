@@ -75,6 +75,7 @@ public class Utils {
 
 
     private static int uploadlenth = 0;//上传图片的数量  从0开始  当uploadlenth==传入的文件集合大小的时候为上传成功
+    private static long l;
 
     /**
      * 获取新的图片名称  转换成类似：cxwl_6546578778578_lovejob_31037649902.jpg
@@ -90,20 +91,36 @@ public class Utils {
         if (isUpLoad && TextUtils.isEmpty(token)) {
             throw new NullPointerException("当选择上传图片时token不能为空");
         }
-        final List<ImageModle> imageModleList = new ArrayList<>();
         final String afterName = "cxwl";// 1
         final String and = "-";// 连接符//2  4
         final String lastName = "lovejob";// 5
         final String smallIndex = "SMALL";//小图在 6 后拼接该符号
+        //生成大小图对应对象
+
+        final List<ImageModle> imageModleList = new ArrayList<>();
+//        int random = new Random().nextInt();//3
+//        long timeThis = new Date().getTime();//6
+//        for (int i = 0; i < files.size(); i++) {
+//            String filePath = files.get(i).getAbsolutePath();
+//            String lastPath = filePath.substring(filePath.lastIndexOf("."));//7
+//            String bitImageName = afterName + and + random + and + lastName + timeThis + lastPath;//原图名称
+//            //获取缩略图名称和文件
+//            String smallImageName = afterName + and + random + and + lastName + timeThis + smallIndex + lastPath;//缩略图名称
+//            File smallFile = null;//缩略图文件 压缩后的图片名称
+//            imageModleList.add()
+//        }
+
+
         Luban.get(context).load(files).putGear(Luban.THIRD_GEAR).launch(new OnMultiCompressListener() {
             @Override
             public void onStart() {
-
+                l = new Date().getTime();
+                V.d("开始压缩");
             }
 
             @Override
             public void onSuccess(List<File> fileList) {
-                V.d("图片压缩完成");
+                V.d("图片压缩完成,耗时：" + (new Date().getTime() - l) + " ms");
                 for (int i = 0; i < fileList.size(); i++) {
                     String filePath = files.get(i).getAbsolutePath();
                     int random = new Random().nextInt();//3
@@ -132,7 +149,7 @@ public class Utils {
 
                             @Override
                             public void onUploadFailed(UploadTask uploadTask, FailReason failReason) {
-                                onUpLoadImagesListener.onError();
+                                if (onUpLoadImagesListener!=null)onUpLoadImagesListener.onError();
                                 return;
                             }
 
@@ -154,7 +171,7 @@ public class Utils {
 
                                                     @Override
                                                     public void onUploadFailed(UploadTask uploadTask, FailReason failReason) {
-                                                        onUpLoadImagesListener.onError();
+                                                        if (onUpLoadImagesListener!=null)  onUpLoadImagesListener.onError();
                                                         return;
                                                     }
 
@@ -164,7 +181,7 @@ public class Utils {
                                                         if (uploadlenth == imageModleList.size()) {
                                                             uploadlenth = 0;
                                                             V.d("<<<<<<<<<<<<<<<<<<<<<<<<<<<<缩略图文件上传成功<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
-                                                            onUpLoadImagesListener.onSucc(imageModleList);
+                                                            if (onUpLoadImagesListener!=null)  onUpLoadImagesListener.onSucc(imageModleList);
                                                         }
                                                     }
 
@@ -179,7 +196,7 @@ public class Utils {
 
                             @Override
                             public void onUploadCancelled(UploadTask uploadTask) {
-                                onUpLoadImagesListener.onError();
+                                if (onUpLoadImagesListener!=null)  onUpLoadImagesListener.onError();
                                 return;
                             }
                         }, token);
@@ -187,13 +204,14 @@ public class Utils {
 
                 } else {
                     //不需上传时直接回调
-                    onUpLoadImagesListener.onSucc(imageModleList);
+                    if (onUpLoadImagesListener!=null)  onUpLoadImagesListener.onSucc(imageModleList);
                 }
             }
 
             @Override
             public void onError(Throwable e) {
-                onUpLoadImagesListener.onError();
+                if (onUpLoadImagesListener!=null)  onUpLoadImagesListener.onError();
+                V.e("压缩失败");
             }
         });
     }

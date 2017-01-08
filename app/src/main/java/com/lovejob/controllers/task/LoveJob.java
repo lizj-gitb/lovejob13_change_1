@@ -199,6 +199,10 @@ public class LoveJob {
                         preferences.put(StaticParams.FileKey.__USERNAME__, thePerfectGirl.getData().getUsername());
                         preferences.put(StaticParams.FileKey.__USERTYPE__, thePerfectGirl.getData().getUserType());
                         preferences.put(StaticParams.FileKey.__REALNAME__, thePerfectGirl.getData().getRealName());
+                        preferences.put(StaticParams.FileKey.__USERPIC__, thePerfectGirl.getData().getPortraitId());
+//                        preferences.put(StaticParams.FileKey.__USERSEX__, thePerfectGirl.getData().getPortraitId());
+
+
                         preferences.put(StaticParams.FileKey.__IDENTIFY__, (!thePerfectGirl.getData().isIdentify()) ? "false" : "true");
                         preferences.put(StaticParams.FileKey.__LEVEL__, thePerfectGirl.getData().getLevel());
                         try {
@@ -301,7 +305,7 @@ public class LoveJob {
                     preferences.put(StaticParams.FileKey.__LEVEL__, thePerfectGirl.getData().getLevel());
                     try {
                         preferences.put(StaticParams.FileKey.__LOCALTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getLocalToken()));
-                        preferences.put(StaticParams.FileKey.__RONGTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getRongCloudToken()));
+//                        preferences.put(StaticParams.FileKey.__RONGTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getRongCloudToken()));
                         V.d("saved bound some data success");
                         onAllParameListener.onSuccess(thePerfectGirl);
                         AppPreferences p = new AppPreferences(context);
@@ -436,7 +440,7 @@ public class LoveJob {
                         preferences.put(StaticParams.FileKey.__LEVEL__, thePerfectGirl.getData().getLevel());
                         preferences.put(StaticParams.FileKey.__IDENTIFY__, thePerfectGirl.getData().isIdentify() ? "true" : "false");
 //                        preferences.put(StaticParams.FileKey.__LOCALTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getLocalToken()));
-                        preferences.put(StaticParams.FileKey.__RONGTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getRongCloudToken()));
+//                        preferences.put(StaticParams.FileKey.__RONGTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getRongCloudToken()));
                         V.d("saved bound some data success");
                         onAllParameListener.onSuccess(thePerfectGirl);
                     } catch (Exception e) {

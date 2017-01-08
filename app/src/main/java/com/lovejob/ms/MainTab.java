@@ -12,7 +12,7 @@ public enum MainTab {
 
 
 	tab1(0,R.string.home, R.drawable.tab_icon_home,
-			F_Home.class),
+			F_Home_2.class),
 
 	tab2(1, R.string.job_hunt, R.drawable.tab_icon_job,
 			F_Job_2.class),

@@ -212,12 +212,12 @@ public class SendDynamic extends BaseActivity {
                         public void onSuccess(ThePerfectGirl thePerfectGirl) {
                             //上传图片到七牛云
                             etSendDynamic.setText("");
-                            Utils.showToast(context, "发布成功");
                             dialog.dismiss();
                             Utils.showToast(context, R.string.senddynamic);
                             Intent intent = new Intent();
                             intent.putExtra("isRefresh", true);
                             setResult(RequestCode_F_Home_TO_SendDyn, intent);
+                            new AppPreferences(context).put(StaticParams.FileKey.__DynamicContent__, "");
                             finish();
                         }
 
@@ -233,57 +233,22 @@ public class SendDynamic extends BaseActivity {
                     });
                     return;
                 }
-                List<File> files = new ArrayList<>();
-                for (int i = 0; i < selectedPhotos.size(); i++) {
-                    files.add(new File(selectedPhotos.get(i)));
-                }
-                HandlerUtils.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        dialog = Utils.showProgressDliago(context, "图片压缩中……");
-                    }
-                });
-                Utils.ImageCo(files, context, true, new OnUpLoadImagesListener() {
-                    @Override
-                    public void onSucc(List<ImageModle> imageModleList) {
-                        dialog.setContent("发布中……");
-                        StringBuffer stringBuffer = new StringBuffer();
-                        for (int i = 0; i < imageModleList.size(); i++) {
-                            stringBuffer.append(imageModleList.get(i).getSmallFileName()).append("|");
-                        }
-                        call_senDyn = LoveJob.sendDyn(address, content, lat, lng, stringBuffer.toString(), new OnAllParameListener() {
-                            @Override
-                            public void onSuccess(ThePerfectGirl thePerfectGirl) {
-                                //上传图片到七牛云
-                                dialog.dismiss();
-                                etSendDynamic.setText("");
-                                Utils.showToast(context, "发布成功");
-                                dialog.dismiss();
-                                Utils.showToast(context, R.string.senddynamic);
-                                Intent intent = new Intent();
-                                intent.putExtra("isRefresh", true);
-                                setResult(RequestCode_F_Home_TO_SendDyn, intent);
-                                finish();
-                            }
 
-                            @Override
-                            public void onError(String msg) {
-                                try {
-                                    dialog.dismiss();
-                                    Utils.showToast(context, msg);
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        });
-                    }
 
-                    @Override
-                    public void onError() {
-                        Utils.showToast(context, "图片上传失败，请稍后再试");
-                    }
-                });
+                //带图片上传
+//                dialog.dismiss();
+                Utils.showToast(context, R.string.senddynamic);
+                Intent intent = new Intent();
+                intent.putExtra("isRefresh", true);
+                intent.putExtra("sendDynData",selectedPhotos);
 
+                intent.putExtra("content",content);
+                intent.putExtra("address",address);
+                intent.putExtra("lat",lat);
+                intent.putExtra("lng",lng);
+
+                setResult(RequestCode_F_Home_TO_SendDyn, intent);
+                finish();
 //                sendDynamicTask = new SendDynamicTask(address, content, lat, lng, sb.toString());
 //                taskHelper.execute(sendDynamicTask, SendDynamicTaskCallBack);
                 break;

@@ -45,6 +45,8 @@ import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.UmengMessageHandler;
 import com.umeng.message.entity.UMessage;
 import com.umeng.socialize.UMShareAPI;
+import com.v.rapiddev.dialogs.zdialog.OnDialogItemClickListener;
+import com.v.rapiddev.dialogs.zdialog.ZDialog;
 import com.v.rapiddev.guide.GuideHelper;
 import com.v.rapiddev.notifactioninfo.Effects;
 import com.v.rapiddev.notifactioninfo.NiftyNotificationView;
@@ -63,6 +65,7 @@ import butterknife.ButterKnife;
 import me.iwf.photopicker.PhotoPicker;
 
 import static com.lovejob.model.StaticParams.isConnectChetService;
+import static com.lovejob.model.StaticParams.isHaveNotDoSomeThing;
 
 /**
  * ClassType: 展示5个fragment
@@ -485,7 +488,23 @@ public class MainActivityMs extends BaseActivity {
             Utils.showToast(context, "再按一次退出程序");
             exitTime = System.currentTimeMillis();
         } else {
-            finish();
+            if (isHaveNotDoSomeThing) {
+
+                ZDialog.showZDlialog(context, "提示", "您发布的动态图片正在上传，退出将无法完成，是否退出？", "退出", "取消", R.mipmap.icon_shang, new OnDialogItemClickListener() {
+                    @Override
+                    public void onLeftButtonClickListener() {
+                        finish();
+                    }
+
+                    @Override
+                    public void onRightButtonClickListener() {
+
+                    }
+                });
+            }else {
+                finish();
+            }
+
         }
     }
 
@@ -514,6 +533,14 @@ public class MainActivityMs extends BaseActivity {
         if (data != null) {
             intent.putExtra("photos", data.getStringArrayListExtra(PhotoPicker.KEY_SELECTED_PHOTOS));
             intent.putExtra("isRefresh", data.getBooleanExtra("isRefresh", false));
+
+            intent.putExtra("sendDynData", data.getStringArrayListExtra("sendDynData"));
+            intent.putExtra("content", data.getStringExtra("content"));
+            intent.putExtra("address", data.getStringExtra("address"));
+            intent.putExtra("lat", data.getStringExtra("lat"));
+            intent.putExtra("lng", data.getStringExtra("lng"));
+
+
         }
         context.sendBroadcast(intent);
         V.d("MainActivity接收到用户进入onActivityResult的回调，已发出广播");

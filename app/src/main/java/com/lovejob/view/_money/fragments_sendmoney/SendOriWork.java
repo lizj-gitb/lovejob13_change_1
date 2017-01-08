@@ -193,7 +193,7 @@ public class SendOriWork extends BaseFragment {
     }
 
     private void sendOriWorkAndUpLoadImages() {
-//        dialog = Utils.showProgressDliago(context, "正在为您发布创意工作，请稍后……");
+        dialog = Utils.showProgressDliago(context, "请稍后……");
         final UserInputModel inputModel = Utils.checkUserInputParams(tvSendWorkOriTitle, tvSendWorkOriLocation,
                 tvSendWorkOriPrice, tvSendWorkOriPhonenumber, tvSendWorkOriCountdown);
         if (!inputModel.isNotEmpty()) {
@@ -231,7 +231,6 @@ public class SendOriWork extends BaseFragment {
                     for (int i = 0; i < imageModleList.size(); i++) {
                         stringBuffer.append(imageModleList.get(i).getSmallFileName()).append("|");
                     }
-
                     strs[7] = stringBuffer.toString();
                     inputModel.setParams(strs);
                     intent.putExtra("photosPaths", arrayList_path);/*压缩后图片路径的集合*/

@@ -172,7 +172,11 @@ public class MyApplication extends MultiDexApplication {
             @Override
             public void onDisplayImage(Context context, ImageView imageView, String url) {
                 //使用Glide加载图片
-                Glide.with(context).load(url).placeholder(R.mipmap.ic_launcher).into(imageView);
+                if (url.contains("http:")){
+                    Glide.with(context).load(url).placeholder(R.mipmap.ic_launcher).into(imageView);
+                }else {
+                    Glide.with(context).load(new File(url)).into(imageView);
+                }
             }
 
             @Override

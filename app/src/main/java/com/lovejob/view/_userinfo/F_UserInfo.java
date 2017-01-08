@@ -155,7 +155,6 @@ public class F_UserInfo extends BaseFragment {
             @Override
             public void onPullDownToRefresh(PullToRefreshBase<ScrollView> refreshView) {
                 addUserInfoData();
-
             }
 
             @Override
@@ -198,7 +197,11 @@ public class F_UserInfo extends BaseFragment {
                     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
                     @Override
                     public void onSuccess(ThePerfectGirl thePerfectGirl) {
-
+                        try {
+                            svFMyRefreshview.onRefreshComplete();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                         final ThePerfectGirl.UserInfoDTO userInfo = thePerfectGirl.getData().getUserInfoDTO();
                         Glide.with(context).load(StaticParams.ImageURL + userInfo.getPortraitId()+"!logo").dontAnimate().placeholder(R.drawable.ic_launcher).into(imgFMyUserlogo);
 

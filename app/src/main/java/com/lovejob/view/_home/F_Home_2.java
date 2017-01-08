@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -16,22 +17,39 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.lovejob.AppConfig;
 import com.lovejob.BaseFragment;
+import com.lovejob.MyApplication;
 import com.lovejob.R;
+import com.lovejob.controllers.OnUpLoadImagesListener;
+import com.lovejob.controllers.adapter.MyAdpater;
 import com.lovejob.controllers.task.LoveJob;
 import com.lovejob.controllers.task.OnAllParameListener;
+import com.lovejob.model.HandlerUtils;
+import com.lovejob.model.ImageModle;
 import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
+import com.lovejob.model.ThreadPoolUtils;
 import com.lovejob.view._home.dyndetailstabs.NewsDetails;
+import com.lovejob.view._job.SendJob;
+import com.lovejob.view._money.Aty_SendMoneyWork;
 import com.lovejob.view._money.MyTextVIew;
+import com.lovejob.view._othersinfos.Others;
+import com.lovejob.view._userinfo.myserver.ServiceActivity;
+import com.lovejob.view._userinfo.myserver.ServiceMyActivity;
+import com.lovejob.view.cityselector.CityPickerActivity;
+import com.v.rapiddev.dialogs.zdialog.OnDialogItemClickListener;
+import com.v.rapiddev.dialogs.zdialog.ZDialog;
 import com.v.rapiddev.utils.V;
 import com.zwy.Utils;
 import com.zwy.activitymanage.AppManager;
@@ -45,12 +63,20 @@ import com.zwy.pulltorefresh.BaseViewHolder;
 import com.zwy.pulltorefresh.listener.OnItemClickListener;
 import com.zwy.views.CircleImageView;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static com.lovejob.model.StaticParams.FileKey.__USERNAME__;
+import static com.lovejob.model.StaticParams.FileKey.__USERPIC__;
+import static com.lovejob.model.StaticParams.FileKey.__USERSEX__;
+import static com.lovejob.model.StaticParams.RequestCode.RequestCode_F_Home_TO_DynDetails;
+import static com.lovejob.model.StaticParams.RequestCode.RequestCode_F_Home_TO_SendDyn;
 
 /**
  * ClassType:
@@ -83,6 +109,11 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
     private BaseQuickAdapter<ThePerfectGirl.InformationInfo, BaseViewHolder> mNewsAdapter;//新闻适配器
     private BaseQuickAdapter<ThePerfectGirl.DynamicDTO, BaseViewHolder> mListAdapter;//列表适配器
     private boolean isBackFromCitySelector = false;
+    private boolean isDataFromFile = false;
+    private String userPid;
+    private boolean isImagesUpLoadSuccess = true;
+    private ThePerfectGirl.DynamicDTO sendDynDetailsDTO;
+
     @Override
     public View initView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.f_home_2, null);
@@ -106,10 +137,15 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
         addDataToDynList();
         mSwipeLayout.setOnRefreshListener(this);
         mListAdapter.setOnLoadMoreListener(this);
+
+        com.v.rapiddev.preferences.AppPreferences appPreferences = new com.v.rapiddev.preferences.AppPreferences(context);
+        userPid = appPreferences.getString(StaticParams.FileKey.__USERPID__, "");
         return view;
     }
+
     private int page = 1;
     private String userInputSearchText;
+
     private void addDataToDynList() {
         com.v.rapiddev.preferences.AppPreferences appPreferences = new com.v.rapiddev.preferences.AppPreferences(context);
         String address = appPreferences.getString(StaticParams.FileKey.__City__, "");
@@ -126,6 +162,12 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                     if (mSwipeLayout.isRefreshing()) {
                         //设置数据
                         mListAdapter.setNewData(thePerfectGirl.getData().getDynamicDTOList());
+                        if (!isImagesUpLoadSuccess) {
+                            isDataFromFile = true;
+                            mListAdapter.add(0, sendDynDetailsDTO);
+//                            isImagesUpLoadSuccess = !isImagesUpLoadSuccess;
+                        }
+                        isDataFromFile = false;
                         //关闭动画
                         mSwipeLayout.setRefreshing(false);
                         //开启加载更多
@@ -202,6 +244,7 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
         //设置不可加载更多
         mListAdapter.setEnableLoadMore(false);
         page = 1;
+        isDataFromFile = false;
         addDataToNewsList();
         addDataToDynList();
     }
@@ -228,12 +271,14 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
 //        });
 //        mSwipeLayout.setRefreshing(true);
     }
+
     private View getNewsView() {
         View view = LayoutInflater.from(context).inflate(R.layout.news_home, null);
         RecyclerView gv_home_news = (RecyclerView) view.findViewById(R.id.gv_home_news);
         initNewsInfo(gv_home_news);
         return view;
     }
+
     private void initNewsInfo(RecyclerView gv_home_news) {
         gv_home_news.setLayoutManager(new GridLayoutManager(context, 3));
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.space);
@@ -256,9 +301,11 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
         gv_home_news.addOnItemTouchListener(new OnItemClickListener() {
             @Override
             public void onSimpleItemClick(final BaseQuickAdapter adapter, final View view, final int position) {
-//                Intent intent = new Intent(context, NewsDetails.class);
-//                intent.putExtra("newsId", ((CxwlResponseData.InformationInfo) adapter.getItem(position)).getPid());
-//                AppManager.getAppManager().toNextPage(intent, ActivityRequestCode.R_C_FHome_NewsDetails);
+
+                Intent intent = new Intent(context, NewsDetails.class);
+                intent.putExtra("newsId", ((ThePerfectGirl.InformationInfo) adapter.getData().get(position)).getPid());
+                context.startActivityForResult(intent, StaticParams.RequestCode.RequestCode_F_Home_TO_NewsDetails);
+                context.overridePendingTransition(R.anim.base_slide_right_in, R.anim.slide_out_to_right);
             }
 
 //            @Override
@@ -277,21 +324,20 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
     }
 
 
-    private void initlistAdapter(){
+    private void initlistAdapter() {
         mListAdapter = new BaseQuickAdapter<ThePerfectGirl.DynamicDTO, BaseViewHolder>(R.layout.item_rv_list, null) {
             @Override
             protected void convert(final BaseViewHolder viewHolder, final ThePerfectGirl.DynamicDTO item) {
-//                Glide.with(mContext).load(AppConfig.QiNiuYunUrl+item.getReleaseInfo().getPortraitId())
-//                        .placeholder(R.mipmap.ic_launcher).into((CircleImageView) helper.getView(R.id.roundview));
                 //添加基础数据
                 ThePerfectGirl.UserInfoDTO userReleseInfo = item.getReleaseInfo();
                 //用户头像
                 CircleImageView userLogo = (CircleImageView) viewHolder.getView(R.id.roundview);
-                String url = StaticParams.ImageURL + userReleseInfo.getPortraitId()+"!logo";
-//                Log.d ("F_Home", "url:"+url);
-//                Log.d ("F_Home", "width:"+userLogo.getWidth ());
-//                userLogo.measure (0,0);
-                Glide.with(mContext).load(url).dontAnimate().placeholder(R.mipmap.ic_launcher).into(userLogo);
+                if (isDataFromFile) {
+                    Glide.with(mContext).load(new File(userReleseInfo.getPortraitId())).placeholder(R.mipmap.ic_launcher).dontAnimate().into(userLogo);
+                } else {
+                    Glide.with(mContext).load(StaticParams.ImageURL+userReleseInfo.getPortraitId()).dontAnimate().into(userLogo);
+                }
+
                 //性别
                 int resSex = userReleseInfo.getSexDec().equals("男") ? R.mipmap.icon_male : R.mipmap.icon_famale;
                 ((ImageView) viewHolder.getView(R.id.img_sex)).setImageResource(resSex);
@@ -362,16 +408,21 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                         img_good.setImageResource(R.mipmap.icon_good_common);
                         break;
                 }
-
                 List<ImageInfo> imageInfos = new ArrayList<>();
                 if (item.getPictrueid() != null && !TextUtils.isEmpty(item.getPictrueid())) {
                     String[] backImgs = item.getPictrueid().split("\\|");
                     for (int i = 0; i < backImgs.length; i++) {
                         if (!TextUtils.isEmpty(backImgs[i])) {
-                            imageInfos.add(new ImageInfo(StaticParams.ImageURL + backImgs[i]+"!logo", StaticParams.ImageURL + backImgs[i]));
+                            if (isDataFromFile) {
+                                imageInfos.add(new ImageInfo(backImgs[i], backImgs[i]));
+                            } else {
+                                imageInfos.add(new ImageInfo(StaticParams.ImageURL + backImgs[i] + "!logo", StaticParams.ImageURL + backImgs[i]));
+                            }
+
                         }
                     }
                 }
+                isDataFromFile = false;
                 NineGridView nine = (NineGridView) viewHolder.getView(R.id.images);
                 if (imageInfos.size() == 0) {
                     nine.setVisibility(View.GONE);
@@ -379,24 +430,26 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                 nine.setAdapter(new NineGridViewClickAdapter(mContext, imageInfos));
                 View view = viewHolder.getConvertView();
                 //进入详情页面
-                view.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Logger.d("进入" + item.getReleaseInfo().getRealName() + "详情页面");
-////                        Toast.success("进入" + item.getReleaseInfo().getRealName() + "详情页面");
-//                        Intent intent = new Intent(mContext, Dyntails.class);
-//                        intent.putExtra("dynPid", item.getDynamicPid());
-//                        AppManager.getAppManager().toNextPage(intent, false);
-                    }
-                });
-                //设置item中的icon点击事件
                  /*用户头像*/
                 view.findViewById(R.id.roundview).setOnClickListener(new View.OnClickListener() {
+
                     @Override
                     public void onClick(View view) {
                         /*用户头像*/
+                        if (item.getDynamicPid() == null || TextUtils.isEmpty(item.getDynamicPid())) {
+                            com.lovejob.model.Utils.showToast(context, "动态发布中，请稍后再试");
+                            return;
+                        }
                         Logger.d("进入" + item.getReleaseInfo().getRealName() + "的个人中心");
-//                        Toast.success("进入" + item.getReleaseInfo().getRealName() + "的个人中心");
+                        V.d("进入个人详情：" + item.getReleaseInfo().getRealName());
+                        if (userPid.equals(item.getReleaseInfo().getUserId())) {
+
+                        } else {
+                            Intent intent = new Intent(context, Others.class);
+                            intent.putExtra("userType", item.getReleaseInfo().getType());
+                            intent.putExtra("userId", item.getReleaseInfo().getUserId());
+                            startActivity(intent);
+                        }
                     }
                 });
                  /*进入服务窗*/
@@ -405,7 +458,18 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                     public void onClick(View view) {
                         /*用户头像*/
                         Logger.d("进入" + item.getReleaseInfo().getRealName() + "的服务窗");
-//                        Toast.success("进入" + item.getReleaseInfo().getRealName() + "的服务窗");
+                        if (item.getDynamicPid() == null || TextUtils.isEmpty(item.getDynamicPid())) {
+                            com.lovejob.model.Utils.showToast(context, "动态发布中，请稍后再试");
+                            return;
+                        }
+                        if (item.getReleaseInfo().getUserId().equals(userPid)) {
+                            //进入自己
+                            startActivity(new Intent(context, ServiceMyActivity.class));
+                        } else {
+                            Intent intent = new Intent(context, ServiceActivity.class);
+                            intent.putExtra("userId", item.getReleaseInfo().getUserId());
+                            startActivity(intent);
+                        }
                     }
                 });
                  /*评论*/
@@ -414,12 +478,14 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                     public void onClick(View view) {
                         /*用户头像*/
                         Logger.d("给" + item.getReleaseInfo().getRealName() + "评论");
-//                        Toast.success("给" + item.getReleaseInfo().getRealName() + "评论");
-//                        Intent intent =new Intent(mContext,Dyntails.class);
-//                        intent.putExtra("index",1);
-//                        intent.putExtra("dynPid", item.getDynamicPid());
-//
-//                        AppManager.getAppManager().toNextPage(intent,false);
+                        if (item.getDynamicPid() == null || TextUtils.isEmpty(item.getDynamicPid())) {
+                            com.lovejob.model.Utils.showToast(context, "动态发布中，请稍后再试");
+                            return;
+                        }
+                        Intent intent = new Intent(context, DynDetailsAty.class);
+                        intent.putExtra("isComm", true);
+                        intent.putExtra("dynPid", item.getDynamicPid());
+                        startActivity(intent);
                     }
                 });
                  /*差评*/
@@ -428,25 +494,36 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                     public void onClick(View view) {
                         /*用户头像*/
                         Logger.d("给" + item.getReleaseInfo().getRealName() + "差评");
-//                        switch (item.getIsPointGood()) {
-//                            case 0:
-//                                //差评过
-//                                img_bad.setImageResource(R.mipmap.icon_bad_common);
-//                                ApiClient.toDynBad(item.getDynamicPid());
-//                                break;
-//                            case 1:
-//                                //点过赞
-//                                Toast.error("您已点赞");
-//                                break;
-//                            case 2:
-//                                //点亮差评
-//                                img_bad.setImageResource(R.mipmap.icon_bad_on);
-//                                //调用点赞接口
-//                                ApiClient.toDynBad(item.getDynamicPid());
-//                                break;
-//                        }
-//                        mViewHolder = viewHolder;
-//                        mItem = item;
+                        if (item.getDynamicPid() == null || TextUtils.isEmpty(item.getDynamicPid())) {
+                            com.lovejob.model.Utils.showToast(context, "动态发布中，请稍后再试");
+                            return;
+                        }
+
+                        LoveJob.toDynGoodOrBad(item.getDynamicPid(), 0, new OnAllParameListener() {
+                            @Override
+                            public void onSuccess(ThePerfectGirl thePerfectGirl) {
+                                ThePerfectGirl.DynamicDTO dynamicDTO = item;
+                                int res = 0;
+                                if (dynamicDTO.getIsPointGood() == 0) {
+                                    // 0 c\hap   1 keyi点赞
+                                    res = R.mipmap.icon_bad_common;
+                                } else {
+                                    res = R.mipmap.icon_bad_on;
+                                }
+                                dynamicDTO.setIsPointGood(thePerfectGirl.getData().getPoints());
+                                ((BaseQuickAdapter) mListAdapter).getData().set(viewHolder.getPosition(), dynamicDTO);
+                                View view = mRvHomeList.getChildAt(viewHolder.getPosition());
+                                TextView t = (TextView) view.findViewById(R.id.tv_bad_num);
+                                ImageView imageView = (ImageView) view.findViewById(R.id.img_bad);
+                                t.setText(String.valueOf(thePerfectGirl.getData().getCount()));
+                                imageView.setImageResource(res);
+                            }
+
+                            @Override
+                            public void onError(String msg) {
+                                com.lovejob.model.Utils.showToast(context, msg);
+                            }
+                        });
                     }
                 });
                 /*点赞*/
@@ -455,26 +532,36 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                     public void onClick(View view) {
                         /*用户头像*/
                         Logger.d("给" + item.getReleaseInfo().getRealName() + "点赞");
-//                        switch (item.getIsPointGood()) {
-//                            case 0:
-//                                //差评过
-//                                Toast.error("您已差评");
-//                                break;
-//                            case 1:
-//                                //点过赞
-//                                img_good.setImageResource(R.mipmap.icon_good_common);
-//                                //取消点赞接口
-//                                ApiClient.toDynGood(item.getDynamicPid());
-//                                break;
-//                            case 2:
-//                                //点亮点赞
-//                                img_good.setImageResource(R.mipmap.icon_good_on);
-//                                //调用点赞接口
-//                                ApiClient.toDynGood(item.getDynamicPid());
-//                                break;
-//                        }
-//                        mViewHolder = viewHolder;
-//                        mItem = item;
+                        if (item.getDynamicPid() == null || TextUtils.isEmpty(item.getDynamicPid())) {
+                            com.lovejob.model.Utils.showToast(context, "动态发布中，请稍后再试");
+                            return;
+                        }
+                        LoveJob.toDynGoodOrBad(item.getDynamicPid(), 1, new OnAllParameListener() {
+                            @Override
+                            public void onSuccess(ThePerfectGirl thePerfectGirl) {
+                                ThePerfectGirl.DynamicDTO oo = item;
+                                int res = 0;
+                                oo.setIsPointGood(thePerfectGirl.getData().getPoints());
+                                if (item.getIsPointGood() == 1) {
+                                    // 0 c\hap   1 keyi点赞
+                                    res = R.mipmap.icon_good_on;
+                                } else {
+                                    res = R.mipmap.icon_good_common;
+                                }
+                                ((BaseQuickAdapter) mListAdapter).getData().set(viewHolder.getPosition(), oo);
+                                View view = mRvHomeList.getChildAt(viewHolder.getPosition());
+                                TextView t = (TextView) view.findViewById(R.id.tv_good_num);
+                                ImageView imageView = (ImageView) view.findViewById(R.id.img_good);
+
+                                t.setText(String.valueOf(thePerfectGirl.getData().getCount()));
+                                imageView.setImageResource(res);
+                            }
+
+                            @Override
+                            public void onError(String msg) {
+                                com.lovejob.model.Utils.showToast(context, msg);
+                            }
+                        });
                     }
                 });
                 /*全文*/
@@ -491,10 +578,27 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                         }
                     }
                 });
+
+                viewHolder.getConvertView().setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        V.d("动态ID：" + item.getDynamicPid());
+                        if (item.getDynamicPid() == null || TextUtils.isEmpty(item.getDynamicPid())) {
+                            com.lovejob.model.Utils.showToast(context, "动态发布中，请稍后再试");
+                            return;
+                        }
+                        Intent intent = new Intent(context, DynDetailsAty.class);
+                        intent.putExtra("dynPid", item.getDynamicPid());
+                        context.startActivityForResult(intent, RequestCode_F_Home_TO_DynDetails);
+                        context.overridePendingTransition(R.anim.base_slide_right_in, R.anim.slide_out_to_right);
+                        intent = null;
+                    }
+                });
             }
         };
         /*设置加载动画*/
         mListAdapter.openLoadAnimation(BaseQuickAdapter.SCALEIN);
+        mListAdapter.isFirstOnly(false);
 //        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.space);
 //        mRvList.addItemDecoration(new SpaceItemDecoration(spacingInPixels));
         /*设置适配器*/
@@ -505,6 +609,23 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
 //        mRvList.addItemDecoration(new SpaceItemDecoration(spacingInPixels));
         mRvHomeList.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        String city = MyApplication.getCity();
+        if (!TextUtils.isEmpty(city)) {
+            mActionbarTvLocationtext.setText(city);
+        }
+        if (!MyApplication.getAppPreferences().getString(StaticParams.FileKey.__City__, "").equals("西安市")) {
+            MyApplication.getAppPreferences().put(StaticParams.FileKey.__City__, "西安市");
+            mActionbarTvLocationtext.setText("西安市");
+//            page = 1;
+//            mSwipeLayout.setRefreshing(true);
+//            addDataToDynList();
+        }
+    }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
@@ -512,50 +633,142 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
         ButterKnife.unbind(this);
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putSerializable("sendDynDTO", sendDynDetailsDTO);
+    }
+
     @OnClick({R.id.actionbar_lt_location, R.id.actionbar_lt_more})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.actionbar_lt_location:
+                //打开行政区域选择页面
+                context.startActivityForResult(new Intent(context, CityPickerActivity.class), StaticParams.RequestCode.RequestCode_F_Home_TO_CitySelector);
                 break;
             case R.id.actionbar_lt_more:
+                //展开泡泡窗口
+                showPopWindow(view);
                 break;
         }
+    }
+
+    private void showPopWindow(View popview) {
+        View contentView = LayoutInflater.from(getActivity()).inflate(R.layout.popview, null);
+        LinearLayout layout_send_dyn = (LinearLayout) contentView.findViewById(R.id.layout_sendDyn);
+        LinearLayout layout_send_work_short = (LinearLayout) contentView.findViewById(R.id.layout_sendwork_short);
+        LinearLayout layout_send_work_long = (LinearLayout) contentView.findViewById(R.id.layout_sendwork_long);
+        final PopupWindow window = new PopupWindow(contentView,
+                340,
+                WindowManager.LayoutParams.WRAP_CONTENT, true);
+        window.setContentView(contentView);
+        window.setOutsideTouchable(true);
+        window.setBackgroundDrawable(new BitmapDrawable());
+        window.showAsDropDown(popview);
+        layout_send_dyn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                V.d("发布动态");
+                window.dismiss();
+                //TODO 跳转发布动态页面
+                if (isImagesUpLoadSuccess) {
+                    context.startActivityForResult(new Intent(context, SendDynamic.class), StaticParams.RequestCode.RequestCode_F_Home_TO_SendDyn);
+                } else {
+                    com.lovejob.model.Utils.showToast(context, "正在发布动态，请稍后");
+                }
+            }
+        });
+        layout_send_work_short.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                V.d("发布创意工作");
+                window.dismiss();
+                startActivity(new Intent(context, Aty_SendMoneyWork.class));
+            }
+        });
+        layout_send_work_long.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                V.d("发布长期工作");
+                window.dismiss();
+                startActivity(new Intent(context, SendJob.class));
+            }
+        });
     }
 
     public class MyActvityResult extends BroadcastReceiver {
         @Override
-        public void onReceive(Context context, Intent intent) {
+        public void onReceive(final Context context, Intent intent) {
+
             if (intent.getAction().equals("com.lovejob.onactivityresult")) {
                 V.d("F_Home接收到广播");
                 int requestCode = intent.getIntExtra("requestCode", -1);
-                Intent data = intent.getSelector();
-//                if (F_Home_2.this.isVisible()) {
-//                    if (requestCode == StaticParams.RequestCode.RequestCode_F_Home_TO_CitySelector) {
-//                        V.d("从城市选择页面返回");
-//                        actionbarTvLocationtext.setText(new AppPreferences(context).getString(StaticParams.FileKey.__City__, "定位失败"));
-//                        if (adapter_dynList != null && adapter_dynList.getList().size() > 0) {
-//                            adapter_dynList.removeAll();
-//                            adapter_dynList.notifyDataSetChanged();
-//                        }
-//                        addDataToDynList();
-//                    } else if (requestCode == StaticParams.RequestCode.RequestCode_F_Home_TO_NewsDetails) {
-//                        V.d("从新闻详情页面返回");
-//                    } else if (requestCode == StaticParams.RequestCode.RequestCode_F_Home_TO_SendDyn) {
-//                        V.d("从发布动态页面返回");
-//                        if (intent.getBooleanExtra("isRefresh", false)) {
-//                            if (adapter_dynList != null && adapter_dynList.getList().size() > 0) {
-//                                adapter_dynList.removeAll();
-//                            }
-//                            addDataToDynList();
-//                        }
-//                        V.d("isRefresh:" + intent.getBooleanExtra("isRefresh", false));
-//                    }
-//                }
+                if (F_Home_2.this.isVisible()) {
+                    if (requestCode == StaticParams.RequestCode.RequestCode_F_Home_TO_CitySelector) {
+                        V.d("从城市选择页面返回");
+                        mActionbarTvLocationtext.setText(new com.v.rapiddev.preferences.AppPreferences(context).getString(StaticParams.FileKey.__City__, "定位失败"));
+                        mListAdapter.setNewData(null);
+                        addDataToDynList();
+                    } else if (requestCode == StaticParams.RequestCode.RequestCode_F_Home_TO_NewsDetails) {
+                        V.d("从新闻详情页面返回");
+                    } else if (requestCode == StaticParams.RequestCode.RequestCode_F_Home_TO_SendDyn) {
+                        V.d("从发布动态页面返回,开始发布动态");
+                        if (intent.getBooleanExtra("isRefresh", false)) {
+                            //构建新数据
+                            List<String> images = intent.getStringArrayListExtra("sendDynData");
+                            if (images != null && images.size() > 0) {
+
+                                ThreadPoolUtils.getInstance().addTask(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        try {
+                                            final GlideDrawable drawable = Glide.with(context).load(R.drawable.uploading).into(60, 60).get();
+                                            getActivity().runOnUiThread(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    mActionbarImgMore.setImageDrawable(drawable);
+                                                }
+                                            });
+                                        } catch (InterruptedException e) {
+                                            e.printStackTrace();
+                                        } catch (ExecutionException e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+                                });
+
+
+                                isImagesUpLoadSuccess = false;
+                                StaticParams.isHaveNotDoSomeThing = true;
+                                senDyn(images, intent.getStringExtra("address"), intent.getStringExtra("content"),
+                                        intent.getStringExtra("lat"), intent.getStringExtra("lng"));
+                                StringBuffer stringBuffer = new StringBuffer();
+                                for (int i = 0; i < images.size(); i++) {
+                                    stringBuffer.append(images.get(i)).append("|");
+                                }
+                                isDataFromFile = true;
+                                String username = new AppPreferences(context).getString(__USERNAME__, "");
+                                String sex = new AppPreferences(context).getString(__USERSEX__, "男");
+                                String pic = new AppPreferences(context).getString(__USERPIC__, "");
+                                sendDynDetailsDTO = new ThePerfectGirl.DynamicDTO(
+                                        0, 0, intent.getStringExtra("content"), "", 0, "", "", "", "", 0, false, 0, 0.0, 0.0,
+                                        stringBuffer.toString(), "", new ThePerfectGirl.UserInfoDTO(
+                                        "", 0, "", 0, 0, "公司", 0, 0, 0, 0, 0.0, 0, "在职", 0, 0, 0, "", pic, "职位", 0, 0, username, 0, sex, "", "", "", null, 0
+                                ), ""
+                                );
+                                mListAdapter.add(0, sendDynDetailsDTO);
+                            } else {
+                                mSwipeLayout.setRefreshing(true);
+                                addDataToDynList();
+                            }
+                        }
+                        V.d("isRefresh:" + intent.getBooleanExtra("isRefresh", false));
+                    }
+                }
             }
         }
     }
 
-    public class SpaceItemDecoration extends RecyclerView.ItemDecoration{
+    public class SpaceItemDecoration extends RecyclerView.ItemDecoration {
 
         private int space;
 
@@ -602,5 +815,75 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                 resid = R.mipmap.icon_level_v1_42;
         }
         return resid;
+    }
+
+
+    private void senDyn(final List<String> selectedPhotos, final String address, final String content, final String lat, final String lng) {
+        List<File> files = new ArrayList<>();
+        for (int i = 0; i < selectedPhotos.size(); i++) {
+            files.add(new File(selectedPhotos.get(i)));
+        }
+        com.lovejob.model.Utils.ImageCo(files, context, true, new OnUpLoadImagesListener() {
+            @Override
+            public void onSucc(List<ImageModle> imageModleList) {
+//                dialog.setContent("发布中……");
+                StringBuffer stringBuffer = new StringBuffer();
+                for (int i = 0; i < imageModleList.size(); i++) {
+                    stringBuffer.append(imageModleList.get(i).getSmallFileName()).append("|");
+                }
+                LoveJob.sendDyn(address, content, lat, lng, stringBuffer.toString(), new OnAllParameListener() {
+                    @Override
+                    public void onSuccess(ThePerfectGirl thePerfectGirl) {
+                        isImagesUpLoadSuccess = true;
+                        StaticParams.isHaveNotDoSomeThing = false;
+                        mActionbarImgMore.setImageResource(R.mipmap.more_01);
+                        new com.v.rapiddev.preferences.AppPreferences(context).put(StaticParams.FileKey.__DynamicContent__, "");
+                        com.lovejob.model.Utils.showToast(context, "图片上传成功");
+                        mSwipeLayout.setRefreshing(true);
+                        page = 1;
+                        addDataToDynList();
+                        isDataFromFile = false;
+
+                    }
+
+                    @Override
+                    public void onError(String msg) {
+                        try {
+                            com.lovejob.model.Utils.showToast(context, msg);
+
+                            ZDialog.showZDlialog(context, "提示", "动态发布失败，是否发起重试？", "重试", "取消", R.mipmap.icon_shang, new OnDialogItemClickListener() {
+                                @Override
+                                public void onLeftButtonClickListener() {
+                                    senDyn(selectedPhotos, address, content, lat, lng);
+                                }
+
+                                @Override
+                                public void onRightButtonClickListener() {
+                                    mActionbarImgMore.setImageResource(R.mipmap.more_01);
+                                }
+                            });
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+
+            @Override
+            public void onError() {
+                com.lovejob.model.Utils.showToast(context, "图片上传失败，请稍后再试");
+                ZDialog.showZDlialog(context, "提示", "动态发布失败，是否发起重试？", "重试", "取消", R.mipmap.icon_shang, new OnDialogItemClickListener() {
+                    @Override
+                    public void onLeftButtonClickListener() {
+                        senDyn(selectedPhotos, address, content, lat, lng);
+                    }
+
+                    @Override
+                    public void onRightButtonClickListener() {
+                        mActionbarImgMore.setImageResource(R.mipmap.more_01);
+                    }
+                });
+            }
+        });
     }
 }

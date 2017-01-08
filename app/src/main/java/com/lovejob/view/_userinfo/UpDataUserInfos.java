@@ -347,21 +347,17 @@ public class UpDataUserInfos extends BaseActivity {
                 if (photos.size() > 0) {
                     imgSetuserinfoLogo.setImageBitmap(Utils.getBitmapFromPath(photos.get(0)));
                     List<File> files = new ArrayList<>();
-                    for (int i = 0; i < selectedPhotos.size(); i++) {
-                        files.add(new File(selectedPhotos.get(i)));
+                    for (int i = 0; i < photos.size(); i++) {
+                        files.add(new File(photos.get(i)));
                     }
                     Utils.ImageCo(files, context, true, new OnUpLoadImagesListener() {
                         @Override
-                        public void onSucc(List<ImageModle> imageModleList) {
-                            final StringBuffer stringBuffer = new StringBuffer();
-                            for (int i = 0; i < imageModleList.size(); i++) {
-                                stringBuffer.append(imageModleList.get(i).getSmallFileName()).append("|");
-                            }
+                        public void onSucc(final List<ImageModle> imageModleList) {
                             HandlerUtils.post(new Runnable() {
                                 @Override
                                 public void run() {
 
-                                    calls.add(LoveJob.upDataUserLogo(stringBuffer.toString(), new OnAllParameListener() {
+                                    calls.add(LoveJob.upDataUserLogo(imageModleList.get(0).getSmallFileName(), new OnAllParameListener() {
                                         @Override
                                         public void onSuccess(ThePerfectGirl thePerfectGirl) {
 
@@ -384,62 +380,6 @@ public class UpDataUserInfos extends BaseActivity {
                             Utils.showToast(context, "图片上传失败，请稍后再试");
                         }
                     });
-//                    Utils.yasuo(context, photos, new Handler() {
-//                        @Override  08
-//                        public void handleMessage(Message msg) {
-//                            if (msg.arg1 == 9000) {
-////                                    File saveFile = new File(getExternalCacheDir(), "compress_" + System.currentTimeMillis() + ".jpg");
-////                                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), Uri.parse(msg.getData().getString("path")));
-////                                    NativeUtil.compressBitmap(bitmap, saveFile.getAbsolutePath());
-//                                final String path = msg.getData().getString("path");
-//                                //开始上传图片  上传的图片路径为msg.getData().getString("path")
-//                                HandlerUtils.post(new Runnable() {
-//                                    @Override
-//                                    public void run() {
-//
-//                                        calls.add(LoveJob.upDataUserLogo(path, new OnAllParameListener() {
-//                                            @Override
-//                                            public void onSuccess(ThePerfectGirl thePerfectGirl) {
-//
-//                                                UploadManager uploadManager = new UploadManager();
-//                                                uploadManager.put(path, path,
-//                                                        thePerfectGirl.getData().getUploadToken(), new UpCompletionHandler() {
-//                                                            @Override
-//                                                            public void complete(String key, ResponseInfo info, JSONObject response) {
-//
-//                                                            }
-//                                                        }, null);
-//                                            }
-//
-//                                            @Override
-//                                            public void onError(String msg) {
-//                                                Utils.showToast(context, msg);
-//                                            }
-//                                        }));
-//                                    }
-//                                });
-////                                uploadManager.put(msg.getData().getString("path"), imgNames.get(msg.getData().getInt("index")), uploadToken,
-////                                        new UpCompletionHandler() {
-////                                            @Override
-////                                            public void complete(String key, ResponseInfo info, JSONObject res) {
-////                                                //res包含hash、key等信息，具体字段取决于上传策略的设置。
-////                                                V.d("上传状态回调：" + key + ",\r\n " + info + ",\r\n " + res);
-////                                                uploadImgToQNY_size_add[0]++;
-////                                                V.d("index:" + uploadImgToQNY_size_add[0]);
-////                                                V.d("size:" + ((photoAdapter.getList().size())));
-////                                                if (uploadImgToQNY_size_add[0] == photoAdapter.getList().size()) {
-////                                                    Utils.showToast(context, "发布成功");
-//////                                        Utils.dissmissDiV(context);
-////                                                    context.setResult(resultCode);
-////                                                    context.finish();
-////                                                }
-////                                            }
-////                                        }, null);
-//                            } else {
-//                                V.e("压缩失败一次");
-//                            }
-//                        }
-//                    });
                 }
                 break;
         }
