@@ -143,7 +143,7 @@ public class F_Job_2 extends BaseFragment {
             }
 
             @Override
-            public void onItemChildClick(BaseQuickAdapter adapter, View view, final int position) {
+            public void onItemChildClick(final BaseQuickAdapter adapter, View view, final int position) {
                 switch (view.getId()) {
                     case R.id.jianghu:
 
@@ -151,7 +151,9 @@ public class F_Job_2 extends BaseFragment {
                             @Override
                             public void onLeftButtonClickListener() {
                                 //分享
-                                toShard(mRvAdapter.getItem(position).getPid());
+                                toShard(mRvAdapter.getItem(position).getPid(), ((ThePerfectGirl.WorkInfoDTO) adapter.getData().get(position)).getTitle(),
+                                        ((ThePerfectGirl.WorkInfoDTO) adapter.getData().get(position)).getReleaseInfo().getCompany(),
+                                        ((ThePerfectGirl.WorkInfoDTO) adapter.getData().get(position)).getSalary());
                             }
 
                             @Override
@@ -219,13 +221,14 @@ public class F_Job_2 extends BaseFragment {
 
     }
 
-    private void toShard(final String workPid) {
+    private void toShard(final String workPid, String title, String commpl, String price) {
 //        new ShareAction(context).withTargetUrl("http://192.168.3.8:8081/test?toOtherActivity=0&otherId=" + workPid)
         new ShareAction(context).withText(workPid)
 
 //                .setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
+                .withText(commpl + "正在招聘【" + title + "】,薪资：" + price + ",求推荐，求转发～")
                 .withTargetUrl(StaticParams.URL_Shared_Job + "?workPid=" + workPid)
-                .withMedia(new UMImage(context, com.zwy.Utils.getBitmapFromResources(context, R.mipmap.appicon)))
+                .withMedia(new UMImage(context, StaticParams.ImageNewsURL + new AppPreferences(context).getString(StaticParams.FileKey.__USERPIC__, "")))
                 .setDisplayList(SHARE_MEDIA.WEIXIN_CIRCLE)
                 .setCallback(new UMShareListener() {
                     @Override

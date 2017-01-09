@@ -42,6 +42,7 @@ import com.umeng.socialize.media.UMImage;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
 import com.v.rapiddev.base.AppManager;
+import com.v.rapiddev.preferences.AppPreferences;
 import com.v.rapiddev.pulltorefresh.PullToRefreshBase;
 import com.v.rapiddev.pulltorefresh.PullToRefreshScrollView;
 import com.v.rapiddev.utils.V;
@@ -486,7 +487,7 @@ public class Aty_OriDetails extends BaseActivity {
 
     }
 
-    @OnClick({R.id.actionbar_back,R.id.actionbar_shared, R.id.img_oridetails_userlogo, R.id.img_oridetails_chat, R.id.img_oridetails_call, R.id.img_oridetails_grad, R.id.tv_oridetails_tocomm})
+    @OnClick({R.id.actionbar_back, R.id.actionbar_shared, R.id.img_oridetails_userlogo, R.id.img_oridetails_chat, R.id.img_oridetails_call, R.id.img_oridetails_grad, R.id.tv_oridetails_tocomm})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.actionbar_back:
@@ -494,14 +495,20 @@ public class Aty_OriDetails extends BaseActivity {
                 break;
 
             case R.id.actionbar_shared:
-                String url = null;
-                if (adapter_contentImg.getList() != null && adapter_contentImg.getList().size() >= 1) {
-                    url = adapter_contentImg.getItem(0);
-                }
+//                String url = null;
+//                if (adapter_contentImg.getList() != null && adapter_contentImg.getList().size() >= 1) {
+//                    url = adapter_contentImg.getItem(0);
+//                } else {
+//                    url = StaticParams.ImageURL + "148154484418890002320087487.png";
+//                }
+
                 new ShareAction(context).setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
-                        .withText(tvOridetailsLocation.getText().toString())
-                        .withMedia(new UMImage(context, url))
-                        .withTitle(tvOridetailsTitle.getText().toString())
+//                        .withTitle(tvOridetailsTitle.getText().toString())
+                        .withText(tvOridetailsUsername.getText().toString().trim() + "发布了创意工作【" + tvOridetailsTitle.getText().toString().trim() + "】,悬赏" +
+                                tvOridetailsPrice.getText().toString().trim().substring(0,tvOridetailsPrice.getText().toString().length()-2) + "元，求推荐，求转发～")
+//                        .withMedia(new UMImage(context, url))
+                        .withMedia(new UMImage(context, StaticParams.ImageNewsURL + new AppPreferences(context).getString(StaticParams.FileKey.__USERPIC__, "")))
+
                         .withTargetUrl(StaticParams.URL_Shared_OriWOrk + "?workPid=" + workId)
                         .setCallback(new UMShareListener() {
                             @Override

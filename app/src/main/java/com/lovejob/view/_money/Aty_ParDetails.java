@@ -42,6 +42,7 @@ import com.umeng.socialize.media.UMImage;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
 import com.v.rapiddev.base.AppManager;
+import com.v.rapiddev.preferences.AppPreferences;
 import com.v.rapiddev.pulltorefresh.PullToRefreshBase;
 import com.v.rapiddev.pulltorefresh.PullToRefreshScrollView;
 import com.v.rapiddev.utils.V;
@@ -486,9 +487,12 @@ public class Aty_ParDetails extends BaseActivity {
 
             case R.id.imag_shared:
                 new ShareAction(context).setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
-                        .withText(tvOridetailsTitle.getText().toString())
-                        .withMedia(new UMImage(context, com.zwy.Utils.getBitmapFromResources(context, R.mipmap.appicon)))
-                        .withTitle(tvOridetailsTitle.getText().toString())
+//                        .withText(tvOridetailsTitle.getText().toString())
+//                        .withMedia(new UMImage(context, com.zwy.Utils.getBitmapFromResources(context, R.mipmap.appicon)))
+                        .withMedia(new UMImage(context, StaticParams.ImageNewsURL + new AppPreferences(context).getString(StaticParams.FileKey.__USERPIC__, "")))
+                        .withText(tvOridetailsUsername.getText().toString().trim() + "发布了兼职工作【" + tvOridetailsTitle.getText().toString().trim() + "】,悬赏"
+                                + tvPardetailsPrice.getText().toString().trim().substring(0, tvPardetailsPrice.getText().toString().length() - 2).trim() + "，求推荐，求转发～")
+//                        .withTitle(tvOridetailsTitle.getText().toString())
                         .withTargetUrl(StaticParams.URL_Shared_ParkWOrk + "?workPid=" + workId)
                         .setCallback(new UMShareListener() {
                             @Override

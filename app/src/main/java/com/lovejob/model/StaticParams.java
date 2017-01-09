@@ -23,8 +23,9 @@ public class StaticParams {
 //    public static final String URL = "http://192.168.3.23/lovejob";
 //    public static final String URL = "http://www.congxinwl.com/lovejob";
 //    public static final String URL = "http://117.34.116.121:8084/lovejob";
-    public static final String URL = "https://117.34.116.121:8443/lovejob";
-
+    public static final String URL = "http://117.34.116.121:8084/lovejob";
+//／    public static final String URL = "http://117.34.116.121:8084/lovejob";
+//
     public static boolean isConnectChetService = false;//是否连接到聊天服务器了
 
     public static final String URL_Shared_OriWOrk = "http://www.congxinwl.com/share/templates/creative_job.html";

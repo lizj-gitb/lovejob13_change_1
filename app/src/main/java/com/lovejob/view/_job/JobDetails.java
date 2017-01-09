@@ -36,6 +36,10 @@ import com.lovejob.ms.MainActivityMs;
 import com.lovejob.view.WriteView;
 import com.lovejob.view.cityselector.cityselector.utils.ToastUtils;
 import com.lovejob.view.payinfoviews.PayView;
+import com.umeng.socialize.ShareAction;
+import com.umeng.socialize.UMShareListener;
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.media.UMImage;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
 import com.v.rapiddev.base.AppManager;
@@ -274,9 +278,14 @@ public class JobDetails extends BaseActivity {
                     btJobdetailsOthers.setVisibility(View.VISIBLE);
                     btJobdetailsOwnLingpai.setVisibility(View.GONE);
                 }
-                Glide.with(context).load(StaticParams.ImageURL + thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo().getPortraitId()+"!logo").dontAnimate()
-                        .placeholder(R.drawable.ic_launcher).into(imgJobdetailsBoosHead);
+                Glide.with(context).load(StaticParams.ImageURL + thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo().getPortraitId() + "!logo").dontAnimate()
+                        .placeholder(R.mipmap.appicon).into(imgJobdetailsBoosHead);
                 userId = thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo().getUserId();
+                String myuid = new AppPreferences(context).getString(StaticParams.FileKey.__USERPID__, "");
+                if (userId.equals(myuid)) {
+                    actionbarShared.setVisibility(View.VISIBLE);
+//                    actionbarShared.setImageResource(R.mipmap.sharedicon);
+                }
                 actionbarSave.setVisibility(View.GONE);
                 actionbarTitle.setText(thePerfectGirl.getData().getWorkInfoDTO().getTitle());
                 actionbarTitle.setTextSize(16);
@@ -328,7 +337,7 @@ public class JobDetails extends BaseActivity {
                 for (int i = 0; i < person.size(); i++) {
                     alreadySiginPersonNumber++;
                     //gv添加一个item
-                    adapter_alreadySiginPerson.addItem(StaticParams.ImageURL + person.get(i).getPortraitId()+"!logo");
+                    adapter_alreadySiginPerson.addItem(StaticParams.ImageURL + person.get(i).getPortraitId() + "!logo");
                 }
                 alreadySignPersonNumber.setText(String.valueOf(alreadySiginPersonNumber));
 
@@ -417,11 +426,54 @@ public class JobDetails extends BaseActivity {
         gridView.setAdapter(adapter);
     }
 
-    @OnClick({R.id.actionbar_back, R.id.img_jobdetails_chat, R.id.img_jobdetails_call, R.id.img_jobdetails_apply, R.id.img_jobdetails_buy, R.id.tv_jobdetails_tocomm})
+    @OnClick({R.id.actionbar_back, R.id.actionbar_shared, R.id.img_jobdetails_chat, R.id.img_jobdetails_call, R.id.img_jobdetails_apply, R.id.img_jobdetails_buy, R.id.tv_jobdetails_tocomm})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.actionbar_back:
                 AppManager.getAppManager().finishActivity(this);
+                break;
+
+            case R.id.actionbar_shared:
+                new ShareAction(context)
+
+                .setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
+                        .withText(tvJobdetailsCompany.getText().toString() + "正在招聘【" + tvJobdetailsTitle.getText().toString() + "】,薪资：" + tvJobdetailsPrice.getText().toString() + ",求推荐，求转发～")
+                        .withTargetUrl(StaticParams.URL_Shared_Job + "?workPid=" + workId)
+                        .withMedia(new UMImage(context, StaticParams.ImageNewsURL + new AppPreferences(context).getString(StaticParams.FileKey.__USERPIC__, "")))
+//                        .setDisplayList(SHARE_MEDIA.WEIXIN_CIRCLE)
+                        .setCallback(new UMShareListener() {
+                            @Override
+                            public void onResult(SHARE_MEDIA share_media) {
+//                        Utils.showToast(context, "分享成功");
+                                V.d("分享成功");
+                                dialog = Utils.showProgressDliago(context, "请稍后……");
+                                callList.add(LoveJob.getJobToken_1("1", workId, new OnAllParameListener() {
+                                    @Override
+                                    public void onSuccess(ThePerfectGirl thePerfectGirl) {
+                                        dialog.dismiss();
+                                        Utils.showToast(context, "分享成功");
+                                    }
+
+                                    @Override
+                                    public void onError(String msg) {
+                                        dialog.dismiss();
+                                        Utils.showToast(context, msg);
+                                    }
+                                }));
+                            }
+
+                            @Override
+                            public void onError(SHARE_MEDIA share_media, Throwable throwable) {
+                                V.d("分享错误");
+                                Utils.showToast(context, "分享错误");
+                            }
+
+                            @Override
+                            public void onCancel(SHARE_MEDIA share_media) {
+                                V.d("分享被取消");
+                                Utils.showToast(context, "分享被取消");
+                            }
+                        }).open();
                 break;
             case R.id.img_jobdetails_chat:
                 V.d("聊天");

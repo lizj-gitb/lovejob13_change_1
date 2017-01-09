@@ -188,7 +188,7 @@ public class F_Money extends BaseFragment {
 //                //gv_f_money_alreadySignPerson
                 time = getItem(position).getFirstRefreshTime() + "".trim();
 //                //发布者头像
-                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getReleaseInfo().getPortraitId().toString().trim()+"!logo").dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) viewHolder.getView(R.id.img_item_lv_f_money_main_userlogo));
+                Glide.with(context).load(StaticParams.ImageURL + getItem(position).getReleaseInfo().getPortraitId().toString().trim()).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) viewHolder.getView(R.id.img_item_lv_f_money_main_userlogo));
 //                //工作标题
                 ((TextView) viewHolder.getView(R.id.tv_item_lv_f_money_main_title)).setText(getItem(position).getTitle());
 //
