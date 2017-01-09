@@ -120,6 +120,7 @@
                 <LinearLayout
                     android:layout_width="150dp"
                     android:layout_height="28dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_alignParentRight="true"
                     android:layout_below="@+id/tv_worklist_apply"
                     android:gravity="center">

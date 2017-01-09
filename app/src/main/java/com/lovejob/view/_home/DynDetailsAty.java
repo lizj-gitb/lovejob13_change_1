@@ -56,6 +56,7 @@ import com.lovejob.view._home.dyndetailstabs.f_comm.F_comm;
  * ProjectName:Lovejob2
  * Package_Name:com.lovejob.view._home
  * Created on 2016-11-22 06:02
+ * 动态详情
  */
 
 public class DynDetailsAty extends BaseActivity {
@@ -261,6 +262,9 @@ public class DynDetailsAty extends BaseActivity {
     }
 
 
+    /**
+     * 动态详情 悬浮栏 listener
+     */
     public class myOclick implements View.OnClickListener {
         private int type = -1;
 

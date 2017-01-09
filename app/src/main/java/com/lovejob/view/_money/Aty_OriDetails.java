@@ -61,6 +61,7 @@ import static com.lovejob.model.StaticParams.RequestCode.RequestCode_OriWork_To_
  * ProjectName:LoveJob
  * Package_Name:com.lovejob.view._money
  * Created on 2016-12-07 19:06
+ * 报名的工作详情
  */
 
 public class Aty_OriDetails extends BaseActivity {
@@ -143,14 +144,14 @@ public class Aty_OriDetails extends BaseActivity {
          * 设置Sv相关属性
          */
         setSVInfos();
-//        /**
-//         * 初始化适配器
-//         */
+
         initAdapater();
-//
         getDetails();
     }
 
+    /**
+     * 初始化适配器
+     */
     private void initAdapater() {
         adapter_contentImg = new FastAdapter<String>(this, R.layout.item_gv_oridetails_img) {
             @Override
@@ -426,6 +427,7 @@ public class Aty_OriDetails extends BaseActivity {
         adapter.notifyDataSetChanged();
     }
 
+
     private void setSVInfos() {
         svAtyOriMain.setMode(PullToRefreshBase.Mode.PULL_FROM_START);
         svAtyOriMain.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ScrollView>() {
@@ -445,6 +447,9 @@ public class Aty_OriDetails extends BaseActivity {
         });
     }
 
+    /**
+     * 判断是否显示（悬浮窗口 聊天、打电话、抢单）
+     */
     private void getDefaultParams() {
         workId = getIntent().getStringExtra("workId");
         if (workId == null) {
@@ -462,6 +467,9 @@ public class Aty_OriDetails extends BaseActivity {
         }
     }
 
+    /**
+     * 初始化Actionbar
+     */
     private void setactionbar() {
         actionbarSave.setVisibility(View.GONE);
         actionbarTitle.setText("创意工作");

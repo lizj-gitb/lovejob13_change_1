@@ -46,6 +46,7 @@ import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2016/11/17.
+ * 个人中心
  */
 
 public class Others extends BaseActivity {
@@ -123,12 +124,12 @@ public class Others extends BaseActivity {
                     @Override
                     public void run() {
                         try {
-                            final Bitmap bitmap = Glide.with(context).load(StaticParams.ImageURL + thePerfectGirl.getData().getUserInfoDTO().getBackground()+"!logo")
+                            final Bitmap bitmap = Glide.with(context).load(StaticParams.ImageURL + thePerfectGirl.getData().getUserInfoDTO().getBackground()+"!logo")     //设置头像
                                     .asBitmap().into(150, 100).get();
                             HandlerUtils.post(new Runnable() {
                                 @Override
                                 public void run() {
-                                    userbg.setBackground(new BitmapDrawable(bitmap));
+                                    userbg.setBackground(new BitmapDrawable(bitmap));          //设置背景
                                 }
                             });
                         } catch (InterruptedException e) {
@@ -148,6 +149,11 @@ public class Others extends BaseActivity {
         });
     }
 
+    /**
+     * 设置Vip等级
+     * @param level  等级
+     * @return
+     */
     private int getUserLever(int level) {
         int resid = 0;
         switch (level) {
@@ -177,11 +183,14 @@ public class Others extends BaseActivity {
         return resid;
     }
 
+    /**
+     * 初始化 Fragment
+     */
     private void initFragMent() {
         fragments = new ArrayList<Fragment>();
-        Fragment Tab_1 = new F_OtherServer();
-        Fragment Tab_2 = new F_OtherDynamic();
-        Fragment Tab_3 = new F_OtherResume();
+        Fragment Tab_1 = new F_OtherServer();        //服务Fragment
+        Fragment Tab_2 = new F_OtherDynamic();       //动态Fragment
+        Fragment Tab_3 = new F_OtherResume();        //简历Fragment
         fragments.add(Tab_1);
         fragments.add(Tab_2);
         fragments.add(Tab_3);
@@ -260,16 +269,16 @@ public class Others extends BaseActivity {
     @OnClick({R.id.img_f_others_back, R.id.rl_other_tab1, R.id.rl_other_tab2, R.id.rl_other_tab3})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.img_f_others_back:
+            case R.id.img_f_others_back:            //返回
                 AppManager.getAppManager().finishActivity();
                 break;
-            case R.id.rl_other_tab1:
+            case R.id.rl_other_tab1:                 //服务Tab
                 setSelect(0);
                 break;
-            case R.id.rl_other_tab2:
+            case R.id.rl_other_tab2:                 //动态Tab
                 setSelect(1);
                 break;
-            case R.id.rl_other_tab3:
+            case R.id.rl_other_tab3:                  //简历Tab
                 setSelect(2);
                 break;
         }

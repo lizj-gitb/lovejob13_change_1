@@ -281,7 +281,7 @@ public class Aty_Information extends BaseActivity {
                 break;
             case R.id.rl_infor_education:
                 options1Items = new ArrayList<>();
-                options1Items.add(new PriceBean("不限"));
+//                options1Items.add(new PriceBean("不限"));
                 options1Items.add(new PriceBean("大专"));
                 options1Items.add(new PriceBean("本科"));
                 options1Items.add(new PriceBean("硕士"));

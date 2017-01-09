@@ -41,6 +41,7 @@ import me.iwf.photopicker.PhotoPreview;
 
 /**
  * Created by Administrator on 2016/11/17.
+ *  他的个人中心—动态—Fragment
  */
 
 public class F_OtherDynamic extends BaseFragment {
@@ -65,11 +66,15 @@ public class F_OtherDynamic extends BaseFragment {
                 Intent intent = new Intent(context, DynDetailsAty.class);
                 intent.putExtra("dynPid", adapter.getItem(position).getPid());
                 startActivity(intent);
+                getActivity().finish();
             }
         });
         return view;
     }
 
+    /**
+     * 获取数据
+     */
     private void addData() {
         LoveJob.getDynamic(userPid, new OnAllParameListener() {
             @Override
@@ -89,15 +94,18 @@ public class F_OtherDynamic extends BaseFragment {
         });
     }
 
+    /**
+     * 初始化适配器
+     */
     private void initAdapter() {
         adapter = new FastAdapter<ThePerfectGirl.DynamicDTO>(context, R.layout.item_lv_dynamic) {
             @Override
             public View getViewHolder(int position, View convertView, ViewGroup parent) {
                 FFViewHolder viewHolder = FFViewHolder.get(context, convertView, parent, R.layout.item_lv_dynamic, position);
-                ((TextView) viewHolder.getView(R.id.tv_dynamic_content)).setText(getItem(position).getContent());
+                ((TextView) viewHolder.getView(R.id.tv_dynamic_content)).setText(getItem(position).getContent());               //内容说明
                 ((ImageView)viewHolder.getView(R.id.img_clear_dynamic)).setVisibility(View.GONE);
                 if (getItem(position).getTimeDec().equals("今天") || getItem(position).getTimeDec().equals("昨天")) {
-                    ((TextView) viewHolder.getView(R.id.tv_dynamic_time)).setText(getItem(position).getTimeDec());
+                    ((TextView) viewHolder.getView(R.id.tv_dynamic_time)).setText(getItem(position).getTimeDec());              //时间
                 } else {
                     ((TextView) viewHolder.getView(R.id.tv_dynamic_time)).setVisibility(View.GONE);
                     ((TextView) viewHolder.getView(R.id.tv_dynamic_timemonth)).setVisibility(View.VISIBLE);
@@ -109,6 +117,7 @@ public class F_OtherDynamic extends BaseFragment {
                 }
 
 
+                //图片
                 final RecyclerView recyclerView = (RecyclerView) viewHolder.getView(R.id.rv_dynamic_pic);
                 recyclerView.setTag(position);
                 final ArrayList<String> selectedPhotos = new ArrayList<>();

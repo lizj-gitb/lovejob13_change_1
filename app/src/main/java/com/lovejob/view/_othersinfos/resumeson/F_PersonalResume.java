@@ -61,7 +61,7 @@ public class F_PersonalResume extends BaseFragment {
         useType = getActivity().getIntent().getStringExtra("userType");
         usePid = getActivity().getIntent().getStringExtra("userId");
 
-        if (useType.equals("0")) {
+        if ("0".equals(useType)) {
             view1 = inflater.inflate(R.layout.item_vp_resume, null);
             tvInforName = (TextView) view1.findViewById(R.id.tv_infor_name);
             tvInforSex = (TextView) view1.findViewById(R.id.tv_infor_sex);

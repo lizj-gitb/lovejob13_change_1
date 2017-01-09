@@ -36,6 +36,7 @@ import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2016/11/29.
+ * 我申请的工作-已报名
  */
 public class Aty_MyGetWork_AreadySignIn extends BaseActivity {
     @Bind(R.id.img_mygetwork_already_signin_back)
@@ -57,6 +58,9 @@ public class Aty_MyGetWork_AreadySignIn extends BaseActivity {
 
     }
 
+    /**
+     * 添加数据
+     */
     private void addData() {
         call_getWorkList = LoveJob.getWorkList("410", String.valueOf(page), new OnAllParameListener() {
             @Override
@@ -78,6 +82,9 @@ public class Aty_MyGetWork_AreadySignIn extends BaseActivity {
         });
     }
 
+    /**
+     * 初始化适配器
+     */
     private void initAdapter() {
         adapter = new FastAdapter<ThePerfectGirl.WorkInfoDTO>(context, R.layout.item_lv_mygetwork_signin) {
             public FastAdapter<String> adapter_lv_gridview;
@@ -93,13 +100,13 @@ public class Aty_MyGetWork_AreadySignIn extends BaseActivity {
                 GridView gvMylistMygetworkAlreaySign = (GridView) viewHolder.getView(R.id.gv_mylist_mygetwork_alreaySign);
                 TextView tvMylistMygetworkAlreaySignCancle = (TextView) viewHolder.getView(R.id.tv_mylist_mygetwork_alreaySign_cancle);
 
-                tvMylistMygetworkAlreaySignTitle.setText(getItem(position).getTitle());
-                tvMylistMygetworkAlreaySignPrice.setText(getItem(position).getSalary() + "元/" + getItem(position).getPaymentDec());
+                tvMylistMygetworkAlreaySignTitle.setText(getItem(position).getTitle());                                                        //标题（工作 ）
+                tvMylistMygetworkAlreaySignPrice.setText(getItem(position).getSalary() + "元/" + getItem(position).getPaymentDec());          //价格
                 long l = getItem(position).getReleaseDate();
                 String s1 = String.format("%tF%n", l);
-                tvMylistMygetworkAlreaySignTime.setText("时间:" + s1);
-                tvMylistMygetworkAlreaySignSignInNumber.setText(String.valueOf(getItem(position).getApplyCount()));
-                tvMylistMygetworkAlreaySignLocation.setText(getItem(position).getAddress());
+                tvMylistMygetworkAlreaySignTime.setText("时间:" + s1);                                                                        //时间
+                tvMylistMygetworkAlreaySignSignInNumber.setText(String.valueOf(getItem(position).getApplyCount()));                            //报名数
+                tvMylistMygetworkAlreaySignLocation.setText(getItem(position).getAddress());                                                   //地址
                 initGridviewAdapater();
                 gvMylistMygetworkAlreaySign.setAdapter(adapter_lv_gridview);
                 for (int i = 0; i < getItem(position).getEmployeeInfo().size(); i++) {
@@ -141,6 +148,9 @@ public class Aty_MyGetWork_AreadySignIn extends BaseActivity {
                 tvMysendallworklistGv.setAdapter(adapter_lv_gridview);
             }
 
+            /**
+             * 初始化GridView图片的Adapter
+             */
             private void initGridviewAdapater() {
                 adapter_lv_gridview = new FastAdapter<String>(context, R.layout.item_lv_f_money_gridview) {
                     @Override
@@ -157,7 +167,7 @@ public class Aty_MyGetWork_AreadySignIn extends BaseActivity {
         lvMygetworkAlreadySignin.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Intent intent = new Intent(Aty_MyGetWork_AreadySignIn.this, Aty_OriDetails.class);
+                Intent intent = new Intent(Aty_MyGetWork_AreadySignIn.this, Aty_OriDetails.class);               //跳转到报名工作详情
                 intent.putExtra("workId", adapter.getItem(position - 1).getPid());
                 intent.putExtra("isEdit", adapter.getItem(position - 1).getShowApplyBtn() == 0 ? false : true);
                 startActivity(intent);
@@ -165,6 +175,10 @@ public class Aty_MyGetWork_AreadySignIn extends BaseActivity {
         });
     }
 
+    /**
+     * 取消报名
+     * @param position
+     */
     private void cancleSignIn(final int position) {
         LoveJob.getGrabForm(adapter.getItem(position).getPid(), new OnAllParameListener() {
             @Override

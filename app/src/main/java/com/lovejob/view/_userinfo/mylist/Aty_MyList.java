@@ -26,6 +26,7 @@ import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2016/11/28.
+ * 我的交易
  */
 public class Aty_MyList extends BaseActivity {
     @Bind(R.id.img_aty_mylist_back)
