@@ -68,9 +68,7 @@
             android:layout_height="80dp"
             android:layout_marginLeft="15dp"></android.support.v7.widget.RecyclerView>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+
             <TextView
                 android:layout_marginLeft="10dp"
                 android:id="@+id/tv_dynamic_content"
@@ -81,11 +79,5 @@
                 android:text="说好一起到白头，你却偷偷焗了油"
                 android:textSize="13sp" />
 
-        </ScrollView>
-
-
-
     </LinearLayout>
-
-
 </LinearLayout>
