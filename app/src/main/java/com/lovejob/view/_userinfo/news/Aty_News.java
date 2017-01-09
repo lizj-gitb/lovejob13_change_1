@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.alibaba.mobileim.conversation.IYWConversationUnreadChangeListener;
 import com.lovejob.BaseActivity;
 import com.lovejob.R;
 import com.lovejob.controllers.task.LoveJob;
@@ -63,9 +64,9 @@ public class Aty_News extends BaseActivity {
     TextView tv333;
     @Bind(R.id.rl_news_dongtai)
     RelativeLayout rlNewsDongtai;
-    int dynamiccount=0;
-    int goodcount=0;
-    int badcount=0;
+    int dynamiccount = 0;
+    int goodcount = 0;
+    int badcount = 0;
     private String userPid;
 
     @Override
@@ -121,12 +122,12 @@ public class Aty_News extends BaseActivity {
                 tvNewsTongzhi.setText(thePerfectGirl.getData().getUserInfoDTO().getInformCount() + "条");
                 String s1 = String.format("%tR%n", thePerfectGirl.getData().getUserInfoDTO().getLastTime());
                 tvNewsTongzhiTime.setText(s1);
-                if (thePerfectGirl.getData().getUserInfoDTO().getDynamicCount() == 0){
+                if (thePerfectGirl.getData().getUserInfoDTO().getDynamicCount() == 0) {
                     tv333.setVisibility(View.GONE);
                     tvNewsDongtai.setVisibility(View.GONE);
                     tvNewsDongtaiTime.setVisibility(View.GONE);
                 }
-                tvNewsDongtai.setText(thePerfectGirl.getData().getUserInfoDTO().getDynamicCount()+"条");
+                tvNewsDongtai.setText(thePerfectGirl.getData().getUserInfoDTO().getDynamicCount() + "条");
                 String s2 = String.format("%tR%n", thePerfectGirl.getData().getUserInfoDTO().getDynamicNewTime());
                 tvNewsDongtaiTime.setText(s2);
             }
@@ -143,6 +144,15 @@ public class Aty_News extends BaseActivity {
     @Override
     public void onResume_() {
         addData();
+
+        MainActivityMs.mIMKit.getConversationService().addTotalUnreadChangeListener(new IYWConversationUnreadChangeListener() {
+            @Override
+            public void onUnreadChange() {
+                tvNewMsg.setVisibility(View.VISIBLE);
+                tvNewMsgNumber.setText("1条");
+            }
+        });
+
     }
 
     @Override
@@ -163,9 +173,9 @@ public class Aty_News extends BaseActivity {
                     ToastUtils.showToast(context, "您未连接到聊天服务器，可能是网络异常，请退出重新登录");
                     return;
                 }
-                 //最近聊天列表
+                //最近聊天列表
                 Intent intent1 = MainActivityMs.mIMKit.getConversationActivityIntent();
-                 startActivity(intent1);
+                startActivity(intent1);
                 V.d("消息");
                 break;
             case R.id.rl_news_tongzhi:
@@ -173,10 +183,10 @@ public class Aty_News extends BaseActivity {
                 V.d("通知");
                 break;
             case R.id.rl_news_dongtai:
-                Intent intent = new Intent(context,Aty_dongtai.class);
-                intent.putExtra("dynamiccount",dynamiccount);
-                intent.putExtra("goodcount",goodcount);
-                intent.putExtra("badcount",badcount);
+                Intent intent = new Intent(context, Aty_dongtai.class);
+                intent.putExtra("dynamiccount", dynamiccount);
+                intent.putExtra("goodcount", goodcount);
+                intent.putExtra("badcount", badcount);
                 startActivity(intent);
 //                startActivity(new Intent(context, Aty_dongtai.class));
                 V.d("新动态");

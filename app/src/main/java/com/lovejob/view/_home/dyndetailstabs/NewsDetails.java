@@ -80,7 +80,7 @@ public class NewsDetails extends BaseActivity {
         }
 
         mRvNewsdetails.setLayoutManager(new LinearLayoutManager(context));
-        adapter = new MyAdapter(R.layout.item_news_details,null);
+        adapter = new MyAdapter(R.layout.item_news_details, null);
         adapter.openLoadAnimation(BaseQuickAdapter.SCALEIN);
         mRvNewsdetails.setAdapter(adapter);
         /**
@@ -141,28 +141,28 @@ public class NewsDetails extends BaseActivity {
                 break;
             case R.id.actionbar_shared:
                 Logger.e("分享出去 的ULRL：" + newsId);
-//                new ShareAction(context).setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
-//                        .withText(((MyAdapter) mRvNewsdetails.getAdapter()).getData().get(0).getContent())
-//                        .withMedia(new UMImage(context, shardURL))
-//                        .withTitle(mTvNewsdetailsSubtitle.getText().toString())
-//                        .withTargetUrl(StaticParams.URL_Shared+"?otherId=" + newsId + "&toOtherActivity=0")
-//                        .setCallback(new UMShareListener() {
-//                            @Override
-//                            public void onResult(SHARE_MEDIA share_media) {
-//
-//                            }
-//
-//                            @Override
-//                            public void onError(SHARE_MEDIA share_media, Throwable throwable) {
-//
-//                            }
-//
-//                            @Override
-//                            public void onCancel(SHARE_MEDIA share_media) {
-//
-//                            }
-//                        })
-//                        .open();
+                new ShareAction(context).setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
+                        .withText(((MyAdapter) mRvNewsdetails.getAdapter()).getData().get(0).getContent())
+                        .withMedia(new UMImage(context, shardURL))
+                        .withTitle(mTvNewsdetailsSubtitle.getText().toString())
+                        .withTargetUrl(StaticParams.URL_Shared_News + "?informationPid=" + newsId)
+                        .setCallback(new UMShareListener() {
+                            @Override
+                            public void onResult(SHARE_MEDIA share_media) {
+                                Utils.showToast(context, "分享成功");
+                            }
+
+                            @Override
+                            public void onError(SHARE_MEDIA share_media, Throwable throwable) {
+                                Utils.showToast(context, "分享失败，请稍后再试");
+                            }
+
+                            @Override
+                            public void onCancel(SHARE_MEDIA share_media) {
+                                Utils.showToast(context, "分享被取消");
+                            }
+                        })
+                        .open();
                 break;
         }
     }

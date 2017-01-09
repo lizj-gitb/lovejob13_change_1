@@ -18,6 +18,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.alibaba.mobileim.YWAPI;
+import com.alibaba.mobileim.contact.YWAppContactImpl;
+import com.alibaba.mobileim.conversation.IYWConversationUnreadChangeListener;
+import com.alibaba.mobileim.conversation.YWConversation;
 import com.alibaba.sdk.android.feedback.impl.FeedbackAPI;
 import com.alibaba.sdk.android.media.WantuService;
 import com.alibaba.wxlib.util.SysUtil;
@@ -35,6 +38,7 @@ import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.ThreadPoolUtils;
 import com.lovejob.model.Utils;
+import com.lovejob.ms.MainActivityMs;
 import com.lovejob.view.login.AQQQ;
 import com.lovejob.view.login.LoginAcitvity;
 import com.lovejob.view.login.SplashActivity;
@@ -154,6 +158,7 @@ public class MyApplication extends MultiDexApplication {
         YWAPI.init(this,APP_KEY );
 //        Log.d("阿里百川即时通讯初始化成功");
         FeedbackAPI.init(this,APP_KEY );
+
 //        Log.d("阿里百川用户反馈初始化成功");
 //        Log.d("Application初始化完成：" + new Date().getTime());
 //        String path = "cxwl_-9774673245782_lovejob.jpg";

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -48,6 +49,7 @@ import com.lovejob.view._othersinfos.Others;
 import com.lovejob.view._userinfo.myserver.ServiceActivity;
 import com.lovejob.view._userinfo.myserver.ServiceMyActivity;
 import com.lovejob.view.cityselector.CityPickerActivity;
+import com.v.rapiddev.dialogs.core.util.DialogUtils;
 import com.v.rapiddev.dialogs.zdialog.OnDialogItemClickListener;
 import com.v.rapiddev.dialogs.zdialog.ZDialog;
 import com.v.rapiddev.utils.V;
@@ -80,7 +82,7 @@ import static com.lovejob.model.StaticParams.RequestCode.RequestCode_F_Home_TO_S
 
 /**
  * ClassType:
- * User:wenyunzhao
+ * User:wenyunzhao   todo
  * ProjectName:LoveJob3
  * Package_Name:com.lovejob.view._home
  * Created on 2016-11-25 16:46
@@ -140,6 +142,35 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
 
         com.v.rapiddev.preferences.AppPreferences appPreferences = new com.v.rapiddev.preferences.AppPreferences(context);
         userPid = appPreferences.getString(StaticParams.FileKey.__USERPID__, "");
+        LoveJob.getSystemVersion(new OnAllParameListener() {
+            @Override
+            public void onSuccess(ThePerfectGirl thePerfectGirl) {
+                String v = thePerfectGirl.getData().getAboutusDTO().getVersion();
+                if (!Utils.getAppVersionName(context).equals(v)) {
+                    ZDialog.showZDlialog(context, "提示", "系统版本有更新，是否现在更新？", "现在更新", "稍后更新", new OnDialogItemClickListener() {
+                        @Override
+                        public void onLeftButtonClickListener() {
+                            V.d("更新");
+                            Intent intent = new Intent();
+                            intent.setAction("android.intent.action.VIEW");
+                            Uri content_url = Uri.parse("http://a.app.qq.com/o/simple.jsp?pkgname=com.lovejob#opened");
+                            intent.setData(content_url);
+                            startActivity(intent);
+                        }
+
+                        @Override
+                        public void onRightButtonClickListener() {
+                            V.d("取消");
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onError(String msg) {
+
+            }
+        });
         return view;
     }
 
@@ -547,7 +578,7 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                             @Override
                             public void onSuccess(ThePerfectGirl thePerfectGirl) {
                                 item.setIsPointGood(thePerfectGirl.getData().getPoints());
-                                viewHolder.setText(R.id.tv_good_num,String.valueOf(thePerfectGirl.getData().getCount()));
+                                viewHolder.setText(R.id.tv_good_num, String.valueOf(thePerfectGirl.getData().getCount()));
 //                                ThePerfectGirl.DynamicDTO oo = item;
 //                                int res = 0;
 //                                oo.setIsPointGood(thePerfectGirl.getData().getPoints());

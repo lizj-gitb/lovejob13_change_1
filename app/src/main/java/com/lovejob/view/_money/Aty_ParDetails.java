@@ -487,7 +487,7 @@ public class Aty_ParDetails extends BaseActivity {
             case R.id.imag_shared:
                 new ShareAction(context).setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
                         .withText(tvOridetailsTitle.getText().toString())
-                        .withMedia(new UMImage(context, com.zwy.Utils.getBitmapFromResources(context, R.mipmap.appcion)))
+                        .withMedia(new UMImage(context, com.zwy.Utils.getBitmapFromResources(context, R.mipmap.appicon)))
                         .withTitle(tvOridetailsTitle.getText().toString())
                         .withTargetUrl(StaticParams.URL_Shared_ParkWOrk + "?workPid=" + workId)
                         .setCallback(new UMShareListener() {

@@ -225,7 +225,7 @@ public class F_Job_2 extends BaseFragment {
 
 //                .setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
                 .withTargetUrl(StaticParams.URL_Shared_Job + "?workPid=" + workPid)
-                .withMedia(new UMImage(context, com.zwy.Utils.getBitmapFromResources(context, R.mipmap.appcion)))
+                .withMedia(new UMImage(context, com.zwy.Utils.getBitmapFromResources(context, R.mipmap.appicon)))
                 .setDisplayList(SHARE_MEDIA.WEIXIN_CIRCLE)
                 .setCallback(new UMShareListener() {
                     @Override

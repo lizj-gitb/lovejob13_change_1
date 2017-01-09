@@ -61,7 +61,7 @@ public class LoveJob {
             public void OnError(String errorMsg) {
                 V.e("版本获取失败");
             }
-        }, "获取系统最新版本");
+        }, "获取上传图片的token");
     }
 
     public static Call getSystemVersion(final OnAllParameListener onAllParameListener) {
