@@ -1,35 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
-    <!--<RelativeLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="54dp"-->
-    <!--android:background="@color/actionbar"-->
-    <!--android:gravity="center_vertical"-->
-    <!--android:orientation="horizontal">-->
-
-    <!--<ImageView-->
-    <!--android:id="@+id/img_ori_back"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_centerVertical="true"-->
-    <!--android:layout_marginLeft="15dp"-->
-    <!--android:src="@mipmap/button_back" />-->
-
-    <!--<TextView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_centerVertical="true"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:gravity="center"-->
-    <!--android:text="创意工作"-->
-    <!--android:textColor="@color/white"-->
-    <!--android:textSize="20sp" />-->
-    <!--</RelativeLayout>-->
-    <include layout="@layout/lovajobactionbar_2" />
+    <include layout="@layout/lovajobactionbar_2"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -57,7 +32,7 @@
                         android:id="@+id/img_oridetails_userlogo"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginLeft="15dp" />
+                        android:layout_marginLeft="15dp"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -77,14 +52,14 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/orage"
-                                android:textSize="20dp" />
+                                android:textSize="20dp"/>
 
                             <ImageView
                                 android:id="@+id/img_oridetails_userleavl"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="4dp"
-                                android:src="@mipmap/icon_level_v1" />
+                                android:src="@mipmap/icon_level_v1"/>
                         </LinearLayout>
 
                         <TextView
@@ -92,14 +67,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:textColor="@color/hiteTextColor" />
+                            android:textColor="@color/hiteTextColor"/>
                     </LinearLayout>
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="5dp"
-                    android:background="@color/viewbackground" />
+                    android:background="@color/viewbackground"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -112,7 +87,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
-                        android:textColor="@color/orage" />
+                        android:textColor="@color/orage"/>
                 </LinearLayout>
 
 
@@ -130,7 +105,7 @@
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
                         android:text="工作要求:"
-                        android:textColor="@color/actionbar" />
+                        android:textColor="@color/actionbar"/>
 
                     <TextView
                         android:id="@+id/tv_oridetails_want"
@@ -139,7 +114,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="5dp"
                         android:textColor="@color/hiteTextColor"
-                        android:textSize="14.3dp" />
+                        android:textSize="14.3dp"/>
                     <!--<TextView-->
                     <!--android:id="@+id/tv_oridetails_want"-->
                     <!--android:layout_width="200dp"-->
@@ -168,7 +143,7 @@
                         android:id="@+id/gv_oridetails_contentimg"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/white" />
+                        android:background="@color/white"/>
                 </LinearLayout>
 
                 <!--</LinearLayout>-->
@@ -191,7 +166,7 @@
                         android:layout_marginTop="8dp"
                         android:gravity="center_vertical"
                         android:text="工作地点:"
-                        android:textColor="@color/actionbar" />
+                        android:textColor="@color/actionbar"/>
 
                     <TextView
                         android:id="@+id/tv_oridetails_location"
@@ -199,7 +174,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="5dp"
-                        android:textColor="@color/hiteTextColor" />
+                        android:textColor="@color/hiteTextColor"/>
                 </LinearLayout>
 
 
@@ -215,7 +190,7 @@
                         android:layout_marginLeft="28dp"
                         android:gravity="center_vertical"
                         android:text="倒计时:"
-                        android:textColor="@color/actionbar" />
+                        android:textColor="@color/actionbar"/>
 
                     <TextView
                         android:id="@+id/tv_oridetails_countdown"
@@ -225,7 +200,7 @@
                         android:background="@mipmap/daojishi"
                         android:gravity="center_vertical"
                         android:textColor="@color/white"
-                        android:textSize="12dp" />
+                        android:textSize="12dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -237,18 +212,18 @@
 
                     <TextView
                         android:layout_width="88dp"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"/>
 
                     <GridView
                         android:id="@+id/gv_oridetails_alreadySignPerson"
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
-                        android:gravity="center_vertical" />
+                        android:gravity="center_vertical"/>
 
                     <TextView
                         android:id="@+id/tv_oridetails_number"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"/>
 
 
                 </LinearLayout>
@@ -265,7 +240,7 @@
                         android:layout_marginLeft="42dp"
                         android:gravity="center_vertical"
                         android:text="酬金:"
-                        android:textColor="@color/actionbar" />
+                        android:textColor="@color/actionbar"/>
 
                     <TextView
                         android:id="@+id/tv_oridetails_price"
@@ -274,7 +249,7 @@
                         android:layout_marginLeft="5dp"
                         android:gravity="center_vertical"
                         android:textColor="@color/orage"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"/>
                 </LinearLayout>
 
 
@@ -290,7 +265,7 @@
                         android:layout_marginLeft="15dp"
                         android:gravity="center_vertical"
                         android:text="联系方式:"
-                        android:textColor="@color/actionbar" />
+                        android:textColor="@color/actionbar"/>
 
                     <TextView
                         android:id="@+id/tv_oridetails_phonenuber"
@@ -299,13 +274,13 @@
                         android:layout_marginLeft="5dp"
                         android:gravity="center_vertical"
                         android:textColor="@color/hiteTextColor"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"/>
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
+                    android:background="@color/viewbackground"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -321,7 +296,7 @@
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
                         android:text="提问/点评"
-                        android:textColor="@color/hiteTextColor" />
+                        android:textColor="@color/hiteTextColor"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -330,13 +305,13 @@
                         android:layout_gravity="right"
                         android:layout_marginRight="15dp"
                         android:gravity="center_vertical"
-                        android:textColor="@color/hiteTextColor" />
+                        android:textColor="@color/hiteTextColor"/>
                 </RelativeLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/viewbackground" />
+                    android:background="@color/viewbackground"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -348,7 +323,7 @@
                     <com.v.rapiddev.views.MyListView
                         android:id="@+id/lv_oridetails_comm"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -360,7 +335,7 @@
                         android:text="暂无提问/点评"
                         android:textColor="@color/gray"
                         android:textSize="12sp"
-                        android:visibility="gone" />
+                        android:visibility="gone"/>
                 </LinearLayout>
 
 
@@ -373,7 +348,7 @@
                     <View
                         android:layout_width="0dp"
                         android:layout_height="1dp"
-                        android:layout_weight="1.5" />
+                        android:layout_weight="1.5"/>
 
                     <TextView
                         android:id="@+id/tv_oridetails_tocomm"
@@ -382,19 +357,19 @@
                         android:layout_weight="1"
                         android:background="@mipmap/tuikuan"
                         android:gravity="center"
-                        android:text="提问/点评" />
+                        android:text="提问/点评"/>
 
                     <View
                         android:layout_width="0dp"
                         android:layout_height="1dp"
-                        android:layout_weight="1.5" />
+                        android:layout_weight="1.5"/>
 
                 </LinearLayout>
 
                 <View
                     android:id="@+id/view_hite"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp" />
+                    android:layout_height="60dp"/>
 
             </LinearLayout>
 
@@ -413,7 +388,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginTop="30dp"
-                android:background="#00000000" />
+                android:background="#00000000"/>
 
             <ImageView
                 android:id="@+id/img_oridetails_chat"
@@ -422,7 +397,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="35dp"
-                android:src="@mipmap/button_chatup" />
+                android:src="@mipmap/button_chatup"/>
 
             <ImageView
                 android:id="@+id/img_oridetails_call"
@@ -430,7 +405,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:src="@mipmap/button_call" />
+                android:src="@mipmap/button_call"/>
 
             <ImageView
                 android:id="@+id/img_oridetails_grad"
@@ -440,7 +415,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="25dp"
-                android:src="@mipmap/button_focus_suspend_off" />
+                android:src="@mipmap/button_focus_suspend_off"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -449,7 +424,7 @@
                 android:layout_marginTop="60dp"
                 android:gravity="center"
                 android:text="薪资已提前预付，完成后即可到账。"
-                android:textSize="12sp" />
+                android:textSize="12sp"/>
 
         </RelativeLayout>
 

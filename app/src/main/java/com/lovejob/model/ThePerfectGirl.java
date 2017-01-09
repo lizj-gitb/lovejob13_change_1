@@ -57,6 +57,9 @@ public class ThePerfectGirl implements Serializable {
         private String level;
         private String userId;
         private String userType;
+        private String company = ""; //地址
+        private int sex = 0; //性别
+        private String position = ""; //职位
         private String privateKey_SERVICE;
         private WorkInfoDTO workInfoDTO;
         private List<WorkInfoDTO> workInfoDTOs;
@@ -70,7 +73,7 @@ public class ThePerfectGirl implements Serializable {
 
         private List<InformationInfo> informationInfos;
         private InformationInfo informationInfo;
-        private String portraitId;
+        private String portraitId;//用户头像
 
         public String getPortraitId() {
             return portraitId;
@@ -128,6 +131,30 @@ public class ThePerfectGirl implements Serializable {
 
         private AboutMe aboutusDTO;
 
+
+        public String getCompany() {
+            return company;
+        }
+
+        public void setCompany(String company) {
+            this.company = company;
+        }
+
+        public String getPosition() {
+            return position;
+        }
+
+        public void setPosition(String position) {
+            this.position = position;
+        }
+
+        public int getSex() {
+            return sex;
+        }
+
+        public void setSex(int sex) {
+            this.sex = sex;
+        }
 
         public AboutMe getAboutusDTO() {
             return aboutusDTO;

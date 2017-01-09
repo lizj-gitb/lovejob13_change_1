@@ -35,6 +35,7 @@ import com.lovejob.view.cityselector.CityPickerActivity;
 import com.umeng.socialize.ShareAction;
 import com.umeng.socialize.UMShareListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.media.UMImage;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.dialogs.zdialog.OnDialogItemClickListener;
 import com.v.rapiddev.dialogs.zdialog.ZDialog;
@@ -223,7 +224,8 @@ public class F_Job_2 extends BaseFragment {
         new ShareAction(context).withText(workPid)
 
 //                .setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
-                .withTargetUrl(StaticParams.URL_Shared+"?otherId=" + workPid + "&toOtherActivity=1")
+                .withTargetUrl(StaticParams.URL_Shared_Job + "?workPid=" + workPid)
+                .withMedia(new UMImage(context, com.zwy.Utils.getBitmapFromResources(context, R.mipmap.appcion)))
                 .setDisplayList(SHARE_MEDIA.WEIXIN_CIRCLE)
                 .setCallback(new UMShareListener() {
                     @Override
@@ -408,7 +410,7 @@ public class F_Job_2 extends BaseFragment {
          */
         @Override
         protected void convert(BaseViewHolder helper, ThePerfectGirl.WorkInfoDTO item) {
-            Glide.with(context).load((StaticParams.ImageURL + item.getReleaseInfo().getPortraitId()+"!logo")).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) helper.getView(R.id.img_job_logo));
+            Glide.with(context).load((StaticParams.ImageURL + item.getReleaseInfo().getPortraitId() + "!logo")).dontAnimate().placeholder(R.drawable.ic_launcher).into((CircleImageView) helper.getView(R.id.img_job_logo));
 
             ((TextView) helper.getView(R.id.tv_job_title)).setText(item.getTitle() == null ? "用户未填写" : item.getTitle());
             ((TextView) helper.getView(R.id.tv_job_com)).setText(item.getReleaseInfo().getCompany() == null ? "公司名称未填写" : item.getReleaseInfo().getCompany());

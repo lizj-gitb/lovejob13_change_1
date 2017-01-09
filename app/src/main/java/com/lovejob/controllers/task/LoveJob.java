@@ -200,7 +200,10 @@ public class LoveJob {
                         preferences.put(StaticParams.FileKey.__USERTYPE__, thePerfectGirl.getData().getUserType());
                         preferences.put(StaticParams.FileKey.__REALNAME__, thePerfectGirl.getData().getRealName());
                         preferences.put(StaticParams.FileKey.__USERPIC__, thePerfectGirl.getData().getPortraitId());
-//                        preferences.put(StaticParams.FileKey.__USERSEX__, thePerfectGirl.getData().getPortraitId());
+
+                        preferences.put(StaticParams.FileKey.__USERSEX__, thePerfectGirl.getData().getSex());
+                        preferences.put(StaticParams.FileKey.__USERCOMPLE__, thePerfectGirl.getData().getCompany());
+                        preferences.put(StaticParams.FileKey.__USERPOSSION__, thePerfectGirl.getData().getPosition());
 
 
                         preferences.put(StaticParams.FileKey.__IDENTIFY__, (!thePerfectGirl.getData().isIdentify()) ? "false" : "true");
@@ -300,7 +303,11 @@ public class LoveJob {
                     preferences.put(StaticParams.FileKey.__USERNAME__, thePerfectGirl.getData().getUsername());
                     preferences.put(StaticParams.FileKey.__USERTYPE__, thePerfectGirl.getData().getUserType());
                     preferences.put(StaticParams.FileKey.__REALNAME__, thePerfectGirl.getData().getRealName());
+                    preferences.put(StaticParams.FileKey.__USERPIC__, thePerfectGirl.getData().getPortraitId());
 
+                    preferences.put(StaticParams.FileKey.__USERSEX__, thePerfectGirl.getData().getSex());
+                    preferences.put(StaticParams.FileKey.__USERCOMPLE__, thePerfectGirl.getData().getCompany());
+                    preferences.put(StaticParams.FileKey.__USERPOSSION__, thePerfectGirl.getData().getPosition());
                     preferences.put(StaticParams.FileKey.__IDENTIFY__, (!thePerfectGirl.getData().isIdentify()) ? "false" : "true");
                     preferences.put(StaticParams.FileKey.__LEVEL__, thePerfectGirl.getData().getLevel());
                     try {
@@ -439,6 +446,12 @@ public class LoveJob {
 //                        preferences.put(StaticParams.FileKey.__REALNAME__, thePerfectGirl.getData().getRealName());
                         preferences.put(StaticParams.FileKey.__LEVEL__, thePerfectGirl.getData().getLevel());
                         preferences.put(StaticParams.FileKey.__IDENTIFY__, thePerfectGirl.getData().isIdentify() ? "true" : "false");
+                        preferences.put(StaticParams.FileKey.__REALNAME__, thePerfectGirl.getData().getRealName());
+                        preferences.put(StaticParams.FileKey.__USERPIC__, thePerfectGirl.getData().getPortraitId());
+
+                        preferences.put(StaticParams.FileKey.__USERSEX__, thePerfectGirl.getData().getSex());
+                        preferences.put(StaticParams.FileKey.__USERCOMPLE__, thePerfectGirl.getData().getCompany());
+                        preferences.put(StaticParams.FileKey.__USERPOSSION__, thePerfectGirl.getData().getPosition());
 //                        preferences.put(StaticParams.FileKey.__LOCALTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getLocalToken()));
 //                        preferences.put(StaticParams.FileKey.__RONGTOKEN__, Utils.decrypt(context, thePerfectGirl.getData().getRongCloudToken()));
                         V.d("saved bound some data success");

@@ -24,7 +24,10 @@ public class StaticParams {
 //    public static final String URL = "http://www.congxinwl.com/lovejob";
 //    public static final String URL = "http://117.34.116.121:8084/lovejob";
     public static boolean isConnectChetService = false;//是否连接到聊天服务器了
-    public static final String URL_Shared = "http://www.congxinwl.com/share.html";
+    public static final String URL_Shared_OriWOrk = "http://1597k6h652.imwork.net:18527/templates/creative_job.html";
+    public static final String URL_Shared_ParkWOrk = "http://1597k6h652.imwork.net:18527/templates/part_time_job.html";
+    public static final String URL_Shared_Job = "http://1597k6h652.imwork.net:18527/templates/job.html";
+
     //友盟推送注册成功返回
     public static String DeviceToken = "";
     //QQ微信授权回调的结果里
@@ -76,6 +79,10 @@ public class StaticParams {
         public static final String __IDENTIFY__ = "false";
         public static final String __USERSEX__ = "usersex";
         public static final String __USERPIC__ = "userpic";
+
+        public static final String __USERCOMPLE__ = "usercomple";
+        public static final String __USERPOSSION__ = "userpossion";
+
 
 
 

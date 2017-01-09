@@ -35,6 +35,10 @@ import com.lovejob.ms.MainActivityMs;
 import com.lovejob.view.WriteView;
 import com.lovejob.view.cityselector.cityselector.utils.ToastUtils;
 import com.umeng.analytics.MobclickAgent;
+import com.umeng.socialize.ShareAction;
+import com.umeng.socialize.UMShareListener;
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.media.UMImage;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
 import com.v.rapiddev.base.AppManager;
@@ -130,12 +134,12 @@ public class Aty_ParDetails extends BaseActivity {
     @Override
     public void onCreate_(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.aty_pardetails);
+        ButterKnife.bind(this);
         workId = getIntent().getStringExtra("workId");
         if (workId == null) {
             Utils.showToast(this, "数据异常,请重新登陆");
             return;
         }
-        ButterKnife.bind(this);
         context = this;
         if (!getIntent().getBooleanExtra("isEdit", false)) {
             hiteView.setVisibility(View.INVISIBLE);
@@ -197,7 +201,7 @@ public class Aty_ParDetails extends BaseActivity {
                 userName = userinfo.getRealName();
                 isphone = workinfoDto.isPhone();
                 Glide.with(context).load(StaticParams.ImageURL
-                        + userinfo.getPortraitId()+"!logo").placeholder(R.mipmap.ic_launcher).dontAnimate().into(imgOridetailsUserVo);
+                        + userinfo.getPortraitId() + "!logo").placeholder(R.mipmap.ic_launcher).dontAnimate().into(imgOridetailsUserVo);
                 tvOridetailsUsername.setText(userinfo.getRealName());
                 //imgOridetailsUserleavl
                 tvOridetailsPosition.setText(userinfo.getPosition());
@@ -231,7 +235,7 @@ public class Aty_ParDetails extends BaseActivity {
                 if (lists != null) {
                     size = lists.size();
                     for (int i = 0; i < workinfoDto.getEmployeeInfo().size(); i++) {
-                        adapter_alreadySignInPersonImg.addItem(StaticParams.ImageURL + workinfoDto.getEmployeeInfo().get(i).getPortraitId()+"!logo");
+                        adapter_alreadySignInPersonImg.addItem(StaticParams.ImageURL + workinfoDto.getEmployeeInfo().get(i).getPortraitId() + "!logo");
                     }
                     adapter_alreadySignInPersonImg.notifyDataSetChanged();
                 }
@@ -438,7 +442,7 @@ public class Aty_ParDetails extends BaseActivity {
         MobclickAgent.onPause(this);
     }
 
-    @OnClick({R.id.img_par_back, R.id.tv_pardetails_tocomm, R.id.img_pardetails_chat, R.id.img_pardetails_call, R.id.img_pardetails_grad})
+    @OnClick({R.id.img_par_back, R.id.tv_pardetails_tocomm, R.id.imag_shared, R.id.img_pardetails_chat, R.id.img_pardetails_call, R.id.img_pardetails_grad})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.img_par_back:
@@ -450,7 +454,7 @@ public class Aty_ParDetails extends BaseActivity {
                 break;
             case R.id.img_pardetails_chat:
                 Utils.showToast(this, "聊天");
-                    //打开单聊对话界面
+                //打开单聊对话界面
                 if (!StaticParams.isConnectChetService) {
                     ToastUtils.showToast(context, "您未连接到聊天服务器，可能是网络异常，请退出重新登录");
                     return;
@@ -478,6 +482,31 @@ public class Aty_ParDetails extends BaseActivity {
                 }
             case R.id.img_pardetails_grad:
                 doSignInOrCancel();
+                break;
+
+            case R.id.imag_shared:
+                new ShareAction(context).setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
+                        .withText(tvOridetailsTitle.getText().toString())
+                        .withMedia(new UMImage(context, com.zwy.Utils.getBitmapFromResources(context, R.mipmap.appcion)))
+                        .withTitle(tvOridetailsTitle.getText().toString())
+                        .withTargetUrl(StaticParams.URL_Shared_ParkWOrk + "?workPid=" + workId)
+                        .setCallback(new UMShareListener() {
+                            @Override
+                            public void onResult(SHARE_MEDIA share_media) {
+                                Utils.showToast(context, "分享成功");
+                            }
+
+                            @Override
+                            public void onError(SHARE_MEDIA share_media, Throwable throwable) {
+                                Utils.showToast(context, "分享失败，请稍后再试");
+                            }
+
+                            @Override
+                            public void onCancel(SHARE_MEDIA share_media) {
+                                Utils.showToast(context, "取消分享");
+                            }
+                        })
+                        .open();
                 break;
         }
     }
