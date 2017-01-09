@@ -53,6 +53,7 @@
                 android:textSize="15sp" />
 
             <TextView
+                android:visibility="invisible"
                 android:id="@+id/tvNewMsg"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -63,6 +64,7 @@
                 android:textSize="15sp" />
 
             <TextView
+                android:visibility="invisible"
                 android:id="@+id/tvNewMsgNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"

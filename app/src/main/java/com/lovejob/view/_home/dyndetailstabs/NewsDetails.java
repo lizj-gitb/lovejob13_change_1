@@ -78,6 +78,11 @@ public class NewsDetails extends BaseActivity {
         if (TextUtils.isEmpty(newsId) || newsId == null) {
             AppManager.getAppManager().finishActivity();
         }
+
+        mRvNewsdetails.setLayoutManager(new LinearLayoutManager(context));
+        adapter = new MyAdapter(R.layout.item_news_details, null);
+        adapter.openLoadAnimation(BaseQuickAdapter.SCALEIN);
+        mRvNewsdetails.setAdapter(adapter);
         /**
          * 获取新闻详情数据
          */
@@ -100,9 +105,6 @@ public class NewsDetails extends BaseActivity {
                     mTvNewsdetailsNumber.setText(String.valueOf(newsDetails.getCount()));
 
 
-                    mRvNewsdetails.setLayoutManager(new LinearLayoutManager(context));
-                    adapter = new MyAdapter(R.layout.item_news_details, newsDetails.getInformationInfoList());
-                    mRvNewsdetails.setAdapter(adapter);
                     adapter.setNewData(newsDetails.getInformationInfoList());
                 }
             }
@@ -143,21 +145,21 @@ public class NewsDetails extends BaseActivity {
                         .withText(((MyAdapter) mRvNewsdetails.getAdapter()).getData().get(0).getContent())
                         .withMedia(new UMImage(context, shardURL))
                         .withTitle(mTvNewsdetailsSubtitle.getText().toString())
-                        .withTargetUrl(StaticParams.URL_Shared+"?otherId=" + newsId + "&toOtherActivity=0")
+                        .withTargetUrl(StaticParams.URL_Shared_News + "?informationPid=" + newsId)
                         .setCallback(new UMShareListener() {
                             @Override
                             public void onResult(SHARE_MEDIA share_media) {
-
+                                Utils.showToast(context, "分享成功");
                             }
 
                             @Override
                             public void onError(SHARE_MEDIA share_media, Throwable throwable) {
-
+                                Utils.showToast(context, "分享失败，请稍后再试");
                             }
 
                             @Override
                             public void onCancel(SHARE_MEDIA share_media) {
-
+                                Utils.showToast(context, "分享被取消");
                             }
                         })
                         .open();

@@ -25,6 +25,7 @@ import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.alibaba.mobileim.conversation.IYWConversationUnreadChangeListener;
 import com.bumptech.glide.Glide;
 import com.lovejob.BaseFragment;
 import com.lovejob.R;
@@ -38,6 +39,7 @@ import com.lovejob.model.StaticParams;
 import com.lovejob.model.ThePerfectGirl;
 import com.lovejob.model.ThreadPoolUtils;
 import com.lovejob.model.Utils;
+import com.lovejob.ms.MainActivityMs;
 import com.lovejob.view._othersinfos.Others;
 import com.lovejob.view._userinfo.myinformation.Aty_Resume;
 import com.lovejob.view._userinfo.mylist.Aty_MyList;

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -48,6 +49,7 @@ import com.lovejob.view._othersinfos.Others;
 import com.lovejob.view._userinfo.myserver.ServiceActivity;
 import com.lovejob.view._userinfo.myserver.ServiceMyActivity;
 import com.lovejob.view.cityselector.CityPickerActivity;
+import com.v.rapiddev.dialogs.core.util.DialogUtils;
 import com.v.rapiddev.dialogs.zdialog.OnDialogItemClickListener;
 import com.v.rapiddev.dialogs.zdialog.ZDialog;
 import com.v.rapiddev.utils.V;
@@ -80,7 +82,7 @@ import static com.lovejob.model.StaticParams.RequestCode.RequestCode_F_Home_TO_S
 
 /**
  * ClassType:
- * User:wenyunzhao
+ * User:wenyunzhao   todo
  * ProjectName:LoveJob3
  * Package_Name:com.lovejob.view._home
  * Created on 2016-11-25 16:46
@@ -140,6 +142,35 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
 
         com.v.rapiddev.preferences.AppPreferences appPreferences = new com.v.rapiddev.preferences.AppPreferences(context);
         userPid = appPreferences.getString(StaticParams.FileKey.__USERPID__, "");
+        LoveJob.getSystemVersion(new OnAllParameListener() {
+            @Override
+            public void onSuccess(ThePerfectGirl thePerfectGirl) {
+                String v = thePerfectGirl.getData().getAboutusDTO().getVersion();
+                if (!Utils.getAppVersionName(context).equals(v)) {
+                    ZDialog.showZDlialog(context, "提示", "系统版本有更新，是否现在更新？", "现在更新", "稍后更新", new OnDialogItemClickListener() {
+                        @Override
+                        public void onLeftButtonClickListener() {
+                            V.d("更新");
+                            Intent intent = new Intent();
+                            intent.setAction("android.intent.action.VIEW");
+                            Uri content_url = Uri.parse("http://a.app.qq.com/o/simple.jsp?pkgname=com.lovejob#opened");
+                            intent.setData(content_url);
+                            startActivity(intent);
+                        }
+
+                        @Override
+                        public void onRightButtonClickListener() {
+                            V.d("取消");
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onError(String msg) {
+
+            }
+        });
         return view;
     }
 
@@ -335,7 +366,7 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                 if (isDataFromFile) {
                     Glide.with(mContext).load(new File(userReleseInfo.getPortraitId())).placeholder(R.mipmap.ic_launcher).dontAnimate().into(userLogo);
                 } else {
-                    Glide.with(mContext).load(StaticParams.ImageURL+userReleseInfo.getPortraitId()).dontAnimate().into(userLogo);
+                    Glide.with(mContext).load(StaticParams.ImageURL + userReleseInfo.getPortraitId()).dontAnimate().into(userLogo);
                 }
 
                 //性别
@@ -498,30 +529,35 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                             com.lovejob.model.Utils.showToast(context, "动态发布中，请稍后再试");
                             return;
                         }
-
+                        int resId = item.getIsPointGood() == 0 ? R.mipmap.icon_bad_common : R.mipmap.icon_bad_on;
+                        viewHolder.setImageResource(R.id.img_bad, resId);
                         LoveJob.toDynGoodOrBad(item.getDynamicPid(), 0, new OnAllParameListener() {
                             @Override
                             public void onSuccess(ThePerfectGirl thePerfectGirl) {
-                                ThePerfectGirl.DynamicDTO dynamicDTO = item;
-                                int res = 0;
-                                if (dynamicDTO.getIsPointGood() == 0) {
-                                    // 0 c\hap   1 keyi点赞
-                                    res = R.mipmap.icon_bad_common;
-                                } else {
-                                    res = R.mipmap.icon_bad_on;
-                                }
-                                dynamicDTO.setIsPointGood(thePerfectGirl.getData().getPoints());
-                                ((BaseQuickAdapter) mListAdapter).getData().set(viewHolder.getPosition(), dynamicDTO);
-                                View view = mRvHomeList.getChildAt(viewHolder.getPosition());
-                                TextView t = (TextView) view.findViewById(R.id.tv_bad_num);
-                                ImageView imageView = (ImageView) view.findViewById(R.id.img_bad);
-                                t.setText(String.valueOf(thePerfectGirl.getData().getCount()));
-                                imageView.setImageResource(res);
+                                item.setIsPointGood(thePerfectGirl.getData().getPoints());
+                                viewHolder.setText(R.id.tv_bad_num, String.valueOf(thePerfectGirl.getData().getCount()));
+//                                ThePerfectGirl.DynamicDTO dynamicDTO = item;
+//                                int res = 0;
+//                                if (dynamicDTO.getIsPointGood() == 0) {
+//                                    // 0 c\hap   1 keyi点赞
+//                                    res = R.mipmap.icon_bad_common;
+//                                } else {
+//                                    res = R.mipmap.icon_bad_on;
+//                                }
+//                                dynamicDTO.setIsPointGood(thePerfectGirl.getData().getPoints());
+//                                ((BaseQuickAdapter) mListAdapter).getData().set(viewHolder.getPosition(), dynamicDTO);
+//                                View view = mRvHomeList.getChildAt(viewHolder.getPosition());
+//                                TextView t = (TextView) view.findViewById(R.id.tv_bad_num);
+//                                ImageView imageView = (ImageView) view.findViewById(R.id.img_bad);
+//                                t.setText(String.valueOf(thePerfectGirl.getData().getCount()));
+//                                imageView.setImageResource(res);
                             }
 
                             @Override
                             public void onError(String msg) {
                                 com.lovejob.model.Utils.showToast(context, msg);
+                                int resId = item.getIsPointGood() == 0 ? R.mipmap.icon_bad_on : R.mipmap.icon_bad_common;
+                                viewHolder.setImageResource(R.id.img_bad, resId);
                             }
                         });
                     }
@@ -536,30 +572,36 @@ public class F_Home_2 extends BaseFragment implements SwipeRefreshLayout.OnRefre
                             com.lovejob.model.Utils.showToast(context, "动态发布中，请稍后再试");
                             return;
                         }
+                        int resId_bad = item.getIsPointGood() == 1 ? R.mipmap.icon_good_common : R.mipmap.icon_good_on;
+                        viewHolder.setImageResource(R.id.img_good, resId_bad);
                         LoveJob.toDynGoodOrBad(item.getDynamicPid(), 1, new OnAllParameListener() {
                             @Override
                             public void onSuccess(ThePerfectGirl thePerfectGirl) {
-                                ThePerfectGirl.DynamicDTO oo = item;
-                                int res = 0;
-                                oo.setIsPointGood(thePerfectGirl.getData().getPoints());
-                                if (item.getIsPointGood() == 1) {
-                                    // 0 c\hap   1 keyi点赞
-                                    res = R.mipmap.icon_good_on;
-                                } else {
-                                    res = R.mipmap.icon_good_common;
-                                }
-                                ((BaseQuickAdapter) mListAdapter).getData().set(viewHolder.getPosition(), oo);
-                                View view = mRvHomeList.getChildAt(viewHolder.getPosition());
-                                TextView t = (TextView) view.findViewById(R.id.tv_good_num);
-                                ImageView imageView = (ImageView) view.findViewById(R.id.img_good);
-
-                                t.setText(String.valueOf(thePerfectGirl.getData().getCount()));
-                                imageView.setImageResource(res);
+                                item.setIsPointGood(thePerfectGirl.getData().getPoints());
+                                viewHolder.setText(R.id.tv_good_num, String.valueOf(thePerfectGirl.getData().getCount()));
+//                                ThePerfectGirl.DynamicDTO oo = item;
+//                                int res = 0;
+//                                oo.setIsPointGood(thePerfectGirl.getData().getPoints());
+//                                if (item.getIsPointGood() == 1) {
+//                                    // 0 c\hap   1 keyi点赞
+//                                    res = R.mipmap.icon_good_on;
+//                                } else {
+//                                    res = R.mipmap.icon_good_common;
+//                                }
+//                                ((BaseQuickAdapter) mListAdapter).getData().set(viewHolder.getPosition(), oo);
+//                                View view = mRvHomeList.getChildAt(viewHolder.getPosition());
+//                                TextView t = (TextView) view.findViewById(R.id.tv_good_num);
+//                                ImageView imageView = (ImageView) view.findViewById(R.id.img_good);
+//
+//                                t.setText(String.valueOf(thePerfectGirl.getData().getCount()));
+//                                imageView.setImageResource(res);
                             }
 
                             @Override
                             public void onError(String msg) {
                                 com.lovejob.model.Utils.showToast(context, msg);
+                                int resId_bad = item.getIsPointGood() == 1 ? R.mipmap.icon_good_on : R.mipmap.icon_good_common;
+                                viewHolder.setImageResource(R.id.img_good, resId_bad);
                             }
                         });
                     }

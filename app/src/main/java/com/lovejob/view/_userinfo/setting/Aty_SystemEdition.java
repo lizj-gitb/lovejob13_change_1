@@ -1,5 +1,7 @@
 package com.lovejob.view._userinfo.setting;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -82,7 +84,11 @@ public class Aty_SystemEdition extends BaseActivity {
                 AppManager.getAppManager().finishActivity();
                 break;
             case R.id.system_update:
-                com.lovejob.model.Utils.showToast(context, "尽情期待");
+                Intent intent = new Intent();
+                intent.setAction("android.intent.action.VIEW");
+                Uri content_url = Uri.parse("http://a.app.qq.com/o/simple.jsp?pkgname=com.lovejob#opened");
+                intent.setData(content_url);
+                startActivity(intent);
                 break;
         }
     }

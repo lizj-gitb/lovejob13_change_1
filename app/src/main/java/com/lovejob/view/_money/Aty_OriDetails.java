@@ -33,7 +33,12 @@ import com.lovejob.model.Utils;
 import com.lovejob.model.bean.Data_Comm_2_2;
 import com.lovejob.ms.MainActivityMs;
 import com.lovejob.view.WriteView;
+import com.lovejob.view._home.dyndetailstabs.NewsDetails;
 import com.lovejob.view.cityselector.cityselector.utils.ToastUtils;
+import com.umeng.socialize.ShareAction;
+import com.umeng.socialize.UMShareListener;
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.media.UMImage;
 import com.v.rapiddev.adpater.FFViewHolder;
 import com.v.rapiddev.adpater.FastAdapter;
 import com.v.rapiddev.base.AppManager;
@@ -52,7 +57,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-import static android.R.attr.type;
 import static com.lovejob.model.StaticParams.RequestCode.RequestCode_OriWork_To_WriteView_WriteComm;
 import static com.lovejob.model.StaticParams.RequestCode.RequestCode_OriWork_To_WriteView_WriteReComm;
 
@@ -62,7 +66,6 @@ import static com.lovejob.model.StaticParams.RequestCode.RequestCode_OriWork_To_
  * ProjectName:LoveJob
  * Package_Name:com.lovejob.view._money
  * Created on 2016-12-07 19:06
- * (报名的)工作详情
  */
 
 public class Aty_OriDetails extends BaseActivity {
@@ -145,14 +148,14 @@ public class Aty_OriDetails extends BaseActivity {
          * 设置Sv相关属性
          */
         setSVInfos();
-
+//        /**
+//         * 初始化适配器
+//         */
         initAdapater();
+//
         getDetails();
     }
 
-    /**
-     * 初始化适配器
-     */
     private void initAdapater() {
         adapter_contentImg = new FastAdapter<String>(this, R.layout.item_gv_oridetails_img) {
             @Override
@@ -201,7 +204,6 @@ public class Aty_OriDetails extends BaseActivity {
                     V.d("隐藏次listview的lt");
                     ((LinearLayout) viewHolder.getView(R.id.lt_oridetails_2_2)).setVisibility(View.GONE);
                 }
-
                 return viewHolder.getConvertView();
             }
 
@@ -252,10 +254,10 @@ public class Aty_OriDetails extends BaseActivity {
             public void onSuccess(ThePerfectGirl thePerfectGirl) {
                 svAtyOriMain.onRefreshComplete();
                 ThePerfectGirl.UserInfoDTO userInfo = thePerfectGirl.getData().getWorkInfoDTO().getReleaseInfo();
-                    userId = userInfo.getUserId();
-                    userName = userInfo.getRealName();
+                userId = userInfo.getUserId();
+                userName = userInfo.getRealName();
                 isphone = thePerfectGirl.getData().getWorkInfoDTO().isPhone();
-                Glide.with(context).load(StaticParams.ImageURL + userInfo.getPortraitId()+"!logo").placeholder(R.mipmap.ic_launcher).dontAnimate()
+                Glide.with(context).load(StaticParams.ImageURL + userInfo.getPortraitId() + "!logo").placeholder(R.mipmap.ic_launcher).dontAnimate()
                         .into(imgOridetailsUserVo);
                 tvOridetailsUsername.setText(userInfo.getRealName() + "".trim());
                 tvOridetailsPosition.setText(userInfo.getPosition() + "".trim());
@@ -275,7 +277,7 @@ public class Aty_OriDetails extends BaseActivity {
                     hitviewDetaile.setVisibility(View.VISIBLE);
                     setGridView(115, gvOridetailsContentimg, adapter_contentImg, img.length);
                     for (int i = 0; i < img.length; i++) {
-                        adapter_contentImg.addItem(StaticParams.ImageURL + img[i].trim()+"!logo");
+                        adapter_contentImg.addItem(StaticParams.ImageURL + img[i].trim() + "!logo");
                     }
                 } else {
                     hitviewDetaile.setVisibility(View.GONE);
@@ -297,7 +299,7 @@ public class Aty_OriDetails extends BaseActivity {
 //                tvOridetailsPhonenuber.setText(thePerfectGirl.getData().getWorkInfoDTO().getContactPhone());
                 String s = thePerfectGirl.getData().getWorkInfoDTO().getContactPhone();
                 String s3 = s.substring(0, s.length() - 4);
-                tvOridetailsPhonenuber.setText(s3+"****");
+                tvOridetailsPhonenuber.setText(s3 + "****");
                 phoneNumber = thePerfectGirl.getData().getWorkInfoDTO().getContactPhone();
                 //TODO 点评列表
 
@@ -306,7 +308,7 @@ public class Aty_OriDetails extends BaseActivity {
                 if (lists != null) {
                     size = lists.size();
                     for (int i = 0; i < thePerfectGirl.getData().getWorkInfoDTO().getEmployeeInfo().size(); i++) {
-                        adapter_alreadySignInPersonImg.addItem(StaticParams.ImageURL + thePerfectGirl.getData().getWorkInfoDTO().getEmployeeInfo().get(i).getPortraitId()+"!logo");
+                        adapter_alreadySignInPersonImg.addItem(StaticParams.ImageURL + thePerfectGirl.getData().getWorkInfoDTO().getEmployeeInfo().get(i).getPortraitId() + "!logo");
                     }
                     adapter_alreadySignInPersonImg.notifyDataSetChanged();
                 }
@@ -429,7 +431,6 @@ public class Aty_OriDetails extends BaseActivity {
         adapter.notifyDataSetChanged();
     }
 
-
     private void setSVInfos() {
         svAtyOriMain.setMode(PullToRefreshBase.Mode.PULL_FROM_START);
         svAtyOriMain.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ScrollView>() {
@@ -449,19 +450,14 @@ public class Aty_OriDetails extends BaseActivity {
         });
     }
 
-    /**
-     * 判断是否显示（悬浮窗口 聊天、打电话、抢单）
-     */
     private void getDefaultParams() {
         workId = getIntent().getStringExtra("workId");
-
         if (workId == null) {
             Utils.showToast(this, "数据异常,请重新登陆");
             return;
         }
         ButterKnife.bind(this);
         context = this;
-
         if (!getIntent().getBooleanExtra("isEdit", false)) {
             hiteView.setVisibility(View.INVISIBLE);
             viewHite.setVisibility(View.VISIBLE);
@@ -471,15 +467,13 @@ public class Aty_OriDetails extends BaseActivity {
         }
     }
 
-    /**
-     * 初始化Actionbar
-     */
     private void setactionbar() {
         actionbarSave.setVisibility(View.GONE);
+        actionbarTitle.setText("创意工作");
         actionbarTitle.setTextSize(16);
-        actionbarTitle.setText("工作详情");
         actionbarTitle.setTextColor(Color.WHITE);
-
+        actionbarShared.setImageResource(R.mipmap.sharedicon);
+        actionbarShared.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -492,11 +486,40 @@ public class Aty_OriDetails extends BaseActivity {
 
     }
 
-    @OnClick({R.id.actionbar_back, R.id.img_oridetails_userlogo, R.id.img_oridetails_chat, R.id.img_oridetails_call, R.id.img_oridetails_grad, R.id.tv_oridetails_tocomm})
+    @OnClick({R.id.actionbar_back,R.id.actionbar_shared, R.id.img_oridetails_userlogo, R.id.img_oridetails_chat, R.id.img_oridetails_call, R.id.img_oridetails_grad, R.id.tv_oridetails_tocomm})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.actionbar_back:
                 AppManager.getAppManager().finishActivity(this);
+                break;
+
+            case R.id.actionbar_shared:
+                String url = null;
+                if (adapter_contentImg.getList() != null && adapter_contentImg.getList().size() >= 1) {
+                    url = adapter_contentImg.getItem(0);
+                }
+                new ShareAction(context).setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
+                        .withText(tvOridetailsLocation.getText().toString())
+                        .withMedia(new UMImage(context, url))
+                        .withTitle(tvOridetailsTitle.getText().toString())
+                        .withTargetUrl(StaticParams.URL_Shared_OriWOrk + "?workPid=" + workId)
+                        .setCallback(new UMShareListener() {
+                            @Override
+                            public void onResult(SHARE_MEDIA share_media) {
+                                Utils.showToast(context, "分享成功");
+                            }
+
+                            @Override
+                            public void onError(SHARE_MEDIA share_media, Throwable throwable) {
+                                Utils.showToast(context, "分享失败，请稍后再试");
+                            }
+
+                            @Override
+                            public void onCancel(SHARE_MEDIA share_media) {
+                                Utils.showToast(context, "取消分享");
+                            }
+                        })
+                        .open();
                 break;
             case R.id.img_oridetails_userlogo:
                 V.d("用户头像被点击");
@@ -512,7 +535,7 @@ public class Aty_OriDetails extends BaseActivity {
                 break;
             case R.id.img_oridetails_call:
                 V.d("打电话");
-                if (isphone){
+                if (isphone) {
                     if (TextUtils.isEmpty(phoneNumber)) {
                         Utils.showToast(context, "请稍后再试");
                         return;
@@ -526,8 +549,8 @@ public class Aty_OriDetails extends BaseActivity {
                     }
                     startActivity(intent_phone);
                     break;
-                }else {
-                    Utils.showToast(context,"未录取前不能打电话");
+                } else {
+                    Utils.showToast(context, "未录取前不能打电话");
                     break;
                 }
 
