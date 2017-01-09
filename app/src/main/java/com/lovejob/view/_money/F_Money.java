@@ -598,7 +598,7 @@ public class F_Money extends BaseFragment {
     }
 
     private void addDataToNewsList() {
-        calls.add(LoveJob.getNewsList("0", new OnAllParameListener() {
+        calls.add(LoveJob.getNewsList("2", new OnAllParameListener() {
             @Override
             public void onSuccess(ThePerfectGirl thePerfectGirl) {
                 isAddData = false;

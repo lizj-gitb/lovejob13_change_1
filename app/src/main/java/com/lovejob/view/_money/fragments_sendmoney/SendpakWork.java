@@ -222,6 +222,12 @@ public class SendpakWork extends BaseFragment {
         strs[12] = tvSendWorkParHight.getText().toString();
         strs[13] = positionNumber;
         inputModel.setParams(strs);
+
+
+        if (!Utils.checkMobileNumberValid(strs[6])) {
+            Utils.showToast(context, "电话号码格式不合法，请检查");
+            return;
+        }
 //        int i1 = Integer.valueOf(tvSendWorkParWanttonum.getText().toString());
 //        String amount=String.valueOf(i1*money);
         inputModel.getParams()[5] = inputModel.getParams()[5].substring(0, inputModel.getParams()[5].length() - 3);

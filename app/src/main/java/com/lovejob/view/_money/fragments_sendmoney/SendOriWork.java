@@ -216,6 +216,11 @@ public class SendOriWork extends BaseFragment {
         strs[2] = String.valueOf(money);
         strs[5] = want;
         strs[6] = person;
+        if (!Utils.checkMobileNumberValid(strs[3])) {
+            Utils.showToast(context, "电话号码格式不合法，请检查");
+            dialog.dismiss();
+            return;
+        }
         //压缩
         //跳转支付页面  传入支付以及发布工作所需参数
         final Intent intent = new Intent(context, PayViewSelectPayment.class);

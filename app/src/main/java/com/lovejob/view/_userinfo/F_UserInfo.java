@@ -205,7 +205,7 @@ public class F_UserInfo extends BaseFragment {
                             e.printStackTrace();
                         }
                         final ThePerfectGirl.UserInfoDTO userInfo = thePerfectGirl.getData().getUserInfoDTO();
-                        Glide.with(context).load(StaticParams.ImageURL + userInfo.getPortraitId()+"!logo").dontAnimate().placeholder(R.drawable.ic_launcher).into(imgFMyUserlogo);
+                        Glide.with(context).load(StaticParams.ImageURL + userInfo.getPortraitId()).dontAnimate().placeholder(R.drawable.ic_launcher).into(imgFMyUserlogo);
 
                         int userSex = userInfo.getUserSex() == 1 ? R.mipmap.icon_male : R.mipmap.icon_famale;
 

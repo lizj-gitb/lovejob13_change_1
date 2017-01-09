@@ -149,6 +149,7 @@ public class Aty_News extends BaseActivity {
             @Override
             public void onUnreadChange() {
                 tvNewMsg.setVisibility(View.VISIBLE);
+                tvNewMsgNumber.setVisibility(View.VISIBLE);
                 tvNewMsgNumber.setText("1条");
             }
         });
