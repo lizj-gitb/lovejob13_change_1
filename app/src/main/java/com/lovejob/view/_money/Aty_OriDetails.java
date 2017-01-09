@@ -52,6 +52,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static android.R.attr.type;
 import static com.lovejob.model.StaticParams.RequestCode.RequestCode_OriWork_To_WriteView_WriteComm;
 import static com.lovejob.model.StaticParams.RequestCode.RequestCode_OriWork_To_WriteView_WriteReComm;
 
@@ -61,7 +62,7 @@ import static com.lovejob.model.StaticParams.RequestCode.RequestCode_OriWork_To_
  * ProjectName:LoveJob
  * Package_Name:com.lovejob.view._money
  * Created on 2016-12-07 19:06
- * 报名的工作详情
+ * (报名的)工作详情
  */
 
 public class Aty_OriDetails extends BaseActivity {
@@ -200,6 +201,7 @@ public class Aty_OriDetails extends BaseActivity {
                     V.d("隐藏次listview的lt");
                     ((LinearLayout) viewHolder.getView(R.id.lt_oridetails_2_2)).setVisibility(View.GONE);
                 }
+
                 return viewHolder.getConvertView();
             }
 
@@ -452,12 +454,14 @@ public class Aty_OriDetails extends BaseActivity {
      */
     private void getDefaultParams() {
         workId = getIntent().getStringExtra("workId");
+
         if (workId == null) {
             Utils.showToast(this, "数据异常,请重新登陆");
             return;
         }
         ButterKnife.bind(this);
         context = this;
+
         if (!getIntent().getBooleanExtra("isEdit", false)) {
             hiteView.setVisibility(View.INVISIBLE);
             viewHite.setVisibility(View.VISIBLE);
@@ -472,9 +476,10 @@ public class Aty_OriDetails extends BaseActivity {
      */
     private void setactionbar() {
         actionbarSave.setVisibility(View.GONE);
-        actionbarTitle.setText("创意工作");
         actionbarTitle.setTextSize(16);
+        actionbarTitle.setText("工作详情");
         actionbarTitle.setTextColor(Color.WHITE);
+
     }
 
     @Override

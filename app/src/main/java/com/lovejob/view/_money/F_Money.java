@@ -155,6 +155,7 @@ public class F_Money extends BaseFragment {
         return mainView;
     }
 
+
     private void setWorkItemListener() {
         lvmoney.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -176,6 +177,7 @@ public class F_Money extends BaseFragment {
             }
         });
     }
+
 
 
     private void initAdapter() {

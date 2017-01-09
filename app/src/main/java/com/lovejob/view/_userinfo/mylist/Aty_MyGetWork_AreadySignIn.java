@@ -169,7 +169,9 @@ public class Aty_MyGetWork_AreadySignIn extends BaseActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Intent intent = new Intent(Aty_MyGetWork_AreadySignIn.this, Aty_OriDetails.class);               //跳转到报名工作详情
                 intent.putExtra("workId", adapter.getItem(position - 1).getPid());
+                intent.putExtra("type", adapter.getItem(position - 1).getType());
                 intent.putExtra("isEdit", adapter.getItem(position - 1).getShowApplyBtn() == 0 ? false : true);
+
                 startActivity(intent);
             }
         });

@@ -54,7 +54,7 @@ import butterknife.OnClick;
 import me.iwf.photopicker.PhotoPreview;
 
 /**
- * 动态
+ * 我的动态
  * Created by Administrator on 2016/11/28.
  */
 public class Aty_MyDynamic extends BaseActivity {
@@ -98,7 +98,7 @@ public class Aty_MyDynamic extends BaseActivity {
         lvMydynamic.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(context, DynDetailsAty.class);
+                Intent intent = new Intent(context, DynDetailsAty.class);               //动态详情
                 intent.putExtra("dynPid", adapter.getItem(position-1).getPid());
                 startActivity(intent);
             }
